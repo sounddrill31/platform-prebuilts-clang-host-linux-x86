@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "105c2963_c22773c9",
+        "filename": "3.8/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T21:44:20Z",
+      "side": 1,
+      "message": "I think the actual right way to do this is to align \"committed\" (and any other subsequent lines) with \"Grab\". Not sure how the various markdown renderers actually handle this.",
+      "revId": "100c60deabd66374ccdf0fc7777ea332bdf6a991",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
