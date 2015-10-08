@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90673931_92a82dfc",
+        "filename": "3.8/README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T21:13:18Z",
+      "side": 1,
+      "message": "`git fetch upstream` to avoid that pain?",
+      "range": {
+        "startLine": 99,
+        "startChar": 11,
+        "endLine": 100,
+        "endChar": 24
+      },
+      "revId": "cc1519941cdf0928421d2802a2f442cb89f44f7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
