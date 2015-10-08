@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "105c2963_f31ed028",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "It\u0027s how you get line breaks. :( LaTeX is so much better in this respect, as at least \\\\ doesn\u0027t show up like garbage in your editor/review tool.",
+      "parentUuid": "30592d74_3a1c967e",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1001893d_abdcc57b",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "105c2963_335208d5",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1001893d_abdcc57b",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d03c51f4_94b01220",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -53,6 +95,30 @@
       "writtenOn": "2015-10-08T06:45:53Z",
       "side": 1,
       "message": "pushing",
+      "range": {
+        "startLine": 140,
+        "startChar": 26,
+        "endLine": 140,
+        "endChar": 36
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d00a915c_5b7366ad",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d03c51f4_94b01220",
       "range": {
         "startLine": 140,
         "startChar": 26,
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "5061411e_d5e72f0a",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "704d65ae_f1936ac8",
+      "range": {
+        "startLine": 153,
+        "startChar": 26,
+        "endLine": 153,
+        "endChar": 36
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "504861a0_d0b62a31",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -99,6 +189,24 @@
       "writtenOn": "2015-10-08T06:45:53Z",
       "side": 1,
       "message": "This step isn\u0027t necessary. The merge on L164 can be directly from aosp/master.",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5061411e_15f247cb",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "I know that it isn\u0027t necessary, but it actually does allow you to more easily inspect/adjust what master should look like (in the case where someone has then pushed even more patches that you don\u0027t want to grab/squash).",
+      "parentUuid": "504861a0_d0b62a31",
       "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -122,6 +230,24 @@
     },
     {
       "key": {
+        "uuid": "30592d74_d53bab05",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "704d65ae_511e9e01",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "704d65ae_3123124c",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -139,6 +265,24 @@
     },
     {
       "key": {
+        "uuid": "105c2963_3377a862",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "704d65ae_3123124c",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "105c2963_93c6742c",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -150,6 +294,30 @@
       "writtenOn": "2015-10-08T06:45:53Z",
       "side": 1,
       "message": "\"as of 7-Oct-2015\" or whatever. Checking the blame is a hassle from gitiles (I\u0027m not even sure how)",
+      "range": {
+        "startLine": 245,
+        "startChar": 0,
+        "endLine": 245,
+        "endChar": 5
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d65ae_c352e547",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "105c2963_93c6742c",
       "range": {
         "startLine": 245,
         "startChar": 0,
@@ -185,6 +353,30 @@
     },
     {
       "key": {
+        "uuid": "704d65ae_2360e90f",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "105c2963_73cbe033",
+      "range": {
+        "startLine": 246,
+        "startChar": 71,
+        "endLine": 246,
+        "endChar": 74
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "704d65ae_b12e022c",
         "filename": "3.8/README.md",
         "patchSetId": 2
@@ -196,6 +388,24 @@
       "writtenOn": "2015-10-08T06:45:53Z",
       "side": 1,
       "message": "\u0026\u0026, not \u0026",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90673931_f4ba3148",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-08T16:49:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "704d65ae_b12e022c",
       "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
