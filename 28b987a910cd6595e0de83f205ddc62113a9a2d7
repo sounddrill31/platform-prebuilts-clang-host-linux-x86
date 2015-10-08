@@ -1,0 +1,204 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30592d74_3a1c967e",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "Trailing whitespace? Lots of it?",
+      "range": {
+        "startLine": 8,
+        "startChar": 22,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1001893d_abdcc57b",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "This block looks like it\u0027s supposed to be in a different section.",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d03c51f4_94b01220",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "pushing",
+      "range": {
+        "startLine": 140,
+        "startChar": 26,
+        "endLine": 140,
+        "endChar": 36
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d65ae_f1936ac8",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "\"submitting\" or \"merging\"",
+      "range": {
+        "startLine": 153,
+        "startChar": 26,
+        "endLine": 153,
+        "endChar": 36
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "504861a0_d0b62a31",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "This step isn\u0027t necessary. The merge on L164 can be directly from aosp/master.",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d65ae_511e9e01",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "mmma would save time here",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d65ae_3123124c",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand this comment. I don\u0027t see this being done, so why do you say we have to? Also, why not just move that into build_toolchain.sh?",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "105c2963_93c6742c",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "\"as of 7-Oct-2015\" or whatever. Checking the blame is a hassle from gitiles (I\u0027m not even sure how)",
+      "range": {
+        "startLine": 245,
+        "startChar": 0,
+        "endLine": 245,
+        "endChar": 5
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "105c2963_73cbe033",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "x86",
+      "range": {
+        "startLine": 246,
+        "startChar": 71,
+        "endLine": 246,
+        "endChar": 74
+      },
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d65ae_b12e022c",
+        "filename": "3.8/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-08T06:45:53Z",
+      "side": 1,
+      "message": "\u0026\u0026, not \u0026",
+      "revId": "28b987a910cd6595e0de83f205ddc62113a9a2d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
