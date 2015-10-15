@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9bdc694_3240311d",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-15T21:35:08Z",
+      "side": 1,
+      "message": "Is this a typo? Should it be libLLVMgold.so? I see that mine is indeed named LLVMgold.so, so perhaps this is WAI. I also see that my copy of these files is in the lib64/ host directory, and not lib/.",
+      "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9bdc694_f2161916",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-15T21:35:08Z",
+      "side": 1,
+      "message": "Is this strictly necessary? Did we make it depend on libLLVM.so? There are other libLLVM.so files checked into the tree already (bleh), but I would like to avoid having more (especially if they can conflict).",
+      "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
