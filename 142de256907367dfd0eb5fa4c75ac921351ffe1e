@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "1959ba73_03e9741a",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-16T01:11:53Z",
+      "side": 1,
+      "message": "Wow, I didn\u0027t realize that they were ok with names not having the \"lib\" prefix, but this is not your ordinary shared object either. My comment about the /lib/ dir part is the left hand side of the cp operation. I see mine is in lib64/LLVMgold.so, instead of lib/LLVMgold.so.",
+      "parentUuid": "fc35b4bb_292b2d1b",
+      "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9bdc694_f2161916",
         "filename": "3.8/update.sh",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Right now LLVMgold.so is dependent on libLLVM.so. If this is a problem I can change the tools/gold makefile to statically link in the contents of libLLVM.so to eliminate the dependency. This is your call, I don\u0027t have an opinion one way or another.",
       "parentUuid": "f9bdc694_f2161916",
+      "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99f12aa5_e21d4e31",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-16T01:11:53Z",
+      "side": 1,
+      "message": "This is ok for now. I just want to avoid an issue in the NDK with shipping multiple libLLVM.so files (that might be different).",
+      "parentUuid": "998daa47_2ea647e8",
       "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
