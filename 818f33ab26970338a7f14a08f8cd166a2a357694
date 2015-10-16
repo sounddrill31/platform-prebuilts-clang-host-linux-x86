@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79fd56bf_a5967e16",
+        "filename": "3.8/update.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1068404
+      },
+      "writtenOn": "2015-10-16T17:54:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure why one of these is going to lib/ while the other is going to lib64/. Is that intended?",
+      "revId": "818f33ab26970338a7f14a08f8cd166a2a357694",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
