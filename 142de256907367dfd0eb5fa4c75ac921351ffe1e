@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "d9bac2ed_f8f2f1c9",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1059614
+      },
+      "writtenOn": "2015-10-16T17:44:20Z",
+      "side": 1,
+      "message": "Ah, yes-- you are right. I will fix that up.",
+      "parentUuid": "1959ba73_03e9741a",
+      "revId": "142de256907367dfd0eb5fa4c75ac921351ffe1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9bdc694_f2161916",
         "filename": "3.8/update.sh",
         "patchSetId": 1
