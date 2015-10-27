@@ -16,6 +16,24 @@
       "revId": "818f33ab26970338a7f14a08f8cd166a2a357694",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6f27de4_b2dc7ef8",
+        "filename": "3.8/update.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1059614
+      },
+      "writtenOn": "2015-10-27T19:15:33Z",
+      "side": 1,
+      "message": "Yes, this is intended.",
+      "parentUuid": "79fd56bf_a5967e16",
+      "revId": "818f33ab26970338a7f14a08f8cd166a2a357694",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
