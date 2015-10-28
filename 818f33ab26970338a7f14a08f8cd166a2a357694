@@ -1,0 +1,7 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Verified+1: Than McIntosh <thanm@google.com>
+Submitted-by: Than McIntosh <thanm@google.com>
+Submitted-at: Wed, 28 Oct 2015 11:59:01 +0000
+Reviewed-on: https://android-review.googlesource.com/176910
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
