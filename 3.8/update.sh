@@ -15,6 +15,16 @@ for b in bin/*; do
   fi
 done
 
+# Copy license files.
+# LLVM is the LLVM license, whereas compiler-rt is MIT. We need to get both
+# MODULE_LICENSE_* files, and concatenate the two NOTICE files here.
+cp -a ${ANDROID_BUILD_TOP}/external/clang/MODULE_LICENSE_* .
+cp -a ${ANDROID_BUILD_TOP}/external/compiler-rt/MODULE_LICENSE_* .
+
+cp -a ${ANDROID_BUILD_TOP}/external/clang/NOTICE .
+echo >> NOTICE
+cat ${ANDROID_BUILD_TOP}/external/compiler-rt/NOTICE >> NOTICE
+
 # Copy static analyzer scripts.
 echo Copying static analyzer tools
 rm -rf tools/*
