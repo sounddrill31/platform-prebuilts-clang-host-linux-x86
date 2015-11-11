@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "369daed4_9687edf3",
+        "filename": "3.8/update.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-11-11T23:37:10Z",
+      "side": 1,
+      "message": "Why is compiler-rt at the bottom here (as opposed to in the middle on 3.6)? \u003c/OCD\u003e",
+      "revId": "c95c9f1804c968ee773edb6ba173db2a83a3082f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
