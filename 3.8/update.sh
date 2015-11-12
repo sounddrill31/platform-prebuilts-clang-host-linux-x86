@@ -10,7 +10,7 @@ for b in bin/*; do
     echo Skipping $file
   else
     echo Copying $file
-    cp -a `find ${ANDROID_HOST_OUT}/bin -name $file` $b
+    cp -a ${ANDROID_HOST_OUT}/bin/$file $b
     strip $b
   fi
 done
@@ -43,7 +43,7 @@ cp -ar ${ANDROID_BUILD_TOP}/external/clang/tools/scan-view tools
 
 # Copy libraries
 echo Copying libc++.so
-cp -a ${ANDROID_HOST_OUT}/lib/libc++.so lib/
+#cp -a ${ANDROID_HOST_OUT}/lib/libc++.so lib/
 cp -a ${ANDROID_HOST_OUT}/lib64/libc++.so lib64/
 
 # Copy LLVMgold.so and dependents
@@ -70,7 +70,7 @@ cp -a `find ${ANDROID_PRODUCT_OUT} -name arm_neon.h | head -n 1` lib/clang/*/inc
 function copy_profile_rt() {
   target=$1
   arch=$2
-  obj=${ANDROID_BUILD_TOP}/out/target/product/${target}/obj/STATIC_LIBRARIES
+  obj=${ANDROID_PRODUCT_OUT}/../${target}/obj/STATIC_LIBRARIES
   libdir=$(echo lib/clang/*)/lib/linux
   lib=${libdir}/libclang_rt.profile-${arch}-android.a
   cp -a ${obj}/libprofile_rt_intermediates/libprofile_rt.a ${lib}
@@ -79,7 +79,7 @@ function copy_profile_rt() {
 function copy_host_profile_rt() {
   arch=$1
   obj_suffix=$2
-  obj=${ANDROID_BUILD_TOP}/out/host/linux-x86/obj$obj_suffix/STATIC_LIBRARIES
+  obj=${ANDROID_HOST_OUT}/obj$obj_suffix/STATIC_LIBRARIES
   libdir=$(echo lib/clang/*)/lib/linux
   lib=${libdir}/libclang_rt.profile-${arch}.a
   cp -a ${obj}/libprofile_rt_intermediates/libprofile_rt.a ${lib}

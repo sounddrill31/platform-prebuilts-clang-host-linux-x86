@@ -28,5 +28,5 @@ for lib in $LIBS64; do
   cp -a ${OBJ64}/${lib}_intermediates/${lib}.a ${lib64}
 done
 
-cp -a ${ANDROID_BUILD_TOP}/out/target/product/generic/system/lib/libclang_rt.asan-arm-android.so ${LIBDEST}
-cp -a ${ANDROID_BUILD_TOP}/out/target/product/generic_arm64/system/lib64/libclang_rt.asan-arm64-android.so ${LIBDEST}
+cp -a ${ANDROID_PRODUCT_OUT}/../generic/system/lib/libclang_rt.asan-arm-android.so ${LIBDEST}
+cp -a ${ANDROID_PRODUCT_OUT}/../generic_arm64/system/lib64/libclang_rt.asan-arm64-android.so ${LIBDEST}
