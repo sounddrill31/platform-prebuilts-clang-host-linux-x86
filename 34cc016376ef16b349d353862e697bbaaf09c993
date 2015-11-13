@@ -16,6 +16,24 @@
       "revId": "34cc016376ef16b349d353862e697bbaaf09c993",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b25eb9e_5046d436",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-11-13T01:36:03Z",
+      "side": 1,
+      "message": "Oops, didn\u0027t actually mean to leave this commented out. I had done so before wangying told me how to also build the 32-bit flavors. I actually don\u0027t know if we need it or not, but I can\u0027t imagine why we would.",
+      "parentUuid": "76d4867d_1fae69a8",
+      "revId": "34cc016376ef16b349d353862e697bbaaf09c993",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
