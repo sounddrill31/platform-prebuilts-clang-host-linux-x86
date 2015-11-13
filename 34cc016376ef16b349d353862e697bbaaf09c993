@@ -34,6 +34,24 @@
       "revId": "34cc016376ef16b349d353862e697bbaaf09c993",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b2a4b7b_024edaba",
+        "filename": "3.8/update.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-11-13T01:41:33Z",
+      "side": 1,
+      "message": "Yeah, I think it is actually dead, but we\u0027ll see, I guess. :)",
+      "parentUuid": "5b25eb9e_5046d436",
+      "revId": "34cc016376ef16b349d353862e697bbaaf09c993",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
