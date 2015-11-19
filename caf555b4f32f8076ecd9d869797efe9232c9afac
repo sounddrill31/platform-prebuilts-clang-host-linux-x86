@@ -1,0 +1,7 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Verified+1: Dan Albert <danalbert@google.com>
+Submitted-by: Dan Albert <danalbert@google.com>
+Submitted-at: Thu, 19 Nov 2015 06:36:03 +0000
+Reviewed-on: https://android-review.googlesource.com/183157
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
