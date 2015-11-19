@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b6aafda_791d1af3",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-11-19T00:31:57Z",
+      "side": 1,
+      "message": "by",
+      "range": {
+        "startLine": 20,
+        "startChar": 29,
+        "endLine": 20,
+        "endChar": 31
+      },
+      "revId": "c38e38115085f2f736e7bf221445a3720e6a8f58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b3453db_e5ee2772",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-11-19T00:31:57Z",
+      "side": 1,
+      "message": "I have to change this to aarch64. I guess I messed this up the first time around.",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 38
+      },
+      "revId": "c38e38115085f2f736e7bf221445a3720e6a8f58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
