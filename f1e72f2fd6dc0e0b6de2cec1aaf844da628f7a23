@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71c9f878_c0874fcc",
+        "filename": "3.8/lib64/clang",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-02-04T05:35:04Z",
+      "side": 1,
+      "message": "This is just a symlink so that I can use the updated Android.mk here. Without this change, everything else will break (even without the build/ change). I would rather not have to revert everything in that case, so it is easier to add the new symlink.",
+      "revId": "f1e72f2fd6dc0e0b6de2cec1aaf844da628f7a23",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
