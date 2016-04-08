@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6e3038ce_f0a016ba",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2016-04-08T19:21:20Z",
+      "side": 1,
+      "message": "We\u0027ve got another copy in build/soong/cc/cc.go that we\u0027ve been updating too. So we need some way to bridge that value from the Go logic to this file. ${clangVersion} may work, but I really don\u0027t want to see Android.bp files digging into random variables defined by the Go logic.\n\nI\u0027ve got some code to export variables from Soong to Make, but that can only verify that those two are equal, we can\u0027t remove the definition from Make because it\u0027s used before we have a device configuration (so before we run Soong).",
+      "parentUuid": "0e733c96_54546c46",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eac54b5_96472b48",
         "filename": "Android.bp",
         "patchSetId": 1
