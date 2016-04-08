@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eac54b5_165b1b2b",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2016-04-08T00:50:26Z",
+      "side": 1,
+      "message": ":-/ I really don\u0027t like yet another place to set this",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eac54b5_96472b48",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2016-04-08T00:50:26Z",
+      "side": 1,
+      "message": "i686 version too?",
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
