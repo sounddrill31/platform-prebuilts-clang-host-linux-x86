@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "285ab8dd_bc2ea7d1",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-04-21T20:48:07Z",
+      "side": 1,
+      "message": "Ah, I don\u0027t think so. The 3.8 part of this can change as well. Perhaps we can figure something better out for a layout here in the future (once I move to using the upstream build process instead of Android.mk for constructing clang and the associated components).",
+      "parentUuid": "285ab8dd_3c1077a5",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eac54b5_96472b48",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -174,6 +198,24 @@
       "side": 1,
       "message": "There will be a mips version shortly as well, since they uploaded rules for compiler-rt to build asan as well.",
       "parentUuid": "4eac54b5_96472b48",
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "285ab8dd_fc941f31",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-04-21T20:48:07Z",
+      "side": 1,
+      "message": "FYI, I did submit the mips rules, although I haven\u0027t regenerated a new compiler yet.",
+      "parentUuid": "0e733c96_74516855",
       "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
