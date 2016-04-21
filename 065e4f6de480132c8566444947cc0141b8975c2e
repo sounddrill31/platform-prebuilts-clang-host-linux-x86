@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "285ab8dd_9ccdeb85",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-04-21T20:38:38Z",
+      "side": 1,
+      "message": "Do you mean to run something like \"-v\" and get output that you need to parse? We currently don\u0027t bake the build ID in, because it would alter the binary between builds, even where there is no code change (i.e. someone kicking off a new build with unrelated changes to bionic for instance). I\u0027m happy to add support for something useful here if you have suggestions/ideas.",
+      "parentUuid": "285ab8dd_199eed92",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eac54b5_96472b48",
         "filename": "Android.bp",
         "patchSetId": 1
