@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "285ab8dd_199eed92",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-04-21T20:33:27Z",
+      "side": 1,
+      "message": "The go logic already has to hard code the name of these modules to add them as a dependency, I could just compute the path to the library directly and not have Android.bp files for these at all.\n\nIs it possible to query the name of these from clang somehow, the way we do for libgcc?",
+      "parentUuid": "6e3038ce_f0a016ba",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eac54b5_96472b48",
         "filename": "Android.bp",
         "patchSetId": 1
