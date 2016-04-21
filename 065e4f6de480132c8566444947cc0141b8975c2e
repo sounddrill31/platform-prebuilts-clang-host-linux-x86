@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "285ab8dd_3c1077a5",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-04-21T20:44:06Z",
+      "side": 1,
+      "message": "I mean given the path to clang and the architecture we\u0027re building for, can I find the path to libclang_rt.asan*.so without just hardcoding prebuilts/clang/host/linux-x86/clang-$VERSION/lib64/clang/3.8/linux/libclang_rt.asan-$ARCH-android.so",
+      "parentUuid": "285ab8dd_9ccdeb85",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 38
+      },
+      "revId": "065e4f6de480132c8566444947cc0141b8975c2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eac54b5_96472b48",
         "filename": "Android.bp",
         "patchSetId": 1
