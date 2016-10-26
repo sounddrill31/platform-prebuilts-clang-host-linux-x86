@@ -1,0 +1,7 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Code-Review+1: Evgenii Stepanov <eugenis@google.com>
+Code-Review+2: Dan Albert <danalbert@google.com>
+Verified+1: Colin Cross <ccross@android.com>
+Reviewed-on: https://android-review.googlesource.com/295739
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
