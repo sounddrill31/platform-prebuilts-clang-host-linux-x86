@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8d175b37_080a6fd2",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-11-24T00:49:33Z",
+      "side": 1,
+      "message": "This should be LOCAL_MODULE_TARGET_ARCH :\u003d arm, and LOCAL_MULTILIB :\u003d 32 is unnecessary.",
+      "revId": "6fe0531bd4e072629103fe2f1b342bfb4896b9db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8d175b37_48a187db",
         "filename": "Android.mk",
         "patchSetId": 1
@@ -31,6 +48,24 @@
       "side": 1,
       "message": "Colin/DanW: I am not sure how this defaults, or if the other LOCAL_MULTILIB declarations are relevant even.",
       "parentUuid": "8d175b37_48a187db",
+      "revId": "6fe0531bd4e072629103fe2f1b342bfb4896b9db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d175b37_68fb2ba0",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-11-24T00:49:33Z",
+      "side": 1,
+      "message": "LOCAL_MULTILIB :\u003d 64 is unnecessary because of LOCAL_MODULE_TARGET_ARCH :\u003d arm64",
+      "parentUuid": "8d175b37_68fa0bc5",
       "revId": "6fe0531bd4e072629103fe2f1b342bfb4896b9db",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
