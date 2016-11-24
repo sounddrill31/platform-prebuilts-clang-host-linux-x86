@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d175b37_48a187db",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2016-11-24T00:28:04Z",
+      "side": 1,
+      "message": "Does it need LOCAL_MULTILIB :\u003d 64?",
+      "revId": "6fe0531bd4e072629103fe2f1b342bfb4896b9db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
