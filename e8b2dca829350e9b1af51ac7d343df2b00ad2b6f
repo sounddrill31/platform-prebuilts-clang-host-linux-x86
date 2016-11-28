@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d175b37_b6a2c149",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-11-28T19:05:22Z",
+      "side": 1,
+      "message": "These lines should probably be deleted at this point.",
+      "revId": "e8b2dca829350e9b1af51ac7d343df2b00ad2b6f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d175b37_76ac293c",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-11-28T19:05:22Z",
+      "side": 1,
+      "message": "Same deletion for this one (and potentially other LOCAL_MULTILIB cases here, since the target arch takes care of this automatically.",
+      "revId": "e8b2dca829350e9b1af51ac7d343df2b00ad2b6f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
