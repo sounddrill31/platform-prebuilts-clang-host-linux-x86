@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+1: Yoshisato Yanagisawa <yyanagisawa@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Thu, 02 Feb 2017 17:53:22 +0000
+Reviewed-on: https://android-review.googlesource.com/331433
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
