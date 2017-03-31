@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bc1ceb2_13a05a5a",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-03-31T07:54:14Z",
+      "side": 1,
+      "message": "I am not 100% convinced this is needed, but I don\u0027t think it hurts anything either. We really shouldn\u0027t \"sanitize\" a prebuilt. :)",
+      "revId": "b705d67f188995750344296e80d67776e0252cc2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
