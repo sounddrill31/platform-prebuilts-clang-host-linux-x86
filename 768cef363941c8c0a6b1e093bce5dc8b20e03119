@@ -1,0 +1,9 @@
+Code-Review+2: Yi Kong <yikong@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Verified+1: Dan Albert <danalbert@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 05 May 2017 09:25:59 +0000
+Reviewed-on: https://android-review.googlesource.com/390292
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
