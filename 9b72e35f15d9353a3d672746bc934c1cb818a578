@@ -1,0 +1,8 @@
+Verified+1: Dan Willemsen <dwillemsen@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Dan Willemsen <dwillemsen@google.com>
+Submitted-at: Sat, 27 May 2017 00:17:09 +0000
+Reviewed-on: https://android-review.googlesource.com/404899
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
