@@ -1,0 +1,8 @@
+Verified+1: Yi Kong <yikong@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Yi Kong <yikong@google.com>
+Submitted-at: Wed, 31 May 2017 20:14:45 +0000
+Reviewed-on: https://android-review.googlesource.com/406053
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
