@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "acbcefe5_2d325620",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-06-05T23:06:03Z",
+      "side": 1,
+      "message": "Missing the PRE",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "c96ec1aa0057c84928e45031a9e659033f964159",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a0009621_d7634e10",
+        "filename": "soong/libfuzzer.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-06-05T23:06:03Z",
+      "side": 1,
+      "message": "Switch to a local \"enabled\" variable and populate the regular props.",
+      "revId": "c96ec1aa0057c84928e45031a9e659033f964159",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
