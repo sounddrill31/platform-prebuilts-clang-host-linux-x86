@@ -18,8 +18,10 @@ package libfuzzer
 
 import (
 	"path"
+	"path/filepath"
 
 	"github.com/google/blueprint"
+	"github.com/google/blueprint/proptools"
 
 	"android/soong/android"
 	"android/soong/cc"
@@ -36,7 +38,26 @@ func init() {
 }
 
 func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
-	// Because of b/38393317, changing clang base dir is not allowed.
+	// Because of b/38393317, changing clang base dir is not allowed.  Mark
+	// libFuzzer as disabled if LLVM_PREBUILTS_BASE is used to specify a
+	// different base dir other than $ANDROID_BUILD_TOP/prebuilts/clang/host
+	// (i.e. $CWD/..).  libFuzzer would be unavailable only for the stage2
+	// of the aosp-llvm build, where it is not needed.
+	if prebuiltsBase := ctx.AConfig().Getenv("LLVM_PREBUILTS_BASE"); prebuiltsBase != "" {
+		prebuiltsBaseAbs, err1 := filepath.Abs(prebuiltsBase)
+		moduleBaseAbs, err2 := filepath.Abs("..")
+		if err1 == nil && err2 == nil && prebuiltsBaseAbs != moduleBaseAbs {
+			type props struct {
+				Enabled *bool
+			}
+
+	                p := &props{}
+			p.Enabled = proptools.BoolPtr(false)
+			ctx.AppendProperties(p)
+			return
+		}
+	}
+
 	clangDir := path.Join(
 		"./",
 		ctx.AConfig().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
