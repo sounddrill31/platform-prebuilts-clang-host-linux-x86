@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3bde6b8_8ed30f90",
+        "filename": "soong/libfuzzer.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-06-05T20:41:59Z",
+      "side": 1,
+      "message": "Can clangDIr be constructed here from LLVM_PREBUILTS_BASE and LLVM_PREBUILTS_VERSION?",
+      "revId": "d4ef2ead7138b216cec21e47adf5c0255d12e8aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
