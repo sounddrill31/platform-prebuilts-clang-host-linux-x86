@@ -24,3 +24,13 @@ libfuzzer_prebuilt_library_static {
 subdirs = [
     "soong",
 ]
+
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.asan",
+    vendor_available: true,
+}
+
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_standalone",
+    vendor_available: true,
+}
