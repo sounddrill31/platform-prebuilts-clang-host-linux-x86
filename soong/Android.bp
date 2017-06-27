@@ -16,7 +16,7 @@
 
 bootstrap_go_package {
     name: "soong-libfuzzer",
-    pkgPath: "android/soong/prebuilts/clang/host/linux-x86",
+    pkgPath: "android/soong/prebuilts/clang/host/linux-x86/libfuzzer",
     deps: [
         "blueprint",
         "soong-android",
@@ -25,6 +25,21 @@ bootstrap_go_package {
     ],
     srcs: [
         "libfuzzer.go",
+    ],
+    pluginFor: ["soong_build"],
+}
+
+bootstrap_go_package {
+    name: "soong-libclang_rt",
+    pkgPath: "android/soong/prebuilts/clang/host/linux-x86/libclang_rt",
+    deps: [
+        "blueprint",
+        "soong-android",
+        "soong-cc",
+        "soong-cc-config"
+    ],
+    srcs: [
+        "libclang_rt.go",
     ],
     pluginFor: ["soong_build"],
 }
