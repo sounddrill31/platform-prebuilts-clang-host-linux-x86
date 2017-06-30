@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0d1abef_9dfc4142",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2017-06-30T19:39:11Z",
+      "side": 1,
+      "message": "Can you run gofmt on this file? These should be tabs, not spaces. (The pre-upload hooks should have rejected this change...)",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 8
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63a174bf_1d028730",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2017-06-30T19:39:11Z",
+      "side": 1,
+      "message": "You\u0027ll need to rebase on top of https://android-review.googlesource.com/425139 when it\u0027s submitted.",
+      "range": {
+        "startLine": 137,
+        "startChar": 44,
+        "endLine": 137,
+        "endChar": 80
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
