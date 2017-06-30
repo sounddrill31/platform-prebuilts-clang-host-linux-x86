@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "aa2c5698_fad2d378",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-06-30T22:47:49Z",
+      "side": 1,
+      "message": "be\n\nAlso the formatting of this comment does seem weird.",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 3
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a0d1abef_9dfc4142",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 2
