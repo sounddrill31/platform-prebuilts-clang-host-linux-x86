@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b942e520_32461a7b",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-02T00:59:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa2c5698_fad2d378",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 3
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a0d1abef_9dfc4142",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "a5ea2f5b_57ddc0fa",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-02T00:59:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a0d1abef_9dfc4142",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 8
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "63a174bf_1d028730",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2017-06-30T19:39:11Z",
       "side": 1,
       "message": "You\u0027ll need to rebase on top of https://android-review.googlesource.com/425139 when it\u0027s submitted.",
+      "range": {
+        "startLine": 137,
+        "startChar": 44,
+        "endLine": 137,
+        "endChar": 80
+      },
+      "revId": "b79cbe0d44d1db0654714f0bdc3c9bdcfc1d800e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9049a23_19712da4",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-02T00:59:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63a174bf_1d028730",
       "range": {
         "startLine": 137,
         "startChar": 44,
