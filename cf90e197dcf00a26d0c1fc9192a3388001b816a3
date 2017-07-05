@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14e364e4_732df99d",
+        "filename": "Android.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-07-05T16:39:18Z",
+      "side": 0,
+      "message": "This patch is dropping support for asan-test completely, and I don\u0027t think that should be intentional here. Can you please add back the prebuilts for asan-test? Thanks.",
+      "revId": "cf90e197dcf00a26d0c1fc9192a3388001b816a3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
