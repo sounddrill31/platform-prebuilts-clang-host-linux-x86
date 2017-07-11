@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "938d1022_335d52df",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 9
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-11T04:20:28Z",
+      "side": 1,
+      "message": "These are added to make the generated Android-\u003ctarget\u003e.mk to be as close as possible to the original Android.mk.",
+      "range": {
+        "startLine": 137,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 30
+      },
+      "revId": "ce8eedf2b79de345b36a8e9489ad8274a53a1be3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
