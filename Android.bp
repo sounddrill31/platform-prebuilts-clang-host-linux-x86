@@ -14,6 +14,20 @@
 // limitations under the License.
 //
 
+llvm_prebuilt_library_shared {
+    name: "libLLVM_host",
+    sanitize: {
+        never: true,
+    },
+}
+
+llvm_prebuilt_library_shared {
+    name: "libclang_host",
+    sanitize: {
+        never: true,
+    },
+}
+
 libfuzzer_prebuilt_library_static {
     name: "libFuzzer",
     sanitize: {
