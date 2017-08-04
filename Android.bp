@@ -299,6 +299,114 @@ libclang_rt_prebuilt_library_static {
     },
 }
 
+// -----------------------------------------------------------------------------
+// Export shared libraries for host tools (libLLVM, libclang, libc++).  These
+// are exported only when the LLVM_BUILD_HOST_TOOLS environment variable is set.
+// -----------------------------------------------------------------------------
+
+// Export libLLVM shared library (libLLVM-X.Ysvn.so)
+llvm_host_prebuilt_library_shared {
+    name: "libLLVM",
+    enabled: false,
+    sanitize: {
+        never: true,
+    },
+    shared_libs: ["libc++_host"],
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        darwin_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+// Export libclang shared library (libclang.so.X.Y)
+llvm_host_prebuilt_library_shared {
+    name: "libclang",
+    enabled: false,
+    sanitize: {
+        never: true,
+    },
+    shared_libs: ["libc++_host"],
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+            // Also include the symlink with just the major version name (which
+            // is available only on Linux).
+            shared_libs: ["libclang_major"],
+        },
+        darwin_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+// Export libclang shared library with just the major version (libclang.so.X).
+// It is just a symlink but is needed to link against libclang.so.X.Y, whose
+// SONAME is set to libclang.so.X.
+llvm_host_prebuilt_library_shared {
+    name: "libclang_major",
+    enabled: false,
+    sanitize: {
+        never: true,
+    },
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+// Export libc++.so for the host LLVM tools (libc++.so.1.0).  The version is
+// hard-coded to 1.0.
+llvm_host_prebuilt_library_shared {
+    name: "libc++_host",
+    enabled: false,
+    sanitize: {
+        never: true,
+    },
+    shared_libs: ["libc++_major_host"],
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        darwin_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+// Export libc++.so.1 for host LLVM tools.  It is just a symlink but is needed
+// to link against libc++.so.1.0, whose SONAME is set to libc++.so.1
+llvm_host_prebuilt_library_shared {
+    name: "libc++_major_host",
+    enabled: false,
+    sanitize: {
+        never: true,
+    },
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+        darwin_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+phony {
+    name: "llvm-host-libs",
+    required: [
+        "libLLVM",
+        "libclang",
+        "libclang_major",
+        "libc++_host",
+        "libc++_major_host",
+    ]
+}
+
 subdirs = [
     "soong",
 ]
