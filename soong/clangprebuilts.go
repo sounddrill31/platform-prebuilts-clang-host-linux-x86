@@ -17,6 +17,7 @@
 package clangprebuilts
 
 import (
+	"fmt"
 	"path"
 	"strings"
 
@@ -27,12 +28,23 @@ import (
 	"android/soong/cc/config"
 )
 
+const libLLVMSoFormat = "libLLVM-%ssvn.so"
+const libclangSoFormat = "libclang.so.%s"
+const libcxxSoName = "libc++.so.1.0"
+const libcxxSoMajorName = "libc++.so.1"
+
+const libLLVMDylibName = "libLLVM.dylib"
+const libclangDylibName = "libclang.dylib"
+const libcxxDylibName = "libc++.1.0.dylib"
+const libcxxDylibMajorName = "libc++.1.0.dylib"
+
 // This module is used to generate libfuzzer, libomp static libraries and
 // libclang_rt.* shared libraries. When LLVM_PREBUILTS_VERSION and
 // LLVM_RELEASE_VERSION are set, the library will generated from the given
 // path.
-
 func init() {
+	android.RegisterModuleType("llvm_host_prebuilt_library_shared",
+		llvmHostPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("llvm_prebuilt_library_static",
 		llvmPrebuiltLibraryStaticFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
@@ -55,6 +67,93 @@ func getClangResourceDir(ctx android.LoadHookContext) string {
 	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
 		config.ClangDefaultShortVersion)
 	return path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
+}
+
+func trimVersionNumbers(ver string, retain int) string {
+	sep := "."
+	versions := strings.Split(ver, sep)
+	return strings.Join(versions[0:retain], sep)
+}
+
+func getHostLibrary(ctx android.LoadHookContext, hostOs string) string {
+	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
+		config.ClangDefaultShortVersion)
+
+	moduleName := ctx.ModuleName()
+	if hostOs == "darwin" {
+		switch moduleName {
+		case "prebuilt_libLLVM":
+			return libLLVMDylibName
+		case "prebuilt_libclang":
+			return libclangDylibName
+		case "prebuilt_libclang_major":
+			// This module should not be needed for Darwin.  Return
+			// empty string here to catch any unintended users.
+			return ""
+		case "prebuilt_libc++_host":
+			return libcxxDylibName
+		case "prebuilt_libc++_major_host":
+			return libcxxDylibMajorName
+		default:
+			ctx.ModuleErrorf("unsupported host LLVM module: " + moduleName)
+			return ""
+		}
+	} else {
+		switch moduleName {
+		case "prebuilt_libLLVM":
+			versionStr := trimVersionNumbers(releaseVersion, 2)
+			return fmt.Sprintf(libLLVMSoFormat, versionStr)
+		case "prebuilt_libclang":
+			versionStr := trimVersionNumbers(releaseVersion, 2)
+			return fmt.Sprintf(libclangSoFormat, versionStr)
+		case "prebuilt_libclang_major":
+			versionStr := trimVersionNumbers(releaseVersion, 1)
+			return fmt.Sprintf(libclangSoFormat, versionStr)
+		case "prebuilt_libc++_host":
+			return libcxxSoName
+		case "prebuilt_libc++_major_host":
+			return libcxxSoMajorName
+		default:
+			ctx.ModuleErrorf("unsupported host LLVM module: " + moduleName)
+			return ""
+		}
+	}
+}
+
+func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
+	clangDir := getClangPrebuiltDir(ctx)
+
+	headerDir := path.Join(clangDir, "include")
+	isHostToolsBuild := ctx.AConfig().IsEnvTrue("LLVM_BUILD_HOST_TOOLS")
+
+	darwinLib := path.Join(clangDir, "lib64", getHostLibrary(ctx, "darwin"))
+	linuxLib := path.Join(clangDir, "lib64", getHostLibrary(ctx, "linux"))
+
+	type props struct {
+		Enabled	*bool
+		Export_include_dirs []string
+		Target struct {
+			Linux_glibc_x86_64 struct {
+				Enabled             *bool
+				Srcs []string
+			}
+			Darwin_x86_64 struct {
+				Enabled             *bool
+				Srcs []string
+			}
+		}
+	}
+
+	p := &props{}
+	p.Enabled = proptools.BoolPtr(false)
+	p.Export_include_dirs = []string{headerDir}
+
+	p.Target.Linux_glibc_x86_64.Enabled = proptools.BoolPtr(isHostToolsBuild)
+	p.Target.Linux_glibc_x86_64.Srcs = []string{linuxLib}
+
+	p.Target.Darwin_x86_64.Enabled = proptools.BoolPtr(isHostToolsBuild)
+	p.Target.Darwin_x86_64.Srcs = []string{darwinLib}
+	ctx.AppendProperties(p)
 }
 
 type archProps struct {
@@ -168,6 +267,12 @@ func libClangRtLLndkLibrary(ctx android.LoadHookContext) {
 func llvmPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.DeviceSupported)
 	android.AddLoadHook(module, llvmPrebuiltLibraryStatic)
+	return module.Init()
+}
+
+func llvmHostPrebuiltLibrarySharedFactory() android.Module {
+	module, _ := cc.NewPrebuiltSharedLibrary(android.HostSupported)
+	android.AddLoadHook(module, llvmHostPrebuiltLibraryShared)
 	return module.Init()
 }
 
