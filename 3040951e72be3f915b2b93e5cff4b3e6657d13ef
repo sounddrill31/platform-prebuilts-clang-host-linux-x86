@@ -22,6 +22,30 @@
       "revId": "3040951e72be3f915b2b93e5cff4b3e6657d13ef",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82867506_30996117",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-08-25T22:22:43Z",
+      "side": 1,
+      "message": "Done.  Never knew about this visibility rule before :)",
+      "parentUuid": "b8e2b9e7_e8c1d1e3",
+      "range": {
+        "startLine": 56,
+        "startChar": 5,
+        "endLine": 56,
+        "endChar": 30
+      },
+      "revId": "3040951e72be3f915b2b93e5cff4b3e6657d13ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
