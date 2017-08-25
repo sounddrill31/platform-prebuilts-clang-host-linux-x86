@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8e2b9e7_e8c1d1e3",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-08-25T21:56:42Z",
+      "side": 1,
+      "message": "This doesn\u0027t need to be exported, make it llvmPrebuiltLibraryShared",
+      "range": {
+        "startLine": 56,
+        "startChar": 5,
+        "endLine": 56,
+        "endChar": 30
+      },
+      "revId": "3040951e72be3f915b2b93e5cff4b3e6657d13ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
