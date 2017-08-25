@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54757cfe_90bb6053",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-08-25T23:05:32Z",
+      "side": 1,
+      "message": "this one too",
+      "range": {
+        "startLine": 171,
+        "startChar": 5,
+        "endLine": 171,
+        "endChar": 37
+      },
+      "revId": "6e2b7fa72e3c975d0ed4140d6b81461550309456",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
