@@ -16,6 +16,24 @@
       "revId": "5885cfc98d28b411d54bab0c1a35c1dd0e91c8b5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f31d384_0533c3c1",
+        "filename": "clang-4347831/lib64/clang/5.0/bin/asan_device_setup",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-09-20T21:32:36Z",
+      "side": 1,
+      "message": "It\u0027s a bug in the cmake variables that we set. We actually produce these in a separate output build dir. I am trying to fix this up today.",
+      "parentUuid": "f6eed3bf_89602a49",
+      "revId": "5885cfc98d28b411d54bab0c1a35c1dd0e91c8b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
