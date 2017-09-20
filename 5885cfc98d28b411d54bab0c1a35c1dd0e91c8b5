@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6eed3bf_89602a49",
+        "filename": "clang-4347831/lib64/clang/5.0/bin/asan_device_setup",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2017-09-20T21:27:04Z",
+      "side": 1,
+      "message": "How did this get under lib64/clang/5.0 ?\nIt is supposed to be in the top-level bin directory, alongside clang binary.",
+      "revId": "5885cfc98d28b411d54bab0c1a35c1dd0e91c8b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
