@@ -1,0 +1,4 @@
+LIBCLANG_RT_ASAN {
+  global:
+    *;
+};
