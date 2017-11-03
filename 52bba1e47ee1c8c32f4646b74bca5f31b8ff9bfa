@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1664258d_eef637de",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2017-11-03T00:09:29Z",
+      "side": 1,
+      "message": "If the build system has to manually specify the locations for these anyway, can the platform ones be the ones installed to a non-standard directory rather than the NDK ones? Or does the platform still rely on -fopenmp being able to find the right library and this is just for dependency tracking?",
+      "revId": "52bba1e47ee1c8c32f4646b74bca5f31b8ff9bfa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
