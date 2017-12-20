@@ -16,6 +16,29 @@
       "revId": "e9309f4231aa3b87e8255fb3c9c878fafdd7eb64",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7633ece9_7ba4b65e",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-12-20T22:44:28Z",
+      "side": 1,
+      "message": "strings.TrimPrefix?",
+      "range": {
+        "startLine": 100,
+        "startChar": 9,
+        "endLine": 100,
+        "endChar": 62
+      },
+      "revId": "e9309f4231aa3b87e8255fb3c9c878fafdd7eb64",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
