@@ -39,6 +39,30 @@
       "revId": "e9309f4231aa3b87e8255fb3c9c878fafdd7eb64",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8aa41182_1faff142",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-12-20T22:58:10Z",
+      "side": 1,
+      "message": "Done.  https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/574012/1 does the same at a few other places.",
+      "parentUuid": "7633ece9_7ba4b65e",
+      "range": {
+        "startLine": 100,
+        "startChar": 9,
+        "endLine": 100,
+        "endChar": 62
+      },
+      "revId": "e9309f4231aa3b87e8255fb3c9c878fafdd7eb64",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
