@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92c454a3_00768d89",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-12-20T07:21:19Z",
+      "side": 1,
+      "message": "We no longer need to support LLVM_PREBUILTS_BASE now that aosp-llvm is turned down.  Filed b/70870498 to clean this up after the Clang update.",
+      "revId": "e9309f4231aa3b87e8255fb3c9c878fafdd7eb64",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
