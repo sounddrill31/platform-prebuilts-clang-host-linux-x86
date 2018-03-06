@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f46a800e_61898353",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2018-03-06T19:06:12Z",
+      "side": 1,
+      "message": "Define a filegroup in the darwin project, and define the module from the linux project, including the filegroup.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 70
+      },
+      "revId": "5b0c3e403c5b3278cf85df0b5f81deb45a0e255d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
