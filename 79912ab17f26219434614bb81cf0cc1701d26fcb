@@ -1,0 +1,7 @@
+Code-Review+2: Yi Kong <yikong@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Wed, 07 Mar 2018 19:51:37 +0000
+Reviewed-on: https://android-review.googlesource.com/635499
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
