@@ -22,6 +22,30 @@
       "revId": "5b0c3e403c5b3278cf85df0b5f81deb45a0e255d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "692a059a_69c360c1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-03-29T19:37:49Z",
+      "side": 1,
+      "message": "See the latest patchset and http://aosp/625330 that uses filegroup.  However, I\u0027m doing something wrong here.  When run on a mac, Soong is looking for a \u0027:libc++_darwin\u0027 file instead of enumerating the file group:\nerror: prebuilts/clang/host/linux-x86/Android.bp:413:1: module \"libc++_host\" variant \"darwin_x86_64_shared\": module source path prebuilts/clang/host/linux-x86/:libc++_darwin does not exist",
+      "parentUuid": "f46a800e_61898353",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 70
+      },
+      "revId": "5b0c3e403c5b3278cf85df0b5f81deb45a0e255d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
