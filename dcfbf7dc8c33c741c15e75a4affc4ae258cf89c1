@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24519ca7_c680a647",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 12
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-03-30T22:48:40Z",
+      "side": 1,
+      "message": "Can you check if this is correct?  This function passes but the Srcs property to the filegroup doesn\u0027t get extended and there are no sources.  If I change the rest of this function to:\n\n        type props struct {\n                Srcs []string\n        }\n\n        p :\u003d \u0026props{}\n        p.Srcs \u003d []string{lib}\n        ctx.AppendProperties(p)\n\nI get:\nprebuilts/clang/host/darwin-x86/Android.bp:27:1: module \"libclang_darwin\": srcs: failed to find property to extend\n\nInterestingly, if I make a typo (fileGroupProperties -\u003e fileGroupProp), I don\u0027t see the error above.",
+      "revId": "dcfbf7dc8c33c741c15e75a4affc4ae258cf89c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
