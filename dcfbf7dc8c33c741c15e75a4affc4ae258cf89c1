@@ -16,6 +16,24 @@
       "revId": "dcfbf7dc8c33c741c15e75a4affc4ae258cf89c1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71d4bbff_638c88ea",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 12
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2018-04-02T23:53:24Z",
+      "side": 1,
+      "message": "Yeah, fileGroupProperties shouldn\u0027t be there. I wonder if we can\u0027t append properties if nothing in the original property structure was set (we lazily instantiate property structures).\n\nIf you set something like:\n\n  srcs: [\"remove_me\"],\n  exclude_srcs: [\"remove_me\"],\n\nDoes the behavior change?",
+      "parentUuid": "24519ca7_c680a647",
+      "revId": "dcfbf7dc8c33c741c15e75a4affc4ae258cf89c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
