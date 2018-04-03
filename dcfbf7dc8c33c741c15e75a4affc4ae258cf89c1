@@ -34,6 +34,24 @@
       "revId": "dcfbf7dc8c33c741c15e75a4affc4ae258cf89c1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "accec831_7c02b315",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 12
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-04-03T00:11:20Z",
+      "side": 1,
+      "message": "No, still the same error.  Can you double check if llvmDarwinFileGroupFactory is correct?  It is slightly different from the factory methods for the other module types.",
+      "parentUuid": "71d4bbff_638c88ea",
+      "revId": "dcfbf7dc8c33c741c15e75a4affc4ae258cf89c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
