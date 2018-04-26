@@ -1,0 +1,10 @@
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Greg Hackmann <ghackmann@google.com>
+Autosubmit+1: Greg Hackmann <ghackmann@google.com>
+Submitted-by: android-build-prod (mdb) <android-build-team-robot@google.com>
+Submitted-at: Thu, 26 Apr 2018 15:26:47 +0000
+Reviewed-on: https://android-review.googlesource.com/672559
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
