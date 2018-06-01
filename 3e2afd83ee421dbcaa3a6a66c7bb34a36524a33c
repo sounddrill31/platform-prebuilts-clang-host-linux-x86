@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b8f176d_d49ad748",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-06-01T16:24:31Z",
+      "side": 1,
+      "message": "Add build number.",
+      "revId": "3e2afd83ee421dbcaa3a6a66c7bb34a36524a33c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
