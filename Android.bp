@@ -300,6 +300,11 @@ llvm_host_prebuilt_library_shared {
     },
     compile_multilib: "64",
     shared_libs: ["libc++_host"],
+    target: {
+        windows: {
+            enabled: false
+        }
+    }
 }
 
 // Export libclang shared library
@@ -310,6 +315,11 @@ llvm_host_prebuilt_library_shared {
     },
     compile_multilib: "64",
     shared_libs: ["libc++_host"],
+    target: {
+        windows: {
+            enabled: false
+        }
+    }
 }
 
 // Export libc++.so for the host LLVM tools
@@ -319,6 +329,11 @@ llvm_host_prebuilt_library_shared {
         never: true,
     },
     compile_multilib: "64",
+    target: {
+        windows: {
+            enabled: false
+        }
+    }
 }
 
 subdirs = [
