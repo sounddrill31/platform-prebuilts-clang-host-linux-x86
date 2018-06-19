@@ -1,0 +1,8 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Kostya Kortchinsky <kostyak@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-by: Vishwath Mohan <vishwath@google.com>
+Submitted-at: Tue, 19 Jun 2018 19:09:54 +0000
+Reviewed-on: https://android-review.googlesource.com/704410
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
