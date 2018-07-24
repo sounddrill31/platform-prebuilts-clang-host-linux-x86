@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "824a09ce_f22a8289",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-07-24T05:20:27Z",
+      "side": 1,
+      "message": "It\u0027s not harmful, but may lead to nasty surprises if the ABI for libc++ from external/libcxx is different from libc++_host (from the prebuilts).",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 18,
+        "endChar": 48
+      },
+      "revId": "6488b7951f3b7f5707774f125165a7c14005c665",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d530b7a5_b523a689",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -13,6 +36,30 @@
       "writtenOn": "2018-07-24T05:02:30Z",
       "side": 1,
       "message": "Not sure if I should support both one and two digits?",
+      "range": {
+        "startLine": 80,
+        "startChar": 51,
+        "endLine": 80,
+        "endChar": 52
+      },
+      "revId": "6488b7951f3b7f5707774f125165a7c14005c665",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf87d6eb_56d5782d",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-07-24T05:20:27Z",
+      "side": 1,
+      "message": "No, there\u0027s no need to support both one and two digits.",
+      "parentUuid": "d530b7a5_b523a689",
       "range": {
         "startLine": 80,
         "startChar": 51,
