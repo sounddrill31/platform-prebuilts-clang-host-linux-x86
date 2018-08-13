@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ad239a0_00bf7dc7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-08-13T23:46:56Z",
+      "side": 1,
+      "message": "Can you mention that they are added only for AArch64?",
+      "revId": "90e07c6e4a27a1b828e6e560fdd80b32903546e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
