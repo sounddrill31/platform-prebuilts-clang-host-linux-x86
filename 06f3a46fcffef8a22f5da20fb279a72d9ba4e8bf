@@ -1,0 +1,9 @@
+Code-Review+2: Colin Cross <ccross@android.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Logan Chien <loganchien@google.com>
+Submitted-by: Logan Chien <loganchien@google.com>
+Submitted-at: Fri, 17 Aug 2018 02:07:59 +0000
+Reviewed-on: https://android-review.googlesource.com/725005
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
