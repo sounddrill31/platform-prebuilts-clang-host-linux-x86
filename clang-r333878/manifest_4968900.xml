@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+  <remote fetch=".." name="aosp" review="https://android-review.googlesource.com/" />
+  <default remote="aosp" revision="master" sync-j="4" />
+  <!-- Core LLVM toolchain components -->
+  <project name="platform/bionic" path="bionic" revision="8f2298e73f4d930b58a8466fd7264e9a88c96d99" upstream="master" />
+  <project name="toolchain/binutils" path="toolchain/binutils" revision="44492f8e438f8ce42a254699ba8496eb76075e00" upstream="master" />
+  <project name="toolchain/llvm" path="toolchain/llvm" revision="6f1ce4dcac66ad619d7c8e376c8e2d53df8f50b3" upstream="master" />
+  <project name="toolchain/llvm_android" path="toolchain/llvm_android" revision="6d3ae6c73e0c02c8d911b95b93b2d51cec9b29e8" upstream="master" />
+  <project name="toolchain/clang" path="toolchain/clang" revision="6789f49af566063eced367d5754254801689c9a5" upstream="master" />
+  <project name="toolchain/lld" path="toolchain/lld" revision="c651cff36b187b318c3df503fbcc97a3534f37eb" upstream="master" />
+  <project name="toolchain/compiler-rt" path="toolchain/compiler-rt" revision="8921fc39e1e548084837db2867ae5e401170acdc" upstream="master" />
+  <project name="toolchain/libcxx" path="toolchain/libcxx" revision="4197fab8680959cd239368c0e833a596b0a2bbe0" upstream="master" />
+  <project name="toolchain/libcxxabi" path="toolchain/libcxxabi" revision="3ec3c6396b642d537717f981ba3615286711951f" upstream="master" />
+  <project name="toolchain/openmp_llvm" path="toolchain/openmp_llvm" revision="4f8ebd5c41dea1b958727e15fb20d480f3711f77" upstream="master" />
+  <project name="toolchain/clang-tools-extra" path="toolchain/clang-tools-extra" revision="71e63999fdd1d17bb31c18efc15a14f637ea8d51" upstream="master" />
+  <!-- Binutils/gcc toolchains -->
+  <project groups="pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" revision="5239d733a5b45781cf0078f70921e941cc7edf8d" upstream="master" />
+  <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" revision="ed1ffc5e65091dfaf792fe150296aebb9b32c090" upstream="master" />
+  <project groups="pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/headers" path="prebuilts/gcc/darwin-x86/host/headers" revision="4ac4f7cc41cf3c9e36fc3d6cf37fd1cfa9587a68" upstream="master" />
+  <project groups="pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" revision="ec5aa66aaa4964c27564d0ec84dc1f18a2d72b7e" upstream="master" />
+  <project groups="pdk,darwin,mips" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" revision="d942564c9331f07026a8f78502d8571206eb7be4" upstream="master" />
+  <project groups="pdk,darwin,x86" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" revision="f80183acf73b6d724216d8ca5d0ced8bced3ab75" upstream="master" />
+  <project groups="pdk,linux,arm" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="77a9b08d6a44208afb100c9d210c712319f9d4b7" upstream="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="91cb0e87deb2188c04aac97661ff93107a0843ec" upstream="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" revision="2ccb38af8c940f1feef62ff5986f4bbc5d899e66" upstream="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="24285de70c617d2bd051e070598d8d4e2efb221a" upstream="master" />
+  <project groups="pdk,linux,mips" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" revision="388fdc4995d374d76a0c4b292afabac91638e134" upstream="master" />
+  <project groups="pdk,linux,x86" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="f809d4e0f1e0ab5cdc9668fce809579cfabee516" upstream="master" />
+  <!-- CMake prebuilts -->
+  <project name="platform/prebuilts/cmake/darwin-x86" path="prebuilts/cmake/darwin-x86" revision="f3bfe547014d2d751b7547ad7847a51b0ea34dc8" upstream="master" />
+  <project name="platform/prebuilts/cmake/linux-x86" path="prebuilts/cmake/linux-x86" revision="da4b9cb08341185e002c8a8c5df73533cdb93b41" upstream="master" />
+  <!-- Prebuilts (for ease of updating) -->
+  <project name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="cea1308de6d32ef9453baaf280a35d32027506e1" upstream="master" />
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="ddabe417a4872babf26b26f3d3c45e2a4373009d" upstream="master" />
+  <project name="platform/prebuilts/clang/host/windows-x86" path="prebuilts/clang/host/windows-x86" revision="c6108907886d7bb14aca2c536f0bb20dfacc6336" upstream="master" />
+  <project name="platform/prebuilts/clang/host/windows-x86_32" path="prebuilts/clang/host/windows-x86_32" revision="3c53068ad599c2b43da5033a6ce235d8c77ce90f" upstream="master" />
+  <!-- NDK headers/libraries -->
+  <project name="toolchain/prebuilts/ndk/r16" path="toolchain/prebuilts/ndk/r16" revision="47a7a80b45aab2306ca73203a2df6ea76771393c" upstream="master" />
+</manifest>
