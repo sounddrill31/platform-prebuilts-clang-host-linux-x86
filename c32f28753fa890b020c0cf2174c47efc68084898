@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8690c14d_51b926d4",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-09-25T19:27:54Z",
+      "side": 1,
+      "message": "Can you delete this export?  We don\u0027t want anyone depending on this without our knowledge.",
+      "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09985aa1_aed3cddc",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-09-25T19:27:54Z",
+      "side": 1,
+      "message": "libclang.so.%ssvn in light of https://android-review.googlesource.com/c/toolchain/llvm_android/+/767681",
+      "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "109eb5e0_f790d82e",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-09-25T19:27:54Z",
+      "side": 1,
+      "message": "libclang_cxx.so.%ssvn",
+      "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
