@@ -425,6 +425,16 @@ llvm_host_prebuilt_library_shared {
     shared_libs: ["libc++_host"],
 }
 
+// Export libclang_cxx shared library
+llvm_host_prebuilt_library_shared {
+    name: "libclang_cxx_host",
+    sanitize: {
+        never: true,
+    },
+    compile_multilib: "64",
+    shared_libs: ["libc++_host"],
+}
+
 // Export libc++.so for the host LLVM tools
 llvm_host_prebuilt_library_shared {
     name: "libc++_host",
