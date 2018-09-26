@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d8c802b7_1819a18a",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2018-09-26T03:08:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8690c14d_51b926d4",
+      "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "09985aa1_aed3cddc",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -51,6 +69,24 @@
       "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0690da34_52743432",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2018-09-26T03:08:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "96e1a6a9_75f98cc1",
+      "revId": "c32f28753fa890b020c0cf2174c47efc68084898",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
