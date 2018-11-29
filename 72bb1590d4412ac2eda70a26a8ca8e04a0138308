@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7be597b_b3c07a47",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2018-11-29T22:42:50Z",
+      "side": 1,
+      "message": "nit: Our convention has been to put the name property at the top of the list",
+      "range": {
+        "startLine": 570,
+        "startChar": 0,
+        "endLine": 570,
+        "endChar": 44
+      },
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5050291_f2354d74",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2018-11-29T22:42:50Z",
+      "side": 1,
+      "message": "We\u0027ve been inlining this into the function so as to not have naming collisions",
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1884dee9_6364ee85",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2018-11-29T22:42:50Z",
+      "side": 1,
+      "message": "Can you use genrule.GenRuleFactory()? It\u0027s not using arch-specific modules, but that should be fine for this case.",
+      "range": {
+        "startLine": 339,
+        "startChar": 0,
+        "endLine": 340,
+        "endChar": 85
+      },
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
