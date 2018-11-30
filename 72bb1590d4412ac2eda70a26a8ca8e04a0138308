@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "601a7bdb_632a3422",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2018-11-30T02:02:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a7be597b_b3c07a47",
+      "range": {
+        "startLine": 570,
+        "startChar": 0,
+        "endLine": 570,
+        "endChar": 44
+      },
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a5050291_f2354d74",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 2
@@ -39,6 +63,24 @@
       "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb0b31cc_dc3b37f2",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2018-11-30T02:02:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5050291_f2354d74",
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -62,6 +104,30 @@
       "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "84f240c0_cd44cfc3",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2018-11-30T02:02:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1884dee9_6364ee85",
+      "range": {
+        "startLine": 339,
+        "startChar": 0,
+        "endLine": 340,
+        "endChar": 85
+      },
+      "revId": "72bb1590d4412ac2eda70a26a8ca8e04a0138308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
