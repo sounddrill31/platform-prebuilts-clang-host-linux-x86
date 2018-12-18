@@ -46,6 +46,30 @@
       "revId": "c23f2f475a6952f4218aa1915019b9105b3f5935",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3fd4b8f8_673600ca",
+        "filename": "GCC_4_9_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2018-12-18T19:38:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4483af6_106618fb",
+      "range": {
+        "startLine": 3,
+        "startChar": 21,
+        "endLine": 3,
+        "endChar": 23
+      },
+      "revId": "c23f2f475a6952f4218aa1915019b9105b3f5935",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
