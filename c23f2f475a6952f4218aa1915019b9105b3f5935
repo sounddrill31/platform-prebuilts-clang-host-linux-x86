@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "289c8cd2_756c21da",
+        "filename": "GCC_4_9_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-12-18T19:34:15Z",
+      "side": 1,
+      "message": "21?",
+      "range": {
+        "startLine": 3,
+        "startChar": 21,
+        "endLine": 3,
+        "endChar": 23
+      },
+      "revId": "c23f2f475a6952f4218aa1915019b9105b3f5935",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
