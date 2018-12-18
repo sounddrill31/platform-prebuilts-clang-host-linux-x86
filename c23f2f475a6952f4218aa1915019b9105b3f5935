@@ -22,6 +22,30 @@
       "revId": "c23f2f475a6952f4218aa1915019b9105b3f5935",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4483af6_106618fb",
+        "filename": "GCC_4_9_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-12-18T19:35:26Z",
+      "side": 1,
+      "message": "Aah, I think you meant Jan 2020.  Can you spell out the month so it\u0027s not confusing?  (I misunderstood it as 2020-2021).",
+      "parentUuid": "289c8cd2_756c21da",
+      "range": {
+        "startLine": 3,
+        "startChar": 21,
+        "endLine": 3,
+        "endChar": 23
+      },
+      "revId": "c23f2f475a6952f4218aa1915019b9105b3f5935",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
