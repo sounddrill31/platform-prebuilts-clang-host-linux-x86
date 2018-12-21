@@ -144,6 +144,52 @@ libclang_rt_prebuilt_library_shared {
     },
 }
 
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan_static-arm-android",
+    enabled: false,
+    arch: {
+        arm: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan_static-aarch64-android",
+    enabled: false,
+    arch: {
+        arm64: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan_static-i686-android",
+    enabled: false,
+    arch: {
+        x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan_static-x86_64-android",
+    host_supported: true,
+    enabled: false,
+    arch: {
+        x86_64: {
+            enabled: true,
+        },
+    },
+    target: {
+        linux_bionic: {
+            enabled: true,
+        },
+    },
+}
+
 libclang_rt_llndk_library {
     name: "libclang_rt.asan-arm-android",
     enabled: false,
