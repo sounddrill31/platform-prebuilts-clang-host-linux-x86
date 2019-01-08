@@ -201,6 +201,9 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 		Pack_relocations *bool
 		Stl              *string
 		Sdk_version      *string
+		Vndk             struct {
+			Must_use_vendor_variant *bool
+		}
 	}
 
 	p := &props{}
@@ -218,6 +221,7 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	// and verify that the lib is using only the APIs in the specified
 	// version
 	p.Sdk_version = proptools.StringPtr("14")
+	p.Vndk.Must_use_vendor_variant = proptools.BoolPtr(true)
 	ctx.AppendProperties(p)
 }
 
