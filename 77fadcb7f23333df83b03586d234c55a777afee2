@@ -16,6 +16,24 @@
       "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b51a80c2_e33159d4",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-01-18T16:49:43Z",
+      "side": 1,
+      "message": "We actually build compiler-rt against the platform SDK version (well, actually 26, since we\u0027re using an older NDK).  I guess only the ARM libraries end up with dependencies bionic symbols introduced in N.  loganchien@: Can you figure out what these symbols are?\n\nIt\u0027s also interesting why x86_32 libraries don\u0027t end up with such a dependency.  My guess is compiler-rt\u0027s CMake selectively uses these symbols/functions for ARM.",
+      "parentUuid": "b3c8b5d7_70625a5b",
+      "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
