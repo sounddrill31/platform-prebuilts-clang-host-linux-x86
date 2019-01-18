@@ -34,6 +34,24 @@
       "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7bbd2235_c7524c58",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2019-01-18T23:11:18Z",
+      "side": 1,
+      "message": "GLOBAL  __aeabi_memclr@LIBC_N\nGLOBAL  __aeabi_memcpy@LIBC_N\nWEAK    __gnu_Unwind_Find_exidx@LIBC_N",
+      "parentUuid": "b51a80c2_e33159d4",
+      "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
