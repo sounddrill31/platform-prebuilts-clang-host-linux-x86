@@ -218,10 +218,7 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	disable := false
 	p.Pack_relocations = &disable
 	p.Stl = proptools.StringPtr("none")
-	// TODO(b/121358700): mark correct version number in Android.bp
-	// and verify that the lib is using only the APIs in the specified
-	// version
-	p.Sdk_version = proptools.StringPtr("14")
+	p.Sdk_version = proptools.StringPtr("24")
 	ctx.AppendProperties(p)
 }
 
