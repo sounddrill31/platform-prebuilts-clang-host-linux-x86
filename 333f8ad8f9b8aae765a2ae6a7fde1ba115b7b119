@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e6e3508_6e8903c8",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-01-18T09:53:57Z",
+      "side": 1,
+      "message": "I believe this is ok, but perhaps Yi can confirm. We still depend on libgcc for unwinding, but I am pretty sure that it isn\u0027t needed as a consequence of this particular prebuilt. libgcc should be used by other libraries that would also be linking against our libclang_rt.builtins* instead.",
+      "revId": "333f8ad8f9b8aae765a2ae6a7fde1ba115b7b119",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
