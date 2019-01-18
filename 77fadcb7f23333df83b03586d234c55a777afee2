@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3c8b5d7_70625a5b",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-01-18T09:58:33Z",
+      "side": 1,
+      "message": "We aren\u0027t built against 24, though. It depends on the architecture, and 14 is actually used for arm32, x86-32, and x86-64. Only arm64 uses API 21.",
+      "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
