@@ -70,6 +70,24 @@
       "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1537b9f0_0a785f6e",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1014807
+      },
+      "writtenOn": "2019-01-29T07:48:27Z",
+      "side": 1,
+      "message": "Revised in PS#3",
+      "parentUuid": "1d2abcac_987762bd",
+      "revId": "77fadcb7f23333df83b03586d234c55a777afee2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
