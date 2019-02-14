@@ -16,6 +16,24 @@
       "revId": "57025375a4c31adca789c60bd90feace7d6e0569",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2ffb2a1_43115a08",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1272474
+      },
+      "writtenOn": "2019-02-14T23:42:25Z",
+      "side": 1,
+      "message": "From the Scudo cmake (pretty much standard to all sanitizers):\n    11: append_list_if(COMPILER_RT_HAS_LIBDL dl SCUDO_MINIMAL_DYNAMIC_LIBS)\n    12: append_list_if(COMPILER_RT_HAS_LIBRT rt SCUDO_MINIMAL_DYNAMIC_LIBS)\n    13: append_list_if(COMPILER_RT_HAS_LIBPTHREAD pthread SCUDO_MINIMAL_DYNAMIC_LIBS)\n    14: append_list_if(COMPILER_RT_HAS_LIBLOG log SCUDO_MINIMAL_DYNAMIC_LIBS)\nIIRC some of the standalone compiler-rt tests fail without.\n\nI tried at some point to get rid of liblog by changing WriteOneLineToSyslog to use async_safe_write_log, but there is still a fallback to __android_log_write in there.\nThere is also some dlopen code in sanitizer_common.\n\nThose end up not being used when using --gc-sections, but things fail to link without.\n\nI haven\u0027t revisited that in a while, is that an issue?",
+      "parentUuid": "dd0f8268_3c5a847d",
+      "revId": "57025375a4c31adca789c60bd90feace7d6e0569",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
