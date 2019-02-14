@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd0f8268_3c5a847d",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-02-14T23:10:29Z",
+      "side": 1,
+      "message": "Is this actually intended? Does this library depend on libc/libdl/liblog?",
+      "revId": "57025375a4c31adca789c60bd90feace7d6e0569",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
