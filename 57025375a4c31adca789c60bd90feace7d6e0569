@@ -34,6 +34,24 @@
       "revId": "57025375a4c31adca789c60bd90feace7d6e0569",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b20dff3_e33d31de",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-02-15T18:14:43Z",
+      "side": 1,
+      "message": "I suppose that I was mostly concerned about the libc dependence, because it seems odd to have a compiler-rt library depending on something like that. These aren\u0027t the usual kinds of runtime libraries, though, so I guess it is fine for now.",
+      "parentUuid": "b2ffb2a1_43115a08",
+      "revId": "57025375a4c31adca789c60bd90feace7d6e0569",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
