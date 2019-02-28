@@ -459,6 +459,27 @@ libclang_rt_prebuilt_library_shared {
     check_elf_files: false,  // Bypass circular dependency between libc++
 }
 
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.scudo-arm-android.static",
+    sdk_version: "24",
+    enabled: false,
+    vendor_available: true,
+    sanitize: {
+        never: true,
+    },
+    vndk: {
+        enabled: true,
+    },
+    arch: {
+        arm: {
+            enabled: true,
+        },
+    },
+    check_elf_files: false,  // Bypass circular dependency between libc++
+    stl: "none",
+}
+
+
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo-aarch64-android",
     sdk_version: "minimum",
@@ -473,6 +494,23 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.scudo-aarch64-android.static",
+    sdk_version: "minimum",
+    enabled: false,
+    vendor_available: true,
+    sanitize: {
+        never: true,
+    },
+    arch: {
+        arm64: {
+            enabled: true,
+        },
+    },
+    check_elf_files: false,  // Bypass circular dependency between libc++
+    stl: "none",
 }
 
 libclang_rt_prebuilt_library_shared {
