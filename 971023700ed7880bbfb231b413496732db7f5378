@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bdf51f7e_a46d0537",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-01T20:40:36Z",
+      "side": 1,
+      "message": "This seems like a hack because there is no support for prebuilts that are both static and shared. Talking to Pirama, we think this is still the most expedient solution, but I would like Colin to be aware of this use. If we don\u0027t think this is a permanent thing, then maybe it isn\u0027t worth implementing full support in Soong, but if we think this will happen again, a tracking bug + TODO might be good here.",
+      "revId": "971023700ed7880bbfb231b413496732db7f5378",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
