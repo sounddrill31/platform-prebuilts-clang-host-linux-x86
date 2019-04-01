@@ -16,6 +16,24 @@
       "revId": "971023700ed7880bbfb231b413496732db7f5378",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56d3e13a_201254ef",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2019-04-01T21:05:04Z",
+      "side": 1,
+      "message": "I don\u0027t expect to need this for too long. I\u0027ve never seen a case where this was needed, which is while I did this patch rather than a full-featured implementation.",
+      "parentUuid": "bdf51f7e_a46d0537",
+      "revId": "971023700ed7880bbfb231b413496732db7f5378",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
