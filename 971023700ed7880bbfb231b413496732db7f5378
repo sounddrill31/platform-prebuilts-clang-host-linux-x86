@@ -1,0 +1,7 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Christopher Ferris <cferris@google.com>
+Submitted-at: Tue, 02 Apr 2019 01:37:06 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/930615
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
