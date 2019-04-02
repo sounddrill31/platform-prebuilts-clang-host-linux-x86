@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bd0f071_9cc27f39",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-02T20:41:39Z",
+      "side": 1,
+      "message": "Probably can be removed.",
+      "range": {
+        "startLine": 54,
+        "startChar": 9,
+        "endLine": 54,
+        "endChar": 16
+      },
+      "revId": "ac6e280bc145fc2674074dae93a0f4a6d7aaec73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ee0ab6b_e9c3b9db",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-02T20:41:39Z",
+      "side": 1,
+      "message": "Probably can be removed.",
+      "range": {
+        "startLine": 56,
+        "startChar": 9,
+        "endLine": 56,
+        "endChar": 17
+      },
+      "revId": "ac6e280bc145fc2674074dae93a0f4a6d7aaec73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "41443a76_d12b3e2a",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-02T20:41:39Z",
+      "side": 1,
+      "message": "Probably can be removed.",
+      "range": {
+        "startLine": 57,
+        "startChar": 9,
+        "endLine": 57,
+        "endChar": 17
+      },
+      "revId": "ac6e280bc145fc2674074dae93a0f4a6d7aaec73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a97320c_10406832",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-02T20:41:39Z",
+      "side": 1,
+      "message": "Probably can be removed.",
+      "range": {
+        "startLine": 58,
+        "startChar": 9,
+        "endLine": 58,
+        "endChar": 17
+      },
+      "revId": "ac6e280bc145fc2674074dae93a0f4a6d7aaec73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6808a9ec_4cb12ff4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-04-02T20:41:39Z",
+      "side": 1,
+      "message": "Probably can be removed.",
+      "range": {
+        "startLine": 60,
+        "startChar": 9,
+        "endLine": 60,
+        "endChar": 17
+      },
+      "revId": "ac6e280bc145fc2674074dae93a0f4a6d7aaec73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
