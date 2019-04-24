@@ -72,6 +72,11 @@ func getClangResourceDir(ctx android.LoadHookContext) string {
 	return path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
 }
 
+func getSymbolFilePath(ctx android.LoadHookContext) string {
+	libDir := getClangResourceDir(ctx)
+	return path.Join(libDir, strings.TrimSuffix(ctx.ModuleName(), ".llndk")+".map.txt")
+}
+
 func trimVersionNumbers(ver string, retain int) string {
 	sep := "."
 	versions := strings.Split(ver, sep)
@@ -202,6 +207,10 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 		}
 		Pack_relocations *bool
 		Stl              *string
+		Stubs            struct {
+			Symbol_file *string
+			Versions    []string
+		}
 	}
 
 	p := &props{}
@@ -217,6 +226,12 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	disable := false
 	p.Pack_relocations = &disable
 	p.Stl = proptools.StringPtr("none")
+
+	if name == "libclang_rt.asan-arm-android" || name == "libclang_rt.asan-aarch64-android" || name == "libclang_rt.asan-i686-android" || name == "libclang_rt.asan-x86_64-android" || name == "libclang_rt.hwasan-aarch64-android" {
+		p.Stubs.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
+		p.Stubs.Versions = []string{"10000"}
+	}
+
 	ctx.AppendProperties(p)
 }
 
@@ -224,11 +239,11 @@ func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	libDir := getClangResourceDir(ctx)
 
 	type props struct {
-		Srcs []string
+		Srcs               []string
 		System_shared_libs []string
-		No_libcrt *bool
-		No_libgcc *bool
-		Stl *string
+		No_libcrt          *bool
+		No_libgcc          *bool
+		Stl                *string
 	}
 
 	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
@@ -247,15 +262,12 @@ func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 }
 
 func libClangRtLLndkLibrary(ctx android.LoadHookContext) {
-	libDir := getClangResourceDir(ctx)
-
 	type props struct {
 		Symbol_file *string
 	}
 
 	p := &props{}
-	symbol_file := string(path.Join(libDir, strings.TrimSuffix(ctx.ModuleName(), ".llndk")+".map.txt"))
-	p.Symbol_file = proptools.StringPtr(symbol_file)
+	p.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
 	ctx.AppendProperties(p)
 }
 
