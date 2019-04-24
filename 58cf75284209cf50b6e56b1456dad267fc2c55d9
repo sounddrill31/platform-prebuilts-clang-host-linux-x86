@@ -16,6 +16,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f2a951ba_d4418ec7",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2019-04-24T22:30:31Z",
+      "side": 1,
+      "message": "IIUC, this needs to match the list of libraries for which we have libclang_rt_llndk_library (i.e. stub library) rules here: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/Android.bp",
+      "parentUuid": "5a375933_fe8ad80d",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
