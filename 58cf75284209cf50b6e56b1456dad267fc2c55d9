@@ -34,6 +34,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87cc1bea_946b2ca3",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-04-24T22:35:44Z",
+      "side": 1,
+      "message": "+ccross Is it possible to dectect if a library has an associated llndk stub library from within Soong?",
+      "parentUuid": "f2a951ba_d4418ec7",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
