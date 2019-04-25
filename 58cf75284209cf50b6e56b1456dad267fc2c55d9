@@ -52,6 +52,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4344f413_fea2047f",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2019-04-25T12:48:01Z",
+      "side": 1,
+      "message": "I think you need to let the symbol_file and versions to be set via Android.bp",
+      "parentUuid": "87cc1bea_946b2ca3",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
