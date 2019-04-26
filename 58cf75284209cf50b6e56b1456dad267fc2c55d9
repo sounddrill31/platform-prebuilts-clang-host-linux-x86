@@ -70,6 +70,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d6b61b3_bfaf429d",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2019-04-26T07:08:59Z",
+      "side": 1,
+      "message": "We can\u0027t set symbol_file in Android.bp because its value depends on environment variables. Maybe we could have a bool property on libclang_rt_prebuilt_library_shared that says whether the library has stubs?",
+      "parentUuid": "4344f413_fea2047f",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
