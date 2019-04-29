@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "f5bbd0ab_313cdd0c",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2019-04-29T07:35:38Z",
+      "side": 1,
+      "message": "to single space? (and have a newline between 209 and 210?)",
+      "range": {
+        "startLine": 210,
+        "startChar": 7,
+        "endLine": 210,
+        "endChar": 19
+      },
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5a375933_fe8ad80d",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -85,6 +108,24 @@
       "side": 1,
       "message": "We can\u0027t set symbol_file in Android.bp because its value depends on environment variables. Maybe we could have a bool property on libclang_rt_prebuilt_library_shared that says whether the library has stubs?",
       "parentUuid": "4344f413_fea2047f",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0ba29b7_6b285c9d",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2019-04-29T07:35:38Z",
+      "side": 1,
+      "message": "Did you mean getClangResourceDir? Yeah, I missed it. You are right. But what about versions?\n\nHaving the bool property sounds much better than listing the names here.",
+      "parentUuid": "7d6b61b3_bfaf429d",
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
