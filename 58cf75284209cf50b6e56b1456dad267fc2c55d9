@@ -129,6 +129,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9667d413_a560acc4",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1067098
+      },
+      "writtenOn": "2019-04-29T23:06:21Z",
+      "side": 1,
+      "message": "Versions can probably always just be 10000 because that\u0027s what we\u0027re using for other LL-NDK libraries, e.g. libc: https://android.googlesource.com/platform/bionic/+/master/libc/Android.bp#1650",
+      "parentUuid": "f0ba29b7_6b285c9d",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
