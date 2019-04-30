@@ -147,6 +147,24 @@
       "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc28e807_053a1fd3",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2019-04-30T02:52:43Z",
+      "side": 1,
+      "message": "I\u0027m generally fine with hard-coding names in Soong if it\u0027s simpler and easier to follow than adding a property.  In this case a property might be simpler, if you are adding a new module and trying to figure out why the behavior is different it will be hard to find this code.\n\nYou can use ctx.OtherModuleExists to see if another module exists (might need to be added to LoadHookContext).",
+      "parentUuid": "9667d413_a560acc4",
+      "revId": "58cf75284209cf50b6e56b1456dad267fc2c55d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
