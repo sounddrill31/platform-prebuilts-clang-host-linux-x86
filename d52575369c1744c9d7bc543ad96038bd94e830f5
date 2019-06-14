@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c09e663f_6f573e6c",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-06-14T22:41:48Z",
+      "side": 1,
+      "message": "Has this moved over? Until we move to the d build, we shouldn\u0027t change this README.md.",
+      "revId": "d52575369c1744c9d7bc543ad96038bd94e830f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb4285aa_86994aa4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-06-14T22:41:48Z",
+      "side": 1,
+      "message": "We should move this to the d build ASAP as well.",
+      "revId": "d52575369c1744c9d7bc543ad96038bd94e830f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ada4136f_31618f19",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-06-14T22:41:48Z",
+      "side": 1,
+      "message": "d",
+      "range": {
+        "startLine": 64,
+        "startChar": 16,
+        "endLine": 64,
+        "endChar": 17
+      },
+      "revId": "d52575369c1744c9d7bc543ad96038bd94e830f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
