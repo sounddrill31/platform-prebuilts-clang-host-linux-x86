@@ -19,6 +19,29 @@
     },
     {
       "key": {
+        "uuid": "5378fd0e_45da2d85",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-06-14T22:48:50Z",
+      "side": 1,
+      "message": "https://android-review.googlesource.com/c/platform/external/qemu/+/984375 switches the emulator to the d build.",
+      "range": {
+        "startLine": 34,
+        "startChar": 20,
+        "endLine": 34,
+        "endChar": 28
+      },
+      "revId": "d52575369c1744c9d7bc543ad96038bd94e830f5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "eb4285aa_86994aa4",
         "filename": "README.md",
         "patchSetId": 1
