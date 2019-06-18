@@ -1,0 +1,8 @@
+Code-Review+1: Nick Desaulniers <ndesaulniers@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Nick Desaulniers <ndesaulniers@google.com>
+Submitted-at: Tue, 18 Jun 2019 17:02:01 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/984833
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
