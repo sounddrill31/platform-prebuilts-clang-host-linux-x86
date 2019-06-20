@@ -16,6 +16,24 @@
       "revId": "55a5f45890c5251e72d469a3fedf7699a1eca1da",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5da18dea_72b32703",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2019-06-20T20:57:14Z",
+      "side": 1,
+      "message": "I agree that the list seems confusing when I want to know *what* version I should be using.\n\nI find is useful as a timeline of how frequently we put out updates (monthly) and I think that\u0027s a cadence we should provide a strong SLO for.  That said, I\u0027m in violation of that SLO currently, for which I recognize the irony.\n\nSend me a patch for what you had in mind.",
+      "parentUuid": "42b04a29_462c5e54",
+      "revId": "55a5f45890c5251e72d469a3fedf7699a1eca1da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
