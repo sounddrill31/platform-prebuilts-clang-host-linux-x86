@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "42b04a29_462c5e54",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-06-20T20:52:53Z",
+      "side": 1,
+      "message": "I\u0027m not sure if the intention of this list is to list all historic prebuilts or to document only the current prebuilts.\n\nWe should consider splitting this into two sections: the current prebuilts in this project and a list of all prior/deleted prebuilts.  That\u0027d serve both purposes.",
+      "revId": "55a5f45890c5251e72d469a3fedf7699a1eca1da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
