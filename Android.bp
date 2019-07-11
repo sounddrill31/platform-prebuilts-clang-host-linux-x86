@@ -389,6 +389,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     arch: {
         arm: {
             enabled: true,
@@ -402,6 +403,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     arch: {
         arm64: {
             enabled: true,
