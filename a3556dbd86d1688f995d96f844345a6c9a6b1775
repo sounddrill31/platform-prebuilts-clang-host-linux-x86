@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3bd8eaa_ba5f9ac2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-07-15T22:21:05Z",
+      "side": 1,
+      "message": "The change also adds new target Fuzzer libs.  Should we mention that as well?",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56553d0b_4a31d9b6",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-07-15T22:21:05Z",
+      "side": 1,
+      "message": "Do we also need the 32-bit fuzzer for the host?  It\u0027s not built currently, but we can add it before the next update.",
+      "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
