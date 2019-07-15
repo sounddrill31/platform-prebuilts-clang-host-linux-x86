@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7e9d2999_4b4799a7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1453063
+      },
+      "writtenOn": "2019-07-15T22:45:30Z",
+      "side": 1,
+      "message": "Isn\u0027t that below? (Adds libFuzzer and ASan prebuilt libraries for host fuzzing.)",
+      "parentUuid": "d3bd8eaa_ba5f9ac2",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "56553d0b_4a31d9b6",
         "filename": "Android.bp",
         "patchSetId": 2
@@ -39,6 +63,24 @@
       "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d65a8cd6_a7253bc9",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 451,
+      "author": {
+        "id": 1453063
+      },
+      "writtenOn": "2019-07-15T22:45:30Z",
+      "side": 1,
+      "message": "Yes please! That would mean that I wouldn\u0027t have to workaround it in build/soong/cc/fuzz.go.",
+      "parentUuid": "56553d0b_4a31d9b6",
+      "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
