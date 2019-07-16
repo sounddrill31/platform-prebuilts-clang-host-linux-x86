@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "87eb9ff1_6ae679b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-07-16T00:43:30Z",
+      "side": 1,
+      "message": "Thanks for the update to the message.",
+      "parentUuid": "f4d42be9_b4805143",
+      "range": {
+        "startLine": 7,
+        "startChar": 14,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "a3556dbd86d1688f995d96f844345a6c9a6b1775",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "56553d0b_4a31d9b6",
         "filename": "Android.bp",
         "patchSetId": 2
