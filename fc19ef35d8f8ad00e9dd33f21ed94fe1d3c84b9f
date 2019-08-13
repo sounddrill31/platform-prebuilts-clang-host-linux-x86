@@ -1,0 +1,6 @@
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-by: Yi Kong <yikong@google.com>
+Submitted-at: Tue, 13 Aug 2019 23:55:25 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1101709
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
