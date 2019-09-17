@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cfc0d604_bbc3ce3a",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-09-17T17:40:23Z",
+      "side": 1,
+      "message": "clang-tools are currently using clang-r365631 and https://android-review.googlesource.com/c/platform/development/+/1122735 moves it to the \u0027b\u0027 build.",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 28
+      },
+      "revId": "ba7e6a1ce4034ab9b44da462f4eb32b77194e81b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
