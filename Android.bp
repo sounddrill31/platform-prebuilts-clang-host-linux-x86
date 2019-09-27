@@ -215,6 +215,50 @@ libclang_rt_llndk_library {
 }
 
 libclang_rt_llndk_library {
+    name: "libclang_rt.ubsan_standalone-arm-android",
+    native_bridge_supported: true,
+    enabled: false,
+    arch: {
+        arm: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_llndk_library {
+    name: "libclang_rt.ubsan_standalone-aarch64-android",
+    native_bridge_supported: true,
+    enabled: false,
+    arch: {
+        arm64: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_llndk_library {
+    name: "libclang_rt.ubsan_standalone-i686-android",
+    native_bridge_supported: true,
+    enabled: false,
+    arch: {
+        x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_llndk_library {
+    name: "libclang_rt.ubsan_standalone-x86_64-android",
+    native_bridge_supported: true,
+    enabled: false,
+    arch: {
+        x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_llndk_library {
     name: "libclang_rt.hwasan-aarch64-android",
     enabled: false,
     arch: {
@@ -228,12 +272,8 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-arm-android",
     sdk_version: "24",
     enabled: false,
-    vendor_available: true,
     recovery_available: true,
     double_loadable: true,
-    vndk: {
-        enabled: true,
-    },
     arch: {
         arm: {
             enabled: true,
@@ -246,12 +286,8 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
-    vendor_available: true,
     recovery_available: true,
     double_loadable: true,
-    vndk: {
-        enabled: true,
-    },
     arch: {
         arm64: {
             enabled: true,
@@ -264,12 +300,8 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-i686-android",
     sdk_version: "minimum",
     enabled: false,
-    vendor_available: true,
     recovery_available: true,
     double_loadable: true,
-    vndk: {
-        enabled: true,
-    },
     arch: {
         x86: {
             enabled: true,
@@ -282,12 +314,8 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-x86_64-android",
     sdk_version: "minimum",
     enabled: false,
-    vendor_available: true,
     recovery_available: true,
     double_loadable: true,
-    vndk: {
-        enabled: true,
-    },
     arch: {
         x86_64: {
             enabled: true,
