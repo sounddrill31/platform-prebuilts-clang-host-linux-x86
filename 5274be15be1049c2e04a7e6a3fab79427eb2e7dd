@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b9538d9_b2979820",
+        "filename": "RELEASE_NOTES.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-09-27T17:18:38Z",
+      "side": 1,
+      "message": "Quick thought: Should we auto-generate the list of cherry-picks by parsing llvm-project\u0027s history?",
+      "revId": "5274be15be1049c2e04a7e6a3fab79427eb2e7dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
