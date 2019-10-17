@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d19dc08b_ea4cd793",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2019-10-17T18:05:48Z",
+      "side": 1,
+      "message": "This will actually be 10.0.1 in the new update. 9.0.8 was released to the NDK already (and is very similar to 9.0.7).",
+      "range": {
+        "startLine": 19,
+        "startChar": 22,
+        "endLine": 19,
+        "endChar": 27
+      },
+      "revId": "f5dab5d4a0fd109d7b5310f7d81acad704152efe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
