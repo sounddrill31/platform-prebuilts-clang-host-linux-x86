@@ -448,18 +448,6 @@ libclang_rt_prebuilt_library_static {
 }
 
 libclang_rt_prebuilt_library_static {
-    name: "libclang_rt.fuzzer-i386",
-    sdk_version: "minimum",
-    enabled: false,
-    host_supported: true,
-    target: {
-        linux_glibc_x86: {
-            enabled: true,
-        },
-    },
-}
-
-libclang_rt_prebuilt_library_static {
     name: "libclang_rt.asan-x86_64",
     sdk_version: "minimum",
     enabled: false,
@@ -521,19 +509,6 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
-}
-
-libclang_rt_prebuilt_library_static {
-    name: "libclang_rt.profile-i386",
-    sdk_version: "minimum",
-    enabled: false,
-    host_supported: true,
-    target: {
-        linux_glibc_x86: {
-            enabled: true,
-        },
-    },
-    check_elf_files: false,  // Bypass circular dependency between libc++
 }
 
 libclang_rt_prebuilt_library_shared {
