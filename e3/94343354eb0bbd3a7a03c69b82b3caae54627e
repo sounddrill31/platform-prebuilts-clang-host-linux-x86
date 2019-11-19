@@ -1,0 +1,7 @@
+Code-Review+2: Yi Kong <yikong@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Nick Desaulniers <ndesaulniers@google.com>
+Submitted-at: Tue, 19 Nov 2019 05:40:36 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1165384
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
