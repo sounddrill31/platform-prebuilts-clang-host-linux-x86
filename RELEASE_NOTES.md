@@ -1,5 +1,14 @@
 # Release Notes
 
+## clang-r370808b
+### Upstream Cherry-picks
+- r373929 [UPSTREAM] Fix Calling Convention through aliases
+### Notes
+Respin of clang-r370808 to cherry-pick the above fix for Windows builds, and to
+fix a backport of r373035 for hwasan.
+### Created
+Nov 25 2019
+
 ## clang-r370808
 ### Upstream Cherry-picks
 - 1689ad27af5c [builtins] Implement rounding mode support for i386/x86_64
