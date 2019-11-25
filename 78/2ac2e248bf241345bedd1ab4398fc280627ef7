@@ -1,0 +1,8 @@
+Autosubmit+1: Nick Desaulniers <ndesaulniers@google.com>
+Presubmit-Ready+1: Nick Desaulniers <ndesaulniers@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-by: Nick Desaulniers <ndesaulniers@google.com>
+Submitted-at: Mon, 25 Nov 2019 20:08:49 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1174424
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
