@@ -1,0 +1,7 @@
+Code-Review+2: Nick Desaulniers <ndesaulniers@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Logan Chien <loganchien@google.com>
+Submitted-at: Mon, 09 Dec 2019 18:34:14 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1183326
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
