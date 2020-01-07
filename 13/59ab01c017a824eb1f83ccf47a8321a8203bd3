@@ -1,0 +1,9 @@
+Autosubmit+1: Nick Desaulniers <ndesaulniers@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Tue, 07 Jan 2020 20:02:07 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1202465
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
