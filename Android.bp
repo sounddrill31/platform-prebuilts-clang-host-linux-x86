@@ -352,6 +352,26 @@ libclang_rt_prebuilt_library_shared {
     ],
 }
 
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_standalone-i386",
+    enabled: false,
+    target: {
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_standalone-x86_64",
+    enabled: false,
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-arm-android",
     sdk_version: "minimum",
@@ -414,6 +434,26 @@ libclang_rt_prebuilt_library_static {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
+}
+
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_minimal-i386",
+    enabled: false,
+    target: {
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_minimal-x86_64",
+    enabled: false,
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+    },
 }
 
 libclang_rt_prebuilt_library_static {
