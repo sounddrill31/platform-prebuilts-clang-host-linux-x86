@@ -1,0 +1,11 @@
+Code-Review+2: Yifan Hong <elsk@google.com>
+Code-Review+1: Evgenii Stepanov <eugenis@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Autosubmit+1: Colin Cross <ccross@android.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Wed, 29 Jan 2020 02:39:33 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1220207
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
