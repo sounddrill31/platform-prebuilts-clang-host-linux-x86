@@ -1,0 +1,10 @@
+Autosubmit+1: Chih-hung Hsieh <chh@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+NDK-API-Review+1: Dan Albert <danalbert@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 14 Feb 2020 20:16:37 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1235378
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
