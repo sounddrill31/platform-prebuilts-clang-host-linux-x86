@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a4cc5fbd_dffff3be",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 677,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2020-02-20T17:28:53Z",
+      "side": 1,
+      "message": "Yea I agree. I copied this from the above in case there was some reason for it, but I\u0027ve gone ahead and cleaned both of these up.",
+      "parentUuid": "8fe87587_d18b536b",
+      "revId": "535f18a861e1ef3db05d312893d47a8cbef19ab3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8a3c955b_ef39695f",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "535f18a861e1ef3db05d312893d47a8cbef19ab3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "061c1a31_d5db0d70",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 685,
+      "author": {
+        "id": 1115178
+      },
+      "writtenOn": "2020-02-20T17:28:53Z",
+      "side": 1,
+      "message": "Done, see above",
+      "parentUuid": "8a3c955b_ef39695f",
+      "revId": "535f18a861e1ef3db05d312893d47a8cbef19ab3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
