@@ -16,6 +16,24 @@
       "revId": "6d175496679bd772ed91123cfe6478e6e02803c1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1f92f98c_88dabb70",
+        "filename": "RELEASE_NOTES.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-03-12T18:14:04Z",
+      "side": 1,
+      "message": "Then the `a` build might need to be reinstated?",
+      "parentUuid": "c7bbc8da_8a44bc17",
+      "revId": "6d175496679bd772ed91123cfe6478e6e02803c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
