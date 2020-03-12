@@ -1,0 +1,7 @@
+Verified+1: Yabin Cui <yabinc@google.com>
+Code-Review+2: Nick Desaulniers <ndesaulniers@google.com>
+Submitted-by: Yabin Cui <yabinc@google.com>
+Submitted-at: Thu, 12 Mar 2020 18:20:11 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1256913
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
