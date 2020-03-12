@@ -1,0 +1,11 @@
+Code-Review+2: Yi Kong <yikong@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Ready+1: Treehugger Robot <treehugger-gerrit@google.com>
+Presubmit-Ready+1: Yabin Cui <yabinc@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+NDK-API-Review+1: Dan Albert <danalbert@google.com>
+Submitted-by: Yabin Cui <yabinc@google.com>
+Submitted-at: Thu, 12 Mar 2020 17:07:35 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1254908
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
