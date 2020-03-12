@@ -34,6 +34,24 @@
       "revId": "6d175496679bd772ed91123cfe6478e6e02803c1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "35d89901_c6f538bb",
+        "filename": "RELEASE_NOTES.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-03-12T18:15:25Z",
+      "side": 1,
+      "message": "Sure, but that\u0027s independent. We already \"dropped\" that direct history here, but perhaps it\u0027s better to just retain everything and make it easy to know/understand what\u0027s different each time.",
+      "parentUuid": "1f92f98c_88dabb70",
+      "revId": "6d175496679bd772ed91123cfe6478e6e02803c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
