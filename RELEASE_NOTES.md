@@ -1,7 +1,7 @@
 # Release Notes
 
 ------
-## clang-r377782b
+## clang-r377782c
 
 ### Upstream Cherry-picks
 - a3b22da4e0ea [CFG] Fix a flaky crash in CFGBlock::getLastCondition().
@@ -12,8 +12,10 @@
 - c5b890e92243 PR44268: Fix crash if __builtin_object_size is applied to a heap allocation.
 - cd40bd0a32e2 hwasan: Move .note.hwasan.globals note to hwasan.module_ctor comdat.
 - 4f38ab250ff4 [LLD][ELF][ARM] Do not insert interworking thunks for non STT_FUNC symbols
+- 41206b61e30c [DebugInfo] Re-instate LiveDebugVariables scope trimming
 - 6c4a8bc0a9f6 Make llvm::crc32() work also for input sizes larger than 32 bits.
 - f8c9ceb1ce9c [SimplifyLibCalls] Add __strlen_chk.
+- 1de10705594c [DAGCombine] Fix alias analysis for unaligned accesses
 
 ### Local Changes
 - Revert two changes that break Android builds
@@ -30,8 +32,10 @@ New Clang warnings encountered:
 - -Wtautological-bitwise-compare
 - -Wtautological-overlap-compare
 
+Switch from python compiler wrapper to go compiler wrapper.
+
 ### Enabled
-Feb 18 2020
+Mar 12 2020
 
 ------
 ## clang-r370808
