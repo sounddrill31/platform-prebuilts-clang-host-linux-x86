@@ -1,0 +1,8 @@
+Autosubmit+1: Nick Desaulniers <ndesaulniers@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Thu, 12 Mar 2020 19:19:31 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1256912
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
