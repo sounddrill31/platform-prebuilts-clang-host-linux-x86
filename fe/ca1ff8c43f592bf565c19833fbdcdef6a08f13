@@ -1,0 +1,9 @@
+Verified+1: Yabin Cui <yabinc@google.com>
+Presubmit-Ready+1: Yabin Cui <yabinc@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-by: Yabin Cui <yabinc@google.com>
+Submitted-at: Thu, 19 Mar 2020 18:44:54 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1261925
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
