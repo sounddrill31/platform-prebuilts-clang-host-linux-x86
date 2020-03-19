@@ -1,0 +1,9 @@
+Verified+1: Yabin Cui <yabinc@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Submitted-by: Yabin Cui <yabinc@google.com>
+Submitted-at: Thu, 19 Mar 2020 22:53:27 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1261927
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
