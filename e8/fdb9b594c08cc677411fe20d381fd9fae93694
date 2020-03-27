@@ -1,0 +1,9 @@
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+NDK-API-Review+1: Dan Albert <danalbert@google.com>
+Submitted-by: Yi Kong <yikong@google.com>
+Submitted-at: Fri, 27 Mar 2020 18:05:09 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1268717
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
