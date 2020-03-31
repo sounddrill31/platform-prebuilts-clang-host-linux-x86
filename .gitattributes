@@ -1,0 +1,9 @@
+*       binary
+OWNERS  text diff
+*.bp    text diff
+*.go    text diff
+*.md    text diff
+*.mk    text diff
+*.sh    text diff
+*.txt   text diff
+*.xml   text diff
