@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d25848d5_373ea2cb",
+        "filename": ".gitattributes",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-03-31T18:17:33Z",
+      "side": 1,
+      "message": "I\u0027m assuming we don\u0027t want/need `*.h` since we don\u0027t overwrite include dirs for specific updates.",
+      "revId": "3ce4ddf5f95d9b65fe063ebc9211155ae4693e11",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
