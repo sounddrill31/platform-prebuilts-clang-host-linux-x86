@@ -1,0 +1,6 @@
+Build-Cop-Override+1: Colin Cross <ccross@android.com>
+Submitted-by: Colin Cross <ccross@android.com>
+Submitted-at: Tue, 07 Apr 2020 04:25:31 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1279719
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
