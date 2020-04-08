@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "133d602e_ead35dcf",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-04-08T18:19:07Z",
+      "side": 1,
+      "message": "Nick: It seems like this number mostly has tracked internal use of the toolchain. Let me know if you want me to change it back or adjust it some other way.",
+      "revId": "fc95f7e1e19331cdb6b6ae59dd56d2a81594a304",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae9022e2_0756c017",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-04-08T18:19:07Z",
+      "side": 1,
+      "message": "I\u0027m going to keep these in a linear order for upstream revision number, rather than just by date.",
+      "revId": "fc95f7e1e19331cdb6b6ae59dd56d2a81594a304",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
