@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cf057724_e8f7024d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-05-04T18:05:11Z",
+      "side": 1,
+      "message": "Thanks for the patch.  I think https://android.googlesource.com/kernel/common/+/android-4.14-stable/build.config.common is actually the \"new\" branch (new convention) that tracks branches to update.  We\u0027ll stop updating toolchains on older branches that have shipped, i.e. \"q\".",
+      "revId": "d90c7a702ad4f9b578b68d1577c6763a5dcd0899",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
