@@ -408,6 +408,50 @@ libclang_rt_prebuilt_library_shared {
 }
 
 libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone-i386.static",
+    enabled: false,
+    host_supported: true,
+    target: {
+        linux_glibc_x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone-x86_64.static",
+    enabled: false,
+    host_supported: true,
+    target: {
+        linux_glibc_x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone-i686-android.static",
+    defaults:["linux_bionic_supported"],
+    enabled: false,
+    arch: {
+        x86: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone-x86_64-android.static",
+    defaults:["linux_bionic_supported"],
+    enabled: false,
+    arch: {
+        x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-arm-android",
     sdk_version: "minimum",
     enabled: false,
