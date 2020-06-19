@@ -1,0 +1,9 @@
+Autosubmit+1: Stephen Hines <srhines@google.com>
+Code-Review+2: Dan Albert <danalbert@google.com>
+NDK-API-Review+1: Dan Albert <danalbert@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 19 Jun 2020 09:45:33 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1344457
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
