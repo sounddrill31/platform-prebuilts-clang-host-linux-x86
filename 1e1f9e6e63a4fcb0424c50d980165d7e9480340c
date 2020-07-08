@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a20b3908_7ed79266",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2020-07-08T04:17:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26fd5297_6a5dee4b",
+      "range": {
+        "startLine": 17,
+        "startChar": 57,
+        "endLine": 17,
+        "endChar": 62
+      },
+      "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7c7a5e0f_e13e7534",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -36,6 +60,47 @@
       "writtenOn": "2020-07-08T04:01:43Z",
       "side": 1,
       "message": "I\u0027m not sure whether the stl changes actually matter, since these are really only affecting prebuilts. Those libraries will always exist on the device in any case, but maybe it is better that we are being more explicit now. I just wonder if there are other missing ones too.",
+      "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3109cc8_1352a0d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2020-07-08T04:17:38Z",
+      "side": 1,
+      "message": "Thanks for pointing that out. Yes, I agree with you. They won\u0027t matter as these are prebuilts.\n\nI\u0027ve just re-examined all the changes and I didn\u0027t find any missing cases (I did find a leftover though, which I fixed in the new patchset).",
+      "parentUuid": "7c7a5e0f_e13e7534",
+      "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a595c852_766e403e",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2020-07-08T04:17:38Z",
+      "side": 1,
+      "message": "Note: these are left here because they are not defaultable.",
+      "range": {
+        "startLine": 678,
+        "startChar": 0,
+        "endLine": 679,
+        "endChar": 73
+      },
       "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
