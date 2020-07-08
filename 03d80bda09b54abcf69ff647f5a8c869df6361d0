@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e16eb31_a0f7d28c",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-07-08T04:01:43Z",
+      "side": 0,
+      "message": "Weird. This one was missing an stl line.",
+      "revId": "03d80bda09b54abcf69ff647f5a8c869df6361d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17c140e8_ad655a95",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-07-08T04:01:43Z",
+      "side": 0,
+      "message": "Weird. This one was also missing an stl line.",
+      "revId": "03d80bda09b54abcf69ff647f5a8c869df6361d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}

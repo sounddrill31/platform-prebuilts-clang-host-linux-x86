@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26fd5297_6a5dee4b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-07-08T04:01:43Z",
+      "side": 1,
+      "message": "from",
+      "range": {
+        "startLine": 17,
+        "startChar": 57,
+        "endLine": 17,
+        "endChar": 62
+      },
+      "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c7a5e0f_e13e7534",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-07-08T04:01:43Z",
+      "side": 1,
+      "message": "I\u0027m not sure whether the stl changes actually matter, since these are really only affecting prebuilts. Those libraries will always exist on the device in any case, but maybe it is better that we are being more explicit now. I just wonder if there are other missing ones too.",
+      "revId": "1e1f9e6e63a4fcb0424c50d980165d7e9480340c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
