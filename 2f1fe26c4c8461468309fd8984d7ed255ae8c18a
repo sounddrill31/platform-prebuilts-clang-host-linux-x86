@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d84bfadc_39666667",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-08-14T02:48:03Z",
+      "side": 1,
+      "message": "Doh! Forgot to get NDK API Review.",
+      "revId": "2f1fe26c4c8461468309fd8984d7ed255ae8c18a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
