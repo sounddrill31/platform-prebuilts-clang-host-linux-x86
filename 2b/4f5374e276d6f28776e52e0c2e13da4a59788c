@@ -1,0 +1,8 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Code-Review+2: Yi Kong <yikong@google.com>
+Submitted-by: Yi Kong <yikong@google.com>
+Submitted-at: Sat, 15 Aug 2020 13:35:12 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1401795
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
