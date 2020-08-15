@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bd51c18_269e1054",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-08-15T09:02:05Z",
+      "side": 1,
+      "message": "This is an overwrite of the existing ones, which should be fine, since the prior ones were invalid for GOMA use.",
+      "revId": "2b4f5374e276d6f28776e52e0c2e13da4a59788c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
