@@ -16,6 +16,46 @@
       "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99bb6d3e_16c20a43",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-08-19T23:09:50Z",
+      "side": 1,
+      "message": "Remove this as redundant/confusing.",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 18
+      },
+      "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4065af0e_f87a0250",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-08-19T23:09:50Z",
+      "side": 1,
+      "message": "Is this indented correctly here? It seems awkward, and isn\u0027t just a line-wrap.",
+      "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
