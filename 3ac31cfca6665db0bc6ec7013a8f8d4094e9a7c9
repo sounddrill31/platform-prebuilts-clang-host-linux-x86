@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14fa2089_24ced780",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-08-19T21:13:32Z",
+      "side": 1,
+      "message": "No effect on the NDK branches, so +1 from me.",
+      "revId": "3ac31cfca6665db0bc6ec7013a8f8d4094e9a7c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b3529ee_91c9bef2",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-08-19T21:13:32Z",
+      "side": 1,
+      "message": "Thus",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 14
+      },
+      "revId": "3ac31cfca6665db0bc6ec7013a8f8d4094e9a7c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
