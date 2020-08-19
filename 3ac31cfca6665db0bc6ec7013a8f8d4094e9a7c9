@@ -39,6 +39,30 @@
       "revId": "3ac31cfca6665db0bc6ec7013a8f8d4094e9a7c9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0141ad96_41500399",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-08-19T21:52:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b3529ee_91c9bef2",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 14
+      },
+      "revId": "3ac31cfca6665db0bc6ec7013a8f8d4094e9a7c9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
