@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94390426_68cfe3b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1293738
+      },
+      "writtenOn": "2020-08-19T22:01:23Z",
+      "side": 1,
+      "message": "Can we add x86_64 to the deprecation plan?",
+      "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
