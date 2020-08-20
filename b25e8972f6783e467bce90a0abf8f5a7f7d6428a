@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "565349d5_aa0493f0",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-08-20T20:20:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99bb6d3e_16c20a43",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 18
+      },
+      "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4065af0e_f87a0250",
         "filename": "BINUTILS_KERNEL_DEPRECATION.md",
         "patchSetId": 2
@@ -56,6 +80,24 @@
       "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49849c0a_d38df1f8",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-08-20T20:20:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4065af0e_f87a0250",
+      "revId": "b25e8972f6783e467bce90a0abf8f5a7f7d6428a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
