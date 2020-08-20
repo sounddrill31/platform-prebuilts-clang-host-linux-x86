@@ -68,11 +68,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_lldReaderWriter "${_IMPORT_PREFIX}/lib64/lib
 # Import target "lld" for configuration "Release"
 set_property(TARGET lld APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(lld PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/lld"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/lld.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS lld )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lld "${_IMPORT_PREFIX}/bin/lld" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_lld "${_IMPORT_PREFIX}/bin/lld.exe" )
 
 # Import target "lldCOFF" for configuration "Release"
 set_property(TARGET lldCOFF APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

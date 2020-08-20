@@ -338,29 +338,29 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangTesting "${_IMPORT_PREFIX}/lib64/libcla
 # Import target "diagtool" for configuration "Release"
 set_property(TARGET diagtool APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(diagtool PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/diagtool"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/diagtool.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS diagtool )
-list(APPEND _IMPORT_CHECK_FILES_FOR_diagtool "${_IMPORT_PREFIX}/bin/diagtool" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_diagtool "${_IMPORT_PREFIX}/bin/diagtool.exe" )
 
 # Import target "clang" for configuration "Release"
 set_property(TARGET clang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-11"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang "${_IMPORT_PREFIX}/bin/clang-11" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang "${_IMPORT_PREFIX}/bin/clang.exe" )
 
 # Import target "clang-format" for configuration "Release"
 set_property(TARGET clang-format APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-format PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-format"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-format.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-format )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-format "${_IMPORT_PREFIX}/bin/clang-format" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-format "${_IMPORT_PREFIX}/bin/clang-format.exe" )
 
 # Import target "clangHandleCXX" for configuration "Release"
 set_property(TARGET clangHandleCXX APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -385,75 +385,65 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangHandleLLVM "${_IMPORT_PREFIX}/lib64/lib
 # Import target "clang-offload-bundler" for configuration "Release"
 set_property(TARGET clang-offload-bundler APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-offload-bundler PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-offload-bundler"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-offload-bundler.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-offload-bundler )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-offload-bundler "${_IMPORT_PREFIX}/bin/clang-offload-bundler" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-offload-bundler "${_IMPORT_PREFIX}/bin/clang-offload-bundler.exe" )
 
 # Import target "clang-offload-wrapper" for configuration "Release"
 set_property(TARGET clang-offload-wrapper APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-offload-wrapper PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-offload-wrapper"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-offload-wrapper.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-offload-wrapper )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-offload-wrapper "${_IMPORT_PREFIX}/bin/clang-offload-wrapper" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-offload-wrapper "${_IMPORT_PREFIX}/bin/clang-offload-wrapper.exe" )
 
 # Import target "clang-scan-deps" for configuration "Release"
 set_property(TARGET clang-scan-deps APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-scan-deps PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-scan-deps"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-scan-deps.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-scan-deps )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-scan-deps "${_IMPORT_PREFIX}/bin/clang-scan-deps" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-scan-deps "${_IMPORT_PREFIX}/bin/clang-scan-deps.exe" )
 
 # Import target "clang-rename" for configuration "Release"
 set_property(TARGET clang-rename APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-rename PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-rename"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-rename.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-rename )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-rename "${_IMPORT_PREFIX}/bin/clang-rename" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-rename "${_IMPORT_PREFIX}/bin/clang-rename.exe" )
 
 # Import target "clang-refactor" for configuration "Release"
 set_property(TARGET clang-refactor APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-refactor PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-refactor"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-refactor.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-refactor )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-refactor "${_IMPORT_PREFIX}/bin/clang-refactor" )
-
-# Import target "clang-cpp" for configuration "Release"
-set_property(TARGET clang-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(clang-cpp PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib64/libclang-cpp.so.11git"
-  IMPORTED_SONAME_RELEASE "libclang-cpp.so.11git"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS clang-cpp )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-cpp "${_IMPORT_PREFIX}/lib64/libclang-cpp.so.11git" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-refactor "${_IMPORT_PREFIX}/bin/clang-refactor.exe" )
 
 # Import target "clang-check" for configuration "Release"
 set_property(TARGET clang-check APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-check PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-check"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-check.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-check )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-check "${_IMPORT_PREFIX}/bin/clang-check" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-check "${_IMPORT_PREFIX}/bin/clang-check.exe" )
 
 # Import target "clang-extdef-mapping" for configuration "Release"
 set_property(TARGET clang-extdef-mapping APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-extdef-mapping PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-extdef-mapping"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-extdef-mapping.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-extdef-mapping )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-extdef-mapping "${_IMPORT_PREFIX}/bin/clang-extdef-mapping" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-extdef-mapping "${_IMPORT_PREFIX}/bin/clang-extdef-mapping.exe" )
 
 # Import target "clangApplyReplacements" for configuration "Release"
 set_property(TARGET clangApplyReplacements APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -468,11 +458,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangApplyReplacements "${_IMPORT_PREFIX}/li
 # Import target "clang-apply-replacements" for configuration "Release"
 set_property(TARGET clang-apply-replacements APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-apply-replacements PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-apply-replacements"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-apply-replacements.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-apply-replacements )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-apply-replacements "${_IMPORT_PREFIX}/bin/clang-apply-replacements" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-apply-replacements "${_IMPORT_PREFIX}/bin/clang-apply-replacements.exe" )
 
 # Import target "clangReorderFields" for configuration "Release"
 set_property(TARGET clangReorderFields APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -487,20 +477,20 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangReorderFields "${_IMPORT_PREFIX}/lib64/
 # Import target "clang-reorder-fields" for configuration "Release"
 set_property(TARGET clang-reorder-fields APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-reorder-fields PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-reorder-fields"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-reorder-fields.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-reorder-fields )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-reorder-fields "${_IMPORT_PREFIX}/bin/clang-reorder-fields" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-reorder-fields "${_IMPORT_PREFIX}/bin/clang-reorder-fields.exe" )
 
 # Import target "modularize" for configuration "Release"
 set_property(TARGET modularize APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(modularize PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/modularize"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/modularize.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS modularize )
-list(APPEND _IMPORT_CHECK_FILES_FOR_modularize "${_IMPORT_PREFIX}/bin/modularize" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_modularize "${_IMPORT_PREFIX}/bin/modularize.exe" )
 
 # Import target "clangTidy" for configuration "Release"
 set_property(TARGET clangTidy APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -755,11 +745,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangTidyMain "${_IMPORT_PREFIX}/lib64/libcl
 # Import target "clang-tidy" for configuration "Release"
 set_property(TARGET clang-tidy APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-tidy PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-tidy"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-tidy.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-tidy )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-tidy "${_IMPORT_PREFIX}/bin/clang-tidy" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-tidy "${_IMPORT_PREFIX}/bin/clang-tidy.exe" )
 
 # Import target "clangTidyUtils" for configuration "Release"
 set_property(TARGET clangTidyUtils APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -784,11 +774,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangChangeNamespace "${_IMPORT_PREFIX}/lib6
 # Import target "clang-change-namespace" for configuration "Release"
 set_property(TARGET clang-change-namespace APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-change-namespace PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-change-namespace"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-change-namespace.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-change-namespace )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-change-namespace "${_IMPORT_PREFIX}/bin/clang-change-namespace" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-change-namespace "${_IMPORT_PREFIX}/bin/clang-change-namespace.exe" )
 
 # Import target "clangDoc" for configuration "Release"
 set_property(TARGET clangDoc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -803,11 +793,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangDoc "${_IMPORT_PREFIX}/lib64/libclangDo
 # Import target "clang-doc" for configuration "Release"
 set_property(TARGET clang-doc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-doc PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-doc"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-doc.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-doc )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-doc "${_IMPORT_PREFIX}/bin/clang-doc" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-doc "${_IMPORT_PREFIX}/bin/clang-doc.exe" )
 
 # Import target "clangIncludeFixer" for configuration "Release"
 set_property(TARGET clangIncludeFixer APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -832,11 +822,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangIncludeFixerPlugin "${_IMPORT_PREFIX}/l
 # Import target "clang-include-fixer" for configuration "Release"
 set_property(TARGET clang-include-fixer APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-include-fixer PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-include-fixer"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-include-fixer.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-include-fixer )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-include-fixer "${_IMPORT_PREFIX}/bin/clang-include-fixer" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-include-fixer "${_IMPORT_PREFIX}/bin/clang-include-fixer.exe" )
 
 # Import target "findAllSymbols" for configuration "Release"
 set_property(TARGET findAllSymbols APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -851,11 +841,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_findAllSymbols "${_IMPORT_PREFIX}/lib64/libf
 # Import target "find-all-symbols" for configuration "Release"
 set_property(TARGET find-all-symbols APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(find-all-symbols PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/find-all-symbols"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/find-all-symbols.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS find-all-symbols )
-list(APPEND _IMPORT_CHECK_FILES_FOR_find-all-symbols "${_IMPORT_PREFIX}/bin/find-all-symbols" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_find-all-symbols "${_IMPORT_PREFIX}/bin/find-all-symbols.exe" )
 
 # Import target "clangMove" for configuration "Release"
 set_property(TARGET clangMove APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -870,11 +860,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangMove "${_IMPORT_PREFIX}/lib64/libclangM
 # Import target "clang-move" for configuration "Release"
 set_property(TARGET clang-move APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-move PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-move"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-move.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-move )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-move "${_IMPORT_PREFIX}/bin/clang-move" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-move "${_IMPORT_PREFIX}/bin/clang-move.exe" )
 
 # Import target "clangQuery" for configuration "Release"
 set_property(TARGET clangQuery APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -889,20 +879,20 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangQuery "${_IMPORT_PREFIX}/lib64/libclang
 # Import target "clang-query" for configuration "Release"
 set_property(TARGET clang-query APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-query PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-query"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-query.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-query )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-query "${_IMPORT_PREFIX}/bin/clang-query" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-query "${_IMPORT_PREFIX}/bin/clang-query.exe" )
 
 # Import target "pp-trace" for configuration "Release"
 set_property(TARGET pp-trace APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(pp-trace PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/pp-trace"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/pp-trace.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS pp-trace )
-list(APPEND _IMPORT_CHECK_FILES_FOR_pp-trace "${_IMPORT_PREFIX}/bin/pp-trace" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_pp-trace "${_IMPORT_PREFIX}/bin/pp-trace.exe" )
 
 # Import target "clangdSupport" for configuration "Release"
 set_property(TARGET clangdSupport APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -937,11 +927,11 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangDaemonTweaks "${_IMPORT_PREFIX}/lib64/l
 # Import target "clangd" for configuration "Release"
 set_property(TARGET clangd APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clangd PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clangd"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clangd.exe"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clangd )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clangd "${_IMPORT_PREFIX}/bin/clangd" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clangd "${_IMPORT_PREFIX}/bin/clangd.exe" )
 
 # Import target "clangdRemoteIndex" for configuration "Release"
 set_property(TARGET clangdRemoteIndex APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -956,22 +946,22 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangdRemoteIndex "${_IMPORT_PREFIX}/lib64/l
 # Import target "libclang" for configuration "Release"
 set_property(TARGET libclang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libclang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib64/libclang.so.11"
-  IMPORTED_SONAME_RELEASE "libclang.so.11git"
+  IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib64/liblibclang.dll.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/libclang.dll"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS libclang )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib64/libclang.so.11" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib64/liblibclang.dll.a" "${_IMPORT_PREFIX}/bin/libclang.dll" )
 
 # Import target "libclang_cxx" for configuration "Release"
 set_property(TARGET libclang_cxx APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libclang_cxx PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib64/libclang_cxx.so.11"
-  IMPORTED_SONAME_RELEASE "libclang_cxx.so.11git"
+  IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib64/liblibclang_cxx.dll.a"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/libclang_cxx.dll"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS libclang_cxx )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libclang_cxx "${_IMPORT_PREFIX}/lib64/libclang_cxx.so.11" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_libclang_cxx "${_IMPORT_PREFIX}/lib64/liblibclang_cxx.dll.a" "${_IMPORT_PREFIX}/bin/libclang_cxx.dll" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)
