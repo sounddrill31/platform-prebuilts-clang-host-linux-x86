@@ -342,8 +342,8 @@ LIBCLANG_RT_ASAN {
     __interceptor_llistxattr;
     __interceptor_localtime;
     __interceptor_localtime_r;
-    __interceptor_longjmp;
     __interceptor__longjmp;
+    __interceptor_longjmp;
     __interceptor_mallinfo;
     __interceptor_malloc;
     __interceptor_malloc_stats;
@@ -473,8 +473,8 @@ LIBCLANG_RT_ASAN {
     __interceptor_strncat;
     __interceptor_strncmp;
     __interceptor_strncpy;
-    __interceptor_strndup;
     __interceptor___strndup;
+    __interceptor_strndup;
     __interceptor_strnlen;
     __interceptor_strpbrk;
     __interceptor_strptime;
@@ -536,8 +536,8 @@ LIBCLANG_RT_ASAN {
     llistxattr;
     localtime;
     localtime_r;
-    longjmp;
     _longjmp;
+    longjmp;
     __lsan_disable;
     __lsan_do_leak_check;
     __lsan_do_recoverable_leak_check;
@@ -1393,8 +1393,8 @@ LIBCLANG_RT_ASAN {
     strncat;
     strncmp;
     strncpy;
-    strndup;
     __strndup;
+    strndup;
     strnlen;
     strpbrk;
     strptime;

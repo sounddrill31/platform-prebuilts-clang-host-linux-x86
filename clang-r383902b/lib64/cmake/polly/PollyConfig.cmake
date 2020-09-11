@@ -1,15 +1,15 @@
 # This file allows users to call find_package(Polly) and pick up our targets.
 
 find_package(LLVM REQUIRED CONFIG
-             HINTS "/buildbot/src/android/llvm-toolchain/out/stage2/lib64/cmake/llvm")
+             HINTS "/usr/local/google/home/jiyong/android/aosp-llvm-toolchain2/out/stage2/lib64/cmake/llvm")
 
 set(Polly_CMAKE_DIR ${CMAKE_CURRENT_LIST_DIR})
 set(Polly_BUNDLED_ISL ON)
 set(Polly_ENABLE_GPGPU_CODEGEN OFF)
 
 set(Polly_DEFINITIONS ${LLVM_DEFINITIONS})
-set(Polly_INCLUDE_DIRS /buildbot/src/android/llvm-toolchain/out/stage2-install/include;/buildbot/src/android/llvm-toolchain/out/stage2-install/include/polly ${LLVM_INCLUDE_DIRS})
-set(Polly_LIBRARY_DIRS /buildbot/src/android/llvm-toolchain/out/stage2-install/lib64)
+set(Polly_INCLUDE_DIRS /usr/local/google/home/jiyong/android/aosp-llvm-toolchain2/out/stage2-install/include;/usr/local/google/home/jiyong/android/aosp-llvm-toolchain2/out/stage2-install/include/polly ${LLVM_INCLUDE_DIRS})
+set(Polly_LIBRARY_DIRS /usr/local/google/home/jiyong/android/aosp-llvm-toolchain2/out/stage2-install/lib64)
 set(Polly_EXPORTED_TARGETS Polly;PollyISL;LLVMPolly)
 set(Polly_LIBRARIES ${LLVM_LIBRARIES} ${Polly_EXPORTED_TARGETS})
 
