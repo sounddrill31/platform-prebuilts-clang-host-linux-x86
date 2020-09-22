@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "34cf868b_a2a3bf6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514973
+      },
+      "writtenOn": "2020-09-22T18:24:05Z",
+      "side": 1,
+      "message": "From incremental build result, I see the link actions that ran locally succeed - https://android-build.googleplex.com/builds/pending/P16872598/aosp_crosshatch-userdebug_RBE/latest/view/logs/rbe_metrics.txt.",
+      "revId": "5db616f853999a6ee45cb2152b7332ea96f75550",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
