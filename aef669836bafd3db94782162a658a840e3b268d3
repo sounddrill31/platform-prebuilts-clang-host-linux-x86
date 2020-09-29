@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8880f7c_ead8f5b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2020-09-29T21:30:31Z",
+      "side": 1,
+      "message": "It might be the case that I need to keep the ordered list together in order instead of breaking it up.  I can send a follow up patch if necessary.",
+      "revId": "aef669836bafd3db94782162a658a840e3b268d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
