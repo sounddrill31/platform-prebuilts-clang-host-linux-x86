@@ -1,0 +1,6 @@
+Code-Review+2: android-build-prod (mdb) <android-build-team-robot@google.com>
+Submitted-by: android-build-prod (mdb) <android-build-team-robot@google.com>
+Submitted-at: Thu, 01 Oct 2020 02:02:14 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1443458
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/emu-30-release
