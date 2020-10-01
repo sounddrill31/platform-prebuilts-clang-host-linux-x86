@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94f3714d_3d6c2f6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-01T18:47:37Z",
+      "side": 1,
+      "message": "These are being added in AOSP, and then will be cherry-picked for R usage. After that, I\u0027ll be deleting these from AOSP, since the only use of these binaries is for newer R builds that want to use regular ASan.",
+      "revId": "e532342f30eadb954c96d19ca6a0edf89a5c65bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
