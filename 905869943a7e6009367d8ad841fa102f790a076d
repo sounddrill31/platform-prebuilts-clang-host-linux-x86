@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "acb54670_a428fb0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-02T16:30:17Z",
+      "side": 1,
+      "message": "Note that these libraries are built against API level 1000: https://source.corp.google.com/android/toolchain/llvm_android/configs.py;l\u003d289.  Although we no longer need to build against 1000 (it was needed to turn a feature in the GCOV runtime only for the platform - but we no longer use GCOV).\n\nWe could probably just set it to 29 instead.  This\u0027d only matter if the runtimes start using new libc functions [1].  If things work fine now, I guess this is not happening.\n\n[1] new functions in libc that gets released in the NDK, since we still get the libc headers from the NDK (an outdated r20 ATM).  {PS: it\u0027s a mess}",
+      "revId": "905869943a7e6009367d8ad841fa102f790a076d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
