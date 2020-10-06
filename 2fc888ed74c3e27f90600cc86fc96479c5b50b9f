@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": false,
       "key": {
         "uuid": "0a896bfd_50d0866e",
         "filename": "/PATCHSET_LEVEL",
@@ -14,8 +15,24 @@
       "side": 1,
       "message": "We also need a new filegroup in prebuilts/clang/host/darwin-x86/Android.bp: https://android.googlesource.com/platform/prebuilts/clang/host/darwin-x86/+/refs/heads/master/Android.bp",
       "revId": "2fc888ed74c3e27f90600cc86fc96479c5b50b9f",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d436b43_a27c5e46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2020-10-06T20:09:49Z",
+      "side": 1,
+      "message": "So: you guys are OK with the current hacky approach? I\u0027d rather add libxml2.so-\u003elibxml2.so.2.9.10 to clang prebuilts, but I don\u0027t know how.",
+      "revId": "2fc888ed74c3e27f90600cc86fc96479c5b50b9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
