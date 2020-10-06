@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "507f167a_557274eb",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2020-10-06T05:43:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8d08bfb6_6f43f747",
+      "range": {
+        "startLine": 893,
+        "startChar": 0,
+        "endLine": 893,
+        "endChar": 1
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9f98fe3_4622a61b",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2020-10-06T03:13:32Z",
       "side": 1,
       "message": "I have concerns whenever I see hard-coded versions like this. Is it possible to generalize this differently? Otherwise, this becomes harder for people to upgrade in the future.",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4eda1b59_c9c4ed47",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2020-10-06T05:43:37Z",
+      "side": 1,
+      "message": "The easiest (for me:-) would be to make clang prebuilts (supplied by llvm-toolchain build) to have prebuilts/clang/host/\u003cos\u003e/\u003cversion\u003e/lib64 contain libxml2.so symlink pointing to the specific libxml2 version (just as, say, there is libc++.so-\u003elibc++.so.1 there). However, I have no idea where such symlink should be set in llvm-toolchain build.",
+      "parentUuid": "a9f98fe3_4622a61b",
       "range": {
         "startLine": 37,
         "startChar": 33,
