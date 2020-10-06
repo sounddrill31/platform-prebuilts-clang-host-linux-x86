@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a896bfd_50d0866e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-06T04:16:36Z",
+      "side": 1,
+      "message": "We also need a new filegroup in prebuilts/clang/host/darwin-x86/Android.bp: https://android.googlesource.com/platform/prebuilts/clang/host/darwin-x86/+/refs/heads/master/Android.bp",
+      "revId": "2fc888ed74c3e27f90600cc86fc96479c5b50b9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
