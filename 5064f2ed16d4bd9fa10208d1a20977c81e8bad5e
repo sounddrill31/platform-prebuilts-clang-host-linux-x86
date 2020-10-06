@@ -117,6 +117,30 @@
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2126e4ba_cab81332",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1344584
+      },
+      "writtenOn": "2020-10-06T16:33:31Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t think a libxml2 symlink will help us here.\nIf I manually create libxml2.so-\u003elibxml2.so.2.9.10 link in `prebuilts/clang/host/linux-x86/clang-r399163b/lib64` and set `libxml2soName` to \"libxml2.so\" in clangprebuilts.go, `prebuilts/clang-tools/build-prebuilts.sh` succeeds, because Soong is happy as libxml2.so file exists, so it can proceed, and the name of the libxml2 library in out/soong/dist/linux-x86/lib64 (which will become prebuilts/clang-tools/linux-x86/lib64 after checkin) is automatically corrected by the post-build phase of build-prebuilts.sh script to libxml2.so.2.9.10 (https://cs.android.com/android/platform/superproject/+/master:development/vndk/tools/header-checker/android/build-prebuilts.sh;drc\u003df1036391fc9de0553124815ff519191dc7ac588c;l\u003d113)\n\nI haven\u0027t verified this approach for Darwin, but I hope it will work there, too.",
+      "parentUuid": "0722227b_69b07787",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
