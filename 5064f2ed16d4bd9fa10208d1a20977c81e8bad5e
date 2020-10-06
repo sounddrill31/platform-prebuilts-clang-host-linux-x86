@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d08bfb6_6f43f747",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 893,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-06T03:13:32Z",
+      "side": 1,
+      "message": "Tab",
+      "range": {
+        "startLine": 893,
+        "startChar": 0,
+        "endLine": 893,
+        "endChar": 1
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9f98fe3_4622a61b",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-06T03:13:32Z",
+      "side": 1,
+      "message": "I have concerns whenever I see hard-coded versions like this. Is it possible to generalize this differently? Otherwise, this becomes harder for people to upgrade in the future.",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
