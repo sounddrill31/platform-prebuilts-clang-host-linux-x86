@@ -33,6 +33,24 @@
       "message": "So: you guys are OK with the current hacky approach? I\u0027d rather add libxml2.so-\u003elibxml2.so.2.9.10 to clang prebuilts, but I don\u0027t know how.",
       "revId": "2fc888ed74c3e27f90600cc86fc96479c5b50b9f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbaa704d_6a396063",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-06T20:23:06Z",
+      "side": 1,
+      "message": "The only difference is the hardcoded version number, correct?  I wouldn\u0027t call it a hack :)  \n\nWe generally avoid making any changes to the prebuilts themselves after they\u0027re submittted.  I will add the symlink before the next compiler update - and we can remove the version number after that.",
+      "parentUuid": "4d436b43_a27c5e46",
+      "revId": "2fc888ed74c3e27f90600cc86fc96479c5b50b9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

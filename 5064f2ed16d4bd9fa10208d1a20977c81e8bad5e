@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "8d08bfb6_6f43f747",
         "filename": "Android.bp",
@@ -20,10 +21,10 @@
         "endChar": 1
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "507f167a_557274eb",
         "filename": "Android.bp",
@@ -44,10 +45,10 @@
         "endChar": 1
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "a9f98fe3_4622a61b",
         "filename": "soong/clangprebuilts.go",
@@ -67,10 +68,10 @@
         "endChar": 40
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "4eda1b59_c9c4ed47",
         "filename": "soong/clangprebuilts.go",
@@ -91,10 +92,10 @@
         "endChar": 40
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "0722227b_69b07787",
         "filename": "soong/clangprebuilts.go",
@@ -115,10 +116,10 @@
         "endChar": 40
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "2126e4ba_cab81332",
         "filename": "soong/clangprebuilts.go",
@@ -139,10 +140,10 @@
         "endChar": 40
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "52afc102_dc5c088d",
         "filename": "soong/clangprebuilts.go",
@@ -163,8 +164,31 @@
         "endChar": 40
       },
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5edbfbc2_d1411ed7",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-06T20:23:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52afc102_dc5c088d",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
