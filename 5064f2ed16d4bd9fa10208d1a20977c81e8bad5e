@@ -141,6 +141,30 @@
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "52afc102_dc5c088d",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-06T17:01:47Z",
+      "side": 1,
+      "message": "Back when I wrote this code, IIRC, soong wasn\u0027t copying the symlink targets to the install directory.  If that\u0027s no longer the case, I agree this will work.  (Need to verify on Darwin like you mentioned.)\n\nIn the toolchain build (out/lib/libxml2-linux-install), this symlink is already present.  So we can change the toolchain build scripts to package the symlink.  Given that\u0027d require new prebuilts, let\u0027s submit this change to unblock the kzip build and remove the hardcoded version after the next prebuilt update.",
+      "parentUuid": "2126e4ba_cab81332",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
