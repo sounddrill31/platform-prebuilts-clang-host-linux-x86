@@ -93,6 +93,30 @@
       "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0722227b_69b07787",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-06T05:52:24Z",
+      "side": 1,
+      "message": "Note that while the symlinks do exist, we still hardcode the symlink target names rather than the link name.  I don\u0027t think a libxml2 symlink will help us here.\n\nLooks like Soong checks this file/module only if LLVM_BUILD_HOST_TOOLS is set.  So this can only cause breakages when clang-tools branch\u0027s compiler gets udpated.  I\u0027d have been more worried if this were not the case and Soong always failed if this file doesn\u0027t exist.  That\u0027d make updating libxml2 harder vis-a-vis the aosp-master-plus-llvm.",
+      "parentUuid": "4eda1b59_c9c4ed47",
+      "range": {
+        "startLine": 37,
+        "startChar": 33,
+        "endLine": 37,
+        "endChar": 40
+      },
+      "revId": "5064f2ed16d4bd9fa10208d1a20977c81e8bad5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
