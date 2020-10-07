@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66a5a2e6_fd98e31e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-10-07T22:03:47Z",
+      "side": 1,
+      "message": "Updating llvm-binutils-stable to unbreak llvm-cov.  Looks like the profdata version got bumped in the latest update and the older llvm-cov cannot read profiles from the r399163.",
+      "revId": "a0f490791408a5fd3ff74ff486b1ed5e1ea2b094",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
