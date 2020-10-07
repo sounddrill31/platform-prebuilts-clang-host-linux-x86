@@ -1,0 +1,8 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Lint+1: Lint 🤖 <android-build-ayeaye@system.gserviceaccount.com>
+Bypass-Presubmit+1: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-by: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-at: Wed, 07 Oct 2020 23:47:46 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1453716
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
