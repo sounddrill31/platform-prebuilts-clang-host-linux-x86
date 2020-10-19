@@ -16,6 +16,24 @@
       "message": "With `llndk_stubs`, we can get rid of `has_stubs` (and instead implicitly pick up the stub variants based on the existence of `llndk_stubs`).",
       "revId": "7ebf1894c1d26feeb5c8b32850844ec96ca6a72c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bca4f60_8ee8471e",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2020-10-19T23:24:25Z",
+      "side": 1,
+      "message": "They are different stubs (APEX stubs vs LLNDK stubs), but the existence of one is probably fine to imply the other.",
+      "parentUuid": "fbfe883a_b9bcece2",
+      "revId": "7ebf1894c1d26feeb5c8b32850844ec96ca6a72c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
