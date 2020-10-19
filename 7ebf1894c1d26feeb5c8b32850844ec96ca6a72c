@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbfe883a_b9bcece2",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-19T23:05:54Z",
+      "side": 1,
+      "message": "With `llndk_stubs`, we can get rid of `has_stubs` (and instead implicitly pick up the stub variants based on the existence of `llndk_stubs`).",
+      "revId": "7ebf1894c1d26feeb5c8b32850844ec96ca6a72c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
