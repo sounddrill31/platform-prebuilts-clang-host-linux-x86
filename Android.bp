@@ -46,6 +46,7 @@ cc_defaults {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
@@ -136,6 +137,7 @@ cc_defaults {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     native_bridge_supported: true,
 }
@@ -256,6 +258,7 @@ cc_defaults {
     enabled: false,
     vendor_available: true,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     double_loadable: true,
     stl: "c++_shared",
@@ -422,6 +425,7 @@ libclang_rt_prebuilt_library_static {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -440,6 +444,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     arch: {
         arm64: {
@@ -460,6 +465,7 @@ cc_defaults {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
 }
@@ -582,6 +588,7 @@ cc_defaults {
     sdk_version: "minimum",
     enabled: false,
     ramdisk_available: true,
+    vendor_ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     sanitize: {
