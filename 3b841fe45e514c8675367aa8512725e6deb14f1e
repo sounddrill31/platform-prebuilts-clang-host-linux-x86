@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52b3e3d9_f72d321d",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2020-10-24T01:03:11Z",
+      "side": 1,
+      "message": "Stephen, there are actually 8 places where it should be false and 7 places where it should be true. Do you want me to do PS2 or PS1? Or do you have other suggestions? e.g. do not mark the following as false",
+      "range": {
+        "startLine": 348,
+        "startChar": 0,
+        "endLine": 348,
+        "endChar": 36
+      },
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

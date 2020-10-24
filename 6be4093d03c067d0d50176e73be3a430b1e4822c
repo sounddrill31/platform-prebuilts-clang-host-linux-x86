@@ -16,6 +16,24 @@
       "message": "I think this should be promoted into `libclang_rt-prebuilt-default` instead of being in each of these derived defaults. Even if there is an outlier prebuilt that shouldn\u0027t be `vendor_ramdisk_available`, we can just mark those ones false instead.",
       "revId": "6be4093d03c067d0d50176e73be3a430b1e4822c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4c206c9_d7ae7152",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2020-10-24T01:03:11Z",
+      "side": 1,
+      "message": "See PS2.\n\nNote that vendor_available and ramdisk_available aren\u0027t in libclang_rt-prebuilt-default either. ramdisk_available should go with vendor_ramdisk_available, so I moved ramdisk_available too.",
+      "parentUuid": "501b789b_b6ccf783",
+      "revId": "6be4093d03c067d0d50176e73be3a430b1e4822c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
