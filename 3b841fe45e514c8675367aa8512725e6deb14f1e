@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bf329ad_94b8b00b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2020-10-26T20:21:59Z",
+      "side": 1,
+      "message": "I hope this answer your question. Feel free to reopen the comment if you need further explanation.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52b3e3d9_f72d321d",
@@ -55,6 +72,30 @@
       "side": 1,
       "message": "Well these libraries are static, so I\u0027m not sure if `ramdisk_available` and `vendor_ramdisk_available` really apply anyways. Shouldn\u0027t this only matter for shared libraries?",
       "parentUuid": "52b3e3d9_f72d321d",
+      "range": {
+        "startLine": 348,
+        "startChar": 0,
+        "endLine": 348,
+        "endChar": 36
+      },
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f3b4e48_60d0818b",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2020-10-26T20:21:59Z",
+      "side": 1,
+      "message": "These are applied to static libraries. In this case, these applies especially to static libraries.\n\nIn general, marking a static library \"X_available\" means that only modules / binaries in X can use/link to this static library. So, without this change, any modules / binaries in ramdisk or vendor_ramdisk can\u0027t link statically to libclang_rt.*.\n\nWhat\u0027s more, in ramdisk and vendor_ramdisk, only static binaries can be run, because there\u0027s no linker there.\n\n(ccross please CMIIW)",
+      "parentUuid": "e11b5182_bbccf8e5",
       "range": {
         "startLine": 348,
         "startChar": 0,
