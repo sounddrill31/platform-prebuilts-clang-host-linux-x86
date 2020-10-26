@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bf2a0c9_ecc7a087",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "I think this is fine as-is, but please answer my one question below. There is certainly some further refactoring that would make this less ugly, because currently it seems that defaults aren\u0027t being applied consistently (especially with scudo). We can clean that up after this set of CLs land, however.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "52b3e3d9_f72d321d",
@@ -20,6 +37,149 @@
         "endLine": 348,
         "endChar": 36
       },
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e11b5182_bbccf8e5",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "Well these libraries are static, so I\u0027m not sure if `ramdisk_available` and `vendor_ramdisk_available` really apply anyways. Shouldn\u0027t this only matter for shared libraries?",
+      "parentUuid": "52b3e3d9_f72d321d",
+      "range": {
+        "startLine": 348,
+        "startChar": 0,
+        "endLine": 348,
+        "endChar": 36
+      },
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ded5426f_3750e315",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "This seems reasonable as well, since we don\u0027t need to profile other versions.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5d802ec_6d37aca2",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "These are definitely good, because we don\u0027t want fuzzing libraries shipped.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d6b58f4_34709efe",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "This is another ABI for profiling, so again, shouldn\u0027t be here. We can possibly refactor this to use a shared default with other profiling runtimes in a follow-up CL.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b74ef862_aea129fb",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "Also OK, since I don\u0027t think we\u0027re using scudo outside of the regular platform.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ec54e4_7dbdbefa",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 718,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "Fine again because scudo, but we should also refactor the `static` variant to probably pull defaults from the non-static variant (or vice versa).",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b56e558f_dd5aae27",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "More scudo, but could also use better default refactoring.",
+      "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e07912db_6092e63c",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 827,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-10-26T17:48:44Z",
+      "side": 1,
+      "message": "More scudo, but could also use better default refactoring.",
       "revId": "3b841fe45e514c8675367aa8512725e6deb14f1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
