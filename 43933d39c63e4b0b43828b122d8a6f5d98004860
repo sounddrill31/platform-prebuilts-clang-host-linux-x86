@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ec7dae8_faaadf81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2020-12-03T18:22:25Z",
+      "side": 1,
+      "message": "I haven\u0027t finished cherry picking patches, do we want to wait until then?",
+      "revId": "43933d39c63e4b0b43828b122d8a6f5d98004860",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
