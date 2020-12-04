@@ -1,0 +1,9 @@
+Autosubmit+1: Rupert Shuttleworth <ruperts@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Code-Review+1: Kousik Kumar <kousikk@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 04 Dec 2020 18:57:44 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1517079
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
