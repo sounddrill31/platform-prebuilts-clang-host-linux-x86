@@ -56,6 +56,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "6023e5e1_31679142",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1726181
+      },
+      "writtenOn": "2020-12-04T18:57:36Z",
+      "side": 1,
+      "message": "Thanks, done",
+      "parentUuid": "4f3b04ed_270128a0",
+      "revId": "0eab8155ed9b7a5905736328fa247a15ec24ab2f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "eb6e2692_26967dab",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
