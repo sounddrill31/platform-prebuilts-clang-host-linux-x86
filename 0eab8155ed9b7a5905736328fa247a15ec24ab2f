@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb6e2692_26967dab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514973
+      },
+      "writtenOn": "2020-12-04T15:54:31Z",
+      "side": 1,
+      "message": "Total size of include directory is ~11MB and the total number of files is 148 (we likely already include some of these files in action inputs).\n\nThis does increase the median number of input files to C++ compiles to 584 from 404, but I think that should be ok. I only see a 200ms remote-exec latency increase (mostly due to elevated input fetch times which should happen ~once per RBE instance).",
+      "revId": "0eab8155ed9b7a5905736328fa247a15ec24ab2f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
