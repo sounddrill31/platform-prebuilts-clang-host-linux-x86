@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f3b04ed_270128a0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2020-12-04T18:41:24Z",
+      "side": 1,
+      "message": "SGTM.\n\nAdd \u0027Bug: http://b/163618332\u0027 to the commit message so it refers back to the original issue.  As an added bonus, Gerrit will also update the bug when these changes get merged.\n\n(Marking comment as unresolved to prevent autosubmit from triggering).",
+      "parentUuid": "bb1081eb_6b7417b6",
+      "revId": "0eab8155ed9b7a5905736328fa247a15ec24ab2f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "eb6e2692_26967dab",
