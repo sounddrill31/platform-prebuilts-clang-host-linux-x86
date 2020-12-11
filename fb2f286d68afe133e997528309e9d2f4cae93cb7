@@ -16,6 +16,23 @@
       "message": "Dan, these binaries would be used for the LTS NDK r21e, but also need NDK-API +1.",
       "revId": "fb2f286d68afe133e997528309e9d2f4cae93cb7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad30beb5_6f7dd43c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2020-12-11T22:24:31Z",
+      "side": 1,
+      "message": "Dan, where should we actually be checking these prebuilts in for the LTS NDK r21? I realize now that we cleaned this up out of aosp/master, and so perhaps it is smarter to just cherry-pick these binaries directly to the branch you are using.",
+      "revId": "fb2f286d68afe133e997528309e9d2f4cae93cb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
