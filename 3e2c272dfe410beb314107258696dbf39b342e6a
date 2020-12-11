@@ -16,6 +16,24 @@
       "message": "Yabin, this build doesn\u0027t seem to include llvm-cxxfilt, FWIW.",
       "revId": "3e2c272dfe410beb314107258696dbf39b342e6a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3d93dd9_f600288b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2020-12-11T19:00:13Z",
+      "side": 1,
+      "message": "Yeah, thanks for reminding! I will abandon it.",
+      "parentUuid": "e1742e26_157764e0",
+      "revId": "3e2c272dfe410beb314107258696dbf39b342e6a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
