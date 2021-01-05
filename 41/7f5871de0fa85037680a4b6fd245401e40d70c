@@ -1,0 +1,10 @@
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Verified+1: Yabin Cui <yabinc@google.com>
+Code-Review+2: Yi Kong <yikong@google.com>
+Presubmit-Verified+2: Treehugger Robot <treehugger-gerrit@google.com>
+NDK-API-Review+1: Dan Albert <danalbert@google.com>
+Submitted-by: Yabin Cui <yabinc@google.com>
+Submitted-at: Tue, 05 Jan 2021 21:49:15 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1532505
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
