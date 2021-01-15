@@ -22,6 +22,30 @@
       },
       "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b77dcd36_a0b0e8f3",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2021-01-15T01:57:48Z",
+      "side": 1,
+      "message": "Technically I think the system_shared_libs setting is only needed for libunwind-exported.a, not libunwind.a. I could move the setting to only affect libunwind-exported.a, but then switching libc.so\u0027s dependency from libunwind-exported.a to libunwind.a (e.g. for testing/experimentation) would trigger a mysterious build error, so I think it\u0027s better to clear the setting for both modules. I\u0027ll update the comment.\n\nI wonder if it makes sense that a prebuilt static archive should automatically/implicitly depend on a shared library like libc.so. e.g. Is it useful for the \"system_shared_libs\" property to exist on a Soong module of type \"llvm_prebuilt_library_static\"?",
+      "parentUuid": "b0ee8d25_50474487",
+      "range": {
+        "startLine": 912,
+        "startChar": 0,
+        "endLine": 912,
+        "endChar": 70
+      },
+      "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
