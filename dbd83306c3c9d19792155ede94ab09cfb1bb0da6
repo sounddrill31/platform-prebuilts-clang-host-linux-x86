@@ -46,6 +46,30 @@
       },
       "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6b88c49_5f419ef9",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2021-01-15T02:14:42Z",
+      "side": 1,
+      "message": "Maybe Soong propagates the dependencies, so that a shared library that links against a prebuilt static library automatically links against the system_shared_libs of the static prebuilt?\n\nlibunwind[-exported].a does actually depend on libc and libdl functions.\n\nThe builtins ought to have the same problem (especially if/when I change libc.so to use a special exported version on arm32/x86), but I see that libClangRtPrebuiltLibraryStatic sets System_shared_libs to [] in clangprebuilts.go. (The builtins call memcpy and abort in libc.)",
+      "parentUuid": "b77dcd36_a0b0e8f3",
+      "range": {
+        "startLine": 912,
+        "startChar": 0,
+        "endLine": 912,
+        "endChar": 70
+      },
+      "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
