@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0ee8d25_50474487",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-01-15T01:38:43Z",
+      "side": 1,
+      "message": "Should this comment say that libc and such are unnecessary for libunwind*?  (Considering system_shared_libs is empty for libunwind as well).",
+      "range": {
+        "startLine": 912,
+        "startChar": 0,
+        "endLine": 912,
+        "endChar": 70
+      },
+      "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
