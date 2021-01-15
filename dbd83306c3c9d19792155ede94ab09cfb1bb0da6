@@ -70,6 +70,30 @@
       },
       "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9b91dc7_e505514c",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 912,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-01-15T18:29:23Z",
+      "side": 1,
+      "message": "That makes sense.  I know Soong doesn\u0027t propagate `shared_libs` property of static libraries but it may do so for `system_shared_libs`.\n\nThe comment here makes sense.  Thanks for updating it.",
+      "parentUuid": "f6b88c49_5f419ef9",
+      "range": {
+        "startLine": 912,
+        "startChar": 0,
+        "endLine": 912,
+        "endChar": 70
+      },
+      "revId": "dbd83306c3c9d19792155ede94ab09cfb1bb0da6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
