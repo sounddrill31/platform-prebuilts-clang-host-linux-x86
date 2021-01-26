@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7c9d8d4_f652d850",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2021-01-26T18:27:53Z",
+      "side": 1,
+      "message": "the kernel is on the A build",
+      "revId": "f53b72697a2a41c7d37800fe2bf3e29ebea1a18f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
