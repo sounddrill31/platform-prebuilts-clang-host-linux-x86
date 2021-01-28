@@ -68,6 +68,17 @@ libclang_rt_prebuilt_library_static {
     },
 }
 
+// Only used in libc.so and libm.so.
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.builtins-arm-android-exported",
+    defaults: ["libclang_rt.builtins-android-default"],
+    arch: {
+        arm: {
+            enabled: true,
+        },
+    },
+}
+
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-aarch64-android",
     defaults: ["libclang_rt.builtins-android-default"],
@@ -81,6 +92,17 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-i686-android",
+    defaults: ["libclang_rt.builtins-android-default"],
+    arch: {
+        x86: {
+            enabled: true,
+        },
+    },
+}
+
+// Only used in libc.so and libm.so.
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.builtins-i686-android-exported",
     defaults: ["libclang_rt.builtins-android-default"],
     arch: {
         x86: {
