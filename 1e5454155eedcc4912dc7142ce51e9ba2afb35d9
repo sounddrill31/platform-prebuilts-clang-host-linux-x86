@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1f3d90a_ed3706ce",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-01-28T05:38:30Z",
+      "side": 1,
+      "message": "Soong supports a \u0027visibility\u0027 property.  Should we add something like the following (if it actually works, that is)?\n\n`visibility: [\"//bionic/libc\", \"//bionic/libm\"]`",
+      "range": {
+        "startLine": 79,
+        "startChar": 4,
+        "endLine": 79,
+        "endChar": 5
+      },
+      "revId": "1e5454155eedcc4912dc7142ce51e9ba2afb35d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
