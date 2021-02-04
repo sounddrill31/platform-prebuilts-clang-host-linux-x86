@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8204f9c3_09df1e50",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-04T12:04:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a625b285_96b948ea",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ad3f63bb_7928c0af",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-02-04T09:29:15Z",
       "side": 1,
       "message": "llvm-link is a bitcode linker for LLVM, and not the actual linker used by Android. This should probably be `/bin/ld.lld`.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eac811f3_020b7144",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-04T12:04:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad3f63bb_7928c0af",
       "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -52,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbc016e9_c163b6cd",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-04T12:04:21Z",
+      "side": 1,
+      "message": "Added, I don\u0027t think we\u0027re using it yet in our builds, but no harm adding it. Also added a comment to direct future readers to the Soong wrapper.",
+      "parentUuid": "07f85d93_312e283d",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56bd6cdd_c51308c8",
@@ -65,6 +119,24 @@
       "writtenOn": "2021-02-04T09:29:15Z",
       "side": 1,
       "message": "I\u0027m not sure if this one is useful actually. You probably do need to retain the `ld.lld` symlinked binary for builds, as I believe that is the one that Clang will call from its driver.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86dd11f7_44ad9cbb",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-04T12:04:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "56bd6cdd_c51308c8",
       "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
