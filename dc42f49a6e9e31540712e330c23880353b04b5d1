@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a625b285_96b948ea",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T09:29:15Z",
+      "side": 1,
+      "message": "Ideally this should be using `clang-r407598b` since you\u0027re checking this into the main branch of aosp. The legacy version listed is likely to be deleted accidentally.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad3f63bb_7928c0af",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T09:29:15Z",
+      "side": 1,
+      "message": "llvm-link is a bitcode linker for LLVM, and not the actual linker used by Android. This should probably be `/bin/ld.lld`.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07f85d93_312e283d",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T09:29:15Z",
+      "side": 1,
+      "message": "`/bin/llvm-strip` exists, but I do know that there is a wrapper around strip provided by Soong as well, so you may be trying to work around that here.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56bd6cdd_c51308c8",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T09:29:15Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this one is useful actually. You probably do need to retain the `ld.lld` symlinked binary for builds, as I believe that is the one that Clang will call from its driver.",
+      "revId": "dc42f49a6e9e31540712e330c23880353b04b5d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
