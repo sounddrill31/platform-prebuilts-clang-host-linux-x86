@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46bb9b9f_5803fd85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T01:39:02Z",
+      "side": 1,
+      "message": "I don\u0027t want to block submission, but did have a question about these license updates, particularly because these prebuilts get updated regularly. +hhb in case he knows more about the python aspect here, and whether it would be ok to post-process/delete these files possibly even.",
+      "revId": "6d6c354952307f1acb7b5bb4a38ccff9aba384bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cdd7d667_97cee348",
+        "filename": "METADATA",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-02-04T01:39:02Z",
+      "side": 1,
+      "message": "Do we have to keep this comment list up-to-date? Each of these directories is a prebuilt toolchain that we produce, so we add/remove them as needed. To be fair, I also don\u0027t know that we actually need to retain these particular files to make python integration work, so we could also possibly just delete them to make the licensing simpler.",
+      "revId": "6d6c354952307f1acb7b5bb4a38ccff9aba384bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
