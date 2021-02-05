@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cc1d43c_3052999b",
+        "filename": "BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-05T08:31:35Z",
+      "side": 1,
+      "message": "This expects that most people reading this are existing build system users, especially the Android LLVM maintainers. I\u0027ll keep this as-is, hope you don\u0027t mind!",
+      "parentUuid": "b64a1f7b_91e76214",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 24
+      },
+      "revId": "ec8caadacd3964c191b5e3a77b368d80ad667b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "26cff8d8_df1a7fb3",
@@ -54,6 +78,30 @@
       "writtenOn": "2021-02-05T05:51:06Z",
       "side": 1,
       "message": "Where do these come from? \n\n(and the flags below - is there a corresponding Blueprint file etc?)",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 39,
+        "endChar": 19
+      },
+      "revId": "ec8caadacd3964c191b5e3a77b368d80ad667b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7628a3f6_2f6e8b23",
+        "filename": "BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-05T08:31:35Z",
+      "side": 1,
+      "message": "Quick dig: https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/config/x86_64_device.go;l\u003d65-80;drc\u003d41ab2519b46ec33ddf26b38ebc1ed3dc197babde",
+      "parentUuid": "26cff8d8_df1a7fb3",
       "range": {
         "startLine": 32,
         "startChar": 1,
