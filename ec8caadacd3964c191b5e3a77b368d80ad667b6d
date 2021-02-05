@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b64a1f7b_91e76214",
+        "filename": "BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1726181
+      },
+      "writtenOn": "2021-02-05T05:51:06Z",
+      "side": 1,
+      "message": "? your builds?\n\nMaybe\n\nNOTE: EXPERIMENTAL AND UNSUPPORTED. NOT USED FOR OFFICIAL BAZEL BUILDS OF AOSP YET.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 24
+      },
+      "revId": "ec8caadacd3964c191b5e3a77b368d80ad667b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26cff8d8_df1a7fb3",
+        "filename": "BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1726181
+      },
+      "writtenOn": "2021-02-05T05:51:06Z",
+      "side": 1,
+      "message": "Where do these come from? \n\n(and the flags below - is there a corresponding Blueprint file etc?)",
+      "range": {
+        "startLine": 32,
+        "startChar": 1,
+        "endLine": 39,
+        "endChar": 19
+      },
+      "revId": "ec8caadacd3964c191b5e3a77b368d80ad667b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
