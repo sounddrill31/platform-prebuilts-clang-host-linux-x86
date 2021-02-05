@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "532d9e55_dad52fc1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-02-05T10:10:12Z",
+      "side": 1,
+      "message": "Change bypassed Presubmit.\n\nBypass Reason: other \nAdditional Feedback: Presubmit-Verified-Together is at +1.\n\nThe one failure for Presubmit-Verified is a flake with com.google.android.googlequicksearchbox(module-abi\u003dx86_64), b/179101382",
+      "revId": "ec8caadacd3964c191b5e3a77b368d80ad667b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b64a1f7b_91e76214",
