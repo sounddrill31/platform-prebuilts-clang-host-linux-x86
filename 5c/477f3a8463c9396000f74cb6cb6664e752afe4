@@ -1,0 +1,9 @@
+Code-Review+2: Jingwen Chen <jingwen@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+2: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Submitted-by: Christopher Parsons <cparsons@google.com>
+Submitted-at: Mon, 08 Feb 2021 15:47:53 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1580063
+Project: platform/prebuilts/clang/host/linux-x86
+Branch: refs/heads/master
