@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25d3d700_4eea4fd5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2021-02-17T19:11:27Z",
+      "side": 1,
+      "message": "Change the platform build version first. Other references will be changed after they are upgraded.\n",
+      "revId": "9ad0900f2ff492b5b0f5ab6c0224e9945803e60a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
