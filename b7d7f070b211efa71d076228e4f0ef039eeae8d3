@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b218311_30ac9251",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-03-16T16:51:28Z",
+      "side": 1,
+      "message": "\"always_linker_flags\" and \"linker_flags\" names could be more descriptive. How about something like \"global_linker_flags\" and \"attribute_linker_flags\" ? (I\u0027m not sure if this is appropriate, but that\u0027s an example)",
+      "revId": "b7d7f070b211efa71d076228e4f0ef039eeae8d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
