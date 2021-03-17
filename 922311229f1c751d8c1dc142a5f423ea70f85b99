@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2df43f9c_de26379a",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-03-17T08:02:03Z",
+      "side": 1,
+      "message": "Is this supposed to also append LINKER_FLAGS? I just ran into a shared library linking problem where it was pulling in /bin/ld and not LLVM\u0027s lld, then I realized that -fuse-ld\u003dlld isn\u0027t in the action.",
+      "range": {
+        "startLine": 506,
+        "startChar": 16,
+        "endLine": 506,
+        "endChar": 37
+      },
+      "revId": "922311229f1c751d8c1dc142a5f423ea70f85b99",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
