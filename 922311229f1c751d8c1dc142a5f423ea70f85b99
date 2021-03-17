@@ -22,6 +22,30 @@
       },
       "revId": "922311229f1c751d8c1dc142a5f423ea70f85b99",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53307e9e_1de30796",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-03-17T08:41:15Z",
+      "side": 1,
+      "message": "The `target_flags` aspect of this should be the `-target aarch64-linux-android` part of most command lines, since a single Clang binary does cross-compilation for all of Android\u0027s targets.\n\nSoong does have `-fuse-ld\u003dlld` as part of the global host and device linker flags, but I don\u0027t know where that exists for bazel.",
+      "parentUuid": "2df43f9c_de26379a",
+      "range": {
+        "startLine": 506,
+        "startChar": 16,
+        "endLine": 506,
+        "endChar": 37
+      },
+      "revId": "922311229f1c751d8c1dc142a5f423ea70f85b99",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
