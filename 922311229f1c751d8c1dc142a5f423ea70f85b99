@@ -46,6 +46,30 @@
       },
       "revId": "922311229f1c751d8c1dc142a5f423ea70f85b99",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe54487f_b4bdeda4",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-03-17T12:40:54Z",
+      "side": 1,
+      "message": "No, it is not supposed to also append LINKER_FLAGS.\n\nThe \"global\" linker flags that are used in Soong for partial linking of cc_objects have a very minimal set of linker flags (just target) and specifies \"-fuse-ld\u003dlld\" separately (https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/builder.go;l\u003d87;drc\u003dmaster).\n\nI have a fix for your issue though, it looks like I accidentally dropped the linker_flag_feature. Will send a followup shortly.",
+      "parentUuid": "53307e9e_1de30796",
+      "range": {
+        "startLine": 506,
+        "startChar": 16,
+        "endLine": 506,
+        "endChar": 37
+      },
+      "revId": "922311229f1c751d8c1dc142a5f423ea70f85b99",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
