@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "090f4c2d_54379fd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2021-03-29T16:32:50Z",
+      "side": 1,
+      "message": "Please check the presubmit failures.\n\nFor kernel, looks like back in O we used clang-r365631c.\nhttps://android.googlesource.com/kernel/common/+/refs/heads/android-4.9-o/build.config.common\n\nI will have to pin their manifests when we eventually remove clang-r365631c.",
+      "revId": "ed4a5ee07d94b0f08e0ca34629ff1c5696218f04",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
