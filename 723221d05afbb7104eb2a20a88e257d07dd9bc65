@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af618c77_dd95e361",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-03-30T02:52:32Z",
+      "side": 1,
+      "message": "Technically my own patch, but Colin also verified this.",
+      "revId": "723221d05afbb7104eb2a20a88e257d07dd9bc65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
