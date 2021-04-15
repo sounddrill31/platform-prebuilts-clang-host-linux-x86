@@ -16,6 +16,24 @@
       "message": "Wait. Shouldn\u0027t http://b/181138249 propose an alternative for generic `python` use on Googler machines rather than just breaking every upstream project that isn\u0027t going to mandate python3 immediately? On our side, we have seen people using `sudo apt-get install python-is-python3` to install the necessary python symlink.",
       "revId": "44a674a0d6c8007ec243c2c0edbe05ffb71144d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61a22e02_2dc29ed9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2021-04-15T00:24:55Z",
+      "side": 1,
+      "message": "If `sudo apt-get install python-is-python3` is the way to go, sure.\n\nCan someone send a PSA, though?",
+      "parentUuid": "7c903ea1_e3647401",
+      "revId": "44a674a0d6c8007ec243c2c0edbe05ffb71144d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
