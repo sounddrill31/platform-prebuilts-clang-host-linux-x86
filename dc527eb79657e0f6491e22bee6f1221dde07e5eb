@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "173842ee_c3a4013f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2021-04-21T00:34:45Z",
+      "side": 1,
+      "message": "I added a .gitignore for python cache files.",
+      "revId": "dc527eb79657e0f6491e22bee6f1221dde07e5eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
