@@ -1179,6 +1179,21 @@ clang_builtin_headers {
     out: ["clang_builtin_headers_resources.inc"],
 }
 
+filegroup {
+    name: "llvm-symbolizer",
+    srcs: [
+        "llvm-binutils-stable/llvm-symbolizer",
+    ],
+}
+
+filegroup {
+    name: "llvm-cxxfilt",
+    srcs: [
+        "clang-bootstrap/bin/llvm-cxxfilt",
+        "clang-bootstrap/lib64/libc++.so.1",
+    ],
+}
+
 subdirs = [
     "soong",
 ]
