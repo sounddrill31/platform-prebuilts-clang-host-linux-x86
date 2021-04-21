@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbd58bd0_27191039",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-04-21T16:48:10Z",
+      "side": 1,
+      "message": "Context: https://android-review.googlesource.com/c/platform/development/+/1682228/3/scripts/symbol.py#437",
+      "revId": "3857008389202edac32d57008bb8c99d2c957f9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
