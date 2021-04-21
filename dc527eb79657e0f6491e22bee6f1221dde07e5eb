@@ -16,6 +16,23 @@
       "message": "I added a .gitignore for python cache files.",
       "revId": "dc527eb79657e0f6491e22bee6f1221dde07e5eb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ee77362_a0e41781",
+        "filename": "clang-stable/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-04-21T17:02:44Z",
+      "side": 1,
+      "message": "Note that libclang.so uses the existing libc++.so.1 from the old clang at runtime.  If this works fine, let\u0027s submit this change.  I\u0027ll upgrade clang-format as a separate change.",
+      "revId": "dc527eb79657e0f6491e22bee6f1221dde07e5eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
