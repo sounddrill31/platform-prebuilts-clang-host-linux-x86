@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b0fb3a3_82f74a36",
+        "filename": "Android.bp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1193,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-22T20:25:18Z",
+      "side": 1,
+      "message": "Ugh, this one is also not \"stable\" based on what you want here. Pirama, I suppose we should be exporting libc++.so.1 as well in this subdir. I do wonder if we could instead point the build system here to just use the tools from the official prebuilts and not a \"stable\" location instead.",
+      "revId": "82efd44eb9efcc13e73168509f8f2ccb2e278bb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
