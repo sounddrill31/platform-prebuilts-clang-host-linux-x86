@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ac2ddad_7ce2fd82",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 1192,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-22T05:09:47Z",
+      "side": 1,
+      "message": "These should come from `llvm-binutils-stable` too. The `clang-bootstrap` version will disappear in the future, as we\u0027re only using that to support building Mac universal binaries.",
+      "revId": "2242684b17f9fe425beca268acbcbbc35fc6e68b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
