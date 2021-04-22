@@ -1,6 +1,7 @@
 load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "feature", "flag_group", "flag_set", "tool_path", "with_feature_set")
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
 load("//build/bazel/rules:static_libc.bzl", "LibcConfigInfo")
+load("//build/bazel/rules:cc_constants.bzl", "constants")
 
 # Clang-specific configuration.
 _ClangVersionInfo = provider(fields = ["directory", "includes"])
@@ -273,7 +274,7 @@ def _compiler_flag_features(
                 ],
                 flag_groups = [
                     flag_group(
-                        flags = CC_COMPILER_FLAGS,
+                        flags = CC_COMPILER_FLAGS + constants.GLOBAL_INCLUDE_DIRS_COPTS_ONLY_USED_FOR_SOONG_COMPATIBILITY_DO_NOT_ADD_MORE,
                     ),
                 ],
             ),
