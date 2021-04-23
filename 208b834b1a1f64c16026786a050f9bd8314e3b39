@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0f38336_2353b6b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-04-23T22:11:50Z",
+      "side": 1,
+      "message": "FYI, I\u0027ve submitted aosp/1684835, which is a portion of your topic. This should be submittable and makes a number of other modules removable from the bp2build denylist :)",
+      "revId": "208b834b1a1f64c16026786a050f9bd8314e3b39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a836882e_eaffa47d",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-04-23T22:11:50Z",
+      "side": 1,
+      "message": "This is? I thought these constants were execroot relative (and it seems like adding this line indeed adds `-isystem` arguments which are execroot relative).",
+      "revId": "208b834b1a1f64c16026786a050f9bd8314e3b39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
