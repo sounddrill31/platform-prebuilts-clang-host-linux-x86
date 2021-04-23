@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ade32f7f_0ee4efbb",
+        "filename": "Android.bp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1186,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-04-23T17:00:23Z",
+      "side": 1,
+      "message": "Can you add visibility property here and below:\n\n`visibility: [\"//development/scripts:__subpackages__\"]`\n\nThis would help us avoid untracked users of these exports.",
+      "revId": "82efd44eb9efcc13e73168509f8f2ccb2e278bb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7b0fb3a3_82f74a36",
         "filename": "Android.bp",
         "patchSetId": 4
@@ -14,6 +31,24 @@
       "writtenOn": "2021-04-22T20:25:18Z",
       "side": 1,
       "message": "Ugh, this one is also not \"stable\" based on what you want here. Pirama, I suppose we should be exporting libc++.so.1 as well in this subdir. I do wonder if we could instead point the build system here to just use the tools from the official prebuilts and not a \"stable\" location instead.",
+      "revId": "82efd44eb9efcc13e73168509f8f2ccb2e278bb0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e428bc6_fd910768",
+        "filename": "Android.bp",
+        "patchSetId": 4
+      },
+      "lineNbr": 1193,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-04-23T17:00:23Z",
+      "side": 1,
+      "message": "Yes, exporting these directly from the toolchain is the right approach.  jdesprez@: For now, you can export these from clang-r416183b to unblock your issue.\n\nNB: It\u0027s safe to export the libc++ without clash with the libc++ from external/libcxx because this usage is in a filegroup and not used to build any library.\n\nIn a followup, the toolchain team should:\n1. infer the current clang prebuilt version and export them to soong.  This\u0027d use the same approach as llvm_* modules in this file.\n2. Add these host tests to our continuous testing so we can validate them before release.",
+      "parentUuid": "7b0fb3a3_82f74a36",
       "revId": "82efd44eb9efcc13e73168509f8f2ccb2e278bb0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }

@@ -34,6 +34,24 @@
       "parentUuid": "2ac2ddad_7ce2fd82",
       "revId": "2242684b17f9fe425beca268acbcbbc35fc6e68b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8871229d_adf3d80b",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 1192,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-04-23T17:00:23Z",
+      "side": 1,
+      "message": "This is out of scope now since we\u0027re now directly using the tools from the clang prebuilts.\n\n(see other comment for this CL).",
+      "parentUuid": "ff16e0c2_b5917207",
+      "revId": "2242684b17f9fe425beca268acbcbbc35fc6e68b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
