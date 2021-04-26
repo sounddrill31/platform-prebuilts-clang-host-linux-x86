@@ -50,6 +50,24 @@
       "message": "Not sure if this is important enough to re-acquire owners approval, but it might be nice to add a comment as to the importance of this inclusion. It seems innocuous, but it\u0027s actually a hack to ensure analysis on //.",
       "revId": "aa2e4a514a6c85eebcc4a27149eaf9244e951a1e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a2b61e0_ce163107",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 617,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-04-26T15:33:56Z",
+      "side": 1,
+      "message": "I\u0027ll send out a followup change. This change is blocking quite a few things so I don\u0027t want to jeopardize it.",
+      "parentUuid": "5e928748_2d8df9cb",
+      "revId": "aa2e4a514a6c85eebcc4a27149eaf9244e951a1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
