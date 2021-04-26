@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "679b3be8_90fc1287",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-04-26T15:39:41Z",
+      "side": 1,
+      "message": "@Pirama: I didn\u0027t want to add this to the previous change. This one is not very urgent so take a look at your leisure.",
+      "revId": "292a0219dc8d13731482d59f00dc50832730437d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
