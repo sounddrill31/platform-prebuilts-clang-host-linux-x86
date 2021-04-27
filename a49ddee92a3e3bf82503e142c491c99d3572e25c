@@ -22,6 +22,30 @@
       },
       "revId": "a49ddee92a3e3bf82503e142c491c99d3572e25c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca89be71_1d4bec0d",
+        "filename": "OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-04-27T07:23:27Z",
+      "side": 1,
+      "message": "Yeah, I was not very sure if this should be here. I\u0027m removing the Blueprint file then.",
+      "parentUuid": "2280f3bf_e0f9dff7",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "a49ddee92a3e3bf82503e142c491c99d3572e25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
