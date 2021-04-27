@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2280f3bf_e0f9dff7",
+        "filename": "OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-27T07:20:49Z",
+      "side": 1,
+      "message": "I\u0027m not sure that this is expected here, since you\u0027re going to get other Android.bp changes that you likely don\u0027t want to review. The other part looks fine.",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "a49ddee92a3e3bf82503e142c491c99d3572e25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
