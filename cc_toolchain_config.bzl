@@ -1,6 +1,5 @@
 load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "feature", "flag_group", "flag_set", "tool_path", "with_feature_set")
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
-load("//build/bazel/rules:static_libc.bzl", "LibcConfigInfo")
 
 # Clang-specific configuration.
 _ClangVersionInfo = provider(fields = ["directory", "includes"])
@@ -487,13 +486,12 @@ def _system_libraries_feature(system_libraries = []):
 
 def _cc_toolchain_config_impl(ctx):
     clang_version_info = ctx.attr.clang_version[_ClangVersionInfo]
-    if ctx.attr.libc:
-        libc_config = ctx.attr.libc[LibcConfigInfo]
-    else:
-        libc_config = None
     builtin_include_dirs = []
-    if libc_config:
-        builtin_include_dirs.extend(libc_config.include_dirs)
+
+    # This is so that Bazel doesn't validate .d files against the set of headers
+    # declared in BUILD files (Blueprint files don't contain that data)
+    builtin_include_dirs.extend(["/"])
+
     builtin_include_dirs.extend(clang_version_info.includes)
     compiler_flag_features = _compiler_flag_features(
         flags = DEFINES + COMPILER_FLAGS + WARNINGS + ctx.attr.target_flags,
@@ -509,6 +507,7 @@ def _cc_toolchain_config_impl(ctx):
     toolchain_include_directories_feature = _toolchain_include_feature(
         system_includes = builtin_include_dirs,
     )
+<<<<<<< HEAD   (eeeb51 Snap for 7196367 from 2c565140e041831a36486409ff3d013150d464)
     if libc_config:
         system_libraries_feature = _system_libraries_feature(
             system_libraries = libc_config.system_libraries,
@@ -516,6 +515,10 @@ def _cc_toolchain_config_impl(ctx):
     else:
         system_libraries_feature = None
     features = compiler_flag_features + _rpath_features() + [linker_flag_feature, toolchain_include_directories_feature, system_libraries_feature]
+=======
+    system_libraries_feature = None
+    features = compiler_flag_features + _rpath_features() + [linker_target_flag_feature, linker_flag_feature, toolchain_include_directories_feature, system_libraries_feature]
+>>>>>>> BRANCH (e72711 Merge "Remove unused clang-r407598")
     features = [feature for feature in features if feature != None]
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
@@ -536,7 +539,6 @@ _cc_toolchain_config = rule(
     implementation = _cc_toolchain_config_impl,
     attrs = {
         "clang_version": attr.label(mandatory = True, providers = [_ClangVersionInfo]),
-        "libc": attr.label(providers = [LibcConfigInfo], mandatory = False),
         "target_flags": attr.string_list(default = []),
         "linker_flags": attr.string_list(default = []),
     },
@@ -550,7 +552,6 @@ def android_cc_toolchain(
         # This should come from the clang_version provider.
         # Instead, it's hard-coded because this is a macro, not a rule.
         clang_version_directory = None,
-        libc = None,
         target_flags = [],
         linker_flags = [],
         toolchain_identifier = None):
@@ -558,7 +559,6 @@ def android_cc_toolchain(
     _cc_toolchain_config(
         name = "%s_config" % name,
         clang_version = clang_version,
-        libc = libc,
         target_flags = target_flags,
         linker_flags = linker_flags,
     )
@@ -593,36 +593,19 @@ def android_cc_toolchain(
         srcs = [clang_version_directory + "/bin/llvm-ar"],
     )
 
-    if libc:
-        native.filegroup(
-            name = "%s_compiler_files" % name,
-            srcs = [
-                "%s_compiler_binaries" % name,
-                "%s_includes" % libc,
-                "%s_compiler_clang_includes" % name,
-            ],
-        )
-        native.filegroup(
-            name = "%s_linker_files" % name,
-            srcs = [
-                "%s_linker_binaries" % name,
-                "%s_system_libraries" % libc,
-            ],
-        )
-    else:
-        native.filegroup(
-            name = "%s_compiler_files" % name,
-            srcs = [
-                "%s_compiler_binaries" % name,
-                "%s_compiler_clang_includes" % name,
-            ],
-        )
-        native.filegroup(
-            name = "%s_linker_files" % name,
-            srcs = [
-                "%s_linker_binaries" % name,
-            ],
-        )
+    native.filegroup(
+        name = "%s_compiler_files" % name,
+        srcs = [
+            "%s_compiler_binaries" % name,
+            "%s_compiler_clang_includes" % name,
+        ],
+    )
+    native.filegroup(
+        name = "%s_linker_files" % name,
+        srcs = [
+            "%s_linker_binaries" % name,
+        ],
+    )
     native.filegroup(
         name = "%s_all_files" % name,
         srcs = [
@@ -633,9 +616,12 @@ def android_cc_toolchain(
     )
 
     # Create the actual cc_toolchain.
+    # The dependency on //:empty is intentional; it's necessary so that Bazel
+    # can parse .d files correctly (see the comment in $TOP/BUILD)
     native.cc_toolchain(
         name = name,
         all_files = "%s_all_files" % name,
+        as_files = "//:empty",  # Note the "//" prefix, see comment above
         ar_files = "%s_ar_files" % name,
         compiler_files = "%s_compiler_files" % name,
         dwp_files = ":empty",
