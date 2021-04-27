@@ -46,6 +46,30 @@
       },
       "revId": "a49ddee92a3e3bf82503e142c491c99d3572e25c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a61ae7e9_6c285806",
+        "filename": "OWNERS",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-27T07:29:14Z",
+      "side": 1,
+      "message": "Yeah, I think it\u0027s unlikely to need much in there until much later (at which point we should be helping a lot more too). I just didn\u0027t want people to ask one of you to review arbitrary CLs unnecessarily.",
+      "parentUuid": "ca89be71_1d4bec0d",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 19
+      },
+      "revId": "a49ddee92a3e3bf82503e142c491c99d3572e25c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

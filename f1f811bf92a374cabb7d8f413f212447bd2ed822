@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77e66803_aab3f030",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-27T07:29:14Z",
+      "side": 1,
+      "message": "Thanks for adding this. I hope it helps with making reviews smoother.",
+      "revId": "f1f811bf92a374cabb7d8f413f212447bd2ed822",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
