@@ -16,6 +16,41 @@
       "message": "Sorry about the unexpected breakage. Is there a reason that there are no presubmits for Bazel?  Generally, we try to run through a list of out-of-tree users of the toolchain before doing removals, but this wasn\u0027t in that listing either. https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1690688 adds it now.",
       "revId": "6448b609eecffa3a7eb0799cd85c10c746769d49",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10df7c7f_0b581195",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-04-29T16:25:10Z",
+      "side": 1,
+      "message": "I\u0027ll force submit this so as to unblock us earlier; the single project that\u0027s not finished yet isn\u0027t very likely to reveal a breakage.",
+      "revId": "6448b609eecffa3a7eb0799cd85c10c746769d49",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "138597bd_d5102e32",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-04-29T16:25:10Z",
+      "side": 1,
+      "message": "There are presubmits for Bazel, but only for specific git projects and apparently Clang was not one of them (+Rupert, I\u0027d check which ones but I\u0027m on baby duty)",
+      "parentUuid": "bae33198_3f54e77f",
+      "revId": "6448b609eecffa3a7eb0799cd85c10c746769d49",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
