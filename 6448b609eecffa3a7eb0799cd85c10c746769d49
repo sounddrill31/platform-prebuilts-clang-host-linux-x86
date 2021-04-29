@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bae33198_3f54e77f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-04-29T15:09:40Z",
+      "side": 1,
+      "message": "Sorry about the unexpected breakage. Is there a reason that there are no presubmits for Bazel?  Generally, we try to run through a list of out-of-tree users of the toolchain before doing removals, but this wasn\u0027t in that listing either. https://android-review.googlesource.com/c/platform/prebuilts/clang/host/linux-x86/+/1690688 adds it now.",
+      "revId": "6448b609eecffa3a7eb0799cd85c10c746769d49",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
