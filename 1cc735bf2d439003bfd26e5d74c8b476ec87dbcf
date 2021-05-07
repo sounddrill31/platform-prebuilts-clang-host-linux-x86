@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45099ce4_3cdc473a",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-07T10:46:04Z",
+      "side": 1,
+      "message": "Where does the string \"android10000\" come from?",
+      "range": {
+        "startLine": 92,
+        "startChar": 37,
+        "endLine": 92,
+        "endChar": 49
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "add576c3_2560c309",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-07T10:46:04Z",
+      "side": 1,
+      "message": "Mind putting this file in the @soong_injection repository?\n\nI thought that would be a good way to distinguish \"BUILD files that can conceivably be checked in\" and \".bzl files that Soong generates as a matter of course\"\n\nThat repository is currently used for the :buildroot target and its friends for mixed builds.",
+      "range": {
+        "startLine": 4,
+        "startChar": 6,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c59119f8_743c6dfe",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-07T10:46:04Z",
+      "side": 1,
+      "message": "nit: why not reference constants.* in _compiler_flag_features to avoid a tiny bit of plumbing?\n\nEven better, one could make each of these a separate feature, although I don\u0027t know if that makes much sense.",
+      "range": {
+        "startLine": 393,
+        "startChar": 12,
+        "endLine": 393,
+        "endChar": 45
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "050c9370_e3fbd767",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-07T10:46:04Z",
+      "side": 1,
+      "message": "These seem to be unused?",
+      "range": {
+        "startLine": 464,
+        "startChar": 8,
+        "endLine": 465,
+        "endChar": 48
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
