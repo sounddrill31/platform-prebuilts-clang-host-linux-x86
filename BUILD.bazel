@@ -39,6 +39,8 @@ android_cc_toolchain(
         "-mpopcnt",
     ],
     toolchain_identifier = "x86_64-toolchain",
+    target_cpu = "x86_64",
+    target_system_name = "x86_64-linux-android10000",
 )
 
 toolchain(
@@ -86,6 +88,8 @@ android_cc_toolchain(
         "-mstackrealign",
     ],
     toolchain_identifier = "x86-toolchain",
+    target_cpu = "x86",
+    target_system_name = "i686-linux-android10000",
 )
 
 toolchain(
@@ -119,6 +123,8 @@ android_cc_toolchain(
         "-march=armv8-a",
     ],
     toolchain_identifier = "arm64-toolchain",
+    target_cpu = "arm64",
+    target_system_name = "aarch64-linux-android10000",
 )
 
 toolchain(
@@ -153,6 +159,8 @@ android_cc_toolchain(
         "-fomit-frame-pointer",
     ],
     toolchain_identifier = "arm-toolchain",
+    target_cpu = "arm32",
+    target_system_name = "armv7a-linux-androideabi10000",
 )
 
 toolchain(
