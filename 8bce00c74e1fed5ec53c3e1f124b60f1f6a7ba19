@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c288b81b_40c1aa24",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-05-10T18:08:29Z",
+      "side": 1,
+      "message": "We\u0027ll need to handle host/device separately: https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/compiler.go;l\u003d445;drc\u003d10906f5cc64d181d211932d42dfa8cccdc1f0d80",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 45
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3770f1ad_9c0bb8c2",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-05-10T18:08:29Z",
+      "side": 1,
+      "message": "It looks like NoOverrideClangGLobalCflags is always the last flag group:\n\nhttps://cs.android.com/android/platform/superproject/+/master:build/soong/cc/builder.go;l\u003d503-506;drc\u003dafcd339d96a0aabb735fe96678f941c0a78e137d",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 45
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a9f1775_e0aac179",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-05-10T18:08:29Z",
+      "side": 1,
+      "message": "Similarly, whether this is host/device needs to be handled.\n\nAdditionally, whether Lld or Ld looks based on OS and a property (defaults to true, and appears unset, so may only need to support Ld for Darwin?): https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/linker.go;l\u003d380;drc\u003dmaster",
+      "range": {
+        "startLine": 413,
+        "startChar": 26,
+        "endLine": 413,
+        "endChar": 46
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

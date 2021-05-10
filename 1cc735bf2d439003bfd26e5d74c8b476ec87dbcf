@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f61c644f_8e1117e1",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-05-10T18:08:29Z",
+      "side": 1,
+      "message": "yeah, unfortunately, to get this correct for device, we\u0027re we\u0027re going to have to tackle the min_sdk_version stuff (https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/compiler.go;l\u003d415-423;drc\u003d10906f5cc64d181d211932d42dfa8cccdc1f0d80).",
+      "parentUuid": "1c04aee4_789d9088",
+      "range": {
+        "startLine": 92,
+        "startChar": 37,
+        "endLine": 92,
+        "endChar": 49
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "add576c3_2560c309",
