@@ -116,6 +116,30 @@
       },
       "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfe55c54_e84f6810",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-11T07:09:48Z",
+      "side": 1,
+      "message": "Then, correction: let\u0027s not support ld *for now* while only Bionic is on the menu.",
+      "parentUuid": "96e9fe7d_8622b40c",
+      "range": {
+        "startLine": 413,
+        "startChar": 26,
+        "endLine": 413,
+        "endChar": 46
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
