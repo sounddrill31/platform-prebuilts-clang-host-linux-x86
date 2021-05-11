@@ -68,6 +68,30 @@
       },
       "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "780e0c6f_9c8b1879",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-11T06:30:07Z",
+      "side": 1,
+      "message": "Let\u0027s not support Ld then. Darwin is going away.",
+      "parentUuid": "2a9f1775_e0aac179",
+      "range": {
+        "startLine": 413,
+        "startChar": 26,
+        "endLine": 413,
+        "endChar": 46
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
