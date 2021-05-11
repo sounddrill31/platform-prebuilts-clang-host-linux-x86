@@ -92,6 +92,30 @@
       },
       "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96e9fe7d_8622b40c",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-05-11T07:04:26Z",
+      "side": 1,
+      "message": "There are Studio/SDK tools like aapt (https://cs.android.com/android/platform/superproject/+/master:frameworks/base/tools/aapt/Android.bp) that currently are built as part of the platform tree. I assume those will need updated build rules that don\u0027t use Bazel if there\u0027s no Darwin support. These tools generally rely on being able to produce binaries that work for all supported host platforms (Linux, Darwin, Windows).",
+      "parentUuid": "780e0c6f_9c8b1879",
+      "range": {
+        "startLine": 413,
+        "startChar": 26,
+        "endLine": 413,
+        "endChar": 46
+      },
+      "revId": "8bce00c74e1fed5ec53c3e1f124b60f1f6a7ba19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
