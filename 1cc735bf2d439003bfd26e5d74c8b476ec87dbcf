@@ -191,6 +191,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c117594_b247f66b",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-05-12T11:31:04Z",
+      "side": 1,
+      "message": "Follow up: just changed this to @soong_injection//cc_toolchain:constants.bzl.",
+      "parentUuid": "fb573210_3177516e",
+      "range": {
+        "startLine": 4,
+        "startChar": 6,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c59119f8_743c6dfe",
