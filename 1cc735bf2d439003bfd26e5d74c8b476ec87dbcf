@@ -215,6 +215,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "da871742_fa63b088",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-05-12T11:34:56Z",
+      "side": 1,
+      "message": "Thanks! I assume you are still working on resolving the rest of the comments. Let me know if I should take a look (but note that I\u0027ll be OOO the rest of the week)",
+      "parentUuid": "5c117594_b247f66b",
+      "range": {
+        "startLine": 4,
+        "startChar": 6,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "1cc735bf2d439003bfd26e5d74c8b476ec87dbcf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c59119f8_743c6dfe",
