@@ -2,6 +2,7 @@ load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "feature", "flag_gro
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
 
 load("@soong_injection//cc_toolchain:constants.bzl", "constants")
+load("//build/bazel/rules:cc_constants.bzl", cc_constants="constants")
 
 # Clang-specific configuration.
 _ClangVersionInfo = provider(fields = ["directory", "includes"])
@@ -466,6 +467,8 @@ def _cc_toolchain_config_impl(ctx):
     builtin_include_dirs.extend(["/"])
 
     builtin_include_dirs.extend(clang_version_info.includes)
+
+    builtin_include_dirs.extend(cc_constants.GLOBAL_INCLUDE_DIRS_COPTS_ONLY_USED_FOR_SOONG_COMPATIBILITY_DO_NOT_ADD_MORE)
 
     # Compiler action features
     compiler_flag_features = _compiler_flag_features(ctx.attr.target_flags, os_is_device)
