@@ -1044,6 +1044,10 @@ llvm_prebuilt_library_static {
         "//bionic:__subpackages__",
         "//frameworks/libs/native_bridge_support/libc:__subpackages__",
     ],
+
+    bazel_module: {
+        label: "//prebuilts/clang/host/linux-x86:libunwind-exported",
+    },
 }
 
 // -----------------------------------------------------------------------------

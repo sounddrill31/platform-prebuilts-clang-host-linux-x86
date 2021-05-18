@@ -209,7 +209,6 @@ cc_toolchain_suite(
 )
 
 _LIBCLANG_RT_PREFIX = "%s/lib64/clang/%s/lib/linux" % (DEFAULT_VERSION, DEFAULT_SHORT_VERSION)
-
 cc_import(
     name = "libclang_rt",
     static_library = select({
@@ -217,6 +216,18 @@ cc_import(
         "//build/bazel/platforms/arch:arm64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-aarch64-android.a",
         "//build/bazel/platforms/arch:x86": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-i386.a",
         "//build/bazel/platforms/arch:x86_64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-x86_64-android.a",
+    }),
+)
+
+# TODO(b/181542514): automatically convert llvm_prebuilt_library_static modules.
+_LIBUNWIND_PREFIX = "%s/lib64/clang/%s/lib/linux" % (DEFAULT_VERSION, DEFAULT_SHORT_VERSION)
+cc_import(
+    name = "libunwind-exported",
+    static_library = select({
+        "//build/bazel/platforms/arch:arm": _LIBUNWIND_PREFIX + "/arm/libunwind-exported.a",
+        "//build/bazel/platforms/arch:arm64": _LIBUNWIND_PREFIX + "/aarch64/libunwind-exported.a",
+        "//build/bazel/platforms/arch:x86": _LIBUNWIND_PREFIX + "/i386/libunwind-exported.a",
+        "//build/bazel/platforms/arch:x86_64": _LIBUNWIND_PREFIX + "/x86_64/libunwind-exported.a",
     }),
 )
 
