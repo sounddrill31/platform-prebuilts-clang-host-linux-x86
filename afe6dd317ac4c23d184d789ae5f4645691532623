@@ -16,6 +16,29 @@
       "message": "I\u0027m using Go LSP, which relies on go.mod to resolve imports. I followed build/soong/go.mod, and needed to add `require android/soong`. This seems to work well for me, but please let me know if it\u0027s the wrong approach.",
       "revId": "afe6dd317ac4c23d184d789ae5f4645691532623",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d80e07d_dc80206e",
+        "filename": "go.mod",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1726181
+      },
+      "writtenOn": "2021-05-24T11:42:27Z",
+      "side": 1,
+      "message": "I think we have go 1.16 now?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 7
+      },
+      "revId": "afe6dd317ac4c23d184d789ae5f4645691532623",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
