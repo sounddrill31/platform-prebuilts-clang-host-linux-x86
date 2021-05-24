@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1aae9fb3_ad8a9b43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-05-24T11:18:17Z",
+      "side": 1,
+      "message": "I\u0027m using Go LSP, which relies on go.mod to resolve imports. I followed build/soong/go.mod, and needed to add `require android/soong`. This seems to work well for me, but please let me know if it\u0027s the wrong approach.",
+      "revId": "afe6dd317ac4c23d184d789ae5f4645691532623",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
