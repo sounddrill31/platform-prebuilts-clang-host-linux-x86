@@ -16,6 +16,24 @@
       "message": "It looks like mixed builds are failing because they expect the names to be\n\ne.g. \n\n//prebuilts/clang/host/linux-x86:libunwind\n\ninstead of\n\n//prebuilts/clang/host/linux-x86:prebuilt_libunwind\n\nNot sure what to do about this. It seems like a Soong convention to add the prebuilt_ prefix? (I am not explicitly adding prebuilt_ anywhere in these CLs).",
       "revId": "c780966b52f45d9a9b1cde0493083dfe820a2913",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af6580ff_8a03fe76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-05-27T12:52:05Z",
+      "side": 1,
+      "message": "yeah, soong has a number of mutators to handle prebuilts, including add/remove prebuilt_ prefix as necessary. We have a bug open (b/179892717) to design something for it. Fortunately, these don\u0027t also have an equivalent built from sources, so it is safe to remove the prebuilt_ prefix.\n\nRather than using name directly, could call  android.RemoveOptionalPrebuiltPrefix (https://cs.android.com/android/platform/superproject/+/master:build/soong/android/prebuilt.go;l\u003d80;drc\u003df7c99f598321d139d7926a2bb34b16ec35e78a81) on the name?",
+      "parentUuid": "f292f7d9_b4edb3ed",
+      "revId": "c780966b52f45d9a9b1cde0493083dfe820a2913",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
