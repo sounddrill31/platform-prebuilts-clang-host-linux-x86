@@ -22,6 +22,30 @@
       },
       "revId": "9541408ea2d618ef896d4a642e52c838631839cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30498424_af14865a",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-06-01T23:08:33Z",
+      "side": 1,
+      "message": "Even better, removed the target since it\u0027s not needed anymore with register_toolchains().",
+      "parentUuid": "17308135_17292a7c",
+      "range": {
+        "startLine": 204,
+        "startChar": 4,
+        "endLine": 204,
+        "endChar": 22
+      },
+      "revId": "9541408ea2d618ef896d4a642e52c838631839cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
