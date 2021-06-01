@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31ea5445_a3a64451",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-06-01T07:11:44Z",
+      "side": 0,
+      "message": "This doesn\u0027t appear to be used at all in the underlying macro, so I removed it.",
+      "range": {
+        "startLine": 419,
+        "startChar": 2,
+        "endLine": 419,
+        "endChar": 35
+      },
+      "revId": "3e99258421ebfdddf01ced632d578876e229e7e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
