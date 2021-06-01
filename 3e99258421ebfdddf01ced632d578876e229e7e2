@@ -22,6 +22,30 @@
       },
       "revId": "3e99258421ebfdddf01ced632d578876e229e7e2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29870b1d_de580d3c",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1726181
+      },
+      "writtenOn": "2021-06-01T12:15:49Z",
+      "side": 0,
+      "message": "The underlying macro has a TODO about what to do with includes\n\ne.g. from the .go file\n\n\tif name \u003d\u003d \"libFuzzer.a\" {\n\t\theaderDir :\u003d path.Join(getClangPrebuiltDir(ctx), \"prebuilt_include\", \"llvm\", \"lib\", \"Fuzzer\")\n\t\tp.Export_include_dirs \u003d []string{headerDir}\n\t}\n\t\nI haven\u0027t worked out what to do about that, but we might want to keep the macro",
+      "parentUuid": "31ea5445_a3a64451",
+      "range": {
+        "startLine": 419,
+        "startChar": 2,
+        "endLine": 419,
+        "endChar": 35
+      },
+      "revId": "3e99258421ebfdddf01ced632d578876e229e7e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
