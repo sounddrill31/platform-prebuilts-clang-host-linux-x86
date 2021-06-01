@@ -46,6 +46,30 @@
       },
       "revId": "3e99258421ebfdddf01ced632d578876e229e7e2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "260ca86c_ba71ea1f",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-06-01T12:26:37Z",
+      "side": 0,
+      "message": "Restored the macro, but renamed it to prebuilt_library_static to share between llvm_ and libclang_rt.",
+      "parentUuid": "29870b1d_de580d3c",
+      "range": {
+        "startLine": 419,
+        "startChar": 2,
+        "endLine": 419,
+        "endChar": 35
+      },
+      "revId": "3e99258421ebfdddf01ced632d578876e229e7e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
