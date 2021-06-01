@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17308135_17292a7c",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-06-01T12:45:24Z",
+      "side": 1,
+      "message": "nit: add a comment that tells why this tag is here",
+      "range": {
+        "startLine": 204,
+        "startChar": 4,
+        "endLine": 204,
+        "endChar": 22
+      },
+      "revId": "9541408ea2d618ef896d4a642e52c838631839cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
