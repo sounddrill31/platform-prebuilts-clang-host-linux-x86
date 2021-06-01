@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b4431d5_42034c74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2021-06-01T17:22:23Z",
+      "side": 1,
+      "message": "Seems fine, but note that we\u0027ll be moving away from this release soon as part of the usual release cycle.  You may want to modify the build scripts for AOSP LLVM to produce this file from a template?",
+      "revId": "428d18d9732aa7ebfcaed87a582d86155db878d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
