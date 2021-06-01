@@ -201,6 +201,7 @@ cc_toolchain_suite(
         "arm64": "cc_toolchain_arm64",
         "arm32": "cc_toolchain_arm32",
     },
+    tags = ["manual"],
 )
 
 _LIBCLANG_RT_PREFIX = "%s/lib64/clang/%s/lib/linux" % (DEFAULT_VERSION, DEFAULT_SHORT_VERSION)
