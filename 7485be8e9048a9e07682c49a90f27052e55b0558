@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "397c1053_5f6fb90f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-06-08T05:52:51Z",
+      "side": 1,
+      "message": "+2ing so that you are not blocked but please remove that branch if it\u0027s not used (which I suspect is the case)",
+      "revId": "7485be8e9048a9e07682c49a90f27052e55b0558",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91601825_614157d8",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-06-08T05:52:51Z",
+      "side": 1,
+      "message": "when does this case happen?",
+      "range": {
+        "startLine": 406,
+        "startChar": 8,
+        "endLine": 406,
+        "endChar": 19
+      },
+      "revId": "7485be8e9048a9e07682c49a90f27052e55b0558",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
