@@ -39,6 +39,30 @@
       },
       "revId": "7485be8e9048a9e07682c49a90f27052e55b0558",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f9b2e1c_d67dc845",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-06-08T13:26:01Z",
+      "side": 1,
+      "message": "some of the toolchains (e.g. windows, darwin, linux arm) don\u0027t support libcrt_builtins in soong.",
+      "parentUuid": "91601825_614157d8",
+      "range": {
+        "startLine": 406,
+        "startChar": 8,
+        "endLine": 406,
+        "endChar": 19
+      },
+      "revId": "7485be8e9048a9e07682c49a90f27052e55b0558",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
