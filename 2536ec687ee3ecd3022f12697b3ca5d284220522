@@ -22,6 +22,30 @@
       },
       "revId": "2536ec687ee3ecd3022f12697b3ca5d284220522",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3344beb2_4aa3f676",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-06-09T07:48:06Z",
+      "side": 1,
+      "message": "Yep, we could also make these available in a toolchain, but aliases are simpler to get started with now.",
+      "parentUuid": "9a68dede_d8be3777",
+      "range": {
+        "startLine": 222,
+        "startChar": 15,
+        "endLine": 222,
+        "endChar": 50
+      },
+      "revId": "2536ec687ee3ecd3022f12697b3ca5d284220522",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
