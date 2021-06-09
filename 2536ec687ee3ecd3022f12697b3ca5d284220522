@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a68dede_d8be3777",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-06-09T07:42:46Z",
+      "side": 1,
+      "message": "It\u0027s kinda weird to single out these specific tools, but there are a lot of them, so I guess a full list would be unwieldy",
+      "range": {
+        "startLine": 222,
+        "startChar": 15,
+        "endLine": 222,
+        "endChar": 50
+      },
+      "revId": "2536ec687ee3ecd3022f12697b3ca5d284220522",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
