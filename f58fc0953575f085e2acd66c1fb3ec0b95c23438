@@ -34,6 +34,24 @@
       "parentUuid": "fac8ee59_6e68d373",
       "revId": "f58fc0953575f085e2acd66c1fb3ec0b95c23438",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "675dfc80_dcad1cfe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2021-06-28T17:31:59Z",
+      "side": 1,
+      "message": "we didn\u0027t cherrypick any cl that touches binutils, but c is universal. I suggest let\u0027s stick with c.",
+      "parentUuid": "73a40436_429ea2aa",
+      "revId": "f58fc0953575f085e2acd66c1fb3ec0b95c23438",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
