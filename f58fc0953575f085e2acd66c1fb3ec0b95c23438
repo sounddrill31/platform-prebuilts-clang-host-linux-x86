@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fac8ee59_6e68d373",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2021-06-28T17:28:52Z",
+      "side": 1,
+      "message": "do we need to downgrade binutils from c to b1?",
+      "revId": "f58fc0953575f085e2acd66c1fb3ec0b95c23438",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
