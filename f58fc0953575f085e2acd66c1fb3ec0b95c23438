@@ -16,6 +16,24 @@
       "message": "do we need to downgrade binutils from c to b1?",
       "revId": "f58fc0953575f085e2acd66c1fb3ec0b95c23438",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73a40436_429ea2aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-06-28T17:30:12Z",
+      "side": 1,
+      "message": "I didn\u0027t realize they were in the \u0027c\u0027 build.  Should we keep it in sync with the platform prebuilts version?",
+      "parentUuid": "fac8ee59_6e68d373",
+      "revId": "f58fc0953575f085e2acd66c1fb3ec0b95c23438",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
