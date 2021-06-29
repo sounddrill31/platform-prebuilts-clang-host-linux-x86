@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "821fbf9c_e7f16fb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-06-29T06:31:17Z",
+      "side": 1,
+      "message": "Thanks for the update! We should really not have this information at two places (b/192058388), but for the time being, this is a good fix.",
+      "revId": "f77ccfd7ecdd178afb9f4561f82ed1d2e3bc037c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
