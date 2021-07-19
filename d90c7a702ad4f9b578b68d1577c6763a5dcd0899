@@ -1,6 +1,24 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97f4839d_ea9d0789",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2021-07-19T20:36:02Z",
+      "side": 1,
+      "message": "Noting -1 based on review comments.",
+      "revId": "d90c7a702ad4f9b578b68d1577c6763a5dcd0899",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "cf057724_e8f7024d",
         "filename": "README.md",
@@ -14,8 +32,7 @@
       "side": 1,
       "message": "Thanks for the patch.  I think https://android.googlesource.com/kernel/common/+/android-4.14-stable/build.config.common is actually the \"new\" branch (new convention) that tracks branches to update.  We\u0027ll stop updating toolchains on older branches that have shipped, i.e. \"q\".",
       "revId": "d90c7a702ad4f9b578b68d1577c6763a5dcd0899",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
