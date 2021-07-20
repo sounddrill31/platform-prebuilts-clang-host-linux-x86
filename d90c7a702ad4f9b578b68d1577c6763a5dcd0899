@@ -33,6 +33,24 @@
       "message": "Thanks for the patch.  I think https://android.googlesource.com/kernel/common/+/android-4.14-stable/build.config.common is actually the \"new\" branch (new convention) that tracks branches to update.  We\u0027ll stop updating toolchains on older branches that have shipped, i.e. \"q\".",
       "revId": "d90c7a702ad4f9b578b68d1577c6763a5dcd0899",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aadbdf4e_774ccbda",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-07-20T00:58:37Z",
+      "side": 1,
+      "message": "Nick\u0027s link looks correct to me. One thing I do wonder about is if these branches are no longer active, we probably shouldn\u0027t necessarily include them here, as this is mostly trying to track live LLVM revisions so that we don\u0027t accidentally delete something useful from a downstream build.",
+      "parentUuid": "cf057724_e8f7024d",
+      "revId": "d90c7a702ad4f9b578b68d1577c6763a5dcd0899",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
