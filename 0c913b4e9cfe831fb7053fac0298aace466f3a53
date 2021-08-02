@@ -25,6 +25,32 @@
       },
       "revId": "0c913b4e9cfe831fb7053fac0298aace466f3a53",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000014044415",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1784629?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "731ebf80_9e2246b9",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-08-02T19:18:53Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 123,
+        "startChar": 7,
+        "endLine": 123,
+        "endChar": 8
+      },
+      "revId": "0c913b4e9cfe831fb7053fac0298aace466f3a53",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
