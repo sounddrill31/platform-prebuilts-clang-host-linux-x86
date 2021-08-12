@@ -12,7 +12,6 @@ package(default_visibility = ["//visibility:public"])
 filegroup(name = "empty")
 
 load(":cc_toolchain_config.bzl", "android_cc_toolchain", "clang_version", "expand_feature_flags")
-load(":clang_version.bzl", "DEFAULT_SHORT_VERSION", "DEFAULT_VERSION")
 load("@soong_injection//cc_toolchain:constants.bzl", "constants")
 
 # Different clang versions are configured here.
