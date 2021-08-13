@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cfae48f_e79e9571",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-08-13T14:23:37Z",
+      "side": 1,
+      "message": "You\u0027ll also need to follow the removal of this in https://cs.android.com/android/platform/superproject/+/master:prebuilts/clang/host/linux-x86/BUILD.bazel;l\u003d15;drc\u003d8ad7ab8658ae3c2451fbd8882bf932f2316831ec",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "a1ce8500bd7c3e011dc2e683cacb142c3e19f109",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "ac2a86af_2b87ed9f",
