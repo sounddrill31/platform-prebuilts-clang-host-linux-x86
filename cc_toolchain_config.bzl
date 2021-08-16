@@ -288,7 +288,8 @@ def _compiler_flag_features(flags = [], os_is_device = False):
         enabled = True,
         flag_sets = [
             flag_set(
-                actions = ALL_COMPILE_ACTIONS,
+                # We want this to apply to all actions except assembly
+                actions = [act for act in ALL_COMPILE_ACTIONS if act not in ALL_ASSEMBLE_ACTIONS],
                 flag_groups = [
                     flag_group(
                         flags = constants.NoOverrideGlobalCflags,
@@ -297,7 +298,6 @@ def _compiler_flag_features(flags = [], os_is_device = False):
             ),
         ],
     ))
-
 
     return features
 
