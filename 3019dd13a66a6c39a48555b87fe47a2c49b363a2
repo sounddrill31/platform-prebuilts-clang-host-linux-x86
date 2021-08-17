@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "424b6182_38ff0e26",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-08-17T15:06:46Z",
+      "side": 1,
+      "message": "I have no strong feelings one way or another; I did consider abstracting the variable. However, it would be the only exclusive-based variable introduced in this file.",
+      "parentUuid": "e64dba32_a601a27d",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 1
+      },
+      "revId": "3019dd13a66a6c39a48555b87fe47a2c49b363a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "27d378ff_ffa7fb22",
         "filename": "cc_toolchain_config.bzl",
         "patchSetId": 2
@@ -37,6 +61,30 @@
       "writtenOn": "2021-08-17T14:40:19Z",
       "side": 1,
       "message": "Can we include in this comment that this is to match Soong\u0027s implementation?",
+      "range": {
+        "startLine": 291,
+        "startChar": 18,
+        "endLine": 291,
+        "endChar": 70
+      },
+      "revId": "3019dd13a66a6c39a48555b87fe47a2c49b363a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8f633a0_811a2286",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-08-17T15:06:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "27d378ff_ffa7fb22",
       "range": {
         "startLine": 291,
         "startChar": 18,
