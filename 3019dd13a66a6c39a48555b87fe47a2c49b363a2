@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a5f2299_404134de",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-08-17T19:14:04Z",
+      "side": 1,
+      "message": "True, but its also more readable, but I don\u0027t have strong feelings about this.",
+      "parentUuid": "424b6182_38ff0e26",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 1
+      },
+      "revId": "3019dd13a66a6c39a48555b87fe47a2c49b363a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27d378ff_ffa7fb22",
