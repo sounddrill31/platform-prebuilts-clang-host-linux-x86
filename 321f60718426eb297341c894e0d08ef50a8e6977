@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50d4eb29_59453ddb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-08-18T14:10:30Z",
+      "side": 1,
+      "message": "Fixed the issue causing the build breakage. Correctly wrapping the relevant strings in lists.",
+      "revId": "321f60718426eb297341c894e0d08ef50a8e6977",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
