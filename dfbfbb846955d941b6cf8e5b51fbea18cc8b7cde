@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be8371ff_55e6a2f5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-08-19T22:34:06Z",
+      "side": 1,
+      "message": "Trusty\u0027s core code still uses r399163b.  We\u0027ve updated only the clang used for the subset of the build that builds Linux.  Can you add another entry for that version?",
+      "range": {
+        "startLine": 45,
+        "startChar": 4,
+        "endLine": 45,
+        "endChar": 27
+      },
+      "revId": "dfbfbb846955d941b6cf8e5b51fbea18cc8b7cde",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a9fd86c_678bc039",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-08-19T22:34:06Z",
+      "side": 1,
+      "message": "Can you try updating OpenJDK?  You can follow aosp/1683376 for the files to be changed.",
+      "range": {
+        "startLine": 59,
+        "startChar": 14,
+        "endLine": 59,
+        "endChar": 28
+      },
+      "revId": "dfbfbb846955d941b6cf8e5b51fbea18cc8b7cde",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
