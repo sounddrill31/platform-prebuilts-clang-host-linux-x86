@@ -11,4 +11,4 @@ ld.lld
 ../lib64/clang/13.0.1/share
 ../lib64/clang/13.0.1/lib/linux
 ../lib64/clang/13.0.1/include
-../lib64/libxml2.so.2.9.10
+../lib64/libxml2.so.2.9.12
