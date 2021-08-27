@@ -16,6 +16,24 @@
       "message": "```\nfind prebuilts/clang/host/linux-x86/clang-r428724/ -iname \"*ignorelist*.txt\"\nprebuilts/clang/host/linux-x86/clangr428724/lib64/clang/13.0.1/share/hwasan_ignorelist.txt\nprebuilts/clang/host/linux-x86/clangr428724/lib64/clang/13.0.1/share/msan_ignorelist.txt\nprebuilts/clang/host/linux-x86/clangr428724/lib64/clang/13.0.1/share/cfi_ignorelist.txt\nprebuilts/clang/host/linux-x86/clangr428724/lib64/clang/13.0.1/share/asan_ignorelist.txt\n```\n\nI think hwasan and asan ignore lists may be used for specific builds.  Can you check if we need them as well?",
       "revId": "124d428c38fa1f1fb8e1c270adc5bcf2fb00a496",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25710a30_b7e2f738",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1514973
+      },
+      "writtenOn": "2021-08-27T22:51:38Z",
+      "side": 1,
+      "message": "Ah good point. They are all specified with `-fsanitize-ignorelist` flag right? If so yeah I need to duplicate them as well. Done.",
+      "parentUuid": "5ceb16b7_06fb8c29",
+      "revId": "124d428c38fa1f1fb8e1c270adc5bcf2fb00a496",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
