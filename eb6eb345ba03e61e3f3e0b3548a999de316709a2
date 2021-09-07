@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f62f82c_4ed708c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-07T22:03:42Z",
+      "side": 1,
+      "message": "FTR, this directory also has the python bindings but they don\u0027t have any changes in this version.",
+      "revId": "eb6eb345ba03e61e3f3e0b3548a999de316709a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
