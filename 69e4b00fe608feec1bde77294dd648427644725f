@@ -16,6 +16,24 @@
       "message": "https://cs.android.com/android/platform/superproject/+/master:bionic/libc/kernel/tools/cpp.py;l\u003d31?q\u003dclang-stable\u0026ss\u003dandroid\u0026start\u003d21 is the only user of this that I can see via cs. We just need to fix the update script to create the proper symlink for it to use. Ugh, I wish we didn\u0027t have to have a dependency like this.",
       "revId": "69e4b00fe608feec1bde77294dd648427644725f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a40a12d0_ffeca34d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-09T19:42:46Z",
+      "side": 1,
+      "message": "I missed updating the symlink.  Sorry about that.",
+      "parentUuid": "169d2532_7e0c8fe1",
+      "revId": "69e4b00fe608feec1bde77294dd648427644725f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
