@@ -34,6 +34,24 @@
       "parentUuid": "169d2532_7e0c8fe1",
       "revId": "69e4b00fe608feec1bde77294dd648427644725f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d0d5bfa_840a0ee1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021676
+      },
+      "writtenOn": "2021-09-09T19:44:00Z",
+      "side": 1,
+      "message": "yes, that is exactly the dependency we have with our tooling (we call clean_headers.py which IIRC uses cpp.py and clang, etc.)  Unfortunately the clean_headers.py has become super heavy.",
+      "parentUuid": "169d2532_7e0c8fe1",
+      "revId": "69e4b00fe608feec1bde77294dd648427644725f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
