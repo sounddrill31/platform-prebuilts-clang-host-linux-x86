@@ -45,6 +45,30 @@
       },
       "revId": "a84d1aeba53bc4e976a47595f7f03b8fac3c5cdf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9bfcbeb4_a630a2bc",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2021-09-15T19:11:33Z",
+      "side": 1,
+      "message": "Due to GKI, only the first two will be getting updates.\n\nWe can remove the rest for tracking purposes.  It may be handy to have them somewhere if we ever need them, but for the purpose of knowing what\u0027s the latest that may still need an update, the rest are irrelevant.",
+      "parentUuid": "23d9b48a_0ffb7d83",
+      "range": {
+        "startLine": 30,
+        "startChar": 14,
+        "endLine": 30,
+        "endChar": 27
+      },
+      "revId": "a84d1aeba53bc4e976a47595f7f03b8fac3c5cdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
