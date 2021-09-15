@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ea7c75f_81851f1f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-15T19:06:25Z",
+      "side": 1,
+      "message": "Use cs.android.com, like the platform link above.",
+      "range": {
+        "startLine": 27,
+        "startChar": 30,
+        "endLine": 27,
+        "endChar": 45
+      },
+      "revId": "a84d1aeba53bc4e976a47595f7f03b8fac3c5cdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23d9b48a_0ffb7d83",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-15T19:06:25Z",
+      "side": 1,
+      "message": "Can update this as well.\n\n+ndesaulniers@  The first two links have clang-r433404 while the rest are still in clang-r416183b.  Should we track them separately if they\u0027re relevant but not going to get updates?",
+      "range": {
+        "startLine": 30,
+        "startChar": 14,
+        "endLine": 30,
+        "endChar": 27
+      },
+      "revId": "a84d1aeba53bc4e976a47595f7f03b8fac3c5cdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
