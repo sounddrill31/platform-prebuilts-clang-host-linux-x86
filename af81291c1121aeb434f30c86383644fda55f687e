@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd369994_04bffffc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-16T20:59:00Z",
+      "side": 1,
+      "message": "We\u0027ve up-revved all users of clang-r428724, so it\u0027s safe to delete those prebuilts.",
+      "revId": "af81291c1121aeb434f30c86383644fda55f687e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
