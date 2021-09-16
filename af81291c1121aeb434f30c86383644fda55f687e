@@ -16,6 +16,24 @@
       "message": "We\u0027ve up-revved all users of clang-r428724, so it\u0027s safe to delete those prebuilts.",
       "revId": "af81291c1121aeb434f30c86383644fda55f687e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35fb7e9a_575df9bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-09-16T21:01:44Z",
+      "side": 1,
+      "message": "Should we delete that as it is the natural revert should we encounter trouble with this toolchain? I\u0027m kind of amazed that we managed to get right past it, but that shows how much our testing process has improved quality of the releases, so we\u0027re ready to update more easily (assuming we do smaller chunks from upstream).",
+      "parentUuid": "fd369994_04bffffc",
+      "revId": "af81291c1121aeb434f30c86383644fda55f687e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
