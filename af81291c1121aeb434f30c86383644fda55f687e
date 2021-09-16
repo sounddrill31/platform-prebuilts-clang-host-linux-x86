@@ -34,6 +34,24 @@
       "parentUuid": "fd369994_04bffffc",
       "revId": "af81291c1121aeb434f30c86383644fda55f687e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17334b8c_92437589",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-09-16T21:31:03Z",
+      "side": 1,
+      "message": "ACK; we can wait a bit to allow the update to soak before deleting clang-r428724.",
+      "parentUuid": "35fb7e9a_575df9bc",
+      "revId": "af81291c1121aeb434f30c86383644fda55f687e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
