@@ -591,6 +591,15 @@ _cc_toolchain_config = rule(
         "target_flags": attr.string_list(default = []),
         "linker_flags": attr.string_list(default = []),
         "libclang_rt_builtin": attr.label(allow_single_file = True),
+
+        # crtbegin and crtend libraries for compiling cc_library_shared and
+        # cc_binary against the Bionic runtime
+        "_crtbegin_shared_library": attr.label(default = "//bionic/libc:crtbegin_so", allow_single_file = True),
+        "_crtend_shared_library": attr.label(default = "//bionic/libc:crtend_so", allow_single_file = True),
+        "_crtbegin_shared_binary": attr.label(default = "//bionic/libc:crtbegin_dynamic", allow_single_file = True),
+        "_crtend_shared_binary": attr.label(default = "//bionic/libc:crtend_android", allow_single_file = True),
+        "_crtbegin_static_binary": attr.label(default = "//bionic/libc:crtbegin_static", allow_single_file = True),
+        "_crtend_static_binary": attr.label(default = "//bionic/libc:crtend_android", allow_single_file = True),
     },
     provides = [CcToolchainConfigInfo],
 )
