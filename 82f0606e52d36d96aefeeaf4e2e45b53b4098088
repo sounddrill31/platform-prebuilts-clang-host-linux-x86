@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff67f660_4e5e9d7d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2021-09-20T22:20:45Z",
+      "side": 1,
+      "message": "Although TH presubmit tests did not set WITH_TIDY or TIDY_TIMEOUT, \nsome projects enabled clang-tidy locally. \nThis new wrapper reported warning on long clang-tidy runs in warnings.html of \nthe aosp_crosshatch-userdebug build at P26174425.\n\nWe see one timed-out run:\n\nsystem/netd/server/TrafficControllerTest.cpp:1:1: warning: clang-tidy aborted after 300 seconds.\n\nand some runs that took more than 90 seconds:\n\nframeworks/av/services/mediametrics/AudioAnalytics.cpp:1:1: warning: clang-tidy used 110 seconds.\nframeworks/base/services/incremental/IncrementalService.cpp:1:1: warning: clang-tidy used 128 seconds.\nframeworks/base/services/incremental/test/IncrementalServiceTest.cpp:1:1: warning: clang-tidy used 270 seconds.\npackages/modules/DnsResolver/tests/resolv_tls_unit_test.cpp:1:1: warning: clang-tidy used 132 seconds.\npackages/modules/DnsResolver/tests/resolv_unit_test.cpp:1:1: warning: clang-tidy used 180 seconds.\nsystem/incremental_delivery/incfs/incfs.cpp:1:1: warning: clang-tidy used 113 seconds.\nsystem/incremental_delivery/incfs/tests/incfs_test.cpp:1:1: warning: clang-tidy used 205 seconds.\nsystem/netd/server/BandwidthControllerTest.cpp:1:1: warning: clang-tidy used 101 seconds.\nsystem/netd/server/InterfaceControllerTest.cpp:1:1: warning: clang-tidy used 104 seconds.\nsystem/netd/server/XfrmControllerTest.cpp:1:1: warning: clang-tidy used 181 seconds.\n",
+      "revId": "82f0606e52d36d96aefeeaf4e2e45b53b4098088",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
