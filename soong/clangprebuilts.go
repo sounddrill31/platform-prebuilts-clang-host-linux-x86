@@ -496,5 +496,5 @@ func prebuiltLibraryStaticBp2BuildInternal(ctx android.TopDownMutatorContext, mo
 	}
 
 	name := android.RemoveOptionalPrebuiltPrefix(module.Name())
-	ctx.CreateBazelTargetModule(name, props, attrs)
+	ctx.CreateBazelTargetModule(props, android.CommonAttributes{Name:name}, attrs)
 }
