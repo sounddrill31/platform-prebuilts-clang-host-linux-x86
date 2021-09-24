@@ -24,16 +24,27 @@ import (
 	"github.com/google/blueprint/proptools"
 
 	"android/soong/android"
+	"android/soong/bazel"
 	"android/soong/cc"
 	"android/soong/cc/config"
 	"android/soong/genrule"
 )
 
-const libLLVMSoFormat = "libLLVM-%ssvn.so"
-const libclangSoFormat = "libclang.so.%ssvn"
-const libclangCxxSoFormat = "libclang_cxx.so.%ssvn"
+const libLLVMSoFormat = "libLLVM-%sgit.so"
+const libclangSoFormat = "libclang.so.%sgit"
+const libclangCxxSoFormat = "libclang_cxx.so.%sgit"
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
+const libxml2SoName = "libxml2.so.2.9.10"
+
+var (
+	// Files included in the llvm-tools filegroup in ../Android.bp
+	llvmToolsFiles = []string{
+		"bin/llvm-symbolizer",
+		"bin/llvm-cxxfilt",
+		"lib64/libc++.so.1",
+	}
+)
 
 // This module is used to generate libfuzzer, libomp static libraries and
 // libclang_rt.* shared libraries. When LLVM_PREBUILTS_VERSION and
@@ -50,12 +61,15 @@ func init() {
 		libClangRtPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_static",
 		libClangRtPrebuiltLibraryStaticFactory)
-	android.RegisterModuleType("libclang_rt_llndk_library",
-		libClangRtLLndkLibraryFactory)
 	android.RegisterModuleType("llvm_darwin_filegroup",
 		llvmDarwinFileGroupFactory)
 	android.RegisterModuleType("clang_builtin_headers",
 		clangBuiltinHeadersFactory)
+	android.RegisterModuleType("llvm_tools_filegroup",
+		llvmToolsFilegroupFactory)
+
+	android.RegisterBp2BuildMutator("llvm_prebuilt_library_static", LlvmPrebuiltLibraryStaticBp2Build)
+	android.RegisterBp2BuildMutator("libclang_rt_prebuilt_library_static", LibclangRtPrebuiltLibraryStaticBp2Build)
 }
 
 func getClangPrebuiltDir(ctx android.LoadHookContext) string {
@@ -101,6 +115,8 @@ func getHostLibrary(ctx android.LoadHookContext) string {
 		return libcxxSoName
 	case "prebuilt_libc++abi_host":
 		return libcxxabiSoName
+	case "prebuilt_libxml2_host":
+		return libxml2SoName
 	default:
 		ctx.ModuleErrorf("unsupported host LLVM module: " + ctx.ModuleName())
 		return ""
@@ -162,6 +178,12 @@ type archProps struct {
 	Android_x86_64 struct {
 		Srcs []string
 	}
+	Linux_bionic_arm64 struct {
+		Srcs []string
+	}
+	Linux_bionic_x86_64 struct {
+		Srcs []string
+	}
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -184,11 +206,15 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
+	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
 	ctx.AppendProperties(p)
 }
 
 type prebuiltLibrarySharedProps struct {
-	Has_stubs *bool
+	Is_llndk *bool
+
+	Shared_libs []string
 }
 
 func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLibrarySharedProps) {
@@ -214,6 +240,9 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLi
 			Symbol_file *string
 			Versions    []string
 		}
+		Llndk struct {
+			Symbol_file *string
+		}
 	}
 
 	p := &props{}
@@ -229,9 +258,10 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLi
 	p.Pack_relocations = &disable
 	p.Stl = proptools.StringPtr("none")
 
-	if proptools.Bool(in.Has_stubs) {
-		p.Stubs.Versions = []string{"10000"}
+	if proptools.Bool(in.Is_llndk) {
+		p.Stubs.Versions = []string{"29", "10000"}
 		p.Stubs.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
+		p.Llndk.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
 	}
 
 	ctx.AppendProperties(p)
@@ -261,21 +291,13 @@ func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	ctx.AppendProperties(p)
 }
 
-func libClangRtLLndkLibrary(ctx android.LoadHookContext) {
-	type props struct {
-		Symbol_file *string
-	}
-
-	p := &props{}
-	p.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
-	ctx.AppendProperties(p)
-}
-
 func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 	clangDir := getClangPrebuiltDir(ctx)
 	libName := strings.TrimSuffix(ctx.ModuleName(), "_darwin")
 	if libName == "libc++" || libName == "libc++abi" {
 		libName += ".1"
+	} else if libName == "libxml2" {
+		libName += ".2.9.10"
 	}
 	lib := path.Join(clangDir, "lib64", libName+".dylib")
 
@@ -292,7 +314,7 @@ func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 }
 
 func llvmPrebuiltLibraryStaticFactory() android.Module {
-	module, _ := cc.NewPrebuiltStaticLibrary(android.DeviceSupported)
+	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
 	android.AddLoadHook(module, llvmPrebuiltLibraryStatic)
 	return module.Init()
 }
@@ -316,12 +338,6 @@ func libClangRtPrebuiltLibrarySharedFactory() android.Module {
 func libClangRtPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
 	android.AddLoadHook(module, libClangRtPrebuiltLibraryStatic)
-	return module.Init()
-}
-
-func libClangRtLLndkLibraryFactory() android.Module {
-	module := cc.NewLLndkStubLibrary()
-	android.AddLoadHook(module, libClangRtLLndkLibrary)
 	return module.Init()
 }
 
@@ -371,4 +387,120 @@ func clangBuiltinHeadersFactory() android.Module {
 	module := genrule.GenRuleFactory()
 	android.AddLoadHook(module, clangBuiltinHeaders)
 	return module
+}
+
+func llvmToolsFileGroup(ctx android.LoadHookContext) {
+	type props struct {
+		Srcs []string
+	}
+
+	p := &props{}
+	prebuiltDir := path.Join(getClangPrebuiltDir(ctx))
+	for _, src := range llvmToolsFiles {
+		p.Srcs = append(p.Srcs, path.Join(prebuiltDir, src))
+	}
+	ctx.AppendProperties(p)
+}
+
+func llvmToolsFilegroupFactory() android.Module {
+	module := android.FileGroupFactory()
+	android.AddLoadHook(module, llvmToolsFileGroup)
+	return module
+}
+
+type bazelLlvmPrebuiltLibraryStaticAttributes struct {
+	Static_library bazel.LabelAttribute
+	Includes       bazel.StringListAttribute
+}
+
+type bazelLlvmPrebuiltLibraryStatic struct {
+	android.BazelTargetModuleBase
+	bazelLlvmPrebuiltLibraryStaticAttributes
+}
+
+func BazelLlvmPrebuiltLibraryStaticFactory() android.Module {
+	module := &bazelLlvmPrebuiltLibraryStatic{}
+	module.AddProperties(&module.bazelLlvmPrebuiltLibraryStaticAttributes)
+	android.InitBazelTargetModule(module)
+	return module
+}
+
+func LlvmPrebuiltLibraryStaticBp2Build(ctx android.TopDownMutatorContext) {
+	module, ok := ctx.Module().(*cc.Module)
+	if !ok {
+		// Not a cc module
+		return
+	}
+	if !module.ConvertWithBp2build(ctx) {
+		return
+	}
+	if ctx.ModuleType() != "llvm_prebuilt_library_static" {
+		return
+	}
+
+	prebuiltLibraryStaticBp2BuildInternal(ctx, module)
+}
+
+type bazelLibclangRtPrebuiltLibraryStaticAttributes struct {
+	Static_library bazel.LabelAttribute
+	Includes       bazel.StringListAttribute
+}
+
+type bazelLibclangRtPrebuiltLibraryStatic struct {
+	android.BazelTargetModuleBase
+	bazelLibclangRtPrebuiltLibraryStaticAttributes
+}
+
+func BazelLibclangRtPrebuiltLibraryStaticFactory() android.Module {
+	module := &bazelLibclangRtPrebuiltLibraryStatic{}
+	module.AddProperties(&module.bazelLibclangRtPrebuiltLibraryStaticAttributes)
+	android.InitBazelTargetModule(module)
+	return module
+}
+
+func LibclangRtPrebuiltLibraryStaticBp2Build(ctx android.TopDownMutatorContext) {
+	module, ok := ctx.Module().(*cc.Module)
+	if !ok {
+		// Not a cc module
+		return
+	}
+	if !module.ConvertWithBp2build(ctx) {
+		return
+	}
+	if ctx.ModuleType() != "libclang_rt_prebuilt_library_static" {
+		return
+	}
+
+	prebuiltLibraryStaticBp2BuildInternal(ctx, module)
+}
+
+func prebuiltLibraryStaticBp2BuildInternal(ctx android.TopDownMutatorContext, module *cc.Module) {
+	prebuiltAttrs := cc.Bp2BuildParsePrebuiltLibraryProps(ctx, module)
+	exportedIncludes := cc.Bp2BuildParseExportedIncludesForPrebuiltLibrary(ctx, module)
+
+	attrs := &bazelLlvmPrebuiltLibraryStaticAttributes{
+		Static_library: prebuiltAttrs.Src,
+		Includes:       exportedIncludes,
+	}
+
+	props := bazel.BazelTargetModuleProperties{
+		Rule_class:        "prebuilt_library_static",
+		Bzl_load_location: "//build/bazel/rules:prebuilt_library_static.bzl",
+	}
+
+	name := android.RemoveOptionalPrebuiltPrefix(module.Name())
+	ctx.CreateBazelTargetModule(BazelLlvmPrebuiltLibraryStaticFactory, name, props, attrs)
+}
+
+func (m *bazelLlvmPrebuiltLibraryStatic) Name() string {
+	return m.BaseModuleName()
+}
+
+func (m *bazelLlvmPrebuiltLibraryStatic) GenerateAndroidBuildActions(ctx android.ModuleContext) {}
+
+func (m *bazelLibclangRtPrebuiltLibraryStatic) Name() string {
+	return m.BaseModuleName()
+}
+
+func (m *bazelLibclangRtPrebuiltLibraryStatic) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 }
