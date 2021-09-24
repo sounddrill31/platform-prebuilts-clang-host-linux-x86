@@ -11,9 +11,11 @@ load(
 load(
     ":cc_toolchain_constants.bzl",
     _actions = "actions",
+    _crt = "crt",
     _flags = "flags",
     _generated_constants = "generated_constants",
 )
+load("//build/bazel/rules:cc_object.bzl", "CcObjectInfo")
 
 # Clang-specific configuration.
 _ClangVersionInfo = provider(fields = ["directory", "includes"])
@@ -350,6 +352,59 @@ def _rpath_features():
     )
     return [runtime_library_search_directories_feature, disable_rpath_feature]
 
+def _link_crtbegin(ctx):
+    if ctx.attr.shared_library_crtbegin == None:
+        return []
+
+    crtbegin_so_file = ctx.file.shared_library_crtbegin
+
+    features = [
+        feature(
+            name = "link_crt",
+            implies = ["link_crtbegin", "link_crtend"],
+            enabled = True,
+        ),
+        # TODO(b/197920036): add mapping for linking shared/static executables
+        feature(
+            name = "link_crtbegin",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = _actions.cpp_link_dynamic_library,
+                    flag_groups = [
+                        flag_group(
+                            flags = [crtbegin_so_file.path],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
+    return features
+
+def _link_crtend(ctx):
+    if ctx.attr.shared_library_crtend == None:
+        return None
+
+    crtend_so_file = ctx.file.shared_library_crtend
+
+    # TODO(b/197920036): add mapping for linking shared/static executables
+    return feature(
+        name = "link_crtend",
+        enabled = False,
+        flag_sets = [
+            flag_set(
+                actions = _actions.cpp_link_dynamic_library,
+                flag_groups = [
+                    flag_group(
+                        flags = [crtend_so_file.path],
+                    ),
+                ],
+            ),
+        ],
+    )
+
 def _use_libcrt_feature(path):
     if not path:
         return None
@@ -376,6 +431,11 @@ def _linker_flag_feature(name, flags = [], additional_static_flags = [], additio
         name = name,
         enabled = True,
         flag_sets = [
+            # TODO(jingwen): Soong supports linking an executable with -static
+            # or -shared, so we should split this cpp_link_executable flagset up
+            # based on a static/shared binary feature.
+            # There are ~33 static executables in AOSP main:
+            # https://cs.android.com/search?q=f:Android.bp%20%22static_executable%22
             flag_set(
                 actions = _actions.cpp_link_executable,
                 flag_groups = [
@@ -437,13 +497,14 @@ def _cc_toolchain_config_impl(ctx):
             ],
         ))
 
-    action_configs.append(action_config(
-        action_name = _actions.cpp_compile[0],
-        enabled = True,
-        tools = [
-            tool_name_to_tool["clang++"],
-        ],
-    ))
+    for action_name in _actions.compile:
+        action_configs.append(action_config(
+            action_name = action_name,
+            enabled = True,
+            tools = [
+                tool_name_to_tool["clang++"],
+            ],
+        ))
 
     os_is_device = ctx.attr.target_os == "android"
 
@@ -484,14 +545,19 @@ def _cc_toolchain_config_impl(ctx):
     )
 
     # Aggregate all features
-    features = compiler_flag_features + \
-               _rpath_features() + _rtti_features() + \
-               [
-                   _use_libcrt_feature(ctx.file.libclang_rt_builtin),
-                   linker_target_flag_feature,
-                   linker_flag_feature,
-                   toolchain_include_directories_feature,
-               ]
+    features = []
+    features.append(feature(name = "no_legacy_features", enabled = True))
+    features.extend(_link_crtbegin(ctx))
+    features.extend(compiler_flag_features)
+    features.extend(_rpath_features())
+    features.extend(_rtti_features())
+    features.extend([
+        _use_libcrt_feature(ctx.file.libclang_rt_builtin),
+        linker_target_flag_feature,
+        linker_flag_feature,
+        toolchain_include_directories_feature,
+        _link_crtend(ctx),
+    ])
     features = [feature for feature in features if feature != None]
 
     return cc_common.create_cc_toolchain_config_info(
@@ -522,6 +588,16 @@ _cc_toolchain_config = rule(
         "target_flags": attr.string_list(default = []),
         "linker_flags": attr.string_list(default = []),
         "libclang_rt_builtin": attr.label(allow_single_file = True),
+
+        # crtbegin and crtend libraries for compiling cc_library_shared and
+        # cc_binary against the Bionic runtime
+        "shared_library_crtbegin": attr.label(allow_single_file = True, cfg = "target"),
+        "shared_library_crtend": attr.label(allow_single_file = True, cfg = "target"),
+        # TODO(b/197920036): handle cc_binary
+        # "shared_binary_crtbegin": attr.label(allow_single_file = True),
+        # "shared_binary_crtend": attr.label(allow_single_file = True),
+        # "static_binary_crtbegin": attr.label(allow_single_file = True),
+        # "static_binary_crtend": attr.label(allow_single_file = True),
     },
     provides = [CcToolchainConfigInfo],
 )
@@ -554,16 +630,31 @@ def android_cc_toolchain(
         libclang_rt_path = libclang_rt_builtin
         extra_linker_paths.append(":" + libclang_rt_path)
 
+    common_toolchain_config = dict(
+        [
+            ("target_os", target_os),
+            ("target_arch", target_arch),
+            ("clang_version", clang_version),
+            ("libclang_rt_builtin", libclang_rt_path),
+            ("target_flags", target_flags),
+            ("linker_flags", linker_flags),
+        ],
+    )
+
     # Write the toolchain config.
     _cc_toolchain_config(
         name = "%s_config" % name,
-        target_os = target_os,
-        target_arch = target_arch,
-        clang_version = clang_version,
-        libclang_rt_builtin = libclang_rt_path,
-        target_flags = target_flags,
-        linker_flags = linker_flags,
         toolchain_identifier = toolchain_identifier,
+        # CRT
+        shared_library_crtbegin = _crt.shared_library_crtbegin,
+        shared_library_crtend = _crt.shared_library_crtend,
+        **common_toolchain_config
+    )
+
+    _cc_toolchain_config(
+        name = "%s_nocrt_config" % name,
+        toolchain_identifier = toolchain_identifier + "_nocrt",
+        **common_toolchain_config
     )
 
     # Create the filegroups needed for sandboxing toolchain inputs to C++ actions.
@@ -615,6 +706,37 @@ def android_cc_toolchain(
         ],
     )
 
+    native.cc_toolchain(
+        name = name + "_nocrt",
+        all_files = "%s_all_files" % name,
+        as_files = "//:empty",  # Note the "//" prefix, see comment above
+        ar_files = "%s_ar_files" % name,
+        compiler_files = "%s_compiler_files" % name,
+        dwp_files = ":empty",
+        linker_files = "%s_linker_files" % name,
+        objcopy_files = ":empty",
+        strip_files = ":empty",
+        supports_param_files = 0,
+        toolchain_config = ":%s_nocrt_config" % name,
+        toolchain_identifier = toolchain_identifier + "_nocrt",
+    )
+
+    native.filegroup(
+        name = "%s_crt_libs" % name,
+        srcs = [
+            _crt.shared_library_crtbegin,
+            _crt.shared_library_crtend,
+        ],
+    )
+
+    native.filegroup(
+        name = "%s_linker_files_with_crt" % name,
+        srcs = [
+            "%s_linker_files" % name,
+            "%s_crt_libs" % name,
+        ],
+    )
+
     # Create the actual cc_toolchain.
     # The dependency on //:empty is intentional; it's necessary so that Bazel
     # can parse .d files correctly (see the comment in $TOP/BUILD)
@@ -625,7 +747,7 @@ def android_cc_toolchain(
         ar_files = "%s_ar_files" % name,
         compiler_files = "%s_compiler_files" % name,
         dwp_files = ":empty",
-        linker_files = "%s_linker_files" % name,
+        linker_files = "%s_linker_files_with_crt" % name,
         objcopy_files = ":empty",
         strip_files = ":empty",
         supports_param_files = 0,
