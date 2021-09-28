@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ab8a05a_1abf0079",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-09-28T12:49:17Z",
+      "side": 1,
+      "message": "Please update the links, though.",
+      "revId": "5d0c8d7784c41141b4b82d8aa978118d83866942",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30dd169f_28a99b6b",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-09-28T12:49:17Z",
+      "side": 1,
+      "message": "nit: let\u0027s not submit internal URLs to OSS projects. If you must reference the exact line number, add a link to GitHub instead.",
+      "range": {
+        "startLine": 415,
+        "startChar": 8,
+        "endLine": 415,
+        "endChar": 137
+      },
+      "revId": "5d0c8d7784c41141b4b82d8aa978118d83866942",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
