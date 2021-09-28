@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad4bc00a_0498e133",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 439,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-09-28T23:34:09Z",
+      "side": 1,
+      "message": "Might we be a little wary of leaking a google3 code link to AOSP?",
+      "revId": "245289f49aaca9d0c4b9d85de4fd76cff2a91ca5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
