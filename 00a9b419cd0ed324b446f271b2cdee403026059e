@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfe96756_17f976d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2021-09-28T11:29:29Z",
+      "side": 1,
+      "message": "Wow, I didn\u0027t realize we still have this hard-wired into Bazel.",
+      "revId": "00a9b419cd0ed324b446f271b2cdee403026059e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
