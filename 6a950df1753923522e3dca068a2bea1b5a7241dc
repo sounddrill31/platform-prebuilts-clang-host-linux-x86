@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9891cf2f_17b095f1",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-09-29T15:21:21Z",
+      "side": 0,
+      "message": "it looks like we dropped this flag?\n\nhttps://cs.android.com/android/_/android/platform/build/soong/+/b59f6e239705cd19a3bfbb2bacf7e4666ff211b5:cc/binary.go;l\u003d268,318;drc\u003da793db33a2d8dcba98b23d1a8c59ef6fb1579214",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 6
+      },
+      "revId": "6a950df1753923522e3dca068a2bea1b5a7241dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
