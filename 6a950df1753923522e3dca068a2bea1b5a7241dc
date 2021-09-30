@@ -22,6 +22,30 @@
       },
       "revId": "6a950df1753923522e3dca068a2bea1b5a7241dc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c522367c_5c601ca1",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-09-30T07:41:19Z",
+      "side": 0,
+      "message": "Oops yes, although it looks like it affects only cc_binary, which isn\u0027t supported yet, so we can re-add this later.",
+      "parentUuid": "9891cf2f_17b095f1",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 6
+      },
+      "revId": "6a950df1753923522e3dca068a2bea1b5a7241dc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
