@@ -1,0 +1,13 @@
+Base revision: [79d58b4d3017d159bf09a77398c9a116128de193](https://github.com/llvm/llvm-project/commit/79d58b4d3017d159bf09a77398c9a116128de193)
+
+- [d0746f2e9bbf08f52196ae12f25d0ef7edcbbe4c.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/cherry/d0746f2e9bbf08f52196ae12f25d0ef7edcbbe4c.patch)
+- [c3aecf87d5b97c3d3580457164e7fe4a19c4221a.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/cherry/c3aecf87d5b97c3d3580457164e7fe4a19c4221a.patch)
+- [79f8b5f0d00fd10fee8aee3c3c58e17a8fea8946.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/cherry/79f8b5f0d00fd10fee8aee3c3c58e17a8fea8946.patch)
+- [Revert-two-changes-that-break-Android-builds.v6.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Revert-two-changes-that-break-Android-builds.v6.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Add-a-new-library-libclang-cxx.v2.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Add-a-new-library-libclang-cxx.v2.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [Fix-Android-libunwind-link-error.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Fix-Android-libunwind-link-error.patch)
+- [WIP-XFAIL-for-next-version-r437112.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/WIP-XFAIL-for-next-version-r437112.patch)
+- [Use-malloc-free-for-KMP-on-Android.patch](https://android.googlesource.com/toolchain/llvm_android/+/a4b395b233e01214fa131e80016eaa92b293e1a3/patches/Use-malloc-free-for-KMP-on-Android.patch)
