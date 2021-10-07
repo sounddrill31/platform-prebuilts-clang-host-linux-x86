@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f43a56c0_99b4b9f5",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-10-07T10:43:14Z",
+      "side": 1,
+      "message": "indent",
+      "range": {
+        "startLine": 324,
+        "startChar": 24,
+        "endLine": 327,
+        "endChar": 22
+      },
+      "revId": "f8a3e7e1dcf9502bad3ee2a45d28935d6ab3537d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5d1a045_0f50d064",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-10-07T10:43:14Z",
+      "side": 1,
+      "message": "indent",
+      "range": {
+        "startLine": 376,
+        "startChar": 24,
+        "endLine": 380,
+        "endChar": 22
+      },
+      "revId": "f8a3e7e1dcf9502bad3ee2a45d28935d6ab3537d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
