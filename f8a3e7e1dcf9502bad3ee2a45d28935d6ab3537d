@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a6cc079_417881ed",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-10-07T13:47:05Z",
+      "side": 1,
+      "message": "lol, i ran buildifier so many times but not the last one. thanks.",
+      "parentUuid": "f43a56c0_99b4b9f5",
+      "range": {
+        "startLine": 324,
+        "startChar": 24,
+        "endLine": 327,
+        "endChar": 22
+      },
+      "revId": "f8a3e7e1dcf9502bad3ee2a45d28935d6ab3537d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f5d1a045_0f50d064",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-10-07T10:43:14Z",
       "side": 1,
       "message": "indent",
+      "range": {
+        "startLine": 376,
+        "startChar": 24,
+        "endLine": 380,
+        "endChar": 22
+      },
+      "revId": "f8a3e7e1dcf9502bad3ee2a45d28935d6ab3537d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "591eae6c_e84cf78b",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-10-07T13:47:05Z",
+      "side": 1,
+      "message": "done.",
+      "parentUuid": "f5d1a045_0f50d064",
       "range": {
         "startLine": 376,
         "startChar": 24,
