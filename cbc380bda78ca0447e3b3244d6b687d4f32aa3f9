@@ -16,6 +16,24 @@
       "message": "Not sure if it\u0027s standard practice to override failing presubmit checks when merging a new Android release, but this change broke the Trusty build, which presubmit checks indicated ahead of time.",
       "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac77c74d_d27e18aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1086523
+      },
+      "writtenOn": "2021-10-12T18:19:17Z",
+      "side": 1,
+      "message": "That\u0027s my bad (an oversight, because the presubmit was expected to fail due to blobs difference, and our checkbuild didn\u0027t catch the Trusty case either since it\u0027s not part of checkbuild and device with blobs build were good), sorry for that.  I will note this in a retrospective document.",
+      "parentUuid": "71471694_37b1ef2f",
+      "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
