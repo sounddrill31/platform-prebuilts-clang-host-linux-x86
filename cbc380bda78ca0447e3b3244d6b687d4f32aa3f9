@@ -34,6 +34,24 @@
       "parentUuid": "71471694_37b1ef2f",
       "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e250fa45_5e990552",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-10-12T18:28:16Z",
+      "side": 1,
+      "message": "Is someone working on the build breakage for Trusty? I think we need to put back the clang-r399163b toolchain.",
+      "parentUuid": "ac77c74d_d27e18aa",
+      "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
