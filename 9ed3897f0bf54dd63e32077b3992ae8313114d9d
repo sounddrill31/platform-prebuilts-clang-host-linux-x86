@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "183eeddb_95a9f384",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-10-12T13:24:06Z",
+      "side": 1,
+      "message": "given that CI isn\u0027t consistently running our presubmits, can we also verify locally?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 8
+      },
+      "revId": "9ed3897f0bf54dd63e32077b3992ae8313114d9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
