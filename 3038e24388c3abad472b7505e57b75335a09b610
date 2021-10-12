@@ -34,6 +34,24 @@
       "parentUuid": "dd5b6ec2_fa77c1d7",
       "revId": "3038e24388c3abad472b7505e57b75335a09b610",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2eae408_93567adc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001525
+      },
+      "writtenOn": "2021-10-12T21:52:44Z",
+      "side": 1,
+      "message": "No, it wouldn\u0027t be permanent. We\u0027ll switch to a newer clang at some point, but right now there are other deadlines to meet. Pinning protects us from this version of clang being accidentally deleted again, until we make the switch to a newer clang (at which point we might just pin to that).",
+      "parentUuid": "b35cc9a6_e3f5e473",
+      "revId": "3038e24388c3abad472b7505e57b75335a09b610",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
