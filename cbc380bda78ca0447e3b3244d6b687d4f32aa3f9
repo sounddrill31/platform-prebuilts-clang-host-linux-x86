@@ -70,6 +70,24 @@
       "parentUuid": "e250fa45_5e990552",
       "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2fb993d_96910875",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001525
+      },
+      "writtenOn": "2021-10-12T18:51:59Z",
+      "side": 1,
+      "message": "\u003e Is someone working on the build breakage for Trusty? \n\nYes, Trusty is switching to a newer clang, but a few things needed to updated for that: https://android-review.googlesource.com/q/topic:trusty-roll-clang-oct-2021\n(and on top of there is an ongoing treehugger issue that prevents TH from verifying those changes: https://b.corp.google.com/issues/202785508)",
+      "parentUuid": "5568a1ea_b940ca66",
+      "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
