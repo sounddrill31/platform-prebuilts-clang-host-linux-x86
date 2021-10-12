@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd5b6ec2_fa77c1d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001525
+      },
+      "writtenOn": "2021-10-12T21:37:05Z",
+      "side": 1,
+      "message": "If this is only for Trusty, then this is not needed. https://googleplex-polygon-android-review.git.corp.google.com/c/trusty/manifest/+/291833 fixes Trusty by pinning the prebuilt project to a specific revision",
+      "revId": "3038e24388c3abad472b7505e57b75335a09b610",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
