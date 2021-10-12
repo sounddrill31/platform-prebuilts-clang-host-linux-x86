@@ -33,6 +33,23 @@
       "message": "2 failed TH tests were failing without this change.\n",
       "revId": "2e5b82a81f62fd1769a93299b4db092be5ee63d4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6e0ec54_9441e3fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2021-10-12T00:31:23Z",
+      "side": 1,
+      "message": "Rerun presubmit tests without vndk changes.\n",
+      "revId": "2e5b82a81f62fd1769a93299b4db092be5ee63d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
