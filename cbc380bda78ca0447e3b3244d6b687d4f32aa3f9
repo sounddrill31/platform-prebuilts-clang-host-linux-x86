@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71471694_37b1ef2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001525
+      },
+      "writtenOn": "2021-10-12T15:52:14Z",
+      "side": 1,
+      "message": "Not sure if it\u0027s standard practice to override failing presubmit checks when merging a new Android release, but this change broke the Trusty build, which presubmit checks indicated ahead of time.",
+      "revId": "cbc380bda78ca0447e3b3244d6b687d4f32aa3f9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
