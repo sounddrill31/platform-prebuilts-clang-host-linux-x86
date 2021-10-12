@@ -22,6 +22,30 @@
       },
       "revId": "9ed3897f0bf54dd63e32077b3992ae8313114d9d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aad6801d_cb5be5fd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-10-12T23:13:46Z",
+      "side": 1,
+      "message": "Verified with Forrest on bp2build and mixed_targets.",
+      "parentUuid": "183eeddb_95a9f384",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 8
+      },
+      "revId": "9ed3897f0bf54dd63e32077b3992ae8313114d9d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
