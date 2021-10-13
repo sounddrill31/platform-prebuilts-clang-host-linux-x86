@@ -69,6 +69,23 @@
       "message": "(feel free to submit this though. It doesn\u0027t hurt to have both)",
       "revId": "3038e24388c3abad472b7505e57b75335a09b610",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3239c8d8_38495882",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-10-13T01:49:05Z",
+      "side": 1,
+      "message": "clang-bootstrap has subsequently been deleted from AOSP.  We can delete it in a follow up.",
+      "revId": "3038e24388c3abad472b7505e57b75335a09b610",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
