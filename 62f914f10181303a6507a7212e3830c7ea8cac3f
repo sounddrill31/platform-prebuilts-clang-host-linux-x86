@@ -22,6 +22,30 @@
       },
       "revId": "62f914f10181303a6507a7212e3830c7ea8cac3f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04393ece_3db485ce",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-10-15T14:57:58Z",
+      "side": 1,
+      "message": "That\u0027s a struct of label strings rather than the attributes. And won\u0027t be compatible with support for linux_musl. Made this a similar struct instead.",
+      "parentUuid": "1b95cfd6_f3785aac",
+      "range": {
+        "startLine": 208,
+        "startChar": 8,
+        "endLine": 212,
+        "endChar": 30
+      },
+      "revId": "62f914f10181303a6507a7212e3830c7ea8cac3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
