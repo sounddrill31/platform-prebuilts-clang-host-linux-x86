@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b95cfd6_f3785aac",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1514900
+      },
+      "writtenOn": "2021-10-15T07:14:48Z",
+      "side": 1,
+      "message": "Pass _bionic_crt into get_features instead?",
+      "range": {
+        "startLine": 208,
+        "startChar": 8,
+        "endLine": 212,
+        "endChar": 30
+      },
+      "revId": "62f914f10181303a6507a7212e3830c7ea8cac3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
