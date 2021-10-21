@@ -50,6 +50,23 @@
       "message": "Have you verified that bp2build now generates expected targets? What do they look like? ",
       "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d023bd89_2f4a497a",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-21T20:06:15Z",
+      "side": 1,
+      "message": "What is llvm_prebuilt_library_shared? Does this module type actually exist?",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
