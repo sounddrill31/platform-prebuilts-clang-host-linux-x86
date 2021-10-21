@@ -72,6 +72,9 @@ func init() {
 
 	android.RegisterBp2BuildMutator("llvm_prebuilt_library_static", LlvmPrebuiltLibraryStaticBp2Build)
 	android.RegisterBp2BuildMutator("libclang_rt_prebuilt_library_static", LibclangRtPrebuiltLibraryStaticBp2Build)
+
+	android.RegisterBp2BuildMutator("llvm_prebuilt_library_shared", LlvmPrebuiltLibrarySharedBp2Build)
+	android.RegisterBp2BuildMutator("libclang_rt_prebuilt_library_shared", LibclangRtPrebuiltLibrarySharedBp2Build)
 }
 
 func getClangPrebuiltDir(ctx android.LoadHookContext) string {
