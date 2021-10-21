@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "899da900_9b9c5029",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-10-21T22:11:40Z",
+      "side": 1,
+      "message": "Sure. Do you mean the sections in `out/soong/build.ninja`? Because that\u0027s what I\u0027ve been checking against, along with their various definitions in `prebuilts/clang/host/linux-x86/Android.bp` .",
+      "parentUuid": "61596b1e_2b988fbe",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d023bd89_2f4a497a",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -83,6 +101,24 @@
       "writtenOn": "2021-10-21T20:06:15Z",
       "side": 1,
       "message": "What is llvm_prebuilt_library_shared? Does this module type actually exist?",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4294554e_2a71b893",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-10-21T22:11:40Z",
+      "side": 1,
+      "message": "I checked `build/` \u0026 `prebuilts/` and indeed there is *not* a use of `llvm_prebuilt_library_shared`. My bad; I had added it as part of aosp/1837554 and so thought to register it. It would thus seem that the function is also superfluous; should it be removed in this CL, another, or not?",
+      "parentUuid": "d023bd89_2f4a497a",
       "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
