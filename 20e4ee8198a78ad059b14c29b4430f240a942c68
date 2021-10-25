@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ec71e5eb_54a6ef52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-25T14:07:37Z",
+      "side": 1,
+      "message": "I mean Bazel BUILD targets, so specifically the contents of a BUILD.bazel file under out/soong/workspace.",
+      "parentUuid": "899da900_9b9c5029",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d023bd89_2f4a497a",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
@@ -119,6 +137,24 @@
       "side": 1,
       "message": "I checked `build/` \u0026 `prebuilts/` and indeed there is *not* a use of `llvm_prebuilt_library_shared`. My bad; I had added it as part of aosp/1837554 and so thought to register it. It would thus seem that the function is also superfluous; should it be removed in this CL, another, or not?",
       "parentUuid": "d023bd89_2f4a497a",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03b19c32_e2eb73ce",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-25T14:07:37Z",
+      "side": 1,
+      "message": "I\u0027d be fine with you removing the dead code in this CL.",
+      "parentUuid": "4294554e_2a71b893",
       "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
