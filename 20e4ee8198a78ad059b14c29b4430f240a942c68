@@ -126,6 +126,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bbb97e00_187dcc5d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-27T18:57:54Z",
+      "side": 1,
+      "message": "Aha! So a `prebuilt_library_shared` is now generated as part of your CL in that BUILD file? Great.\n\nHave you tried building this target with bazel?",
+      "parentUuid": "2d27fbe4_1288dba1",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d023bd89_2f4a497a",
         "filename": "soong/clangprebuilts.go",
         "patchSetId": 1
