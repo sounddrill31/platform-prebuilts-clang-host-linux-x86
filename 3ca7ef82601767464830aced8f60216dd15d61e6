@@ -16,6 +16,23 @@
       "message": "Hopefully nothing else left to do regarding b/200795398",
       "revId": "3ca7ef82601767464830aced8f60216dd15d61e6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ed743da_68b53f4f",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-27T19:21:38Z",
+      "side": 1,
+      "message": "No need for this comment",
+      "revId": "3ca7ef82601767464830aced8f60216dd15d61e6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

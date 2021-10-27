@@ -160,6 +160,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1336263_04c113ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-10-27T19:21:38Z",
+      "side": 1,
+      "message": "Excellent. Yeah, your test for `:all` certainly should\u0027ve covered it, but this at least verifies that bazel resolves that specific name correctly. Just an extra check to be 100% confident things exist.",
+      "parentUuid": "43b226e9_64e4b433",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d023bd89_2f4a497a",
