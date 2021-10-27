@@ -106,6 +106,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d27fbe4_1288dba1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-10-27T18:51:55Z",
+      "side": 1,
+      "message": "`out/soong/bp2build/prebuilts/clang/host/linux-x86/BUILD.bazel` contains:\n```\nprebuilt_library_shared(\n    name \u003d \"libclang_rt.ubsan_standalone-arm-android\",\n    shared_library \u003d \"clang-r433403b/lib64/clang/13.0.3/lib/linux/libclang_rt.ubsan_standalone-arm-android.so\",\n)\n```\n\nfrom:\n```\nlibclang_rt_prebuilt_library_shared {\n    name: \"libclang_rt.ubsan_standalone-arm-android\",\n    defaults: [\"libclang_rt.ubsan_standalone-android-default\"],\n    sdk_version: \"24\",\n    check_elf_files: false,  // Bypass circular dependency between libc++\n    arch: {\n        arm: {\n            enabled: true,\n        },\n    },\n}\n```",
+      "parentUuid": "ec71e5eb_54a6ef52",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d023bd89_2f4a497a",
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "I\u0027d be fine with you removing the dead code in this CL.",
       "parentUuid": "4294554e_2a71b893",
+      "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05f5e5fc_2400cd58",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2021-10-27T18:51:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03b19c32_e2eb73ce",
       "revId": "20e4ee8198a78ad059b14c29b4430f240a942c68",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
