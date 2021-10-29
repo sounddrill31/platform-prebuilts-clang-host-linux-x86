@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "573756a8_ba1129aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-10-29T20:07:39Z",
+      "side": 1,
+      "message": "We need to understand the boot failures before checking in binaries. These are going to pass presubmit because they aren\u0027t being switched on here, but it\u0027s a waste of GB of space to churn binaries if we have to respin (and we likely do have to pick up a fix of some sort).",
+      "revId": "69a6abd7394373491fc7e6702190c9d27aef36c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
