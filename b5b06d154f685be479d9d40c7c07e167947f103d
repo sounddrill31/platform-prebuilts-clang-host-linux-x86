@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "526f978e_70321106",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2021-11-09T21:07:54Z",
+      "side": 1,
+      "message": "Does clang-r416183b actually have llvm-windres?\n\ne.g. I see that --help works with llvm-windres in clang-r433403b but not with clang-r416183b.\n\nNDK master is using clang-r433403b so we don\u0027t need the symlink in older versions.\n\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r433403b/bin$ ln -sf llvm-rc llvm-windres\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r433403b/bin$ ./llvm-rc --help\n    Exactly one input file should be provided.\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r433403b/bin$ ./llvm-windres --help\n    OVERVIEW: LLVM windres (GNU windres compatible)\n\n    USAGE: windres [options] file...\n\n    OPTIONS:\n      --codepage\u003d\u003cvalue\u003e      Default codepage to use\n      --define\u003d\u003cvalue\u003e        Define to pass to the preprocessor\n      ...\n\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r416183b/bin$ ln -sf llvm-rc llvm-windres\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r416183b/bin$ ./llvm-rc --help\n    Exactly one input file should be provided.\n    rprichard@cashew:/x/ndk/prebuilts/clang/host/linux-x86/clang-r416183b/bin$ ./llvm-windres --help\n    Exactly one input file should be provided.\n",
+      "revId": "b5b06d154f685be479d9d40c7c07e167947f103d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
