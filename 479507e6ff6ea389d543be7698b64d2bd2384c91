@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9504394_3c4875fc",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "Sure. :)",
+      "parentUuid": "cf1e4e4b_9083079d",
+      "range": {
+        "startLine": 132,
+        "startChar": 18,
+        "endLine": 132,
+        "endChar": 51
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7f1f105c_5ba7f112",
@@ -54,6 +78,30 @@
       "writtenOn": "2021-11-09T18:00:12Z",
       "side": 1,
       "message": "is this intended to be commented out? if so should we have a todo to enable later?",
+      "range": {
+        "startLine": 136,
+        "startChar": 18,
+        "endLine": 136,
+        "endChar": 37
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8605201e_f2b1fe51",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "I forgot to remove this, sorry.\n\nIt originates from: https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/stl.go;l\u003d212?q\u003d%22nostdlib%22%20file:go$\n\nBut this is only added for \"extra libs\", and not for generic link actions. So, it\u0027s omission here is actually parity with the shared libraries I was testing.\n\nI could file a bug for it, but I think perhaps it\u0027s best swept under the rug and investigated when we see difftool differences later. (Namely, we already have too much bug bloat, and adding it for a random flag seems overkill) WDYT?",
+      "parentUuid": "7f1f105c_5ba7f112",
       "range": {
         "startLine": 136,
         "startChar": 18,
@@ -87,6 +135,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "de3e821c_29613c15",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "/shrug sure? The important thing to note here is that this is for a non-host linux arch, as we assume host is x86_64.",
+      "parentUuid": "be51db38_1bba3266",
+      "range": {
+        "startLine": 235,
+        "startChar": 31,
+        "endLine": 235,
+        "endChar": 39
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4487b94e_092c62ac",
@@ -100,6 +172,30 @@
       "writtenOn": "2021-11-09T18:00:12Z",
       "side": 1,
       "message": "it feels a bit funny to pass crt as a bool and then always create a crt and nocrt toolchain",
+      "range": {
+        "startLine": 394,
+        "startChar": 3,
+        "endLine": 407,
+        "endChar": 5
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "346909ef_4facc70b",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "Fair point. How about this? We now alias the regular to the _nocrt in those cases.",
+      "parentUuid": "4487b94e_092c62ac",
       "range": {
         "startLine": 394,
         "startChar": 3,
@@ -133,6 +229,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae6770cb_eea2e680",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "Nice catch, Liz!\n\nI was borrowing from here:\nhttps://cs.android.com/android/platform/superproject/+/master:build/soong/cc/linker.go;l\u003d283-284;drc\u003d0eae52e0debb28dc27b33e915a6ab317839b7c2e\n\nBut, joke\u0027s on me, these are only actually added for host, non-windows:\nhttps://cs.android.com/android/platform/superproject/+/master:build/soong/cc/linker.go;l\u003d546-549;drc\u003dmaster\n\nFair point re: loader_path. Though, This function has a TODO to handle loader_path for other, existing features. Perhaps we defer until then?\n\nAlso, the existing pattern seems to be to determine os_is_device and arch_is_64_bit in the caller, and pass it down. So I\u0027ll continue that for now...",
+      "parentUuid": "e7aa8e48_c4298f13",
+      "range": {
+        "startLine": 472,
+        "startChar": 7,
+        "endLine": 472,
+        "endChar": 21
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "06ae269b_ac3c7faf",
@@ -146,6 +266,30 @@
       "writtenOn": "2021-11-09T18:00:12Z",
       "side": 1,
       "message": "features result in a specific order, instead of putting this last, can we update _rtti_features to take a bool and return no features if they are unnecessary?",
+      "range": {
+        "startLine": 1222,
+        "startChar": 0,
+        "endLine": 1223,
+        "endChar": 36
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0203301_3e719c50",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1223,
+      "author": {
+        "id": 1605027
+      },
+      "writtenOn": "2021-11-09T20:25:22Z",
+      "side": 1,
+      "message": "Certainly, but oof. Are we sure we\u0027ve gotten the ordering correct in the past?",
+      "parentUuid": "06ae269b_ac3c7faf",
       "range": {
         "startLine": 1222,
         "startChar": 0,
