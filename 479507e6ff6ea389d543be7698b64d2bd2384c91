@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf1e4e4b_9083079d",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "since these are getting repeated, should we add to prebuilts/clang/host/linux-x86/cc_toolchain_constants.bzl?",
+      "range": {
+        "startLine": 132,
+        "startChar": 18,
+        "endLine": 132,
+        "endChar": 51
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f1f105c_5ba7f112",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "is this intended to be commented out? if so should we have a todo to enable later?",
+      "range": {
+        "startLine": 136,
+        "startChar": 18,
+        "endLine": 136,
+        "endChar": 37
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be51db38_1bba3266",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "should this be x86?",
+      "range": {
+        "startLine": 235,
+        "startChar": 31,
+        "endLine": 235,
+        "endChar": 39
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4487b94e_092c62ac",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "it feels a bit funny to pass crt as a bool and then always create a crt and nocrt toolchain",
+      "range": {
+        "startLine": 394,
+        "startChar": 3,
+        "endLine": 407,
+        "endChar": 5
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7aa8e48_c4298f13",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "Should we pass os + arch here? \n\nThis should be limited to non-device os-es. This also is only true for linux as darwin uses \"@loader_path\".",
+      "range": {
+        "startLine": 472,
+        "startChar": 7,
+        "endLine": 472,
+        "endChar": 21
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06ae269b_ac3c7faf",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1223,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-09T18:00:12Z",
+      "side": 1,
+      "message": "features result in a specific order, instead of putting this last, can we update _rtti_features to take a bool and return no features if they are unnecessary?",
+      "range": {
+        "startLine": 1222,
+        "startChar": 0,
+        "endLine": 1223,
+        "endChar": 36
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
