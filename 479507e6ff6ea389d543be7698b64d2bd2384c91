@@ -206,6 +206,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd6f7cbe_cf2ce927",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-10T14:06:31Z",
+      "side": 1,
+      "message": "sgtm",
+      "parentUuid": "346909ef_4facc70b",
+      "range": {
+        "startLine": 394,
+        "startChar": 3,
+        "endLine": 407,
+        "endChar": 5
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e7aa8e48_c4298f13",
@@ -290,6 +314,30 @@
       "side": 1,
       "message": "Certainly, but oof. Are we sure we\u0027ve gotten the ordering correct in the past?",
       "parentUuid": "06ae269b_ac3c7faf",
+      "range": {
+        "startLine": 1222,
+        "startChar": 0,
+        "endLine": 1223,
+        "endChar": 36
+      },
+      "revId": "479507e6ff6ea389d543be7698b64d2bd2384c91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84889a2e_af52656b",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1223,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2021-11-10T14:06:31Z",
+      "side": 1,
+      "message": "at the very least, we know we want:\n_link_crtbegin() and _get_legacy_features_begin() at the beginning,\nmost other stuff in the middle\nand _get_legacy_features_end() and _link_crtend() at the end.\n\nbut i make no claims about whether the order in the middle is identical to Soong",
+      "parentUuid": "f0203301_3e719c50",
       "range": {
         "startLine": 1222,
         "startChar": 0,
