@@ -195,24 +195,35 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_") + ".a"
 
 	type props struct {
-		Export_include_dirs []string
 		Target              archProps
 	}
 
+	type mainProps struct {
+		Export_include_dirs []string
+	}
+
 	p := &props{}
+	mp := &mainProps{}
 
 	if name == "libFuzzer.a" {
 		headerDir := path.Join(getClangPrebuiltDir(ctx), "prebuilt_include", "llvm", "lib", "Fuzzer")
-		p.Export_include_dirs = []string{headerDir}
+		mp.Export_include_dirs = []string{headerDir}
 	}
 
+	ctx.AppendProperties(mp)
 	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
 	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
-	ctx.AppendProperties(p)
+
+	ctx.AppendTargetProperties("android_arm", &p.Target.Android_arm)
+	ctx.AppendTargetProperties("android_arm64", &p.Target.Android_arm64)
+	ctx.AppendTargetProperties("android_x86", &p.Target.Android_x86)
+	ctx.AppendTargetProperties("android_x86_64", &p.Target.Android_x86_64)
+	ctx.AppendTargetProperties("linux_bionic_arm64", &p.Target.Linux_bionic_arm64)
+	ctx.AppendTargetProperties("linux_bionic_x86_64", &p.Target.Linux_bionic_x86_64)
 }
 
 type prebuiltLibrarySharedProps struct {
