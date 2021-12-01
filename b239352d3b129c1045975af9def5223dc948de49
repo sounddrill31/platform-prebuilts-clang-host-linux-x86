@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ee86499_79566443",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2021-12-01T11:20:35Z",
+      "side": 1,
+      "message": "Verified that with the underscore converted back to a hyphen (to avoid a weird renaming in the go rules) that this builds and works fine on Darwin. Thanks, Pirama, for getting the hard part done here!",
+      "revId": "b239352d3b129c1045975af9def5223dc948de49",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
