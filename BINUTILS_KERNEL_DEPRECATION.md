@@ -1,3 +1,28 @@
+As of Android S, this work is fully complete (except for ARCH=arm on
+android-4.19-stable). ie. build commands should be one of:
+
+```sh
+# arm64
+$ ARCH=arm64 CROSS_COMPILE_COMPAT=arm-linux-gnueabi- make LLVM=1
+
+# arm
+$ ARCH=arm make LLVM=1
+$ ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- make LLVM=1 # android-4.19-stable
+
+# x86_64
+$ make LLVM=1
+```
+
+The relevant kernel commits are:
+v5.7-rc1:
+commit a0d1c951ef08 ("kbuild: support LLVM=1 to switch the default tools to Clang/LLVM")
+v5.15-rc1:
+commit f12b034afeb3 ("scripts/Makefile.clang: default to LLVM_IAS=1")
+
+The original version of this document is retained below:
+
+---
+
 In the effort to improve test coverage of the LLVM substitutes when building
 Linux kernels for Android distributions, as well as minimize build
 dependencies, we plan to phase kernel builds over to use the LLVM substitutes
