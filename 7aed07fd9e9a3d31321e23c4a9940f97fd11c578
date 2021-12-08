@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca229b7c_b6b32c0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-12-08T07:51:08Z",
+      "side": 1,
+      "message": "LGTM except for the nit.",
+      "revId": "7aed07fd9e9a3d31321e23c4a9940f97fd11c578",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdc91048_1e4ddae0",
+        "filename": "BINUTILS_KERNEL_DEPRECATION.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2021-12-08T07:51:08Z",
+      "side": 1,
+      "message": "deprecation",
+      "range": {
+        "startLine": 1,
+        "startChar": 22,
+        "endLine": 1,
+        "endChar": 26
+      },
+      "revId": "7aed07fd9e9a3d31321e23c4a9940f97fd11c578",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
