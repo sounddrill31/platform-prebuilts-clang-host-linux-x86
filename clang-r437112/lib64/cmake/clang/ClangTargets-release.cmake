@@ -1022,15 +1022,5 @@ set_target_properties(libclang PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS libclang )
 list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib64/libclang.so.14.0.0git" )
 
-# Import target "libclang_cxx" for configuration "Release"
-set_property(TARGET libclang_cxx APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(libclang_cxx PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib64/libclang_cxx.so.14"
-  IMPORTED_SONAME_RELEASE "libclang_cxx.so.14git"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS libclang_cxx )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libclang_cxx "${_IMPORT_PREFIX}/lib64/libclang_cxx.so.14" )
-
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)
