@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ecc80c3_169a0417",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-01-07T23:03:38Z",
+      "side": 1,
+      "message": "I need to be cc\u0027ed on changes like this. This broke the kernel builds.\naosp/1941353",
+      "revId": "5c9775781702add9958c9a7f6e877797ce176d9e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
