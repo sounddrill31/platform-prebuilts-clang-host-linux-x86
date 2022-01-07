@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d3476c0_c9930e25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-01-07T23:34:29Z",
+      "side": 1,
+      "message": "I\u0027ll remember to bump this again for b/202986547.",
+      "revId": "4058010e2f864f3e7082306518727413ecb7935f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
