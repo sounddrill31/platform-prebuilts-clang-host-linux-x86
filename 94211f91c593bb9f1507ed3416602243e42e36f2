@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "039387d5_17a19f91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-01-07T23:09:49Z",
+      "side": 1,
+      "message": "LGTM.  We\u0027ll remember to add Nick in future changes like these.\n\nI think we missed this because the kernel is still reported to be in the old prebuilt in https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/README.md.  ",
+      "revId": "94211f91c593bb9f1507ed3416602243e42e36f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
