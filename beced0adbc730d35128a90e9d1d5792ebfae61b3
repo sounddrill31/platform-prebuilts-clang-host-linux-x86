@@ -16,6 +16,23 @@
       "message": "DO NOT SUBMIT until the kernels have actually cut over to newer versions.",
       "revId": "beced0adbc730d35128a90e9d1d5792ebfae61b3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "903d23f0_4ff8e859",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-01-11T20:37:19Z",
+      "side": 1,
+      "message": "just waiting on aosp/1941258 before submitting.",
+      "revId": "beced0adbc730d35128a90e9d1d5792ebfae61b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
