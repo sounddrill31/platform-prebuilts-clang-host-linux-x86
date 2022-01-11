@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40fb1df3_87718bff",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1347428
+      },
+      "writtenOn": "2022-01-11T01:28:55Z",
+      "side": 1,
+      "message": "I presumed you wouldn\u0027t want a link to googleplex.android.git.corp.google.com here. But, is it worth going through all the mirroring, just to get an AOSP link here?",
+      "range": {
+        "startLine": 77,
+        "startChar": 13,
+        "endLine": 77,
+        "endChar": 158
+      },
+      "revId": "86a3d20171dc401b29a7af22267e1d0209688dc5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
