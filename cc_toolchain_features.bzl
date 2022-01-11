@@ -264,6 +264,22 @@ def _compiler_flag_features(flags = [], os_is_device = False):
         ],
     ))
 
+    features.append(feature(
+        name = "stub_library",
+        enabled = False,
+        implies = ["stub_library_visibility"],
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = _generated_constants.StubLibraryCompilerFlags,
+                    ),
+                ],
+            ),
+        ],
+    ))
+
     # The user_compile_flags feature is used by Bazel to add --copt, --conlyopt,
     # and --cxxopt values. Any features added above this call will thus appear
     # earlier in the commandline than the user opts (so users could override
@@ -298,6 +314,22 @@ def _compiler_flag_features(flags = [], os_is_device = False):
                 flag_groups = [
                     flag_group(
                         flags = _generated_constants.NoOverrideGlobalCflags,
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    # Ensures that the stub libraries are always compiled with default visibility
+    features.append(feature(
+        name = "stub_library_visibility",
+        enabled = False,
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = ["-fvisibility=default"]
                     ),
                 ],
             ),
