@@ -22,6 +22,30 @@
       },
       "revId": "86a3d20171dc401b29a7af22267e1d0209688dc5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50f033e8_f1c936c6",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-01-11T01:30:43Z",
+      "side": 1,
+      "message": "You can link to the internal one if mirroring to AOSP isn\u0027t necessary (or would just be a waste). In your case, if you\u0027re not publishing this stuff via AOSP, it doesn\u0027t make sense to have it copied out there.",
+      "parentUuid": "40fb1df3_87718bff",
+      "range": {
+        "startLine": 77,
+        "startChar": 13,
+        "endLine": 77,
+        "endChar": 158
+      },
+      "revId": "86a3d20171dc401b29a7af22267e1d0209688dc5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
