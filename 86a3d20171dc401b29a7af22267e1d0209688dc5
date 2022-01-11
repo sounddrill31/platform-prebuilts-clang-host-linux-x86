@@ -46,6 +46,30 @@
       },
       "revId": "86a3d20171dc401b29a7af22267e1d0209688dc5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "107214ff_d6ae0939",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1347428
+      },
+      "writtenOn": "2022-01-11T01:52:09Z",
+      "side": 1,
+      "message": "Thanks. I converted the link to point to internal repo. (It really was redundant work to mirror it just for this)",
+      "parentUuid": "50f033e8_f1c936c6",
+      "range": {
+        "startLine": 77,
+        "startChar": 13,
+        "endLine": 77,
+        "endChar": 158
+      },
+      "revId": "86a3d20171dc401b29a7af22267e1d0209688dc5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
