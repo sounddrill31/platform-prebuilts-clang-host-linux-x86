@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4756060a_2fa05cbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2022-01-13T18:46:57Z",
+      "side": 1,
+      "message": "Dan, this is our second attempt to remove this old release.\nCould you review/vote on the NDK-API again? Thanks.\n\n",
+      "revId": "608c42645cf9179283f1400b50795fa42f9cb3b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
