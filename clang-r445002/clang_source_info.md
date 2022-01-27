@@ -1,0 +1,11 @@
+Base revision: [18308e171b5b1dd99627a4d88c7d6c5ff21b8c96](https://github.com/llvm/llvm-project/commits/18308e171b5b1dd99627a4d88c7d6c5ff21b8c96)
+
+- [[AArch64][SVE] Fix handling of stack protection with SVE](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/cherry/dc9f65be4555406262ff693c8bac5f1f0b960a97.patch)
+- [[clang] diagnose_as_builtin attribute for Fortify diagnosing](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/cherry/bc5f2d12cadce765620efc56a1ca815221db47af.patch)
+- [[compiler-rt][AArch64] Add a workaround for Exynos 9810](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/cherry/cce4a7258b81159e57a411896011ee2742f17def.patch)
+- [[libc++] Fix GDB pretty printers when GDB uses Python 2.7](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/cherry/89103bd2f06dea6dc89276cd12dd78c72476b03f.patch)
+- [Revert-two-changes-that-break-Android-builds.v6.patch](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/Revert-two-changes-that-break-Android-builds.v6.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [TSAN-Fix-undefined-symbols-on-Android-side-issues.patch](https://android.googlesource.com/toolchain/llvm_android/+/3a88190385d5d75242310fb46dd835b957053dd7/patches/TSAN-Fix-undefined-symbols-on-Android-side-issues.patch)
