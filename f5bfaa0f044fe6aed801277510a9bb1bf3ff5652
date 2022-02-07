@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed379ab6_c7f74692",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-02-07T22:29:52Z",
+      "side": 1,
+      "message": "Change shouldn\u0027t impact pending build (llvm-toolchain).",
+      "revId": "f5bfaa0f044fe6aed801277510a9bb1bf3ff5652",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
