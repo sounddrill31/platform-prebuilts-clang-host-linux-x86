@@ -47,8 +47,6 @@ var (
 // LLVM_RELEASE_VERSION are set, the library will generated from the given
 // path.
 func init() {
-	android.RegisterModuleType("llvm_host_defaults",
-		llvmHostDefaultsFactory)
 	android.RegisterModuleType("llvm_host_prebuilt_library_shared",
 		llvmHostPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("llvm_prebuilt_library_static",
@@ -361,24 +359,6 @@ func libClangRtPrebuiltObjectFactory() android.Module {
 func llvmDarwinFileGroupFactory() android.Module {
 	module := android.FileGroupFactory()
 	android.AddLoadHook(module, llvmDarwinFileGroup)
-	return module
-}
-
-func llvmHostDefaults(ctx android.LoadHookContext) {
-	type props struct {
-		Enabled *bool
-	}
-
-	p := &props{}
-	if !ctx.AConfig().IsEnvTrue("LLVM_BUILD_HOST_TOOLS") {
-		p.Enabled = proptools.BoolPtr(false)
-	}
-	ctx.AppendProperties(p)
-}
-
-func llvmHostDefaultsFactory() android.Module {
-	module := cc.DefaultsFactory()
-	android.AddLoadHook(module, llvmHostDefaults)
 	return module
 }
 

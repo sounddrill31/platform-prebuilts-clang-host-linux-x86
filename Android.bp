@@ -835,9 +835,14 @@ llvm_prebuilt_library_static {
 // are exported only when the LLVM_BUILD_HOST_TOOLS environment variable is set.
 // -----------------------------------------------------------------------------
 
+DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS= `
+def derive(env):
+  return {} if env.is_true("LLVM_BUILD_HOST_TOOLS") else {"enabled": False}
+`
 // Export LLVM_BUILD_HOST_TOOLS
-llvm_host_defaults {
+cc_defaults {
     name: "llvm-build-host-tools-defaults",
+    derived: DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS
 }
 
 // Export libclang-cpp shared library
