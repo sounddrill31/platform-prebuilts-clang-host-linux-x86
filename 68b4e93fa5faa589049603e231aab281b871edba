@@ -16,6 +16,24 @@
       "message": "Hmm, clang-r445002 no longer has libclang.so (needed by cindex).  It only has libclang.so.13.  I think something is wrong when we package the toolchain.  Let\u0027s update to an older clang for now.",
       "revId": "68b4e93fa5faa589049603e231aab281b871edba",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b1c96ed_10ce3bda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-02-23T20:00:42Z",
+      "side": 1,
+      "message": "None of the prebuilts have the libclang.so symlink.  We may need to manually add it in clang-stable.",
+      "parentUuid": "e0c044cc_89cefec1",
+      "revId": "68b4e93fa5faa589049603e231aab281b871edba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
