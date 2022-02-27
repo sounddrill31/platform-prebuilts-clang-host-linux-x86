@@ -16,7 +16,24 @@
       "message": "Dan, Zijun, FYI, these prebuilts should fix the fuzzer API level issue.",
       "revId": "5642ce999b98ff59fdc99b013b60f09f73a50864",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb1f7741_481ae9bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890456
+      },
+      "writtenOn": "2022-02-27T05:35:49Z",
+      "side": 1,
+      "message": "Yes, these prebuilts fix the fuzzer API level issue! Thank you for helping!",
+      "parentUuid": "2a2f6f44_86385bf5",
+      "revId": "5642ce999b98ff59fdc99b013b60f09f73a50864",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
-  ],
-  "submitRequirementResults": []
+  ]
 }
