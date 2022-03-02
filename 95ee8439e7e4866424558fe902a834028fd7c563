@@ -33,6 +33,24 @@
       "message": "nit: \"//build/.../variants:\" is repeated",
       "revId": "95ee8439e7e4866424558fe902a834028fd7c563",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49b24a49_d34db945",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-02T20:39:48Z",
+      "side": 1,
+      "message": "Similarly to Bazel, we\u0027re also repeating some other packages, I\u0027ll submit as is but am open to cleanup CLs",
+      "parentUuid": "1e9dbced_e8a09b41",
+      "revId": "95ee8439e7e4866424558fe902a834028fd7c563",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
