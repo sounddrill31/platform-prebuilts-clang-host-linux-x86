@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fcf28c6_64239b81",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-10T13:42:37Z",
+      "side": 1,
+      "message": "We should add the ability to compare linking actions to build/bazel/scripts/difftool so that we can automate this check against a Soong-built module in the future",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 51
+      },
+      "revId": "8cb21ecd2517ccfa9cd5b703c62563997b1c6754",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c40fd79f_29068699",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-10T13:42:37Z",
+      "side": 1,
+      "message": "windows",
+      "range": {
+        "startLine": 131,
+        "startChar": 37,
+        "endLine": 131,
+        "endChar": 44
+      },
+      "revId": "8cb21ecd2517ccfa9cd5b703c62563997b1c6754",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
