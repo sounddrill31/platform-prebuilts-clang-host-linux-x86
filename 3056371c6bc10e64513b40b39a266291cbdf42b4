@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a71f7c43_ac996a7a",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-10T14:09:56Z",
+      "side": 1,
+      "message": "to reduce nesting, can we return early if this is false?",
+      "range": {
+        "startLine": 30,
+        "startChar": 3,
+        "endLine": 30,
+        "endChar": 20
+      },
+      "revId": "3056371c6bc10e64513b40b39a266291cbdf42b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a25d2379_c69e83b9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1359,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-10T14:09:56Z",
+      "side": 1,
+      "message": "this list is ordered, to maintain -target in its prior position, we can add it before `_compiler_flag_features`",
+      "range": {
+        "startLine": 1358,
+        "startChar": 7,
+        "endLine": 1359,
+        "endChar": 61
+      },
+      "revId": "3056371c6bc10e64513b40b39a266291cbdf42b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
