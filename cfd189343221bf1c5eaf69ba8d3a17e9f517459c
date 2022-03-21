@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b5c8e15_3219a6cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-03-21T20:41:57Z",
+      "side": 1,
+      "message": "Thanks for putting this in! I\u0027ve made some simplification/reduction suggestions, fwiw.",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba69540e_0a8811a0",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-03-21T20:41:57Z",
+      "side": 1,
+      "message": "Do you really need this function...? It reduces to `arch_variant_to_features.get(arch_variant or \"\", [])`",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2efc2253_ffa51116",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-03-21T20:41:57Z",
+      "side": 1,
+      "message": "These if blocks can be folded into the `for` as\n```\nfor feature in features + [variant.arch_variant, variant.cpu_variant]:\n  if feature:\n    ret.append(\"//build/bazel/platforms/arch/variants:\" + feature)\n```\nwhich itself can be\n`[\"//build/bazel/platforms/arch/variants:\" + feat for feature in features + [variant.arch_variant, variant.cpu_variant] if feat]`\n\nIn case you find either is more readable and/or maintanable.",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
