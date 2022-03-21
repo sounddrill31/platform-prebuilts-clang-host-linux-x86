@@ -49,15 +49,53 @@ license {
     // large-scale-change unable to identify any license_text files
 }
 
-llvm_prebuilt_library_static {
+GET_CLANG_PREBUILT_DIR=`def get_clang_prebuilt_dir(ctx):
+  return "./" + (
+    ctx.env.getvar("LLVM_PREBUILTS_VERSION") or
+    ctx.constants.CLANG_DEFAULT_VERSION
+  )
+`
+GET_RELEASE_VERSION=`def get_release_version(ctx):
+  return ctx.env.getvar("LLVM_RELEASE_VERSION") or ctx.constants.CLANG_DEFAULT_SHORT_VERSION
+`
+LLVM_PREBUILT_LIBRARY_STATIC = GET_CLANG_PREBUILT_DIR +
+    GET_RELEASE_VERSION +
+    `def compute(ctx):
+  p = {}
+
+  clang_prebuilt_dir = get_clang_prebuilt_dir(ctx)
+  name = ctx.module_name[len("prebuilt_"):] if ctx.module_name.startswith("prebuilt_") else ctx.module_name
+  name = name + ".a"
+  if name == "libFuzzer.a":
+    p["export_include_dirs"] = [clang_prebuilt_dir + "/prebuilt_include/llvm/lib/Fuzzer"]
+
+  release_version = get_release_version(ctx)
+
+  clang_resource_dir = clang_prebuilt_dir + "/lib64/clang/" + release_version + "/lib/linux"
+  helper = lambda x: {"srcs": [clang_resource_dir + "/" + x + "/" + name]}
+  p["target"] = {
+    "android_arm": helper("arm"),
+    "android_arm64": helper("aarch64"),
+    "android_x86": helper("i386"),
+    "android_x86_64": helper("x86_64"),
+    "linux_bionic_arm64": helper("aarch64"),
+    "linux_bionic_x86_64": helper("x86_64"),
+    "linux_musl_x86": helper("i686-linux-musl/lib"),
+    "linux_musl_x86_64": helper("x86_64-linux-musl/lib"),
+  }
+  return p
+`
+
+cc_prebuilt_library_static {
     name: "libFuzzer",
     sdk_version: "minimum",
     sanitize: {
         never: true,
     },
+    computed: LLVM_PREBUILT_LIBRARY_STATIC,
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libomp",
     sdk_version: "minimum",
     vendor_available: true,
@@ -65,6 +103,7 @@ llvm_prebuilt_library_static {
     sanitize: {
         never: true,
     },
+    computed: LLVM_PREBUILT_LIBRARY_STATIC,
 }
 
 cc_defaults {
@@ -287,9 +326,10 @@ cc_defaults {
     system_shared_libs: [],
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind",
     defaults: ["libunwind-android-default"],
+    computed: LLVM_PREBUILT_LIBRARY_STATIC,
     target: {
         musl: {
             enabled: true,
@@ -297,10 +337,10 @@ llvm_prebuilt_library_static {
     },
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind-exported",
     defaults: ["libunwind-android-default"],
-
+    computed: LLVM_PREBUILT_LIBRARY_STATIC,
     // The libunwind-exported.a library is only intended for use with libc.so,
     // which needs to export the unwinder API.
     visibility: [
@@ -314,14 +354,67 @@ llvm_prebuilt_library_static {
 // are exported only when the LLVM_BUILD_HOST_TOOLS environment variable is set.
 // -----------------------------------------------------------------------------
 
+DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS= `def compute(context):
+  return {} if context.env.is_true("LLVM_BUILD_HOST_TOOLS") else {"enabled": False}
+`
 // Export LLVM_BUILD_HOST_TOOLS
-llvm_host_defaults {
+cc_defaults {
     name: "llvm-build-host-tools-defaults",
+    computed: DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS
 }
 
-// Export libclang-cpp shared library
+// Export libclang-cpp shared library - TODO cf what we did for _static
+LLVM_HOST_PREBUILT_LIBRARY_SHARED_HELPER=GET_CLANG_PREBUILT_DIR +
+    GET_RELEASE_VERSION + `
+def compute(ctx):
+  def trim_version(ver, retain):
+    sep = "."
+    versions = ver.split(sep)
+    return sep.join(versions[0:retain])
+
+  def get_host_library():
+    release_version = get_release_version(ctx)
+    if ctx.module_name == "prebuilt_libclang-cpp_host":
+      version_str = trim_version(release_version, 1)
+      return "libclang-cpp.so.{}git".format(version_str)
+    if ctx.module_name == "prebuilt_libc++_host":
+      return "libc++.so.1"
+    if ctx.module_name == "prebuilt_libc++abi_host":
+      return "libc++abi.so.1"
+    return None
+
+  def get_darwin_file_group():
+    # NOTE removeprefix()/removesuffix() unavailable in go interpreter
+    darwin_file_group = ctx.module_name
+    if darwin_file_group.startswith("prebuild_"):
+      darwin_file_group = darwin_file_group[len("prebuild_"):]
+    if darwin_file_group.endswith("_host"):
+      darwin_file_group = darwin_file_group[0:-len("_host")]
+    return ":{}_darwin".format(darwin_file_group)
+
+  clang_prebuilt_dir = get_clang_prebuilt_dir(ctx)
+  header_dir = "{}/include".format(clang_prebuilt_dir)
+  if ctx.module_name == "prebuilt_libc++_host":
+    header_dir += "/c++/v1"
+  host_library = get_host_library()
+  if not host_library:
+    return "unsupported host LLVM module"
+  linux_library = "{}/lib64/{}".format(clang_prebuilt_dir, host_library)
+
+  return {
+    "Enabled": ctx.env.is_true("LLVM_BUILD_HOST_TOOLS"),
+    "Export_include_dirs": [header_dir],
+    "Target": {
+      "Linux_glibc_x86_64": {"Srcs": [linux_library]},
+      "Darwin_x86_64": {"Srcs": [get_darwin_file_group()]},
+      "Windows": {"Enabled": False},
+    },
+    "Stl": "none"
+  }
+`
 llvm_host_prebuilt_library_shared {
     name: "libclang-cpp_host",
+    computed: LLVM_HOST_PREBUILT_LIBRARY_SHARED_HELPER,
     sanitize: {
         never: true,
     },
@@ -339,7 +432,8 @@ llvm_host_prebuilt_library_shared {
 // Export libc++.so for the host LLVM tools
 llvm_host_prebuilt_library_shared {
     name: "libc++_host",
-    sanitize: {
+    computed: LLVM_HOST_PREBUILT_LIBRARY_SHARED_HELPER,
+     sanitize: {
         never: true,
     },
     compile_multilib: "64",
@@ -353,6 +447,7 @@ llvm_host_prebuilt_library_shared {
 // Export libc++abi.so for the host LLVM tools
 llvm_host_prebuilt_library_shared {
     name: "libc++abi_host",
+    computed: LLVM_HOST_PREBUILT_LIBRARY_SHARED_HELPER,
     sanitize: {
         never: true,
     },
@@ -377,3 +472,4 @@ llvm_tools_filegroup {
 subdirs = [
     "soong",
 ]
+
