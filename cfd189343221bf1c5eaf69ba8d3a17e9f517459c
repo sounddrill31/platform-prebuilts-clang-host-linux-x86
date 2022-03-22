@@ -69,6 +69,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1201a5e9_e18f1799",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-22T12:56:46Z",
+      "side": 1,
+      "message": "Ack. This is moving functions from one file to another, refactorings should generally be a separate change from a move.\n\nAnd personally, I don\u0027t find Python\u0027s/Starlark ternary statements readable, so I\u0027d rather call a function.",
+      "parentUuid": "ba69540e_0a8811a0",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "36ad9c66_be24210c",
@@ -82,6 +100,24 @@
       "writtenOn": "2022-03-21T20:49:42Z",
       "side": 1,
       "message": "A similar reduction as below can be applied here:\n```\n\"\".join([\"_\" + v for in [variant.arch_variant, variant.cpu_variant] if v])\n```\n, though personally that may be less directly-parseable, depending on whom is reading.",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68126a7d_4cb7685b",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-22T12:56:46Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "36ad9c66_be24210c",
       "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -117,6 +153,24 @@
       "side": 1,
       "message": "correction: `.... feature for feature in features .... if feature` (which may read better with `feat` or `f` 🤷; yak shaving and/or bikeshedding)",
       "parentUuid": "2efc2253_ffa51116",
+      "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7761b4d3_86b81216",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-03-22T12:56:46Z",
+      "side": 1,
+      "message": "Ack. Personally, I don\u0027t find list comprehensions to be more readable, so I don\u0027t tend to use them unless necessary",
+      "parentUuid": "0128af14_f987397f",
       "revId": "cfd189343221bf1c5eaf69ba8d3a17e9f517459c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
