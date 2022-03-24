@@ -49,8 +49,6 @@ var (
 func init() {
 	android.RegisterModuleType("llvm_host_prebuilt_library_shared",
 		llvmHostPrebuiltLibrarySharedFactory)
-	android.RegisterModuleType("llvm_prebuilt_library_static",
-		llvmPrebuiltLibraryStaticFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
 		libClangRtPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_static",
@@ -165,31 +163,6 @@ type archProps struct {
 	Glibc_x86_64        archInnerProps
 	Linux_musl_x86      archInnerProps
 	Linux_musl_x86_64   archInnerProps
-}
-
-func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
-	libDir := getClangResourceDir(ctx)
-	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_") + ".a"
-
-	type props struct {
-		Export_include_dirs []string
-		Target              archProps
-	}
-
-	p := &props{}
-
-	if name == "libFuzzer.a" {
-		headerDir := path.Join(getClangPrebuiltDir(ctx), "prebuilt_include", "llvm", "lib", "Fuzzer")
-		p.Export_include_dirs = []string{headerDir}
-	}
-
-	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
-	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
-	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
-	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
-	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
-	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
-	ctx.AppendProperties(p)
 }
 
 type prebuiltLibrarySharedProps struct {
@@ -355,12 +328,6 @@ func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 		p.Srcs = []string{lib}
 		ctx.AppendProperties(p)
 	}
-}
-
-func llvmPrebuiltLibraryStaticFactory() android.Module {
-	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
-	android.AddLoadHook(module, llvmPrebuiltLibraryStatic)
-	return module.Init()
 }
 
 func llvmHostPrebuiltLibrarySharedFactory() android.Module {

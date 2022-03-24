@@ -49,15 +49,50 @@ license {
     // large-scale-change unable to identify any license_text files
 }
 
-llvm_prebuilt_library_static {
+llvmPrebuiltLibraryStatic = `
+def derive(ctx):
+  p = {}
+
+  clang_prebuilt_dir = ctx.env.get("LLVM_PREBUILTS_VERSION")
+  if clang_prebuilt_dir == None:
+    clang_prebuilt_dir = ctx.constants.CLANG_DEFAULT_VERSION
+  clang_prebuilt_dir = "./" + clang_prebuilt_dir
+  ctx.println("clang_prebuilt_dir", clang_prebuilt_dir)
+
+  name = ctx.module_name[len("prebuilt_"):] if ctx.module_name.startswith("prebuilt_") else ctx.module_name
+  name = name + ".a"
+  if name == "libFuzzer.a":
+    p["export_include_dirs"] = [clang_prebuilt_dir + "/prebuilt_include/llvm/lib/Fuzzer"]
+  ctx.println("name", name)
+
+  release_version = ctx.env.get("LLVM_RELEASE_VERSION")
+  if release_version == None:
+    release_version = ctx.constants.CLANG_DEFAULT_SHORT_VERSION
+
+  clang_resource_dir = clang_prebuilt_dir + "/lib64/clang/" + release_version + "/lib/linux"
+  helper = lambda x: {"srcs": [clang_resource_dir + "/" + x + "/" + name]}
+  p["target"] = {
+    "android_arm": helper("arm"),
+    "android_arm64": helper("aarch64"),
+    "android_x86": helper("i386"),
+    "android_x86_64": helper("x86_64"),
+    "linux_bionic_arm64": helper("aarch64"),
+    "linux_bionic_x86_64": helper("x86_64")
+  }
+  ctx.println(clang_resource_dir)
+  return p
+`
+
+cc_prebuilt_library_static {
     name: "libFuzzer",
     sdk_version: "minimum",
     sanitize: {
         never: true,
     },
+    derived: llvmPrebuiltLibraryStatic,
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libomp",
     sdk_version: "minimum",
     vendor_available: true,
@@ -65,6 +100,7 @@ llvm_prebuilt_library_static {
     sanitize: {
         never: true,
     },
+    derived: llvmPrebuiltLibraryStatic,
 }
 
 cc_defaults {
@@ -287,12 +323,13 @@ cc_defaults {
     system_shared_libs: [],
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind",
     defaults: ["libunwind-android-default"],
+    derived: llvmPrebuiltLibraryStatic,
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind-exported",
     defaults: ["libunwind-android-default"],
 
@@ -302,6 +339,7 @@ llvm_prebuilt_library_static {
         "//bionic:__subpackages__",
         "//frameworks/libs/native_bridge_support/libc:__subpackages__",
     ],
+    derived: llvmPrebuiltLibraryStatic,
 }
 
 // -----------------------------------------------------------------------------
@@ -319,7 +357,7 @@ cc_defaults {
     derived: DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS
 }
 
-// Export libclang-cpp shared library
+// Export libclang-cpp shared library - TODO cf what we did for _static
 llvm_host_prebuilt_library_shared {
     name: "libclang-cpp_host",
     sanitize: {
