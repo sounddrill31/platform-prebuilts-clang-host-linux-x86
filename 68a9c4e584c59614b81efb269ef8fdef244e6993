@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89183b17_d664e200",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-04-13T00:34:09Z",
+      "side": 1,
+      "message": "Reminder: I need to be cc\u0027ed on removals; they tend to break kernel builds.",
+      "revId": "68a9c4e584c59614b81efb269ef8fdef244e6993",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
