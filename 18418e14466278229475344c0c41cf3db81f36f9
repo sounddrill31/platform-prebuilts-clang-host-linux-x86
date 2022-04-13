@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1c7e43b_d16a78f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2022-04-13T00:14:38Z",
+      "side": 1,
+      "message": "I\u0027ll fix the kernel builds. Reverting a compiler deletion is heavy weight for everyone syncing Android tree.",
+      "revId": "18418e14466278229475344c0c41cf3db81f36f9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
