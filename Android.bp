@@ -49,15 +49,16 @@ license {
     // large-scale-change unable to identify any license_text files
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libFuzzer",
     sdk_version: "minimum",
     sanitize: {
         never: true,
     },
+    computed: "file:computed.bzl#llvm_prebuilt_library_static",
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libomp",
     sdk_version: "minimum",
     vendor_available: true,
@@ -65,6 +66,7 @@ llvm_prebuilt_library_static {
     sanitize: {
         never: true,
     },
+    computed: "file:computed.bzl#llvm_prebuilt_library_static",
 }
 
 cc_defaults {
@@ -78,7 +80,7 @@ cc_defaults {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.builtins",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "minimum",
@@ -94,12 +96,11 @@ libclang_rt_prebuilt_library_static {
     bazel_module: {
         label: "//prebuilts/clang/host/linux-x86:libclang_rt",
     },
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.builtins-exported",
-    lib_name: "libclang_rt.builtins",
-    suffix: "-exported",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "minimum",
     recovery_available: true,
@@ -126,10 +127,11 @@ libclang_rt_prebuilt_library_static {
         "//bionic:__subpackages__",
         "//frameworks/libs/native_bridge_support/libc:__subpackages__",
     ],
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static_builtins_exported",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libclang_rt.asan",
     defaults: ["libclang_rt-prebuilt-default"],
     host_supported: true,
@@ -137,11 +139,12 @@ libclang_rt_prebuilt_library_shared {
     native_bridge_supported: true,
     sdk_version: "24",
     check_elf_files: false,  // Bypass circular dependency between libc++
-    is_llndk: true,
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_shared_llndk"
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone",
     defaults: ["libclang_rt-prebuilt-default"],
     host_supported: true,
@@ -155,10 +158,11 @@ libclang_rt_prebuilt_library_shared {
     },
     sdk_version: "24",
     check_elf_files: false,  // Bypass circular dependency between libc++
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_shared"
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.ubsan_standalone.static",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "24",
@@ -169,11 +173,12 @@ libclang_rt_prebuilt_library_static {
     host_supported: true,
     stl: "c++_static",
     check_elf_files: false,  // Bypass circular dependency between libc++
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "24",
@@ -183,10 +188,12 @@ libclang_rt_prebuilt_library_static {
     double_loadable: true,
     host_supported: true,
     native_bridge_supported: true,
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.hwasan_static",
     sdk_version: "minimum",
     enabled: false,
@@ -202,10 +209,12 @@ libclang_rt_prebuilt_library_static {
     defaults: [
         "libclang_rt-prebuilt-default",
     ],
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libclang_rt.hwasan",
     sdk_version: "minimum",
     enabled: false,
@@ -217,14 +226,15 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
-    is_llndk: true,
     defaults: [
         "libclang_rt-prebuilt-default",
     ],
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_shared_llndk",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.profile",
     defaults: ["libclang_rt-prebuilt-default"],
     host_supported: true,
@@ -233,10 +243,12 @@ libclang_rt_prebuilt_library_static {
     vendor_available: true,
     product_available: true,
     check_elf_files: false,  // Bypass circular dependency between libc++
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libclang_rt.fuzzer",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "minimum",
@@ -249,20 +261,24 @@ libclang_rt_prebuilt_library_static {
     sanitize: {
         never: true,
     },
+    stl: "none",
+    computed: "file:computed.bzl#libclang_rt_prebuilt_library_static",
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_object {
+cc_prebuilt_object {
     name: "clang_rt.crtbegin",
     host_supported: true,
     defaults: ["libclang_rt-prebuilt-default"],
+    computed: "file:computed.bzl#libclang_rt_prebuilt_object",
 }
 
-libclang_rt_prebuilt_object {
+cc_prebuilt_object {
     name: "clang_rt.crtend",
     host_supported: true,
     defaults: ["libclang_rt-prebuilt-default"],
+    computed: "file:computed.bzl#libclang_rt_prebuilt_object",
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -287,7 +303,7 @@ cc_defaults {
     system_shared_libs: [],
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind",
     defaults: ["libunwind-android-default"],
     target: {
@@ -295,18 +311,19 @@ llvm_prebuilt_library_static {
             enabled: true,
         },
     },
+    computed: "file:computed.bzl#llvm_prebuilt_library_static",
 }
 
-llvm_prebuilt_library_static {
+cc_prebuilt_library_static {
     name: "libunwind-exported",
     defaults: ["libunwind-android-default"],
-
     // The libunwind-exported.a library is only intended for use with libc.so,
     // which needs to export the unwinder API.
     visibility: [
         "//bionic:__subpackages__",
         "//frameworks/libs/native_bridge_support/libc:__subpackages__",
     ],
+    computed: "file:computed.bzl#llvm_prebuilt_library_static",
 }
 
 // -----------------------------------------------------------------------------
@@ -314,9 +331,13 @@ llvm_prebuilt_library_static {
 // are exported only when the LLVM_BUILD_HOST_TOOLS environment variable is set.
 // -----------------------------------------------------------------------------
 
+DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS= `def compute(context):
+  return {} if context.env.is_true("LLVM_BUILD_HOST_TOOLS") else {"enabled": False}
+`
 // Export LLVM_BUILD_HOST_TOOLS
-llvm_host_defaults {
+cc_defaults {
     name: "llvm-build-host-tools-defaults",
+    computed: DISABLE_IF_NOT_LLVM_BUILD_HOST_TOOLS
 }
 
 // Export libclang-cpp shared library
@@ -334,6 +355,7 @@ llvm_host_prebuilt_library_shared {
             },
         },
     },
+    computed: "file:computed.bzl#llvm_host_prebuilt_library_shared",
 }
 
 // Export libc++.so for the host LLVM tools
@@ -348,6 +370,7 @@ llvm_host_prebuilt_library_shared {
             shared_libs: ["libc++abi_host"],
         },
     },
+    computed: "file:computed.bzl#llvm_host_prebuilt_library_shared",
 }
 
 // Export libc++abi.so for the host LLVM tools
@@ -357,6 +380,7 @@ llvm_host_prebuilt_library_shared {
         never: true,
     },
     compile_multilib: "64",
+    computed: "file:computed.bzl#llvm_host_prebuilt_library_shared",
 }
 
 clang_builtin_headers {
@@ -377,3 +401,4 @@ llvm_tools_filegroup {
 subdirs = [
     "soong",
 ]
+
