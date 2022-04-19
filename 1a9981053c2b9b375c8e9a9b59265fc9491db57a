@@ -16,6 +16,24 @@
       "message": "Can you link to the bug tracking this failure?\n\nReverting this change has no effect on the compiler used.  You need to change clang versions in `build/soong/cc/config/global.go` back to:\n\n```\n\tClangDefaultVersion      \u003d \"clang-r445002\"\n\tClangDefaultShortVersion \u003d \"14.0.2\"\n```",
       "revId": "1a9981053c2b9b375c8e9a9b59265fc9491db57a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d553d258_917157e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1884045
+      },
+      "writtenOn": "2022-04-19T19:15:26Z",
+      "side": 1,
+      "message": "This is a temporary CL for investigating b/227353074. It\u0027s not meant to be submitted. I just want to try an old clang version to see if the problem goes away. Do you mean I can try an old clang version by changing `build/soong/cc/config/global.go` without reverting this CL?",
+      "parentUuid": "82996bbc_836c2eda",
+      "revId": "1a9981053c2b9b375c8e9a9b59265fc9491db57a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
