@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82996bbc_836c2eda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-04-19T16:08:42Z",
+      "side": 1,
+      "message": "Can you link to the bug tracking this failure?\n\nReverting this change has no effect on the compiler used.  You need to change clang versions in `build/soong/cc/config/global.go` back to:\n\n```\n\tClangDefaultVersion      \u003d \"clang-r445002\"\n\tClangDefaultShortVersion \u003d \"14.0.2\"\n```",
+      "revId": "1a9981053c2b9b375c8e9a9b59265fc9491db57a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
