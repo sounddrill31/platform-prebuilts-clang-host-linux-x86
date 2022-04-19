@@ -34,6 +34,24 @@
       "parentUuid": "82996bbc_836c2eda",
       "revId": "1a9981053c2b9b375c8e9a9b59265fc9491db57a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc10f367_1cde0a13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-04-19T19:24:07Z",
+      "side": 1,
+      "message": "Yes, this CL only adds the clang binaries.  The version used during build is picked in the soong file above.  Change that file to try a different clang version.",
+      "parentUuid": "d553d258_917157e9",
+      "revId": "1a9981053c2b9b375c8e9a9b59265fc9491db57a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
