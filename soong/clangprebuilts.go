@@ -20,8 +20,6 @@ import (
 	"path"
 	"strings"
 
-	"github.com/google/blueprint/proptools"
-
 	"android/soong/android"
 	"android/soong/cc"
 	"android/soong/cc/config"
@@ -46,8 +44,6 @@ func init() {
 	//cc_prebuilt_library_host_shared and cc_library_host_shared is too different
 	android.RegisterModuleType("llvm_host_prebuilt_library_shared",
 		llvmHostPrebuiltLibrarySharedFactory)
-	android.RegisterModuleType("libclang_rt_prebuilt_object",
-		libClangRtPrebuiltObjectFactory)
 
 	android.RegisterModuleType("llvm_darwin_filegroup",
 		llvmDarwinFileGroupFactory)
@@ -62,39 +58,6 @@ func getClangPrebuiltDir(ctx android.LoadHookContext) string {
 		"./",
 		ctx.Config().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
 	)
-}
-
-func getClangResourceDir(ctx android.LoadHookContext) string {
-	clangDir := getClangPrebuiltDir(ctx)
-	releaseVersion := ctx.Config().GetenvWithDefault("LLVM_RELEASE_VERSION",
-		config.ClangDefaultShortVersion)
-	return path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
-}
-
-func libClangRtPrebuiltObject(ctx android.LoadHookContext) {
-	libDir := getClangResourceDir(ctx)
-
-	type props struct {
-		Arch struct {
-			X86 struct {
-				Srcs []string
-			}
-			X86_64 struct {
-				Srcs []string
-			}
-		}
-		System_shared_libs []string
-		Stl                *string
-	}
-
-	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
-
-	p := &props{}
-	p.Arch.X86.Srcs = []string{path.Join(libDir, name+"-i386.o")}
-	p.Arch.X86_64.Srcs = []string{path.Join(libDir, name+"-x86_64.o")}
-	p.System_shared_libs = []string{}
-	p.Stl = proptools.StringPtr("none")
-	ctx.AppendProperties(p)
 }
 
 func llvmDarwinFileGroup(ctx android.LoadHookContext) {
@@ -119,12 +82,6 @@ func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 
 func llvmHostPrebuiltLibrarySharedFactory() android.Module {
 	module, _ := cc.NewPrebuiltSharedLibrary(android.HostSupported)
-	return module.Init()
-}
-
-func libClangRtPrebuiltObjectFactory() android.Module {
-	module := cc.NewPrebuiltObject(android.HostAndDeviceSupported)
-	android.AddLoadHook(module, libClangRtPrebuiltObject)
 	return module.Init()
 }
 

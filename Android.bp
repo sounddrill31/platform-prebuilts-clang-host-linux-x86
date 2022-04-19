@@ -267,16 +267,18 @@ cc_prebuilt_library_static {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_object {
+cc_prebuilt_object {
     name: "clang_rt.crtbegin",
     host_supported: true,
     defaults: ["libclang_rt-prebuilt-default"],
+    computed: "file:computed.bzl#libclang_rt_prebuilt_object",
 }
 
-libclang_rt_prebuilt_object {
+cc_prebuilt_object {
     name: "clang_rt.crtend",
     host_supported: true,
     defaults: ["libclang_rt-prebuilt-default"],
+    computed: "file:computed.bzl#libclang_rt_prebuilt_object",
 }
 
 ///////////////////////////////////////////////////////////////////////////////

@@ -1,12 +1,10 @@
 # Note this does NOT conform to Bazel Starlark, e.g. load() is undefined
 
 """string.removeprefix() unavailable in go interpreter"""
-
 def _removeprefix(string, prefix):
     return string[len(prefix):] if string.startswith(prefix) else string
 
 """string.removesuffix() unavailable in go interpreter"""
-
 def _removesuffix(string, suffix):
     return string[0:-len(suffix)] if string.endswith(suffix) else string
 
@@ -206,3 +204,15 @@ def libclang_rt_prebuilt_library_shared(
             "symbol_file": symbol_file_path,
         }
     return p
+
+def libclang_rt_prebuilt_object(ctx):
+    lib_dir = _get_clang_resource_dir(ctx)
+    name = _removeprefix(ctx.module_name, "prebuilt_")
+    return {
+        "arch": {
+            "x86": {"srcs": [lib_dir + "/" + name + "-i386.o"]},
+            "x86_64": {"srcs": [lib_dir + "/" + name + "-x86_64.o"]},
+        },
+        "system_shared_libs": [],
+        "stl": "none",
+    }
