@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "490e6a53_9914731e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-04-21T19:48:12Z",
+      "side": 1,
+      "message": "this resolved libdl locally, still have m ndk running in case there are other issues hidden by libdl",
+      "revId": "34d56617c8f697e74e40fa95d5a6269bd2d03d50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
