@@ -33,6 +33,24 @@
       "message": "Thanks Liz!!",
       "revId": "34d56617c8f697e74e40fa95d5a6269bd2d03d50",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "619fe835_7f5e57a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-04-21T19:54:54Z",
+      "side": 1,
+      "message": "[100% 16028/16028] touch out/soong/ndk_abi_diff.timestamp\n\n#### build completed successfully (04:51 (mm:ss)) ####",
+      "parentUuid": "490e6a53_9914731e",
+      "revId": "34d56617c8f697e74e40fa95d5a6269bd2d03d50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
