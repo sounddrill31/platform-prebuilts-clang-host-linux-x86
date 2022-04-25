@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4557d7a2_23a3e007",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-04-25T15:01:14Z",
+      "side": 1,
+      "message": "This is never correct. `llvm-binutils-stable` is provided only as a convenience, so you have to pick up the correct `llvm-objcopy` from the specific prebuilts from `build/soong` instead. This already happens with https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/builder.go;l\u003d1052?q\u003dllvm-objcopy%20-file:prebuilts%2F\u0026ss\u003dandroid%2Fplatform%2Fsuperproject, so can you possibly adjust what happens based on that variable instead?",
+      "revId": "ee499a0fdc7a79e14af253e775ba760d3a894cd5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
