@@ -374,6 +374,12 @@ llvm_tools_filegroup {
     // ./soong/clangprebuilts.go:llvmToolsFiles
 }
 
+prebuilt_build_tool {
+    name: "llvm-objcopy",
+    src: "llvm-binutils-stable/llvm-objcopy",
+    deps: [":libc++_host"],
+}
+
 subdirs = [
     "soong",
 ]
