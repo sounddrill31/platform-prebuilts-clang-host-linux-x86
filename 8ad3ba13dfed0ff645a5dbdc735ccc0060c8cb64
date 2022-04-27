@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f87289a_d0cd6893",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2022-04-27T08:37:44Z",
+      "side": 1,
+      "message": "Hey, this is really nice! I\u0027m happy that no changes to Bazel were needed this time, although it\u0027s a little unsettling that neither Pedro nor Chris nor Liz nor myself realized that.\n\nI\u0027m a little uncomfortable, though, because there is absolutely no testing in this change and this looks like something that could regress very easily. I\u0027ll start a thread on roboleaf-team .\n",
+      "revId": "8ad3ba13dfed0ff645a5dbdc735ccc0060c8cb64",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87600c93_0baf8614",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1066075
+      },
+      "writtenOn": "2022-04-27T08:37:44Z",
+      "side": 1,
+      "message": "nit: I assume this should be `%workspace%/` (note the trailing slash)?\n\nThis is important because if it\u0027s as the comment is written, the result will be \"/\", which AFAIU wouldn\u0027t fix the bug because it\u0027d trigger the \"this is an absolute path\" branch in HeaderDiscovery.java .",
+      "range": {
+        "startLine": 221,
+        "startChar": 73,
+        "endLine": 221,
+        "endChar": 84
+      },
+      "revId": "8ad3ba13dfed0ff645a5dbdc735ccc0060c8cb64",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
