@@ -141,6 +141,24 @@
       "message": "global:Registered-Users",
       "revId": "24ad50770788d312b697609722a23a393070f67b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7509e1f_bf367406",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-04-28T20:55:26Z",
+      "side": 1,
+      "message": "b/230779458.  I am also unable to submit this topic because gerrit thinks the abandoned CL is also getting submitted 😕.  I\u0027ll try manually updating the Change-ID to see if it helps.",
+      "parentUuid": "90247d7d_1748e5e0",
+      "revId": "24ad50770788d312b697609722a23a393070f67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
