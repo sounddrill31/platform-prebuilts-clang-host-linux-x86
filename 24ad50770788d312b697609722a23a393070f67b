@@ -34,6 +34,24 @@
       "parentUuid": "4c8fb61e_d00e73ad",
       "revId": "24ad50770788d312b697609722a23a393070f67b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ab78cfc_c7be0fab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2022-04-28T06:21:12Z",
+      "side": 1,
+      "message": "FYI, you can upload all at once by running `repo upload --cbr -t`",
+      "parentUuid": "ba9cde4c_19682dea",
+      "revId": "24ad50770788d312b697609722a23a393070f67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
