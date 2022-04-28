@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83a2fda2_9d773a2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-04-28T16:13:47Z",
+      "side": 1,
+      "message": "The kernel builds are using this prebuilt (and the README is out of date).  Nick, can you give a +1 after moving to clang-r450784e?",
+      "revId": "1f5ed47bfc05b91291bbd192e916b30288c17cb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
