@@ -70,6 +70,24 @@
       "parentUuid": "9ab78cfc_c7be0fab",
       "revId": "24ad50770788d312b697609722a23a393070f67b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8d1a9fe_fc8863b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-04-28T06:29:42Z",
+      "side": 1,
+      "message": "\u003e That\u0027s a good point.  In this case, I was actually uploading from different terminals to parallelize the uploads.\n\n^ Yeah, I\u0027m a big fan of this too because it does work faster than sequentially uploading to gerrit. I wish that `repo upload` across multiple projects could parallelize like this directly.",
+      "parentUuid": "2ee872e5_cf523173",
+      "revId": "24ad50770788d312b697609722a23a393070f67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
