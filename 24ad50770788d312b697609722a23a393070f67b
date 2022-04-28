@@ -106,6 +106,24 @@
       "parentUuid": "2ee872e5_cf523173",
       "revId": "24ad50770788d312b697609722a23a393070f67b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90247d7d_1748e5e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-04-28T06:36:12Z",
+      "side": 1,
+      "message": "Maybe it is worth filing a bug report for the gerrit folks that even this case happened. I don\u0027t know how their \"eventual consistency\" really is intended to work, but I don\u0027t think having 2 CLs with the same Change-ID is expected by the Android developers.",
+      "parentUuid": "51b07625_a5f76b21",
+      "revId": "24ad50770788d312b697609722a23a393070f67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
