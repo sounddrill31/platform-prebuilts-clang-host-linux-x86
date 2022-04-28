@@ -16,6 +16,23 @@
       "message": "The kernel builds are using this prebuilt (and the README is out of date).  Nick, can you give a +1 after moving to clang-r450784e?",
       "revId": "1f5ed47bfc05b91291bbd192e916b30288c17cb7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6b80ffb_85af27d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-04-28T21:25:28Z",
+      "side": 1,
+      "message": "Sorry, the Android Common Kernels are on the B build at the moment.\n\nI need the E build to land for me to move from B to E. I\u0027d rather wait for E rather than move twice (once to D, once to E).",
+      "revId": "1f5ed47bfc05b91291bbd192e916b30288c17cb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
