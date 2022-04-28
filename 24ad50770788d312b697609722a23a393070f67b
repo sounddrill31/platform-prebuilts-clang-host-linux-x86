@@ -88,6 +88,24 @@
       "parentUuid": "2ee872e5_cf523173",
       "revId": "24ad50770788d312b697609722a23a393070f67b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51b07625_a5f76b21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-04-28T06:31:50Z",
+      "side": 1,
+      "message": "Hmm, this also hit a corner in gerrit where two CLs in the same project have the same Change-ID: this change and aosp/2078920.  If I hadn\u0027t abandoned this change, I could have updated the change to do a `repo upload` and check which CL gerrit picks to update or if it just blows up.",
+      "parentUuid": "2ee872e5_cf523173",
+      "revId": "24ad50770788d312b697609722a23a393070f67b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
