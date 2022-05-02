@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a67adc99_2bfcaf2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-05-02T23:03:36Z",
+      "side": 1,
+      "message": "You don\u0027t need this patch to revert. Please unhook it from the topic and abandon it. Only the build/soong change is needed for the revert.",
+      "revId": "19dc50ecaf18b4d611b92c78f635eb3521acd56a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
