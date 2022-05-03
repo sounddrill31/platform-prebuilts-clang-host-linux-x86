@@ -110,7 +110,7 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         linker_flags = generated_constants.Arm64CpuVariantLdflags.get(
             variant.cpu_variant,
             [],
-        ) + generated_constants.Arm64Lldflags,
+        ) + generated_constants.Arm64DeviceLldflags,
         target_arch = arches.Arm64,
         target_flags = generated_constants.Arm64ArchVariantCflags[variant.arch_variant] +
                        generated_constants.Arm64CpuVariantCflags.get(
