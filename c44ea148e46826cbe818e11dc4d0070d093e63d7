@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3ce91e2_00b317b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2022-05-20T17:04:39Z",
+      "side": 1,
+      "message": "Thanks for cleaning these up. Right now, it looks like we\u0027re up to 8 versions of AOSP clang prebuilts (7 after this patch)! Hopefully we can get this number down to around 2 or 3 versions, and keep it from growing much higher.",
+      "revId": "c44ea148e46826cbe818e11dc4d0070d093e63d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
