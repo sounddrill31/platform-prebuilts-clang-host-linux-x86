@@ -171,9 +171,8 @@ libclang_rt_prebuilt_library_static {
     check_elf_files: false,  // Bypass circular dependency between libc++
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////
-libclang_rt_prebuilt_library_static {
+libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_minimal",
     defaults: ["libclang_rt-prebuilt-default"],
     sdk_version: "24",
@@ -183,6 +182,22 @@ libclang_rt_prebuilt_library_static {
     double_loadable: true,
     host_supported: true,
     native_bridge_supported: true,
+    is_llndk: true,
+    check_elf_files: false,  // Bypass circular dependency between libc++
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_minimal.static",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "24",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    double_loadable: true,
+    host_supported: true,
+    native_bridge_supported: true,
+    check_elf_files: false,  // Bypass circular dependency between libc++
 }
 
 ///////////////////////////////////////////////////////////////////////////////
