@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb20f206_017b12bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-06-25T01:58:19Z",
+      "side": 1,
+      "message": "These are taken from a presubmit build, and can be replaced with ones from a postsubmit build after this topic is submitted.",
+      "revId": "ce84916e257cf27a3d57b5839e664a7f3ce27757",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
