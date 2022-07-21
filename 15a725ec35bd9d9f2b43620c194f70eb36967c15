@@ -46,6 +46,30 @@
       },
       "revId": "15a725ec35bd9d9f2b43620c194f70eb36967c15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9496fe1d_8f9ebc8c",
+        "filename": "clang-stable/bin/git-clang-format",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-07-21T18:26:58Z",
+      "side": 1,
+      "message": "No, but we probably should. Filing one now.",
+      "parentUuid": "d4736973_06db8247",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 21
+      },
+      "revId": "15a725ec35bd9d9f2b43620c194f70eb36967c15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
