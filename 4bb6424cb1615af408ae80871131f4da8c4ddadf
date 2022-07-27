@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3db0073_f32d9a6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2022-07-27T17:53:48Z",
+      "side": 1,
+      "message": "+jomof and emrekultursay in case AGP/AS/AGDE are affected. NDK itself looks to be fine (it\u0027ll need to adapt, but we can do that easily enough). Anyone that is packaging the sanitizer runtimes for apps will be affected.",
+      "revId": "4bb6424cb1615af408ae80871131f4da8c4ddadf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
