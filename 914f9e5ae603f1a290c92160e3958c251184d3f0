@@ -39,6 +39,30 @@
       },
       "revId": "914f9e5ae603f1a290c92160e3958c251184d3f0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "268394a9_ab99b067",
+        "filename": "clang-r458507/clang_source_info.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-08-06T01:31:32Z",
+      "side": 1,
+      "message": "a58d0af0 is what the bug says. I think that this might be broken now based on the fact that buildbots might not be able to access git during their execution. We should probably adjust how we\u0027re storing/using this information. Thanks for pointing this out.",
+      "parentUuid": "c7302bd7_ca6e3f1f",
+      "range": {
+        "startLine": 1,
+        "startChar": 24,
+        "endLine": 1,
+        "endChar": 74
+      },
+      "revId": "914f9e5ae603f1a290c92160e3958c251184d3f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
