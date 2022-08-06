@@ -16,6 +16,29 @@
       "message": "Bazel lints are not important to our project.",
       "revId": "914f9e5ae603f1a290c92160e3958c251184d3f0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7302bd7_ca6e3f1f",
+        "filename": "clang-r458507/clang_source_info.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1347428
+      },
+      "writtenOn": "2022-08-06T00:01:07Z",
+      "side": 1,
+      "message": "This looks like a copy/paste mistake. What\u0027s the commit hash?",
+      "range": {
+        "startLine": 1,
+        "startChar": 24,
+        "endLine": 1,
+        "endChar": 74
+      },
+      "revId": "914f9e5ae603f1a290c92160e3958c251184d3f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
