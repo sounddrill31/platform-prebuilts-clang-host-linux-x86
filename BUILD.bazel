@@ -6,8 +6,6 @@
 # unless you have coordinated with the team managing the Soong to Bazel
 # migration.
 
-package(default_visibility = ["//visibility:public"])
-
 # Toolchain config
 filegroup(name = "empty")
 
@@ -22,9 +20,9 @@ load(
     "arch_to_variants",
     "arches",
     "arm_extra_ldflags",
-    "enabled_features",
     "device_compatibility_flags_non_darwin",
     "device_compatibility_flags_non_windows",
+    "enabled_features",
     "generated_constants",
     "variant_constraints",
     "variant_name",
