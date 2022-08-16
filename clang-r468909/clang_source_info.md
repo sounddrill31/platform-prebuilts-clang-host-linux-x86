@@ -1,0 +1,11 @@
+Base revision: [Merge](https://github.com/llvm/llvm-project/commits/Merge)
+
+- [Revert-Enable-IAS-In-Backend.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Revert-Enable-IAS-In-Backend.patch)
+- [[Orc] Disable use of shared memory on Android](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/cherry/ac3cb4ecd0c6ed03c135945d27bbe197d80cba4e.patch)
+- [[X86][FP16] Promote FP16->[U]INT to FP16->FP32->[U]INT](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/cherry/8b69549dc5c5fa0f5f8632cde1c740bb2c7d8957.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Fix-Android-windows-x86-64-NATIVE-cmake-error.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Fix-Android-windows-x86-64-NATIVE-cmake-error.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [Undef-CS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/Undef-CS-macro-for-Android-x86_64.patch)
+- [BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch](https://android.googlesource.com/toolchain/llvm_android/+/937a29eeb3d0eedb9b190be722cda6370b07ede5/patches/BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch)
