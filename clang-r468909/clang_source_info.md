@@ -1,0 +1,12 @@
+Base revision: [Merge](https://github.com/llvm/llvm-project/commits/Merge)
+
+- [[clang-format] Fix the return code of git-clang-format](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/cherry/f9a2f6b6aecf0dd2b484d99458c99f799caee584.patch)
+- [Revert-Enable-IAS-In-Backend.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Revert-Enable-IAS-In-Backend.patch)
+- [[Orc] Disable use of shared memory on Android](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/cherry/ac3cb4ecd0c6ed03c135945d27bbe197d80cba4e.patch)
+- [[X86][FP16] Promote FP16->[U]INT to FP16->FP32->[U]INT](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/cherry/8b69549dc5c5fa0f5f8632cde1c740bb2c7d8957.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Fix-Android-windows-x86-64-NATIVE-cmake-error.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Fix-Android-windows-x86-64-NATIVE-cmake-error.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [Undef-CS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/Undef-CS-macro-for-Android-x86_64.patch)
+- [BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch](https://android.googlesource.com/toolchain/llvm_android/+/959c05d953b6941fe6b215716fb969cf7a975ee1/patches/BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch)
