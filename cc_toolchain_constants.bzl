@@ -95,6 +95,7 @@ _cpp_std_versions = {
     "gnu++11": True,
     "gnu++17": True,
     "gnu++2a": True,
+    "gnu++20": True,
     "c++98": True,
     "c++11": True,
     "c++17": True,
