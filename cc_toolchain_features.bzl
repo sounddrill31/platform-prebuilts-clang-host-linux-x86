@@ -19,12 +19,12 @@ load(
     _c_std_versions = "c_std_versions",
     _cpp_std_versions = "cpp_std_versions",
     _default_c_std_version = "default_c_std_version",
-    _experimental_c_std_version = "experimental_c_std_version",
-    _default_cpp_std_version = "default_cpp_std_version",
-    _experimental_cpp_std_version = "experimental_cpp_std_version",
     _default_c_std_version_no_gnu = "default_c_std_version_no_gnu",
-    _experimental_c_std_version_no_gnu = "experimental_c_std_version_no_gnu",
+    _default_cpp_std_version = "default_cpp_std_version",
     _default_cpp_std_version_no_gnu = "default_cpp_std_version_no_gnu",
+    _experimental_c_std_version = "experimental_c_std_version",
+    _experimental_c_std_version_no_gnu = "experimental_c_std_version_no_gnu",
+    _experimental_cpp_std_version = "experimental_cpp_std_version",
     _experimental_cpp_std_version_no_gnu = "experimental_cpp_std_version_no_gnu",
     _flags = "flags",
     _generated_constants = "generated_constants",
@@ -220,6 +220,14 @@ def _compiler_flag_features(flags = [], os_is_device = False):
 
     features = []
 
+    # This feature will be enabled on arm32 platforms.
+    # It can be used to enable other features only on arm32
+    # using with_features=[with_feature_set(features=["arm"])]
+    features.append(feature(
+        name = "arm",
+        enabled = False,
+    ))
+
     # TODO: disabled on windows
     features.append(feature(
         name = "pic",
@@ -353,6 +361,51 @@ def _compiler_flag_features(flags = [], os_is_device = False):
                 with_features = [
                     with_feature_set(
                         not_features = ["non_external_compiler_flags"],
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    features.append(feature(
+        name = "arm_isa_arm",
+        enabled = False,
+        provides = ["arm_isa"],
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = ["-fstrict-aliasing"],
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        features = ["arm"],
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    features.append(feature(
+        name = "arm_isa_thumb",
+        enabled = True,
+        provides = ["arm_isa"],
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = [
+                            "-mthumb",
+                            "-Os",
+                        ],
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        features = ["arm"],
                     ),
                 ],
             ),
@@ -1146,7 +1199,7 @@ def _get_legacy_features_begin():
                                 "-fprofile-instr-generate=/data/misc/trace/clang-%%p-%%m.profraw",
                                 "-fcoverage-mapping",
                                 "-Wno-pass-failed",
-                                "-D__ANDROID_CLANG_COVERAGE__"
+                                "-D__ANDROID_CLANG_COVERAGE__",
                             ],
                         ),
                     ],
