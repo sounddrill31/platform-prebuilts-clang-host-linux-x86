@@ -112,7 +112,8 @@ _LIBCLANG_RT_PREBUILT_MAP = {
             [],
         ) + generated_constants.Arm64Lldflags,
         target_arch = arches.Arm64,
-        target_flags = generated_constants.Arm64ArchVariantCflags[variant.arch_variant] +
+        target_flags = generated_constants.Arm64Cflags +
+                       generated_constants.Arm64ArchVariantCflags[variant.arch_variant] +
                        generated_constants.Arm64CpuVariantCflags.get(
                            variant.cpu_variant,
                            [],
@@ -132,7 +133,8 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:android_arm"],
         linker_flags = generated_constants.ArmLldflags + arm_extra_ldflags(variant),
         target_arch = arches.Arm,
-        target_flags = generated_constants.ArmToolchainCflags +
+        target_flags = generated_constants.ArmCflags +
+                       generated_constants.ArmToolchainCflags +
                        generated_constants.ArmArchVariantCflags[variant.arch_variant] +
                        generated_constants.ArmCpuVariantCflags.get(
                            variant.cpu_variant,

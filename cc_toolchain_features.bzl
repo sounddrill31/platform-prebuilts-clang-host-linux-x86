@@ -220,6 +220,15 @@ def _compiler_flag_features(flags = [], os_is_device = False):
 
     features = []
 
+    # This feature will be enabled on arm32 platforms.
+    # It can be used to enable other features only on arm32
+    # using with_features=[with_feature_set(features=["arm"])]
+    features.append(feature(
+        name = "arm",
+        enabled = False,
+    ))
+
+
     # TODO: disabled on windows
     features.append(feature(
         name = "pic",
@@ -353,6 +362,51 @@ def _compiler_flag_features(flags = [], os_is_device = False):
                 with_features = [
                     with_feature_set(
                         not_features = ["non_external_compiler_flags"],
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    features.append(feature(
+        name = "arm_isa_arm",
+        enabled = False,
+        provides = ["arm_isa"],
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = ["-fstrict-aliasing"],
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        features=["arm"],
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    features.append(feature(
+        name = "arm_isa_thumb",
+        enabled = True,
+        provides = ["arm_isa"],
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = [
+                            "-mthumb",
+                            "-Os",
+                        ],
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        features=["arm"],
                     ),
                 ],
             ),
