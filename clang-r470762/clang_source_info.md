@@ -1,0 +1,8 @@
+Base revision: [619fd8c2ab505d8f79cbbbe3fd09b02f6640e1b1](https://github.com/llvm/llvm-project/commits/619fd8c2ab505d8f79cbbbe3fd09b02f6640e1b1)
+
+- [[X86][FP16] Promote FP16->[U]INT to FP16->FP32->[U]INT](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/cherry/8b69549dc5c5fa0f5f8632cde1c740bb2c7d8957_v1.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch)
+- [Revert-Enable-IAS-In-Backend.patch](https://android.googlesource.com/toolchain/llvm_android/+/e91b3ef968dffa99c9a19401a7928fd563943a88/patches/Revert-Enable-IAS-In-Backend.patch)
