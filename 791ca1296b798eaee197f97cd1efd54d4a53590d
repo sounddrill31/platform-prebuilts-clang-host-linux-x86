@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cb88c61_c55eddd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-08-26T18:24:52Z",
+      "side": 1,
+      "message": "The presubmit failure isn\u0027t real (or related to this). I think you should just Submit it, since autosubmit won\u0027t work around it.",
+      "revId": "791ca1296b798eaee197f97cd1efd54d4a53590d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
