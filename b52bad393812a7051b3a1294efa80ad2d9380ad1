@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f5ac6d0_b1946e72",
+        "filename": "clang-r458507/clang_source_info.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-08-29T18:09:14Z",
+      "side": 1,
+      "message": "Couldn\u0027t figure out how to get vim to keep the newline :shrug:",
+      "revId": "b52bad393812a7051b3a1294efa80ad2d9380ad1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
