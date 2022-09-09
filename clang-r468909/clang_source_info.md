@@ -1,0 +1,13 @@
+Base revision: [7bb1151ba21e26d91ddaa83177bb58b4d1c36710](https://github.com/llvm/llvm-project/commits/7bb1151ba21e26d91ddaa83177bb58b4d1c36710)
+
+- [[clang-format] Fix the return code of git-clang-format](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/cherry/f9a2f6b6aecf0dd2b484d99458c99f799caee584.patch)
+- [[clang-tidy] Rename the make-confusable-table executable](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/cherry/18b4a8bcf3553174f770f09528c9bd01c8cebfe7.patch)
+- [[clang-tidy] Add CLANG_TIDY_CONFUSABLE_CHARS_GEN cmake cache](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/cherry/dc95d0c525636aed53a3b38258efa2dff4c83edf.patch)
+- [[Orc] Disable use of shared memory on Android](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/cherry/ac3cb4ecd0c6ed03c135945d27bbe197d80cba4e.patch)
+- [[X86][FP16] Promote FP16->[U]INT to FP16->FP32->[U]INT](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/cherry/8b69549dc5c5fa0f5f8632cde1c740bb2c7d8957.patch)
+- [Add-stubs-and-headers-for-nl_types-APIs.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/Add-stubs-and-headers-for-nl_types-APIs.patch)
+- [Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/Ensure-that-we-use-our-toolchain-s-lipo-and-not-the-.patch)
+- [Undef-FS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/Undef-FS-macro-for-Android-x86_64.patch)
+- [Undef-CS-macro-for-Android-x86_64.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/Undef-CS-macro-for-Android-x86_64.patch)
+- [BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/BOLT-Double-max-allocation-size-to-allow-BOLTing-clang-and-rustc.patch)
+- [Revert-Enable-IAS-In-Backend.patch](https://android.googlesource.com/toolchain/llvm_android/+/8cd092009b91c0f8b44231bed749ce4fe3372dd2/patches/Revert-Enable-IAS-In-Backend.patch)
