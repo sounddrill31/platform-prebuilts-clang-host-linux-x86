@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24215db3_23ec61b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2022-09-10T05:00:27Z",
+      "side": 1,
+      "message": "You cannot check in the PGO profile and the BOLT profile at the same time. Instead, check in the PGO profile and wait for a new BOLT profile to get generated, then check in.",
+      "revId": "ebe521d72a1633f744412e9af506e6b1f83cfedb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
