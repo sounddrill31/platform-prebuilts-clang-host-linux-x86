@@ -106,6 +106,7 @@ libclang_rt_prebuilt_library_static {
     vendor_available: true,
     product_available: true,
     native_bridge_supported: true,
+    host_supported: true,
     sanitize: {
         never: true,
     },
@@ -115,6 +116,9 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
         android_x86: {
+            enabled: true,
+        },
+        linux_bionic_x86: {
             enabled: true,
         },
     },
