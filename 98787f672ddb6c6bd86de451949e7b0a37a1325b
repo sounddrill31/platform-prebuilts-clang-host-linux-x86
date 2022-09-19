@@ -1,0 +1,205 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000029290893",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2221685?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "fb2f6840_4df165cd",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 32,
+                "startChar": 0,
+                "endLine": 32,
+                "endChar": 0
+              },
+              "replacement": "    \"x86_64_host_toolchains\",\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 33,
+                "startChar": 0,
+                "endLine": 34,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 214,
+                "startChar": 0,
+                "endLine": 215,
+                "endChar": 0
+              },
+              "replacement": "            for nocrt in [\n                True,\n                False,\n            ]\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "8fbd91be_e06fa9eb",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-09-19T19:42:48Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "98787f672ddb6c6bd86de451949e7b0a37a1325b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000029290893",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2221685?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "3721054b_f97b6dbc",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 10,
+                "startChar": 0,
+                "endLine": 10,
+                "endChar": 0
+              },
+              "replacement": "    \"variant_constraints\",\n    \"variant_name\",\n    \"x86_64_host_toolchains\",\n    \"x86_host_toolchains\",\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 12,
+                "startChar": 0,
+                "endLine": 12,
+                "endChar": 0
+              },
+              "replacement": "    _enabled_features \u003d \"enabled_features\",\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 13,
+                "startChar": 0,
+                "endLine": 18,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 456,
+                "startChar": 0,
+                "endLine": 458,
+                "endChar": 0
+              },
+              "replacement": "def _toolchain_name(arch, variant, nocrt \u003d False):\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 464,
+                "startChar": 0,
+                "endLine": 466,
+                "endChar": 0
+              },
+              "replacement": "def toolchain_definition(arch, variant, nocrt \u003d False):\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 494,
+                "startChar": 0,
+                "endLine": 495,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 514,
+                "startChar": 0,
+                "endLine": 516,
+                "endChar": 0
+              },
+              "replacement": "            toolchain_definitions.append(_toolchain_name(arch, variant, nocrt \u003d False))\n            toolchain_definitions.append(_toolchain_name(arch, variant, nocrt \u003d True))\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 518,
+                "startChar": 0,
+                "endLine": 520,
+                "endChar": 0
+              },
+              "replacement": "        toolchain_definitions.append(_toolchain_name(arch, variant, nocrt \u003d False))\n        toolchain_definitions.append(_toolchain_name(arch, variant, nocrt \u003d True))\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "da77777c_5ac019d1",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-09-19T19:42:48Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_config.bzl` to format the file, or apply the suggested fix.",
+      "revId": "98787f672ddb6c6bd86de451949e7b0a37a1325b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000029290893",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2221685?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "19a63150_2ffa2a24",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_constants.bzl",
+              "range": {
+                "startLine": 203,
+                "startChar": 0,
+                "endLine": 204,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "39ad40e4_ad1ef0f3",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-09-19T19:42:48Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_constants.bzl` to format the file, or apply the suggested fix.",
+      "revId": "98787f672ddb6c6bd86de451949e7b0a37a1325b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
