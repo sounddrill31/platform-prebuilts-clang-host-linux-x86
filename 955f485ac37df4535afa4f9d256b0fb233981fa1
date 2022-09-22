@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9aa6520a_4079f11b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-09-22T20:16:51Z",
+      "side": 1,
+      "message": "nit: typo on \"function\"",
+      "range": {
+        "startLine": 13,
+        "startChar": 9,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "955f485ac37df4535afa4f9d256b0fb233981fa1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ec5626d_890b1072",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-09-22T20:16:51Z",
+      "side": 1,
+      "message": "LGTM. Thanks for fixing this quiet ordering issue.",
+      "revId": "955f485ac37df4535afa4f9d256b0fb233981fa1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
