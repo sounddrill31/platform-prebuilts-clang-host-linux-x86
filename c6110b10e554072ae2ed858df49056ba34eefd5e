@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "489d6cb3_edc86547",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2022-09-23T09:15:44Z",
+      "side": 1,
+      "message": "Let\u0027s hold off until we have new prebuilts with the mac fix as well.",
+      "revId": "c6110b10e554072ae2ed858df49056ba34eefd5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
