@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f82ea139_9b6738a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2022-09-25T01:04:30Z",
+      "side": 1,
+      "message": "running v2/android-gki/kernel/kleaf/kernel_x86_64_tests is unrelated to this change",
+      "revId": "80b4bc1447129ba0c6f91cc15ee5883d7c6340ab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
