@@ -15,7 +15,7 @@
 
   <project path="toolchain/llvm-project" name="toolchain/llvm-project" revision="617109052e5bd421c75c61561ed3c3cbc28abe33" />
 
-  <project path="toolchain/llvm_android" name="toolchain/llvm_android" revision="481eaf98205d077d8377e2e77336d19ba5b6b328" />
+  <project path="toolchain/llvm_android" name="toolchain/llvm_android" revision="16670b5453904d97dc76fe0758144329fe8dc993" />
 
   <project path="toolchain/common" name="toolchain/common" revision="0bce8b062126242872e9f3fc66760d3f76773c49" />
 
@@ -53,13 +53,13 @@
 
   <project path="prebuilts/python/windows-x86" name="platform/prebuilts/python/windows-x86" clone-depth="1" revision="7119932cd3cea23f16db62e683b69c23e415ff09" />
 
-  <project path="prebuilts/clang/host/darwin-x86" name="platform/prebuilts/clang/host/darwin-x86" clone-depth="1" revision="93f56f617a96e47cb0f610cf96da780da874f560" />
+  <project path="prebuilts/clang/host/darwin-x86" name="platform/prebuilts/clang/host/darwin-x86" clone-depth="1" revision="68749492fdd803a022b456a5c11f49a6c632f306" />
 
   <project path="prebuilts/clang/host/darwin-universal" name="platform/prebuilts/clang/host/darwin-universal" clone-depth="1" revision="592f071af1df99cb463ff5b670cd383efd49a6e1" />
 
-  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" revision="257c287c9141a23f6f9d521068ebdaed366ecada" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" revision="80b4bc1447129ba0c6f91cc15ee5883d7c6340ab" />
 
-  <project path="prebuilts/clang/host/windows-x86" name="platform/prebuilts/clang/host/windows-x86" clone-depth="1" revision="d94414d953722d837859285b6a59923684276203" />
+  <project path="prebuilts/clang/host/windows-x86" name="platform/prebuilts/clang/host/windows-x86" clone-depth="1" revision="34279e2a072dc56847e2dcd374989f8493ad41ad" />
 
   <project path="toolchain/prebuilts/ndk/r24" name="toolchain/prebuilts/ndk/r24" revision="8b2723be32c2093d7b297bb074f4358b7a1fba82" />
 </manifest>
