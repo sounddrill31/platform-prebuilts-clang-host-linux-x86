@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d73d8e6a_8114def9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2022-09-28T19:14:00Z",
+      "side": 1,
+      "message": "The only change from before is the addition of https://android-review.googlesource.com/c/platform/build/soong/+/2236499/2/build_test.bash in the Soong CL",
+      "revId": "1417f1e522c17be2fb427b789bddde7cd6004b3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
