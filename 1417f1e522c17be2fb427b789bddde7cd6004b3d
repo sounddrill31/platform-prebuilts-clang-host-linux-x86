@@ -16,6 +16,23 @@
       "message": "The only change from before is the addition of https://android-review.googlesource.com/c/platform/build/soong/+/2236499/2/build_test.bash in the Soong CL",
       "revId": "1417f1e522c17be2fb427b789bddde7cd6004b3d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f31e4fab_331be64d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-09-28T19:17:08Z",
+      "side": 1,
+      "message": "LGTM. Thanks for implementing this!",
+      "revId": "1417f1e522c17be2fb427b789bddde7cd6004b3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
