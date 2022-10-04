@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93103714_7be8ae7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-10-04T20:44:44Z",
+      "side": 1,
+      "message": "Yi had a comment on aosp/2240282 about updating BOLT/PGO profiles.  Removing +2 to avoid autosubmit.",
+      "revId": "841c04ac2444825fccccbb090c3fc7cb5386172f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
