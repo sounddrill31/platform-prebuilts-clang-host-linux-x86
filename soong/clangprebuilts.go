@@ -315,8 +315,12 @@ func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext, libProps *preb
 
 	p.Target.Android_arm.Srcs = []string{path.Join(libDir, name+"-arm-android"+suffix+".a")}
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
-	// TODO(b/250918230): switch this to use real riscv64 prebuilts once they are available
-	p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
+	if name == "libclang_rt.builtins" {
+		p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, name+"-riscv64-android"+suffix+".a")}
+	} else {
+		// TODO(b/250918230): switch this to use real riscv64 prebuilts once they are available
+		p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
+	}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, name+"-i686-android"+suffix+".a")}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64-android"+suffix+".a")}
 	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
