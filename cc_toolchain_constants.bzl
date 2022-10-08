@@ -14,6 +14,9 @@ flags = struct(
     # ============
     # Linker flags
     # ============
+    host_non_windows_dynamic_executable_linker_flags = [
+        "-pie",
+    ],
     bionic_linker_flags = [
         # These are the linker flags for OSes that use Bionic: LinuxBionic, Android
         "-nostdlib",
@@ -94,7 +97,9 @@ _cpp_std_versions = {
     "gnu++98": True,
     "gnu++11": True,
     "gnu++17": True,
+    "gnu++20": True,
     "gnu++2a": True,
+    "gnu++2b": True,
     "c++98": True,
     "c++11": True,
     "c++17": True,
@@ -126,7 +131,6 @@ _c_std_versions[default_c_std_version_no_gnu] = True
 _c_std_versions[experimental_c_std_version_no_gnu] = True
 
 c_std_versions = [k for k in _c_std_versions.keys()]
-
 
 # Added by linker.go for non-bionic, non-musl, non-windows toolchains.
 # Should be added to host builds to match the default behavior of device builds.
@@ -199,3 +203,12 @@ def variant_constraints(variant, arch_variant_features = {}):
     for feature in features:
         ret.append("//build/bazel/platforms/arch/variants:" + feature)
     return ret
+
+x86_64_host_toolchains = [
+    ("cc_toolchain_x86_64_linux_host", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_x86_64_linux_host_nocrt", "nocrt_toolchain"),
+]
+x86_host_toolchains = [
+    ("cc_toolchain_x86_linux_host", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_x86_linux_host_nocrt", "nocrt_toolchain"),
+]
