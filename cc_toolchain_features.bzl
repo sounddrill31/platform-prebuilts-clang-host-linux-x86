@@ -1007,7 +1007,10 @@ def _get_legacy_features_begin():
                     actions = ["c++-link-static-library"],
                     flag_groups = [
                         flag_group(
-                            flags = ["rcsD"],
+                            flags = ["crsPD"],
+                        ),
+                        flag_group(
+                            flags = ["--format=gnu"],
                         ),
                         flag_group(
                             expand_if_available = "output_execpath",
