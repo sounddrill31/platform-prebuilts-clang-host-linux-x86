@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fad06536_6e9f5e68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-10-14T16:41:19Z",
+      "side": 1,
+      "message": "There\u0027s also a copy of llvm-binutils-stable in darwin prebuilts.  Steve, if you\u0027d used the update-binutils.py script, the darwin symlinks would\u0027ve been updated as well.",
+      "revId": "84dcd5039287fc3a915b6cf24ba598f27d21a06a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
