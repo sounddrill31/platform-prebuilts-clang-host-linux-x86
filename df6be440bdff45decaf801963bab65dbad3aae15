@@ -16,6 +16,24 @@
       "message": "pirama: _this_ was actually the patch i was talking about needing to cherrypick this morning to be able to build anything for riscv64...\n\ndo we need any more source patches to be able to build these \"properly\"? (sorry, i don\u0027t remember what ccross told me he still needed.)",
       "revId": "df6be440bdff45decaf801963bab65dbad3aae15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52702446_f92b6b1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-10-19T23:15:53Z",
+      "side": 1,
+      "message": "To build this properly I need aosp/2261001 converted to a local patch, aosp/2261059, and to build a bionic sysroot to check in.  We\u0027re pretty close to having the sysroot building.  I\u0027ve been attempting to build the sysroot with `m ALLOW_MISSING_DEPENDENCIES\u003dtrue out/target/product/generic_riscv64/ndk_sysroot.tar.bz2`.  I think aosp/2142653 and aosp/2252353 are necessary, and a few I have locally and haven\u0027t uploaded yet.",
+      "parentUuid": "e157ab5f_b886a264",
+      "revId": "df6be440bdff45decaf801963bab65dbad3aae15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
