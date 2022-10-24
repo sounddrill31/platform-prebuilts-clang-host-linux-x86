@@ -1392,6 +1392,7 @@ def _get_legacy_features_end():
 def _link_crtbegin(crt_files):
     # in practice, either all of these are supported for a toolchain or none of them do
     if crt_files.shared_library_crtbegin == None or crt_files.shared_binary_crtbegin == None or crt_files.static_binary_crtbegin == None:
+        print("$$$crt_files:\n\t%s\n" % str(crt_files))
         return []
 
     features = [
@@ -1477,6 +1478,7 @@ def _link_crtbegin(crt_files):
 def _link_crtend(crt_files):
     # in practice, either all of these are supported for a toolchain or none of them do
     if crt_files.shared_library_crtend == None or crt_files.binary_crtend == None:
+        print("@@@crt_files:\n\t%s" % str(crt_files))
         return None
 
     return [
@@ -1942,4 +1944,4 @@ def get_features(
         _link_crtend(crt_files),
     ]
 
-    return _flatten([f for f in features if f != None])
+    return [f for f in _flatten(features) if f != None]
