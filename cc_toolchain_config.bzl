@@ -7,8 +7,10 @@ load(
 load(
     ":cc_toolchain_constants.bzl",
     "arch_to_variants",
+    "arm64_bionic_toolchains",
     "variant_constraints",
     "variant_name",
+    "x86_64_bionic_toolchains",
     "x86_64_host_toolchains",
     "x86_64_musl_host_toolchains",
     "x86_host_toolchains",
@@ -550,6 +552,7 @@ def cc_register_toolchains():
     host_toolchains = [
         tc[0] + "_def"
         for tc in x86_64_host_toolchains + x86_host_toolchains +
+                  x86_64_bionic_host_toolchains + arm64_bionic_host_toolchains +
                   x86_64_musl_host_toolchains + x86_musl_host_toolchains
     ]
 
