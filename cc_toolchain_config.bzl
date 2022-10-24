@@ -1,3 +1,17 @@
+# Copyright 2022 Google Inc. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http:#www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 load(
     "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
     "action_config",
@@ -7,8 +21,10 @@ load(
 load(
     ":cc_toolchain_constants.bzl",
     "arch_to_variants",
+    "arm64_bionic_toolchains",
     "variant_constraints",
     "variant_name",
+    "x86_64_bionic_toolchains",
     "x86_64_host_toolchains",
     "x86_host_toolchains",
     _actions = "actions",
@@ -498,7 +514,10 @@ def cc_register_toolchains():
 
     toolchain_definitions = [
         tc[0] + "_def"
-        for tc in x86_64_host_toolchains + x86_host_toolchains
+        for tc in x86_64_host_toolchains +
+                  x86_host_toolchains +
+                  x86_64_bionic_toolchains +
+                  arm64_bionic_toolchains
     ]
     deferred_toolchains = []
 
