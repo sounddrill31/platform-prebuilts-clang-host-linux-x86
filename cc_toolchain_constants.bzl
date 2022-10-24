@@ -236,6 +236,15 @@ x86_host_toolchains = [
     ("cc_toolchain_x86_linux_host_nocrt", "nocrt_toolchain"),
 ]
 
+x86_64_bionic_host_toolchains = [
+    ("cc_toolchain_x86_64_linux_host_bionic", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_x86_64_linux_bionic_host_nocrt", "nocrt_toolchain"),
+]
+arm64_bionic_host_toolchains = [
+    ("cc_toolchain_arm64_linux_bionic_host", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_arm64_linux_bionic_host_nocrt", "nocrt_toolchain"),
+]
+
 x86_64_musl_host_toolchains = [
     ("cc_toolchain_x86_64_linux_musl_host", "@bazel_tools//tools/cpp:toolchain_type"),
     ("cc_toolchain_x86_64_linux_musl_host_nocrt", "nocrt_toolchain"),
@@ -256,6 +265,7 @@ libclang_rt_prebuilt_map = {
     "//build/bazel/platforms/os_arch:android_arm64": _libclang_rt_prefix + "/libclang_rt.builtins-aarch64-android.a",
     "//build/bazel/platforms/os_arch:android_x86": _libclang_rt_prefix + "/libclang_rt.builtins-i686-android.a",
     "//build/bazel/platforms/os_arch:android_x86_64": _libclang_rt_prefix + "/libclang_rt.builtins-x86_64-android.a",
+    "//build/bazel/platforms/os_arch:linux_bionic_arm64": _libclang_rt_prefix + "/libclang_rt.builtins-aarch64-android.a",    
     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": _libclang_rt_prefix + "/libclang_rt.builtins-x86_64-android.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86": _libclang_rt_prefix + "/libclang_rt.builtins-i386.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": _libclang_rt_prefix + "/libclang_rt.builtins-x86_64.a",
@@ -269,6 +279,7 @@ libclang_ubsan_minimal_rt_prebuilt_map = {
     "//build/bazel/platforms/os_arch:android_arm64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-aarch64-android.a",
     "//build/bazel/platforms/os_arch:android_x86": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-i686-android.a",
     "//build/bazel/platforms/os_arch:android_x86_64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-x86_64-android.a",
+    "//build/bazel/platforms/os_arch:linux_bionic_arm64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-aarch64-android.a",
     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-x86_64-android.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-i386.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-x86_64.a",
