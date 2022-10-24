@@ -207,6 +207,30 @@ def variant_constraints(variant, arch_variant_features = {}):
         ret.append("//build/bazel/platforms/arch/variants:" + feature)
     return ret
 
+oses = struct(
+    Android = "android",
+    LinuxBionic = "linux_bionic",
+)
+
+# OS -> Arch -> (Cflags, Ldflags)
+os_to_flags = {
+    oses.Android: {
+        arches.Arm64: ([], []),
+        arches.X86_64: ([], []),
+    },
+    oses.LinuxBionic: {
+        arches.Arm64: (
+            _generated_constants.LinuxBionicArm64Cflags,
+            _generated_constants.LinuxBionicArm64Ldflags,
+        ),
+        arches.X86_64: (
+            _generated_constants.LinuxBionicCflags,
+            _generated_constants.LinuxBionicLdflags +
+            _generated_constants.LinuxBionicLldflags,
+        ),
+    },
+}
+
 x86_64_host_toolchains = [
     ("cc_toolchain_x86_64_linux_host", "@bazel_tools//tools/cpp:toolchain_type"),
     ("cc_toolchain_x86_64_linux_host_nocrt", "nocrt_toolchain"),
@@ -214,4 +238,13 @@ x86_64_host_toolchains = [
 x86_host_toolchains = [
     ("cc_toolchain_x86_linux_host", "@bazel_tools//tools/cpp:toolchain_type"),
     ("cc_toolchain_x86_linux_host_nocrt", "nocrt_toolchain"),
+]
+
+x86_64_bionic_toolchains = [
+    ("cc_toolchain_x86_64_linux_bionic", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_x86_64_linux_bionic_nocrt", "nocrt_toolchain"),
+]
+arm64_bionic_toolchains = [
+    ("cc_toolchain_arm64_linux_bionic", "@bazel_tools//tools/cpp:toolchain_type"),
+    ("cc_toolchain_arm64_linux_bionic_nocrt", "nocrt_toolchain"),
 ]

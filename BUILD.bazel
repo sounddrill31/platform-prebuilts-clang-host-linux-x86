@@ -20,13 +20,17 @@ load(
     ":cc_toolchain_constants.bzl",
     "arch_to_variants",
     "arches",
+    "arm64_bionic_toolchains",
     "arm_extra_ldflags",
     "device_compatibility_flags_non_darwin",
     "device_compatibility_flags_non_windows",
     "enabled_features",
     "generated_constants",
+    "os_to_flags",
+    "oses",
     "variant_constraints",
     "variant_name",
+    "x86_64_bionic_toolchains",
     "x86_64_host_toolchains",
     "x86_host_toolchains",
 )
@@ -52,6 +56,7 @@ _LIBCLANG_RT_PREBUILT_MAP = {
     "//build/bazel/platforms/os_arch:android_x86": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-i686-android.a",
     "//build/bazel/platforms/os_arch:android_x86_64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-x86_64-android.a",
     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-x86_64-android.a",
+    "//build/bazel/platforms/os_arch:linux_bionic_arm64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-aarch64-android.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-i386.a",
     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": _LIBCLANG_RT_PREFIX + "/libclang_rt.builtins-x86_64.a",
     "//conditions:default": None,
@@ -60,11 +65,11 @@ _LIBCLANG_RT_PREBUILT_MAP = {
 # x86_64 toolchain definitions
 [
     android_cc_toolchain(
-        name = "cc_toolchain_x86_64" + variant_name(variant),
+        name = ("cc_toolchain_%s_x86_64" % os) + variant_name(variant),
         clang_version = ":clang",
         clang_version_directory = generated_constants.CLANG_DEFAULT_VERSION,
-        libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:android_x86_64"],
-        linker_flags = generated_constants.X86_64ToolchainLdflags + generated_constants.X86_64Lldflags,
+        libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:%s_x86_64" % os],
+        linker_flags = generated_constants.X86_64ToolchainLdflags + generated_constants.X86_64Lldflags + os_to_flags[os][arches.X86_64][1],
         target_arch = arches.X86_64,
         target_flags = generated_constants.X86_64ToolchainCflags +
                        generated_constants.X86_64ArchVariantCflags[variant.arch_variant] +
@@ -72,11 +77,15 @@ _LIBCLANG_RT_PREBUILT_MAP = {
                            variant.arch_variant,
                            _arch_constants.AndroidArchToVariantToFeatures[arches.X86_64],
                            generated_constants.X86_64ArchFeatureCflags,
-                       ) + generated_constants.X86_64Cflags,
-        target_os = "android",
+                       ) + generated_constants.X86_64Cflags + os_to_flags[os][arches.X86_64][0],
+        target_os = os,
         toolchain_identifier = "x86_64-toolchain",
     )
     for variant in arch_to_variants[arches.X86_64]
+    for os in [
+        oses.Android,
+        oses.LinuxBionic,
+    ]
 ]
 
 # x86 toolchain definitions.
@@ -104,25 +113,29 @@ _LIBCLANG_RT_PREBUILT_MAP = {
 # arm64 toolchain definitions.
 [
     android_cc_toolchain(
-        name = "cc_toolchain_arm64" + variant_name(variant),
+        name = ("cc_toolchain_%s_arm64" % os) + variant_name(variant),
         clang_version = ":clang",
         clang_version_directory = generated_constants.CLANG_DEFAULT_VERSION,
-        libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:android_arm64"],
+        libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:%s_arm64" % os],
         linker_flags = generated_constants.Arm64CpuVariantLdflags.get(
             variant.cpu_variant,
             [],
-        ) + generated_constants.Arm64Lldflags,
+        ) + generated_constants.Arm64Lldflags + os_to_flags[os][arches.Arm64][1],
         target_arch = arches.Arm64,
         target_flags = generated_constants.Arm64Cflags +
                        generated_constants.Arm64ArchVariantCflags[variant.arch_variant] +
                        generated_constants.Arm64CpuVariantCflags.get(
                            variant.cpu_variant,
                            [],
-                       ),
-        target_os = "android",
+                       ) + os_to_flags[os][arches.Arm64][0],
+        target_os = os,
         toolchain_identifier = "arm64-toolchain",
     )
     for variant in arch_to_variants[arches.Arm64]
+    for os in [
+        oses.Android,
+        oses.LinuxBionic,
+    ]
 ]
 
 # arm32 toolchain definitions.
@@ -175,6 +188,30 @@ android_cc_toolchain(
     toolchain_identifier = "x86_64-toolchain",
 )
 
+# Toolchain to compile for the linux x86-64 target using bionic as libc
+# TODO(b/186628704): automatically generate from Soong.
+android_cc_toolchain(
+    name = "cc_toolchain_x86_64_linux_bionic",
+    clang_version = ":clang",
+    clang_version_directory = generated_constants.CLANG_DEFAULT_VERSION,
+    compiler_flags = generated_constants.LinuxCflags +
+                     generated_constants.LinuxBionicCflags +
+                     generated_constants.LinuxX8664Cflags,
+    crt = False,
+    gcc_toolchain = generated_constants.LinuxGccRoot,
+    libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:linux_bionic_x86_64"],
+    linker_flags = generated_constants.LinuxBionicLdflags +  # TOCHECK: Verify order wrt Soong
+                   generated_constants.LinuxLdflags +
+                   generated_constants.LinuxX8664Ldflags +
+                   device_compatibility_flags_non_windows +
+                   device_compatibility_flags_non_darwin,
+    rtti_toggle = False,
+    target_arch = "x86_64",
+    target_flags = ["--target=x86_64-linux-bionic"],
+    target_os = "linux_bionic",
+    toolchain_identifier = "x86_64-toolchain-bionic",
+)
+
 # Toolchain to compile for the linux x86 target.
 android_cc_toolchain(
     name = "cc_toolchain_x86_linux_host",
@@ -200,6 +237,31 @@ android_cc_toolchain(
     target_flags = ["--target=i686-linux-gnu"],
     target_os = "linux_glibc",
     toolchain_identifier = "x86-toolchain",
+)
+
+# Toolchain to compile for the arm64 linux target using bionic as libc
+# TODO(b/186628704): automatically generate from Soong.
+android_cc_toolchain(
+    name = "cc_toolchain_arm64_linux_bionic",
+    clang_version = ":clang",
+    clang_version_directory = generated_constants.CLANG_DEFAULT_VERSION,
+    compiler_flags = generated_constants.LinuxCflags +
+                     generated_constants.LinuxBionicCflags +
+                     generated_constants.LinuxBionicArm64Cflags,
+    crt = False,
+    gcc_toolchain = generated_constants.LinuxGccRoot,
+    libclang_rt_builtin = _LIBCLANG_RT_PREBUILT_MAP["//build/bazel/platforms/os_arch:linux_bionic_arm64"],
+    # TOCHECK: Intentionally first? Against Soong
+    linker_flags = generated_constants.LinuxBionicArm64Ldflags +
+                   generated_constants.LinuxLdflags +
+                   generated_constants.LinuxBionicArm64Cflags +
+                   device_compatibility_flags_non_windows +
+                   device_compatibility_flags_non_darwin,
+    rtti_toggle = False,
+    target_arch = "arm64",
+    target_flags = ["--target=arm64-linux-bionic"],
+    target_os = "linux_bionic",
+    toolchain_identifier = "arm64-toolchain-bionic",
 )
 
 toolchain_type(name = "nocrt_toolchain")
@@ -253,6 +315,42 @@ toolchain_type(name = "nocrt_toolchain")
         toolchain_type = toolchain_type,
     )
     for (toolchain_name, toolchain_type) in x86_host_toolchains
+]
+
+# Toolchains for linux target (non-host) x86_64 arch
+[
+    toolchain(
+        name = "%s_def" % toolchain_name,
+        exec_compatible_with = [
+            "//build/bazel/platforms/arch:x86_64",
+            "//build/bazel/platforms/os:linux_bionic",
+        ],
+        target_compatible_with = [
+            "//build/bazel/platforms/arch:x86_64",
+            "//build/bazel/platforms/os:linux_bionic",
+        ],
+        toolchain = toolchain_name,
+        toolchain_type = toolchain_type,
+    )
+    for (toolchain_name, toolchain_type) in x86_64_bionic_toolchains
+]
+
+# Toolchains for linux target (non-host) arm64 arch
+[
+    toolchain(
+        name = "%s_def" % toolchain_name,
+        exec_compatible_with = [
+            "//build/bazel/platforms/arch:x86_64",
+            "//build/bazel/platforms/os:linux_bionic",
+        ],
+        target_compatible_with = [
+            "//build/bazel/platforms/arch:arm64",
+            "//build/bazel/platforms/os:linux_bionic",
+        ],
+        toolchain = toolchain_name,
+        toolchain_type = toolchain_type,
+    )
+    for (toolchain_name, toolchain_type) in arm64_bionic_toolchains
 ]
 
 cc_import(
