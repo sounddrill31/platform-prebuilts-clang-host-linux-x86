@@ -497,6 +497,7 @@ def cc_register_toolchains():
     registered last.
     """
 
+    # TODO(alexmarquez): Register new top-level toolchain lists
     toolchain_definitions = [
         tc[0] + "_def"
         for tc in x86_64_host_toolchains + x86_host_toolchains
