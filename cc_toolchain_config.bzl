@@ -7,8 +7,10 @@ load(
 load(
     ":cc_toolchain_constants.bzl",
     "arch_to_variants",
+    "arm64_bionic_toolchains",
     "variant_constraints",
     "variant_name",
+    "x86_64_bionic_toolchains",
     "x86_64_host_toolchains",
     "x86_host_toolchains",
     _actions = "actions",
@@ -499,7 +501,10 @@ def cc_register_toolchains():
 
     toolchain_definitions = [
         tc[0] + "_def"
-        for tc in x86_64_host_toolchains + x86_host_toolchains
+        for tc in x86_64_host_toolchains +
+                  x86_host_toolchains +
+                  x86_64_bionic_toolchains +
+                  arm64_bionic_toolchains
     ]
     deferred_toolchains = []
 
