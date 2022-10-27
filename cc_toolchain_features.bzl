@@ -1453,6 +1453,163 @@ def _link_crtend(crt_files):
         ),
     ]
 
+def _get_ubsan_features():
+    ALL_UBSAN_ACTIONS = _actions.compile + _actions.link + _actions.assemble
+
+    ubsan_features = [
+        feature(
+            name = "ubsan_integer_overflow",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = ALL_UBSAN_ACTIONS,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fsanitize=unsigned-integer-overflow",
+                                "-fsanitize=signed-integer-overflow",
+                            ],
+                        ),
+                    ],
+                ),
+            ],
+            implies = ["ubsan_minimal_runtime"],
+        ),
+    ]
+
+    UBSAN_CHECKS = [
+        "alignment",
+        "bool",
+        "builtin",
+        "bounds",
+        "array-bounds",
+        "local-bounds",
+        "enum",
+        "float-cast-overflow",
+        "float-divide-by-zero",
+        "function",
+        "implicit-unsigned-integer-truncation",
+        "implicit-signed-integer-truncation",
+        "implicit-integer-sign-change",
+        "integer-divide-by-zero",
+        "nonnull-attribute",
+        "null",
+        "nullability-arg",
+        "nullability-assign",
+        "nullability-return",
+        "objc-cast",
+        "object-size",
+        "pointer-overflow",
+        "return",
+        "returns-nonnull-attribute",
+        "shift",
+        "shift-base",
+        "shift-exponent",
+        "unsigned-shift-base",
+        "signed-integer-overflow",
+        "unreachable",
+        "unsigned-integer-overflow",
+        "vla-bound",
+        "vptr",
+
+        # check groups
+        "undefined",
+        "implicit-integer-truncation",
+        "implicit-integer-arithmetic-value-change",
+        "implicit-conversion",
+        "integer",
+        "nullability",
+    ]
+    ubsan_features += [
+        feature(
+            name = "ubsan_%s" % check_name,
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = ALL_UBSAN_ACTIONS,
+                    flag_groups = [
+                        flag_group(
+                            flags = ["-fsanitize=%s" % check_name],
+                        ),
+                    ],
+                ),
+            ],
+            implies = ["ubsan_minimal_runtime"],
+        )
+        for check_name in UBSAN_CHECKS
+    ]
+
+    ubsan_features += [
+        feature(
+            name = "ubsan_minimal_runtime",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = ALL_UBSAN_ACTIONS,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fsanitize-minimal-runtime",
+                                "-fno-sanitize-trap=integer,undefined",
+                                "-fno-sanitize-recover=integer,undefined",
+                            ],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
+    ubsan_features += [
+        feature(
+            name = "ubsan_disable_unsupported_integer_checks",
+            enabled = True,
+            flag_sets = [
+                # TODO(b/119329758): If this bug is fixed, this shouldn't be
+                #                    needed anymore
+                flag_set(
+                    actions = _actions.compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fno-sanitize=implicit-integer-sign-change",
+                            ],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            features = ["ubsan_integer"],
+                            not_features = [
+                                "ubsan_implicit-integer-sign-change",
+                            ],
+                        ),
+                    ],
+                ),
+                # TODO(b/171275751): If this bug is fixed, this shouldn't be
+                #                    needed anymore
+                flag_set(
+                    actions = _actions.compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fno-sanitize=unsigned-shift-base",
+                            ],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            features = ["ubsan_integer"],
+                            not_features = [
+                                "ubsan_unsigned-shift-base",
+                            ],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+    return ubsan_features
+
 # Create the full list of features.
 def get_features(
         target_os,
@@ -1510,7 +1667,8 @@ def get_features(
         # Compiling stub.c sources to stub libraries
         _stub_library_feature(),
         _get_legacy_features_end(),
-
+        # Sanitizers
+        _get_ubsan_features(),
         # This must always come last.
         _link_crtend(crt_files),
     ]
