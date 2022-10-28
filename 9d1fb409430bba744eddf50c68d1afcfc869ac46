@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3eed813_4b7c82fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-10-28T15:42:11Z",
+      "side": 1,
+      "message": "This version is built on a presubmit host (against a locally built sysroot), includes the fuzzers, and removes all the TODOs.  I think it is ready to submit.  Once this is in I can add an aosp_riscv64-userdebug CI builder that builds the sysroots against this, then check in the CI-built sysroot and the llvm_android change, and finally regenerate this using artifacts entirely built in CI.",
+      "revId": "9d1fb409430bba744eddf50c68d1afcfc869ac46",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
