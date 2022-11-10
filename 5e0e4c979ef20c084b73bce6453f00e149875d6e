@@ -1,0 +1,108 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000032239796",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2297943?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "94c9eb8c_758c5a48",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 70,
+                "startChar": 0,
+                "endLine": 71,
+                "endChar": 0
+              },
+              "replacement": "                       generated_constants.X86_64ArchVariantCflags.get(\n                           variant.arch_variant,\n                           [],\n                       ) +\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 92,
+                "startChar": 0,
+                "endLine": 93,
+                "endChar": 0
+              },
+              "replacement": "                       generated_constants.X86ArchVariantCflags.get(\n                           variant.arch_variant,\n                           [],\n                       ) +\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 117,
+                "startChar": 0,
+                "endLine": 119,
+                "endChar": 0
+              },
+              "replacement": "                       generated_constants.Arm64ArchVariantCflags.get(\n                           variant.arch_variant,\n                           [],\n                       ) +\n                       generated_constants.Arm64CpuVariantCflags.get(\n                           variant.cpu_variant,\n                           [],\n                       ),\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 136,
+                "startChar": 0,
+                "endLine": 138,
+                "endChar": 0
+              },
+              "replacement": "                       generated_constants.ArmArchVariantCflags.get(\n                           variant.arch_variant,\n                           [],\n                       ) +\n                       generated_constants.ArmCpuVariantCflags.get(\n                           variant.cpu_variant,\n                           [],\n                       ),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "67e37ba3_5d226d63",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-11-10T19:30:03Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "5e0e4c979ef20c084b73bce6453f00e149875d6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000032239796",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2297943?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "13a3b17b_d3110ca8",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_constants.bzl",
+              "range": {
+                "startLine": 3,
+                "startChar": 0,
+                "endLine": 4,
+                "endChar": 0
+              },
+              "replacement": "load(\"@soong_injection//product_config:arch_configuration.bzl\", _raw_arch_to_cpu_variants \u003d \"arch_to_cpu_variants\", _raw_arch_to_variants \u003d \"arch_to_variants\")\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "bd53894d_04eb90d5",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-11-10T19:30:03Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_constants.bzl` to format the file, or apply the suggested fix.",
+      "revId": "5e0e4c979ef20c084b73bce6453f00e149875d6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
