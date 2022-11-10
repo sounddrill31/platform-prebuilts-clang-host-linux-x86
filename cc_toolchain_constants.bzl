@@ -1,5 +1,6 @@
 load("@bazel_tools//tools/build_defs/cc:action_names.bzl", "ACTION_NAMES")
 load("@soong_injection//cc_toolchain:constants.bzl", _generated_constants = "constants")
+load("@soong_injection//product_config:arch_configuration.bzl", _raw_arch_to_variants = "arch_to_variants", _raw_arch_to_cpu_variants = "arch_to_cpu_variants")
 
 # This file uses structs to organize and control the visibility of symbols.
 
@@ -154,20 +155,20 @@ arches = struct(
     X86_64 = "x86_64",
 )
 
-def _variant_combinations(arch_variants = {}, cpu_variants = {}):
+def _variant_combinations(arch_variants = [], cpu_variants = []):
     combinations = []
+    if "" not in arch_variants:
+        arch_variants = [""] + arch_variants
+    if "" not in cpu_variants:
+        cpu_variants = [""] + cpu_variants
     for arch in arch_variants:
-        if "" not in cpu_variants:
-            combinations.append(struct(arch_variant = arch, cpu_variant = ""))
         for cpu in cpu_variants:
             combinations.append(struct(arch_variant = arch, cpu_variant = cpu))
     return combinations
 
 arch_to_variants = {
-    arches.Arm: _variant_combinations(arch_variants = _generated_constants.ArmArchVariantCflags, cpu_variants = _generated_constants.ArmCpuVariantCflags),
-    arches.Arm64: _variant_combinations(arch_variants = _generated_constants.Arm64ArchVariantCflags, cpu_variants = _generated_constants.Arm64CpuVariantCflags),
-    arches.X86: _variant_combinations(arch_variants = _generated_constants.X86ArchVariantCflags),
-    arches.X86_64: _variant_combinations(arch_variants = _generated_constants.X86_64ArchVariantCflags),
+    arch: _variant_combinations(arch_variants = _raw_arch_to_variants[arch], cpu_variants = _raw_arch_to_cpu_variants[arch])
+    for arch in [getattr(arches, a) for a in dir(arches) if type(getattr(arches, a)) == "string"]
 }
 
 def arm_extra_ldflags(variant):

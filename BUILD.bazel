@@ -67,7 +67,7 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         linker_flags = generated_constants.X86_64ToolchainLdflags + generated_constants.X86_64Lldflags,
         target_arch = arches.X86_64,
         target_flags = generated_constants.X86_64ToolchainCflags +
-                       generated_constants.X86_64ArchVariantCflags[variant.arch_variant] +
+                       generated_constants.X86_64ArchVariantCflags.get(variant.arch_variant, []) +
                        expand_feature_flags(
                            variant.arch_variant,
                            _arch_constants.AndroidArchToVariantToFeatures[arches.X86_64],
@@ -89,7 +89,7 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         linker_flags = generated_constants.X86ToolchainLdflags + generated_constants.X86Lldflags,
         target_arch = arches.X86,
         target_flags = generated_constants.X86ToolchainCflags +
-                       generated_constants.X86ArchVariantCflags[variant.arch_variant] +
+                       generated_constants.X86ArchVariantCflags.get(variant.arch_variant, []) +
                        expand_feature_flags(
                            variant.arch_variant,
                            _arch_constants.AndroidArchToVariantToFeatures[arches.X86],
@@ -114,11 +114,8 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         ) + generated_constants.Arm64Lldflags,
         target_arch = arches.Arm64,
         target_flags = generated_constants.Arm64Cflags +
-                       generated_constants.Arm64ArchVariantCflags[variant.arch_variant] +
-                       generated_constants.Arm64CpuVariantCflags.get(
-                           variant.cpu_variant,
-                           [],
-                       ),
+                       generated_constants.Arm64ArchVariantCflags.get(variant.arch_variant, []) +
+                       generated_constants.Arm64CpuVariantCflags.get(variant.cpu_variant, []),
         target_os = "android",
         toolchain_identifier = "arm64-toolchain",
     )
@@ -136,11 +133,8 @@ _LIBCLANG_RT_PREBUILT_MAP = {
         target_arch = arches.Arm,
         target_flags = generated_constants.ArmCflags +
                        generated_constants.ArmToolchainCflags +
-                       generated_constants.ArmArchVariantCflags[variant.arch_variant] +
-                       generated_constants.ArmCpuVariantCflags.get(
-                           variant.cpu_variant,
-                           [],
-                       ),
+                       generated_constants.ArmArchVariantCflags.get(variant.arch_variant, []) +
+                       generated_constants.ArmCpuVariantCflags.get(variant.cpu_variant, []),
         target_os = "android",
         toolchain_identifier = "arm-toolchain",
     )
