@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000032666590",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2274766?revision\u003d7",
+      "fixSuggestions": [
+        {
+          "fixId": "2386769f_8e097288",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1575,
+                "startChar": 0,
+                "endLine": 1576,
+                "endChar": 0
+              },
+              "replacement": "                                \"-fno-sanitize\u003dimplicit-integer-sign-change\",\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1583,
+                "startChar": 0,
+                "endLine": 1584,
+                "endChar": 0
+              },
+              "replacement": "                                \"ubsan_implicit-integer-sign-change\",\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1595,
+                "startChar": 0,
+                "endLine": 1596,
+                "endChar": 0
+              },
+              "replacement": "                                \"-fno-sanitize\u003dunsigned-shift-base\",\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1604,
+                "startChar": 0,
+                "endLine": 1608,
+                "endChar": 0
+              },
+              "replacement": "                            ],\n                        ),\n                    ],\n                ),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "11f6b2d0_0db1e6bc",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-11-17T18:58:40Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "c32b7013a986af0d9712cd4b3b59ca8d1e21cbfc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000032666590",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2274766?revision\u003d7",
+      "fixSuggestions": [
+        {
+          "fixId": "61c3f195_984db8cb",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 110,
+                "startChar": 0,
+                "endLine": 111,
+                "endChar": 0
+              },
+              "replacement": "                    ctx.attr.expected_disabled_sanitizer,\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 123,
+                "startChar": 0,
+                "endLine": 124,
+                "endChar": 0
+              },
+              "replacement": "        ),\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 130,
+                "startChar": 0,
+                "endLine": 131,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 143,
+                "startChar": 0,
+                "endLine": 144,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 149,
+                "startChar": 0,
+                "endLine": 150,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 165,
+                "startChar": 0,
+                "endLine": 166,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 189,
+                "startChar": 0,
+                "endLine": 190,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 202,
+                "startChar": 0,
+                "endLine": 203,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 208,
+                "startChar": 0,
+                "endLine": 209,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 224,
+                "startChar": 0,
+                "endLine": 225,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 244,
+                "startChar": 0,
+                "endLine": 244,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "447f4af7_45da37d3",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-11-17T18:58:40Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "c32b7013a986af0d9712cd4b3b59ca8d1e21cbfc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
