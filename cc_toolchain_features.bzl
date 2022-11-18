@@ -1453,6 +1453,88 @@ def _link_crtend(crt_files):
         ),
     ]
 
+# This will be removed. DO NOT SUBMIT
+def _get_thinlto_features():
+    features = [
+        feature(
+            name = "android_thin_lto",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = _actions.compile + _actions.link + _actions.assemble,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-flto=thin",
+                                "-fsplit-lto-unit",
+                            ],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            not_features = ["disable_android_thin_lto"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+        feature(
+            name = "android_thin_lto_whole_program_vtables",
+            enabled = False,
+            requires = [feature_set(features = ["android_thin_lto"])],
+            flag_sets = [
+                flag_set(
+                    actions = _actions.link,
+                    flag_groups = [
+                        flag_group(
+                            flags = ["-fwhole-program-vtables"],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            not_features = ["disable_android_thin_lto"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+        feature(
+            name = "android_thin_lto_limit_cross_tu_inline",
+            enabled = False,
+            requires = [feature_set(features = ["android_thin_lto"])],
+            flag_sets = [
+                flag_set(
+                    actions = _actions.link,
+                    flag_groups = [
+                        flag_group(
+                            flags = ["-Wl,-plugin-opt,-import-instr-limit=5"],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            not_features = ["disable_android_thin_lto"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+        feature(
+            name = "disable_android_thin_lto",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = _actions.compile + _actions.link,
+                    flag_groups = [
+                        flag_group(
+                            flags = ["-fno-lto"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+    return features
+
 # Create the full list of features.
 def get_features(
         target_os,
@@ -1510,6 +1592,9 @@ def get_features(
         # Compiling stub.c sources to stub libraries
         _stub_library_feature(),
         _get_legacy_features_end(),
+
+        # Optimization
+        _get_thinlto_features(),
 
         # This must always come last.
         _link_crtend(crt_files),
