@@ -262,7 +262,7 @@ cc_import(
 
 [alias(
     name = "llvm-%s" % tool,
-    actual = generated_constants.CLANG_DEFAULT_VERSION + "/bin/llvm-%s" % tool,
+    actual = generated_constants.CLANG_DEFAULT_VERSION + ":bin/llvm-%s" % tool,
     visibility = ["//visibility:public"],
 ) for tool in [
     "ar",
@@ -273,7 +273,7 @@ cc_import(
 
 [alias(
     name = tool,
-    actual = generated_constants.CLANG_DEFAULT_VERSION + "/bin/" + tool,
+    actual = generated_constants.CLANG_DEFAULT_VERSION + ":bin/" + tool,
     visibility = ["//visibility:public"],
 ) for tool in [
     "clang-tidy",
@@ -285,8 +285,8 @@ cc_import(
 filegroup(
     name = "test_tools",
     srcs = [
-        generated_constants.CLANG_DEFAULT_VERSION + "/bin/llvm-readelf",
-        generated_constants.CLANG_DEFAULT_VERSION + "/bin/llvm-nm",
+        generated_constants.CLANG_DEFAULT_VERSION + ":bin/llvm-readelf",
+        generated_constants.CLANG_DEFAULT_VERSION + ":bin/llvm-nm",
     ],
     visibility = ["//build/bazel/tests:__subpackages__"],
 )
