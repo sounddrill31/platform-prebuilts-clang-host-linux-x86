@@ -16,6 +16,24 @@
       "message": "This CL contains many temporary local files. Please remove them from the CL.",
       "revId": "df3b43575f02703169f99bd356f3d87bfbc32879",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af2601d4_56aa498f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2022-12-02T04:39:10Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "4acd41c8_a29dfa7a",
+      "revId": "df3b43575f02703169f99bd356f3d87bfbc32879",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
