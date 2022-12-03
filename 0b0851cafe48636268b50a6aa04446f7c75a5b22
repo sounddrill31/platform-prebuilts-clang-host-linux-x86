@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2ae9c62_72fe2be7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-12-03T00:05:28Z",
+      "side": 1,
+      "message": "We need the files in clang-stable/lib/x86_64-unknown-linux-gnu/.  Did you use a script that skipped these?",
+      "revId": "0b0851cafe48636268b50a6aa04446f7c75a5b22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
