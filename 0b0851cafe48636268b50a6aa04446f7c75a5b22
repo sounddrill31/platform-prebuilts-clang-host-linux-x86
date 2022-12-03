@@ -34,6 +34,24 @@
       "parentUuid": "d2ae9c62_72fe2be7",
       "revId": "0b0851cafe48636268b50a6aa04446f7c75a5b22",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6f39e3a_9cd5c4cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2022-12-03T00:10:38Z",
+      "side": 1,
+      "message": "I used toolchain/llvm_android/update_clang_stable.sh. But it is a bit outdated. I will update it.",
+      "parentUuid": "77b96c19_1e8684ec",
+      "revId": "0b0851cafe48636268b50a6aa04446f7c75a5b22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
