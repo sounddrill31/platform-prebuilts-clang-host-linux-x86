@@ -16,6 +16,24 @@
       "message": "We need the files in clang-stable/lib/x86_64-unknown-linux-gnu/.  Did you use a script that skipped these?",
       "revId": "0b0851cafe48636268b50a6aa04446f7c75a5b22",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77b96c19_1e8684ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2022-12-03T00:06:05Z",
+      "side": 1,
+      "message": "Never mind about this.  It was a stale comment before seeing PS2.",
+      "parentUuid": "d2ae9c62_72fe2be7",
+      "revId": "0b0851cafe48636268b50a6aa04446f7c75a5b22",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
