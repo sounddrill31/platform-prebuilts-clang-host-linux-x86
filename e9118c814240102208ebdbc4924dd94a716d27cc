@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07fe7c0d_194d8a90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2022-12-07T15:46:49Z",
+      "side": 1,
+      "message": "Kokoro presubmit failed due to https://b.corp.google.com/issues/245729363. Ignoring",
+      "revId": "e9118c814240102208ebdbc4924dd94a716d27cc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
