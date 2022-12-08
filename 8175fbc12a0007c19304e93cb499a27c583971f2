@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "505fbc57_e81d2dbf",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-08T17:40:58Z",
+      "side": 1,
+      "message": "I think \u003dthis test seems generic enough that we should it in `rules/test_common/rules.bzl`. Thoughts?",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 33
+      },
+      "revId": "8175fbc12a0007c19304e93cb499a27c583971f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "151c3611_ca120aad",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-08T17:40:58Z",
+      "side": 1,
+      "message": "Nit: expection_action_mnemonics?",
+      "range": {
+        "startLine": 53,
+        "startChar": 9,
+        "endLine": 53,
+        "endChar": 25
+      },
+      "revId": "8175fbc12a0007c19304e93cb499a27c583971f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "941a21be_cf13a2fc",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-08T17:40:58Z",
+      "side": 1,
+      "message": "Nit: `...requires_android_thin_lto_feature`",
+      "range": {
+        "startLine": 112,
+        "startChar": 40,
+        "endLine": 112,
+        "endChar": 47
+      },
+      "revId": "8175fbc12a0007c19304e93cb499a27c583971f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03eaf038_9d28df30",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-08T17:40:58Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 155,
+        "startChar": 40,
+        "endLine": 155,
+        "endChar": 47
+      },
+      "revId": "8175fbc12a0007c19304e93cb499a27c583971f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
