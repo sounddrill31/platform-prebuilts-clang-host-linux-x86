@@ -294,7 +294,7 @@ def android_cc_toolchain(
         clang_version = None,
         # This should come from the clang_version provider.
         # Instead, it's hard-coded because this is a macro, not a rule.
-        clang_version_directory = None,
+        clang_version_package = None,
         gcc_toolchain = None,
         # If false, the crt version and "normal" version of this toolchain are identical.
         crt = True,
@@ -308,7 +308,7 @@ def android_cc_toolchain(
     libclang_rt_path = None
     if libclang_rt_builtin:
         libclang_rt_path = libclang_rt_builtin
-        extra_linker_paths.append(":" + libclang_rt_path)
+        extra_linker_paths.append(libclang_rt_path)
     if gcc_toolchain:
         gcc_toolchain_path = "//%s:tools" % gcc_toolchain
         extra_linker_paths.append(gcc_toolchain_path)
@@ -333,26 +333,24 @@ def android_cc_toolchain(
     )
 
     # Create the filegroups needed for sandboxing toolchain inputs to C++ actions.
-    native.filegroup(
+    native.alias(
         name = "%s_compiler_clang_includes" % name,
-        srcs = native.glob([clang_version_directory + "/lib64/clang/*/include/**"]),
+        actual = clang_version_package + ":compiler_clang_includes",
     )
 
-    native.filegroup(
+    native.alias(
         name = "%s_compiler_binaries" % name,
-        srcs = native.glob([clang_version_directory + "/bin/clang*"]),
+        actual = clang_version_package + ":compiler_binaries",
     )
 
-    native.filegroup(
+    native.alias(
         name = "%s_linker_binaries" % name,
-        srcs = native.glob([
-            clang_version_directory + "/bin/*",
-        ]),
+        actual = clang_version_package + ":linker_binaries",
     )
 
-    native.filegroup(
+    native.alias(
         name = "%s_ar_files" % name,
-        srcs = [clang_version_directory + "/bin/llvm-ar"],
+        actual = clang_version_package + ":ar_files",
     )
 
     native.filegroup(
@@ -517,6 +515,6 @@ def cc_register_toolchains():
         toolchain_definitions.append(_toolchain_name(arch, variant, nocrt = True))
 
     native.register_toolchains(*[
-        "//prebuilts/clang/host/linux-x86:" + tc
+        "//prebuilts/clang/host/linux-x86/soong:" + tc
         for tc in toolchain_definitions
     ])

@@ -7,3 +7,7 @@ filegroup(
         "lib64/*",
     ]),
 )
+
+exports_files(glob([
+    "lib64/clang/*/lib/linux/libclang_rt.builtins-*.a",
+]))
