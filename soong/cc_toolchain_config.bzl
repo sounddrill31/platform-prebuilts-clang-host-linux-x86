@@ -517,6 +517,6 @@ def cc_register_toolchains():
         toolchain_definitions.append(_toolchain_name(arch, variant, nocrt = True))
 
     native.register_toolchains(*[
-        "//prebuilts/clang/host/linux-x86:" + tc
+        "//prebuilts/clang/host/linux-x86/soong:" + tc
         for tc in toolchain_definitions
     ])
