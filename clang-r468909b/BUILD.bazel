@@ -7,3 +7,29 @@ filegroup(
         "lib/*",
     ]),
 )
+
+filegroup(
+    name = "compiler_clang_includes",
+    srcs = glob(["lib64/clang/*/include/**"]),
+)
+
+filegroup(
+    name = "compiler_binaries",
+    srcs = glob(["bin/clang*"]),
+)
+
+filegroup(
+    name = "linker_binaries",
+    srcs = glob([
+        "bin/*",
+    ]),
+)
+
+filegroup(
+    name = "ar_files",
+    srcs = ["bin/llvm-ar"],
+)
+
+exports_files(glob([
+    "lib64/clang/*/lib/linux/libclang_rt.builtins-*.a",
+]))
