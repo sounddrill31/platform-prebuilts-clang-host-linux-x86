@@ -79,7 +79,7 @@ libclang_rt_prebuilt_library_static {
     },
     stl: "none",
     bazel_module: {
-        label: "//prebuilts/clang/host/linux-x86:libclang_rt",
+        label: "//prebuilts/clang/host/linux-x86/soong:libclang_rt",
     },
 }
 

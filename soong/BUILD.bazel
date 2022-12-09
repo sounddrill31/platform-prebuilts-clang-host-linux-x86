@@ -10,14 +10,14 @@
 filegroup(name = "empty")
 
 load(
-    "//prebuilts/clang/host/linux-x86/soong:cc_toolchain_config.bzl",
+    ":cc_toolchain_config.bzl",
     "android_cc_toolchain",
     "clang_version",
     "expand_feature_flags",
     "toolchain_definition",
 )
 load(
-    "//prebuilts/clang/host/linux-x86/soong:cc_toolchain_constants.bzl",
+    ":cc_toolchain_constants.bzl",
     "arch_to_variants",
     "arches",
     "arm_extra_ldflags",
