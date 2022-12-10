@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9a6e96e_715c4cb3",
+        "filename": "soong/cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2022-12-10T00:14:43Z",
+      "side": 1,
+      "message": "This requires clang_version to be executed in prebuilts/clang-host/linux-x86",
+      "revId": "42b9ec31505bbce32151d58ae15b84b2effaf397",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
