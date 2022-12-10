@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000034056170",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2336508?revision\u003d4",
+      "fixSuggestions": [
+        {
+          "fixId": "0ec751a9_6bc6cab6",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "clang-r450784e/BUILD.bazel",
+              "range": {
+                "startLine": 10,
+                "startChar": 0,
+                "endLine": 10,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "4f655dca_3aab9f7d",
+        "filename": "clang-r450784e/BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-10T00:13:27Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier clang-r450784e/BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "42b9ec31505bbce32151d58ae15b84b2effaf397",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
