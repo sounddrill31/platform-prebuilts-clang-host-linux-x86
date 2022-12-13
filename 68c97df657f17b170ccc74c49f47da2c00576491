@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd46209b_781174a6",
+        "filename": "kleaf/cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2022-12-13T22:15:57Z",
+      "side": 1,
+      "message": "BAD!",
+      "range": {
+        "startLine": 125,
+        "startChar": 59,
+        "endLine": 125,
+        "endChar": 65
+      },
+      "revId": "68c97df657f17b170ccc74c49f47da2c00576491",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
