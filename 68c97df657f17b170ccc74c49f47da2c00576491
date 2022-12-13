@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "12268db7_bfc42458",
+        "filename": "kleaf/cc_toolchain_config.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2022-12-13T22:37:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd46209b_781174a6",
+      "range": {
+        "startLine": 125,
+        "startChar": 59,
+        "endLine": 125,
+        "endChar": 65
+      },
+      "revId": "68c97df657f17b170ccc74c49f47da2c00576491",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9f7cd30_558077c3",
