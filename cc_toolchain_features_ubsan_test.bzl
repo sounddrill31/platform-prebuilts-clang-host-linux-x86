@@ -124,27 +124,44 @@ ubsan_disablement_test = analysistest.make(
     _ubsan_disablement_test_impl,
     attrs = disablement_test_attrs,
 )
-ubsan_disablement_linux_test = analysistest.make(
+_ubsan_disablement_linux_test = analysistest.make(
     _ubsan_disablement_test_impl,
     attrs = disablement_test_attrs,
-    config_settings = {
-        "//command_line_option:platforms": "@//build/bazel/platforms:linux_x86",
-    },
 )
-ubsan_disablement_linux_bionic_test = analysistest.make(
+def ubsan_disablement_linux_test(**kwargs):
+    _ubsan_disablement_linux_test(
+        target_compatible_with = [
+            "@//build/bazel/platforms/os:linux",
+            "@//build/bazel/platforms/arch:x86",
+        ],
+        **kwargs
+    )
+
+_ubsan_disablement_linux_bionic_test = analysistest.make(
     _ubsan_disablement_test_impl,
     attrs = disablement_test_attrs,
-    config_settings = {
-        "//command_line_option:platforms": "@//build/bazel/platforms:linux_bionic_x86_64",
-    },
 )
-ubsan_disablement_android_test = analysistest.make(
+def ubsan_disablement_linux_bionic_test(**kwargs):
+    _ubsan_disablement_linux_bionic_test(
+        target_compatible_with = [
+            "@//build/bazel/platforms/os:linux_bionic",
+            "@//build/bazel/platforms/arch:x86_64",
+        ],
+        **kwargs
+    )
+
+_ubsan_disablement_android_test = analysistest.make(
     _ubsan_disablement_test_impl,
     attrs = disablement_test_attrs,
-    config_settings = {
-        "//command_line_option:platforms": "@//build/bazel/platforms:android_x86",
-    },
 )
+def ubsan_disablement_android_test(**kwargs):
+    _ubsan_disablement_android_test(
+        target_compatible_with = [
+            "@//build/bazel/platforms/os:android",
+            "@//build/bazel/platforms/arch:x86",
+        ],
+        **kwargs
+    )
 
 def _test_ubsan_implicit_integer_sign_change_disabled_by_default_with_integer():
     name = "ubsan_implicit_integer_sign_change_disabled_by_default_with_integer"
