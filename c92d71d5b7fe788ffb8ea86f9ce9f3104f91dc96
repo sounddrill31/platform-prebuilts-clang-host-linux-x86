@@ -16,6 +16,24 @@
       "message": "I am confused: the error you provided here is about abi diff tests, while the cl is to disable ubsan tests?",
       "revId": "c92d71d5b7fe788ffb8ea86f9ce9f3104f91dc96",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d00f6fb1_3dd0e986",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2022-12-15T23:48:34Z",
+      "side": 1,
+      "message": "Sorry, I also had those issues on the abi diff tests, but was able to resolve them. I do get similar errors on the ubsan tests though. I removed the message from the commit description to be less confusing.",
+      "parentUuid": "2ae05119_ba0674a5",
+      "revId": "c92d71d5b7fe788ffb8ea86f9ce9f3104f91dc96",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
