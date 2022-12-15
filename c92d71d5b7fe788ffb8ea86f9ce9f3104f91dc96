@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ae05119_ba0674a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1124746
+      },
+      "writtenOn": "2022-12-15T23:44:05Z",
+      "side": 1,
+      "message": "I am confused: the error you provided here is about abi diff tests, while the cl is to disable ubsan tests?",
+      "revId": "c92d71d5b7fe788ffb8ea86f9ce9f3104f91dc96",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
