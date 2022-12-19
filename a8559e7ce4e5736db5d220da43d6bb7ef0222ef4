@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ff1b2898_29e0a80e",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-12-19T22:38:19Z",
+      "side": 1,
+      "message": "The expectation is that there will be a transition period where the build will either be all glibc or all musl based on the `USE_HOST_MUSL` flag, then the glibc prebuilts will be deleted and only the musl toolchain will exist.  When building with musl we\u0027ll switch to using musl-built prebuilts for anything that mixes builds artifacts with the prebuilts (e.g. rustc).  Glibc prebuilts can continue to be used if they are only used as individual processes and don\u0027t try to load or be loaded by build artifacts linked against musl.  Those prebuilts can be switched from glibc to musl independently of the `USE_HOST_MUSL` roll-out, either before or after.",
+      "parentUuid": "162a04db_538cde89",
+      "range": {
+        "startLine": 332,
+        "startChar": 0,
+        "endLine": 332,
+        "endChar": 52
+      },
+      "revId": "a8559e7ce4e5736db5d220da43d6bb7ef0222ef4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fde1c67e_cd04ba4f",
         "filename": "cc_toolchain_config.bzl",
         "patchSetId": 2
@@ -37,6 +61,30 @@
       "writtenOn": "2022-12-19T17:24:38Z",
       "side": 1,
       "message": "should these be added to the list rather than replacing other x86 host toolchains?",
+      "range": {
+        "startLine": 503,
+        "startChar": 18,
+        "endLine": 503,
+        "endChar": 72
+      },
+      "revId": "a8559e7ce4e5736db5d220da43d6bb7ef0222ef4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f30986a5_4ed1b519",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2022-12-19T22:38:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fde1c67e_cd04ba4f",
       "range": {
         "startLine": 503,
         "startChar": 18,
