@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "162a04db_538cde89",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-12-19T17:24:38Z",
+      "side": 1,
+      "message": "should we also introduce toolchains compatible to be run on linux_glibc, or do we intended to build build tools with musl whenever we are targeting musl?",
+      "range": {
+        "startLine": 332,
+        "startChar": 0,
+        "endLine": 332,
+        "endChar": 52
+      },
+      "revId": "a8559e7ce4e5736db5d220da43d6bb7ef0222ef4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fde1c67e_cd04ba4f",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-12-19T17:24:38Z",
+      "side": 1,
+      "message": "should these be added to the list rather than replacing other x86 host toolchains?",
+      "range": {
+        "startLine": 503,
+        "startChar": 18,
+        "endLine": 503,
+        "endChar": 72
+      },
+      "revId": "a8559e7ce4e5736db5d220da43d6bb7ef0222ef4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
