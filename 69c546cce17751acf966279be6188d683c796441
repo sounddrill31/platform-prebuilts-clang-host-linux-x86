@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35504e7f_f8dd22f1",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2022-12-20T18:19:29Z",
+      "side": 1,
+      "message": "if `target_os` is \"linux_bionic\", code is not able to go into this condition. This is different from the old logic. Is it expected?",
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "116fbc41_4746c1c4",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1763,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2022-12-20T18:19:29Z",
+      "side": 1,
+      "message": "You have replaced `os_is_device` with `target_os` in many functions in this file. Is there any reason you keep using `os_is_device` in `_get_sdk_version_features`, `_additional_linker_flags`, `_static_binary_linker_flags`, etc,.?",
+      "range": {
+        "startLine": 1763,
+        "startChar": 4,
+        "endLine": 1763,
+        "endChar": 16
+      },
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
