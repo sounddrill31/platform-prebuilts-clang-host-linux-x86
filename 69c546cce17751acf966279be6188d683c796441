@@ -53,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "adc728a0_fe53e102",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-20T20:16:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e761dc8b_1f94f6db",
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "116fbc41_4746c1c4",
@@ -90,6 +108,30 @@
       "side": 1,
       "message": "If the function would otherwise require the `target_os` to be passed, then I go ahead and obviate its `os_is_device` parameter. Wherever else truly only cared about device-or-not I left as-is, using `os_is_device`.",
       "parentUuid": "116fbc41_4746c1c4",
+      "range": {
+        "startLine": 1763,
+        "startChar": 4,
+        "endLine": 1763,
+        "endChar": 16
+      },
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca3fb0c_8b4470a5",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1763,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-20T20:16:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "225a2bcf_041cebc9",
       "range": {
         "startLine": 1763,
         "startChar": 4,
