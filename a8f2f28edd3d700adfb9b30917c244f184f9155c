@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "768209f5_1cbb2a03",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 522,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2022-12-20T20:44:45Z",
+      "side": 1,
+      "message": "Say cpu_variant_toolchains + arch_variant_toolchains + generic_toolchains has (a1, v1), (a2, v2) and _tn is short for _toolchain_name, This list comprehension makes target_toochains [_tn(a1, v1, False), _tn(a2, v2, False), _tn(a1, v1, True), _tn(a2, v2, True)]\n\nHowever the previous logic may have [_tn(a1, v1, False), _tn(a1, v1, True), _tn(a2, v2, False), _tn(a2, v2, True)]\n\nIs this expected or you need to switch the 2 loops?",
+      "revId": "a8f2f28edd3d700adfb9b30917c244f184f9155c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
