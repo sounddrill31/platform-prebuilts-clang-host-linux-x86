@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e380533_2b6c3b6e",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2022-12-20T13:36:04Z",
+      "side": 1,
+      "message": "SG, thanks",
+      "parentUuid": "ff1b2898_29e0a80e",
+      "range": {
+        "startLine": 332,
+        "startChar": 0,
+        "endLine": 332,
+        "endChar": 52
+      },
+      "revId": "a8559e7ce4e5736db5d220da43d6bb7ef0222ef4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fde1c67e_cd04ba4f",
