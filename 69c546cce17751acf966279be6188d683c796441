@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "26eeac8b_78c5378f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-20T19:21:10Z",
+      "side": 1,
+      "message": "Thanks for taking a look!",
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "35504e7f_f8dd22f1",
@@ -20,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e761dc8b_1f94f6db",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-20T19:21:10Z",
+      "side": 1,
+      "message": "This *is* different to the old logic and expected insofar as the general work for b/205771732; there are various conditions that used to check for Android when they really mean they care about bionic, and various conditions vice-versa.",
+      "parentUuid": "35504e7f_f8dd22f1",
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "116fbc41_4746c1c4",
         "filename": "cc_toolchain_features.bzl",
         "patchSetId": 6
@@ -31,6 +66,30 @@
       "writtenOn": "2022-12-20T18:19:29Z",
       "side": 1,
       "message": "You have replaced `os_is_device` with `target_os` in many functions in this file. Is there any reason you keep using `os_is_device` in `_get_sdk_version_features`, `_additional_linker_flags`, `_static_binary_linker_flags`, etc,.?",
+      "range": {
+        "startLine": 1763,
+        "startChar": 4,
+        "endLine": 1763,
+        "endChar": 16
+      },
+      "revId": "69c546cce17751acf966279be6188d683c796441",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "225a2bcf_041cebc9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1763,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-20T19:21:10Z",
+      "side": 1,
+      "message": "If the function would otherwise require the `target_os` to be passed, then I go ahead and obviate its `os_is_device` parameter. Wherever else truly only cared about device-or-not I left as-is, using `os_is_device`.",
+      "parentUuid": "116fbc41_4746c1c4",
       "range": {
         "startLine": 1763,
         "startChar": 4,
