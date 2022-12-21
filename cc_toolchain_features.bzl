@@ -39,6 +39,9 @@ def is_os_device(os):
 def is_os_bionic(os):
     return os == _oses.Android or os == _oses.LinuxBionic
 
+def _sdk_version_features_before(version):
+    return ["sdk_version_" + str(i) for i in range(1, version)]
+
 def _get_sdk_version_features(os_is_device, target_arch):
     if not os_is_device:
         return []
@@ -537,7 +540,6 @@ def _pack_dynamic_relocations_features(target_os):
     if not is_os_bionic(target_os):
         return [pack_dynamic_relocations_feature, disable_pack_relocations_feature]
 
-    # sdk version >= 30
     sht_relr_feature = feature(
         name = "sht_relr",
         provides = ["pack_dynamic_relocations"],
@@ -556,7 +558,7 @@ def _pack_dynamic_relocations_features(target_os):
                             "disable_pack_relocations",
                             "android_relr",
                             "relocation_packer",
-                        ],
+                        ] + _sdk_version_features_before(30),
                     ),
                 ],
             ),
@@ -564,7 +566,6 @@ def _pack_dynamic_relocations_features(target_os):
         enabled = True,
     )
 
-    # sdk version >= 28
     android_relr_feature = feature(
         name = "android_relr",
         provides = ["pack_dynamic_relocations"],
@@ -583,7 +584,7 @@ def _pack_dynamic_relocations_features(target_os):
                             "disable_pack_relocations",
                             "sht_relr",
                             "relocation_packer",
-                        ],
+                        ] + _sdk_version_features_before(28),
                     ),
                 ],
             ),
@@ -591,7 +592,6 @@ def _pack_dynamic_relocations_features(target_os):
         enabled = False,
     )
 
-    # sdk version >= 32
     relocation_packer_feature = feature(
         name = "relocation_packer",
         provides = ["pack_dynamic_relocations"],
@@ -610,7 +610,7 @@ def _pack_dynamic_relocations_features(target_os):
                             "disable_pack_relocations",
                             "sht_relr",
                             "android_relr",
-                        ],
+                        ] + _sdk_version_features_before(23),
                     ),
                 ],
             ),
