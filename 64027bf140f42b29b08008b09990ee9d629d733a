@@ -1,0 +1,81 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000034911734",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2366776?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "06ea4196_70811f8d",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_test.bzl",
+              "range": {
+                "startLine": 45,
+                "startChar": 0,
+                "endLine": 46,
+                "endChar": 0
+              },
+              "replacement": "                    \"action was expected to contain SHT_RELR arg, but did not; arguments: %s\" % (action.argv),\n"
+            },
+            {
+              "path": "cc_toolchain_features_test.bzl",
+              "range": {
+                "startLine": 51,
+                "startChar": 0,
+                "endLine": 52,
+                "endChar": 0
+              },
+              "replacement": "                    \"action was expected to contain ANDROID_RELR arg, but did not; arguments: %s\" % (action.argv),\n"
+            },
+            {
+              "path": "cc_toolchain_features_test.bzl",
+              "range": {
+                "startLine": 58,
+                "startChar": 0,
+                "endLine": 59,
+                "endChar": 0
+              },
+              "replacement": "                    \"action unexpectedly contained ANDROID_RELR arg; arguments: %s\" % (action.argv),\n"
+            },
+            {
+              "path": "cc_toolchain_features_test.bzl",
+              "range": {
+                "startLine": 65,
+                "startChar": 0,
+                "endLine": 66,
+                "endChar": 0
+              },
+              "replacement": "                    \"action was expected to contain RELR_PACKER arg, but did not; arguments: %s\" % (action.argv),\n"
+            },
+            {
+              "path": "cc_toolchain_features_test.bzl",
+              "range": {
+                "startLine": 71,
+                "startChar": 0,
+                "endLine": 72,
+                "endChar": 0
+              },
+              "replacement": "                    \"action unexpectedly contained RELR_PACKER arg; arguments: %s\" % (action.argv),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "c0f3f2b0_6b467bad",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-22T16:17:29Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "64027bf140f42b29b08008b09990ee9d629d733a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
