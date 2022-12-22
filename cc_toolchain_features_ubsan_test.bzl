@@ -14,6 +14,15 @@ limitations under the License.
 """
 
 load("@bazel_skylib//lib:unittest.bzl", "analysistest", "asserts")
+load(
+    "//build/bazel/rules/test_common:flags.bzl",
+    "action_flags_android_test",
+    "action_flags_linux_test",
+    # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented
+    # "action_flags_linux_bionic_test",
+    # TODO(b/263787526): Uncomment when musl toolchain is implemented
+    # "action_flags_musl_test",
+)
 
 def _ubsan_integer_overflow_feature_test_impl(ctx):
     env = analysistest.begin(ctx)
@@ -284,25 +293,26 @@ def _test_ubsan_unsupported_non_bionic_checks_disabled_when_linux():
 
     return test_name
 
-def _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic():
-    name = "ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic"
-    test_name = name + "_test"
-
-    native.cc_binary(
-        name = name,
-        srcs = test_srcs,
-        features = ["ubsan_undefined"],
-        tags = ["manual"],
-    )
-
-    ubsan_disablement_linux_bionic_test(
-        name = test_name,
-        target_under_test = name,
-        expected_disabled_sanitizer = "function,vptr",
-        disabled = False,
-    )
-
-    return test_name
+# TODO(b/b/263787980): Uncomment when bionic toolchain is implemented
+#def _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic():
+#    name = "ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic"
+#    test_name = name + "_test"
+#
+#    native.cc_binary(
+#        name = name,
+#        srcs = test_srcs,
+#        features = ["ubsan_undefined"],
+#        tags = ["manual"],
+#    )
+#
+#    ubsan_disablement_linux_bionic_test(
+#        name = test_name,
+#        target_under_test = name,
+#        expected_disabled_sanitizer = "function,vptr",
+#        disabled = False,
+#    )
+#
+#    return test_name
 
 def _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_android():
     name = "ubsan_unsupported_non_bionic_checks_not_disabled_when_android"
@@ -343,6 +353,70 @@ def _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_no_ubsan():
 
     return test_name
 
+link_action_mnemonic = "CppLink"
+sanitizer_no_link_runtime_flag = "-fno-sanitize-link-runtime"
+
+def _test_ubsan_no_link_runtime():
+    name = "ubsan_no_link_runtime"
+
+    native.cc_binary(
+        name = name,
+        srcs = test_srcs,
+        features = ["ubsan_undefined"],
+        tags = ["manual"],
+    )
+
+    android_test_name = name + "_when_android_test"
+    test_names = [android_test_name]
+    action_flags_android_test(
+        name = android_test_name,
+        target_under_test = name,
+        mnemonics_with_flags = [link_action_mnemonic],
+        exclusive = True,
+        expected_flags = [sanitizer_no_link_runtime_flag],
+    )
+
+    # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented
+    #    bionic_test_name = name + "_when_bionic_test"
+    #    action_flags_linux_bionic_test(
+    #        name = bionic_test_name,
+    #        target_under_test = name,
+    #        mnemonics_with_flags = [link_action_mnemonic],
+    #    )
+    #    test_names += [bionic_test_name]
+
+    # TODO(b/263787526): Uncomment when musl toolchain is implemented
+    #    musl_test_name = name + "_when_musl_test"
+    #    action_flags_musl_test(
+    #        name = musl_test_name,
+    #        target_under_test = name,
+    #        mnemonics_with_flags = [link_action_mnemonic],
+    #        expected_flags = [sanitizer_no_link_runtime_flag],
+    #    )
+    #    test_names += [musl_test_name]
+
+    return test_names
+
+def _test_ubsan_link_runtime_when_not_bionic_or_musl():
+    name = "ubsan_link_runtime_when_not_bionic_or_musl"
+    test_name = name + "_test"
+
+    native.cc_binary(
+        name = name,
+        srcs = test_srcs,
+        tags = ["manual"],
+    )
+
+    action_flags_linux_test(
+        name = test_name,
+        target_under_test = name,
+        mnemonics_without_flags = [link_action_mnemonic],
+        exclusive = False,
+        expected_flags = [sanitizer_no_link_runtime_flag],
+    )
+
+    return test_name
+
 def cc_toolchain_features_ubsan_test_suite(name):
     native.test_suite(
         name = name,
@@ -356,7 +430,10 @@ def cc_toolchain_features_ubsan_test_suite(name):
             _test_ubsan_unsigned_shift_base_not_disabled_when_specified(),
             _test_ubsan_unsigned_shift_base_not_disabled_without_integer(),
             _test_ubsan_unsupported_non_bionic_checks_disabled_when_linux(),
+            # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented
+            # _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic(),
             _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_android(),
             _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_no_ubsan(),
-        ],
+            _test_ubsan_link_runtime_when_not_bionic_or_musl(),
+        ] + _test_ubsan_no_link_runtime(),
     )
