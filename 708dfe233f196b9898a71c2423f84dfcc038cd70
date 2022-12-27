@@ -1,0 +1,81 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035073228",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2370870?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "7d961315_7ea1d83b",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 17,
+                "startChar": 0,
+                "endLine": 18,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 20,
+                "endChar": 0
+              },
+              "replacement": "    \"action_flags_android_test\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 21,
+                "startChar": 0,
+                "endLine": 26,
+                "endChar": 0
+              },
+              "replacement": "    # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented\n    #    \"action_flags_linux_bionic_test\",\n    # TODO(b/263787526): Uncomment when musl toolchain is implemented\n    #    \"action_flags_musl_test\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 379,
+                "startChar": 0,
+                "endLine": 397,
+                "endChar": 0
+              },
+              "replacement": "    # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented\n    #    bionic_test_name \u003d name + \"_when_bionic_test\"\n    #    action_flags_linux_bionic_test(\n    #        name \u003d bionic_test_name,\n    #        target_under_test \u003d name,\n    #        mnemonics_with_flags \u003d [link_action_mnemonic],\n    #    )\n    #    test_names +\u003d [bionic_test_name]\n\n    # TODO(b/263787526): Uncomment when musl toolchain is implemented\n    #    musl_test_name \u003d name + \"_when_musl_test\"\n    #    action_flags_musl_test(\n    #        name \u003d musl_test_name,\n    #        target_under_test \u003d name,\n    #        mnemonics_with_flags \u003d [link_action_mnemonic],\n    #        expected_flags \u003d [sanitizer_no_link_runtime_flag],\n    #    )\n    #    test_names +\u003d [musl_test_name]\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 433,
+                "startChar": 0,
+                "endLine": 434,
+                "endChar": 0
+              },
+              "replacement": "            #            _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_linux_bionic(),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "1658a4f0_d9655df4",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-27T19:12:35Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "708dfe233f196b9898a71c2423f84dfcc038cd70",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
