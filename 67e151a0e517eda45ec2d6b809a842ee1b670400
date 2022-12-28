@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b5937fc_90572df5",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 502,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2022-12-28T18:38:05Z",
+      "side": 1,
+      "message": "nit: does it look better to move the 2 tests inside the `[]`?",
+      "revId": "67e151a0e517eda45ec2d6b809a842ee1b670400",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
