@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3d21a42_ba3089a1",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2022-12-28T18:24:01Z",
+      "side": 1,
+      "message": "I think this file should be named something more specific, like maybe `cc_toolchain_relocations_features_test.bzl`",
+      "revId": "53edcecc8fd771c9ee8589d0ebd7426b8bdc5083",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
