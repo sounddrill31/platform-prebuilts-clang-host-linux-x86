@@ -1,0 +1,115 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035114110",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2371408?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "5bd9a7c8_a5c2395f",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 378,
+                "startChar": 0,
+                "endLine": 379,
+                "endChar": 0
+              },
+              "replacement": "            \"@//build/soong/cc/config:integer_overflow_blocklist.txt\",\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "aa9d1b17_87ab2956",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-28T15:16:37Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_config.bzl` to format the file, or apply the suggested fix.",
+      "revId": "464929c6c257ef0077ad865a15308c7810605bc2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035114110",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2371408?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "4d087247_87010259",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1641,
+                "startChar": 0,
+                "endLine": 1646,
+                "endChar": 0
+              },
+              "replacement": "                                \"-fsanitize-ignorelist\u003dbuild/soong/cc/config/integer_overflow_blocklist.txt\",\n                            ],\n                        ),\n                    ],\n                ),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "8520cf12_890feb0e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-28T15:16:37Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "464929c6c257ef0077ad865a15308c7810605bc2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035114110",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2371408?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "446cbbda_ba451c5a",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 91,
+                "startChar": 0,
+                "endLine": 92,
+                "endChar": 0
+              },
+              "replacement": "        expected_flags \u003d [\"-fsanitize-ignorelist\u003dbuild/soong/cc/config/integer_overflow_blocklist.txt\"],\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "e9f8362d_1eced2cf",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-28T15:16:37Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "464929c6c257ef0077ad865a15308c7810605bc2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
