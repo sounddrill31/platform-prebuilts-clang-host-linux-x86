@@ -1637,6 +1637,16 @@ def _get_ubsan_features(target_os):
                         ),
                     ],
                 ),
+                flag_set(
+                    actions = _actions.compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fsanitize-ignorelist=build/soong/cc/config/integer_overflow_blocklist.txt",
+                            ],
+                        ),
+                    ],
+                ),
             ],
             implies = ["ubsan_minimal_runtime", "ubsan_enabled"],
         ),
