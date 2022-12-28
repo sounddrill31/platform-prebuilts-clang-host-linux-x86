@@ -16,6 +16,52 @@
       "message": "Please use the `oses` enum/struct",
       "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5461b3ac_c3f6447c",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-28T18:51:31Z",
+      "side": 1,
+      "message": "In the bug, can you add a reference to this line so that anyone working on the bug know where to find it?",
+      "range": {
+        "startLine": 379,
+        "startChar": 12,
+        "endLine": 379,
+        "endChar": 24
+      },
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56b01533_817f2b35",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2022-12-28T18:51:31Z",
+      "side": 1,
+      "message": "As commented in the other CL, I think we should combine `action_flags_linux_test` and `action_flags_android_test` into a macro and lift `config_settings` to the test\u0027s API. This way, we can default to linux platforms as the rest of the codebase without having to explicitly say \"linux\" here.",
+      "range": {
+        "startLine": 410,
+        "startChar": 4,
+        "endLine": 410,
+        "endChar": 27
+      },
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
