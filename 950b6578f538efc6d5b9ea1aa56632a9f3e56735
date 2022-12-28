@@ -1,0 +1,98 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035127425",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2371408?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "4def1702_1679a45b",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1820,
+                "startChar": 0,
+                "endLine": 1821,
+                "endChar": 0
+              },
+              "replacement": "                _oses.LinuxMusl,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "7b09bc0b_0d85174a",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-28T21:18:26Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "950b6578f538efc6d5b9ea1aa56632a9f3e56735",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035127425",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2371408?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "f3240f77_0151368d",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 19,
+                "startChar": 0,
+                "endLine": 19,
+                "endChar": 0
+              },
+              "replacement": "    \"action_flags_test\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 21,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 367,
+                "startChar": 0,
+                "endLine": 368,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "75bc1528_e0b8b6dd",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-12-28T21:18:26Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "950b6578f538efc6d5b9ea1aa56632a9f3e56735",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
