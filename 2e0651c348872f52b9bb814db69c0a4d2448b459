@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43b143e6_0fc954ee",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 1807,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-28T15:05:01Z",
+      "side": 1,
+      "message": "Please use the `oses` enum/struct",
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
