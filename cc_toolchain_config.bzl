@@ -375,6 +375,7 @@ def android_cc_toolchain(
         srcs = [
             "%s_compiler_binaries" % name,
             "%s_compiler_clang_includes" % name,
+            "@//build/soong/cc/config:integer_overflow_blocklist.txt",
         ],
     )
 
