@@ -18,6 +18,7 @@ load(
     "//build/bazel/rules/test_common:flags.bzl",
     "action_flags_android_test",
     "action_flags_linux_test",
+    "action_flags_test",
     # TODO(b/b/263787980): Uncomment when bionic toolchain is implemented
     # "action_flags_linux_bionic_test",
     # TODO(b/263787526): Uncomment when musl toolchain is implemented
@@ -59,25 +60,37 @@ test_srcs = [
     "baz.s",
     "blah.S",
 ]
+compile_action_mnemonic = "CppCompile"
 
 def _test_ubsan_integer_overflow_feature():
     name = "ubsan_integer_overflow"
-    test_name = name + "_test"
     native.cc_binary(
         name = name,
         srcs = test_srcs,
         features = ["ubsan_integer_overflow"],
         tags = ["manual"],
     )
+    flags_test_name = name + "_base_flags_test"
+    test_names = [flags_test_name]
     ubsan_sanitizer_test(
-        name = test_name,
+        name = flags_test_name,
         target_under_test = name,
         expected_sanitizers = [
             "signed-integer-overflow",
             "unsigned-integer-overflow",
         ],
     )
-    return test_name
+
+    ignorelist_test_name = name + "_ignorelist_flag_test"
+    test_names += [ignorelist_test_name]
+    action_flags_test(
+        name = ignorelist_test_name,
+        target_under_test = name,
+        mnemonics_with_flags = [compile_action_mnemonic],
+        exclusive = True,
+        expected_flags = ["-fsanitize-ignorelist=build/soong/cc/config/integer_overflow_blocklist.txt"],
+    )
+    return test_names
 
 def _test_ubsan_misc_undefined_feature():
     name = "ubsan_misc_undefined"
@@ -421,7 +434,6 @@ def cc_toolchain_features_ubsan_test_suite(name):
     native.test_suite(
         name = name,
         tests = [
-            _test_ubsan_integer_overflow_feature(),
             _test_ubsan_misc_undefined_feature(),
             _test_ubsan_implicit_integer_sign_change_disabled_by_default_with_integer(),
             _test_ubsan_implicit_integer_sign_change_not_disabled_when_specified(),
@@ -435,5 +447,5 @@ def cc_toolchain_features_ubsan_test_suite(name):
             _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_android(),
             _test_ubsan_unsupported_non_bionic_checks_not_disabled_when_no_ubsan(),
             _test_ubsan_link_runtime_when_not_bionic_or_musl(),
-        ] + _test_ubsan_no_link_runtime(),
+        ] + _test_ubsan_no_link_runtime() + _test_ubsan_integer_overflow_feature(),
     )
