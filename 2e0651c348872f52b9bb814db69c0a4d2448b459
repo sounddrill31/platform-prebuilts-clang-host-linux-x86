@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e32fa8ca_3695fcd9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 1807,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2022-12-28T21:21:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43b143e6_0fc954ee",
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5461b3ac_c3f6447c",
@@ -41,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f57808b_ee622d51",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2022-12-28T21:21:07Z",
+      "side": 1,
+      "message": "I think there are too many places that need to be uncommented to warrant linking the specific lines.",
+      "parentUuid": "5461b3ac_c3f6447c",
+      "range": {
+        "startLine": 379,
+        "startChar": 12,
+        "endLine": 379,
+        "endChar": 24
+      },
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "56b01533_817f2b35",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-12-28T18:51:31Z",
       "side": 1,
       "message": "As commented in the other CL, I think we should combine `action_flags_linux_test` and `action_flags_android_test` into a macro and lift `config_settings` to the test\u0027s API. This way, we can default to linux platforms as the rest of the codebase without having to explicitly say \"linux\" here.",
+      "range": {
+        "startLine": 410,
+        "startChar": 4,
+        "endLine": 410,
+        "endChar": 27
+      },
+      "revId": "2e0651c348872f52b9bb814db69c0a4d2448b459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a12c9608_2fecb4b2",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2022-12-28T21:21:07Z",
+      "side": 1,
+      "message": "Discussed offline. Went for hybrid approach",
+      "parentUuid": "56b01533_817f2b35",
       "range": {
         "startLine": 410,
         "startChar": 4,
