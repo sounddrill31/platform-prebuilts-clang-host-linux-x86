@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd4fcbc9_3968702c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2022-12-29T19:08:51Z",
+      "side": 1,
+      "message": "LGTM; thx for the extra unit tests. I\u0027ll uncomment-out in a separate testing CL alongside the others. May introduce a `tests/` dir.",
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
