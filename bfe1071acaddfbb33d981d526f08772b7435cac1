@@ -16,6 +16,80 @@
       "message": "realized that my original attempt was not solving the problem robustly. Made some changes to the features to ensure that the logic is more like Soong.\n\nIn the first patchsets, a user would have to explicitly disable sht_reloc if they wanted another reloc to be used, but now the logic is more like Soong, where the most appropriate reloc is used depending on sdk_version.",
       "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f4fcc88_73f2d65e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T21:20:59Z",
+      "side": 1,
+      "message": "This can call `_sdk_version_features_between(1, version + 1)`, I think",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6716212_27ac7b3c",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T21:20:59Z",
+      "side": 1,
+      "message": "You might be able to use the new `action_flags_test` for this. See https://cs.android.com/android/platform/superproject/+/master:build/bazel/rules/test_common/flags.bzl;l\u003d51.",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad3060a6_61a14c3d",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T21:20:59Z",
+      "side": 1,
+      "message": "Is there a reason the base variables can\u0027t be sets?",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db6f7c01_ad260bc2",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T21:20:59Z",
+      "side": 1,
+      "message": "We have a new way of doing this now, using `target_compatible_with`. See aosp/2360163 for an example.",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
