@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035320388",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2366776?revision\u003d5",
+      "fixSuggestions": [
+        {
+          "fixId": "c51a6f21_69cf086f",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 574,
+                "startChar": 0,
+                "endLine": 575,
+                "endChar": 0
+              },
+              "replacement": "        flag_sets \u003d pack_dyn_relr_flag_sets,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "ccacb731_d8730159",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-01-03T20:54:57Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "7e51b870bce981c97fff2edfc478616617d14920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
