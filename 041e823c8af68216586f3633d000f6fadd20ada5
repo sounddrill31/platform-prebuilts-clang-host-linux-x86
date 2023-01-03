@@ -22,6 +22,30 @@
       },
       "revId": "041e823c8af68216586f3633d000f6fadd20ada5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87a811e9_1a45d3af",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T21:48:41Z",
+      "side": 1,
+      "message": "good call. Done.",
+      "parentUuid": "076d7cc2_d9d9c64a",
+      "range": {
+        "startLine": 9,
+        "startChar": 5,
+        "endLine": 9,
+        "endChar": 14
+      },
+      "revId": "041e823c8af68216586f3633d000f6fadd20ada5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
