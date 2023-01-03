@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bed8a8cf_21229dd1",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T18:40:48Z",
+      "side": 1,
+      "message": "This is a bit different. There are individual ubsan features, and this one represents whether ubsan is enabled overall, so I think it kind of feels weird to just have \"ubsan\".",
+      "parentUuid": "2f4473da_ec127181",
+      "range": {
+        "startLine": 1615,
+        "startChar": 26,
+        "endLine": 1615,
+        "endChar": 33
+      },
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ce4fdac0_3df7c7f8",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-01-03T16:12:43Z",
       "side": 1,
       "message": "Do you know when the musl and bionic toolchains will be implemented? Do we have bugs for that? (Asking because I don\u0027t see b/263787980 blocking any other bugs for implementing the toolchains).\n\nAlso, I think it\u0027s better to leave these commented tests out of submitted code. We can move them to the bugs to make the test more clean. WDYT?",
+      "range": {
+        "startLine": 392,
+        "startChar": 13,
+        "endLine": 392,
+        "endChar": 22
+      },
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23829b71_594c53b3",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T18:40:48Z",
+      "side": 1,
+      "message": "I\u0027m sure we have bugs but I don\u0027t know what they are.\n\nI don\u0027t think it\u0027ll be long...I know Alex is working on bionic now. I\u0027ll ask them for the bug number and set it as a blocker and see what I can find out about musl. I\u0027d rather leave them commented out for now.",
+      "parentUuid": "ce4fdac0_3df7c7f8",
       "range": {
         "startLine": 392,
         "startChar": 13,
@@ -81,6 +129,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6141793b_d2e59f98",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T18:40:48Z",
+      "side": 1,
+      "message": "Oops. I forgot to check for these comments before submitting. I\u0027ll follow up in another CL.",
+      "parentUuid": "d205cba5_1f06d891",
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f79a001a_ef92a06b",
@@ -94,6 +160,24 @@
       "writtenOn": "2023-01-03T16:12:43Z",
       "side": 1,
       "message": "Are we sure it\u0027ll eventually have the same expected flags?",
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cddebe41_5ac4a6a5",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-03T18:40:48Z",
+      "side": 1,
+      "message": "There might be other flags, but yes, these will be there.",
+      "parentUuid": "f79a001a_ef92a06b",
       "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
