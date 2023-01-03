@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000035308152",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2360163?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "cc240d19_f3087eb4",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 131,
+                "startChar": 0,
+                "endLine": 131,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 144,
+                "startChar": 0,
+                "endLine": 144,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 157,
+                "startChar": 0,
+                "endLine": 157,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "b68c5bc0_744aff0a",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-01-03T18:38:19Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "a2815f6b8fd27f9048adc83308b1480642cf645d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
