@@ -16,6 +16,24 @@
       "message": "I think the update for this should be made to the `create_action_flags_test_for_config()` function itself. We also shouldn\u0027t need the `x86_64` constraint if we\u0027re taking this approach.",
       "revId": "816797803ff3e20549217cacf9798f45770e4272",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bdb2e69_c49384fd",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2023-01-03T20:40:52Z",
+      "side": 1,
+      "message": "Discussed offline, and decided to remove `create_action_flags_test_for_config`.",
+      "parentUuid": "b5857558_edfa8fdd",
+      "revId": "816797803ff3e20549217cacf9798f45770e4272",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
