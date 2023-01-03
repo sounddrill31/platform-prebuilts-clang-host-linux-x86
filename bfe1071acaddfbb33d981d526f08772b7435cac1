@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "84fcb607_846e2153",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-03T22:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f4fcc88_73f2d65e",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a6716212_27ac7b3c",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-01-03T21:20:59Z",
       "side": 1,
       "message": "You might be able to use the new `action_flags_test` for this. See https://cs.android.com/android/platform/superproject/+/master:build/bazel/rules/test_common/flags.bzl;l\u003d51.",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f8c5663_6a2a1a76",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-03T22:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a6716212_27ac7b3c",
       "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -75,6 +111,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4d8471d_2b7ac875",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-03T22:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad3060a6_61a14c3d",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 66
+      },
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "db6f7c01_ad260bc2",
@@ -88,6 +148,24 @@
       "writtenOn": "2023-01-03T21:20:59Z",
       "side": 1,
       "message": "We have a new way of doing this now, using `target_compatible_with`. See aosp/2360163 for an example.",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d72b7b51_f1885711",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-03T22:16:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "db6f7c01_ad260bc2",
       "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
