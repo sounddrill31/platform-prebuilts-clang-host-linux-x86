@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4732b3ab_20c854a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-03T21:06:02Z",
+      "side": 1,
+      "message": "realized that my original attempt was not solving the problem robustly. Made some changes to the features to ensure that the logic is more like Soong.\n\nIn the first patchsets, a user would have to explicitly disable sht_reloc if they wanted another reloc to be used, but now the logic is more like Soong, where the most appropriate reloc is used depending on sdk_version.",
+      "revId": "bfe1071acaddfbb33d981d526f08772b7435cac1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
