@@ -16,6 +16,86 @@
       "message": "LGTM; thx for the extra unit tests. I\u0027ll uncomment-out in a separate testing CL alongside the others. May introduce a `tests/` dir.",
       "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f4473da_ec127181",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1615,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-03T16:12:43Z",
+      "side": 1,
+      "message": "I think the \"enabled\" suffix is a little counterintuitive. Any feature is either enabled or disabled and we don\u0027t need to suffix them all with \"enabled\".",
+      "range": {
+        "startLine": 1615,
+        "startChar": 26,
+        "endLine": 1615,
+        "endChar": 33
+      },
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce4fdac0_3df7c7f8",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-03T16:12:43Z",
+      "side": 1,
+      "message": "Do you know when the musl and bionic toolchains will be implemented? Do we have bugs for that? (Asking because I don\u0027t see b/263787980 blocking any other bugs for implementing the toolchains).\n\nAlso, I think it\u0027s better to leave these commented tests out of submitted code. We can move them to the bugs to make the test more clean. WDYT?",
+      "range": {
+        "startLine": 392,
+        "startChar": 13,
+        "endLine": 392,
+        "endChar": 22
+      },
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d205cba5_1f06d891",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-03T16:12:43Z",
+      "side": 1,
+      "message": "Is this supposed to have some expected flags?",
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f79a001a_ef92a06b",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-03T16:12:43Z",
+      "side": 1,
+      "message": "Are we sure it\u0027ll eventually have the same expected flags?",
+      "revId": "96f9e6fa4ba21b053e69b15691c12d39825b5c1c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
