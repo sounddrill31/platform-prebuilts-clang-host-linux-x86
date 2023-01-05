@@ -22,6 +22,30 @@
       },
       "revId": "99ee2978c04340c18f07f1eeb526d4fdd38d38c4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14f8d9fe_ee175205",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-05T17:08:13Z",
+      "side": 1,
+      "message": "If I\u0027m not mistaken, Bazel uses the same action for linking c and s files. Regardless, we definitely should be testing these file types.",
+      "parentUuid": "843bec61_9d06c4f3",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 13
+      },
+      "revId": "99ee2978c04340c18f07f1eeb526d4fdd38d38c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
