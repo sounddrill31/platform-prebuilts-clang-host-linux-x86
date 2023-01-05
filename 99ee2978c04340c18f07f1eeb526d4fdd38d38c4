@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "843bec61_9d06c4f3",
+        "filename": "cc_toolchain_features_pack_relocation_test.bzl",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-05T17:04:54Z",
+      "side": 1,
+      "message": "Since we\u0027re only testing CppLink, do we need these files?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 13
+      },
+      "revId": "99ee2978c04340c18f07f1eeb526d4fdd38d38c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
