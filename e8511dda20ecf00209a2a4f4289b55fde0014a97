@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aebb0f14_474ad85b",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-10T15:28:00Z",
+      "side": 1,
+      "message": "Nit: `when_linux` doesn\u0027t read well to me IMO. Should it be `in_linux`?",
+      "range": {
+        "startLine": 510,
+        "startChar": 62,
+        "endLine": 510,
+        "endChar": 72
+      },
+      "revId": "e8511dda20ecf00209a2a4f4289b55fde0014a97",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
