@@ -63,6 +63,30 @@
       },
       "revId": "e8511dda20ecf00209a2a4f4289b55fde0014a97",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d378ee3b_9ecda6e6",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-10T15:36:33Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fcd443a8_aa62a28a",
+      "range": {
+        "startLine": 510,
+        "startChar": 62,
+        "endLine": 510,
+        "endChar": 72
+      },
+      "revId": "e8511dda20ecf00209a2a4f4289b55fde0014a97",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
