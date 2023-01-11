@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb7eb092_7b4c368b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-01-11T17:52:12Z",
+      "side": 1,
+      "message": "LGTM~ Modulo presubmit failure",
+      "revId": "4b6ace7aec191e2e499b01aca579fb8cac57d59b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
