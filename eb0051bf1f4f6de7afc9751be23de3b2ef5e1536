@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "184489a8_2eab46cd",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1829,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-01-12T20:20:22Z",
+      "side": 1,
+      "message": "It may make sense to add the feature only when it\u0027s the correct os rather than always adding both to the toolchain? e.g. similar to https://cs.android.com/android/platform/superproject/+/master:prebuilts/clang/host/linux-x86/cc_toolchain_features.bzl;l\u003d640;drc\u003d4b6ace7aec191e2e499b01aca579fb8cac57d59b",
+      "range": {
+        "startLine": 1829,
+        "startChar": 0,
+        "endLine": 1829,
+        "endChar": 50
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15afa00f_16f4c542",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1836,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-01-12T20:20:22Z",
+      "side": 1,
+      "message": "can you point to where we\u0027re getting this flag from Soong or even better export the value from soong similar to how we export many flags from cc/config (e.g. https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/config/x86_device.go;l\u003d101;drc\u003df68c18f710b08be0d245277df4e5ba3aec20c119)",
+      "range": {
+        "startLine": 1836,
+        "startChar": 0,
+        "endLine": 1836,
+        "endChar": 60
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "856b91c3_1acd5b42",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 553,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-01-12T20:20:22Z",
+      "side": 1,
+      "message": "nit: this likely belongs in a separate CL, but interpreting `exclusive` is quite difficult.\n\nSome things that could improve clarity:\n\nSeparate args: `expected_flags`, `expected_absent_flags`\n\nseparate rules/implementation for the various types -- this would help make the goal of the test clear. e.g.\n\n* `action_flags_test_present_only_for_mnemonic`\n* `action_flags_test_absent_for_mnemonic`\n* `action_flags_test_absent_only_for_mnemonic`\n\nI\u0027m not sure what the use case for `action_flags_test_absent_only_for_mnemonic` would be -- it seems most (all?) of the uses of `mnemonics_without_flags` also set `exclusive \u003d False`.\n\nThis may also simplify the test implementation and make it more clear what is being checked for a specific test.",
+      "range": {
+        "startLine": 552,
+        "startChar": 8,
+        "endLine": 553,
+        "endChar": 41
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
