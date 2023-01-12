@@ -1585,6 +1585,40 @@ def _get_thinlto_features():
     ]
     return features
 
+def _ubsan_flag_feature(name, actions, flags):
+    return feature(
+        name = name,
+        enabled = True,
+        flag_sets = [
+            flag_set(
+                actions = actions,
+                flag_groups = [
+                    flag_group(
+                        flags = flags,
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        features = ["ubsan_enabled"],
+                    ),
+                ],
+            ),
+        ],
+    )
+
+def _host_or_device_specific_ubsan_feature(target_os):
+    if is_os_device(target_os):
+        return _ubsan_flag_feature(
+            "ubsan_device_only_flags",
+            _actions.compile,
+            _generated_constants.DeviceOnlySanitizeFlags,
+        )
+    return _ubsan_flag_feature(
+        "ubsan_host_only_flags",
+        _actions.compile,
+        _generated_constants.HostOnlySanitizeFlags,
+    )
+
 int_overflow_ignorelist_path = "build/soong/cc/config"
 int_overflow_ignorelist_filename = "integer_overflow_blocklist.txt"
 
@@ -1822,6 +1856,8 @@ def _get_ubsan_features(target_os):
             ],
         ),
     ]
+
+    ubsan_features += [_host_or_device_specific_ubsan_feature(target_os)]
 
     return ubsan_features
 
