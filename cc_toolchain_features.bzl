@@ -1823,6 +1823,55 @@ def _get_ubsan_features(target_os):
         ),
     ]
 
+    ubsan_features += [
+        feature(
+            name = "ubsan_host_only_features",
+            enabled = not is_os_device(target_os),
+            flag_sets = [
+                flag_set(
+                    actions = _actions.compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fno-sanitize-recover=all",
+                            ],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            features = ["ubsan_enabled"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
+    ubsan_features += [
+        feature(
+            name = "ubsan_device_only_features",
+            enabled = is_os_device(target_os),
+            flag_sets = [
+                flag_set(
+                    actions = _actions.compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                "-fsanitize-trap=all",
+                                "-fsanitize-trap=abort",
+                            ],
+                        ),
+                    ],
+                    with_features = [
+                        with_feature_set(
+                            features = ["ubsan_enabled"],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
     return ubsan_features
 
 # Create the full list of features.
