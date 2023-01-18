@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edc10d95_8819c22a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-01-18T19:06:32Z",
+      "side": 1,
+      "message": "The emulator builds shouldn\u0027t be affected by this change but re-run presubmit before bypass.",
+      "revId": "0c1b38b9d76c2e184189468bb77d64529cda9fab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
