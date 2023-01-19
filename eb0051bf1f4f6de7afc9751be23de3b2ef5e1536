@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f0e2380_08b145c5",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1829,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-19T16:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "184489a8_2eab46cd",
+      "range": {
+        "startLine": 1829,
+        "startChar": 0,
+        "endLine": 1829,
+        "endChar": 50
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "15afa00f_16f4c542",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1df5cef5_2a091e5e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1836,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-19T16:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15afa00f_16f4c542",
+      "range": {
+        "startLine": 1836,
+        "startChar": 0,
+        "endLine": 1836,
+        "endChar": 60
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "856b91c3_1acd5b42",
@@ -60,6 +108,30 @@
       "writtenOn": "2023-01-12T20:20:22Z",
       "side": 1,
       "message": "nit: this likely belongs in a separate CL, but interpreting `exclusive` is quite difficult.\n\nSome things that could improve clarity:\n\nSeparate args: `expected_flags`, `expected_absent_flags`\n\nseparate rules/implementation for the various types -- this would help make the goal of the test clear. e.g.\n\n* `action_flags_test_present_only_for_mnemonic`\n* `action_flags_test_absent_for_mnemonic`\n* `action_flags_test_absent_only_for_mnemonic`\n\nI\u0027m not sure what the use case for `action_flags_test_absent_only_for_mnemonic` would be -- it seems most (all?) of the uses of `mnemonics_without_flags` also set `exclusive \u003d False`.\n\nThis may also simplify the test implementation and make it more clear what is being checked for a specific test.",
+      "range": {
+        "startLine": 552,
+        "startChar": 8,
+        "endLine": 553,
+        "endChar": 41
+      },
+      "revId": "eb0051bf1f4f6de7afc9751be23de3b2ef5e1536",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "29d2b679_73ae8db2",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 553,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-19T16:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "856b91c3_1acd5b42",
       "range": {
         "startLine": 552,
         "startChar": 8,
