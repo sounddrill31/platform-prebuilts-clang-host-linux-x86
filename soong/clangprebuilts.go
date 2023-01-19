@@ -29,11 +29,27 @@ import (
 	"android/soong/genrule"
 )
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 const libLLVMSoFormat = "libLLVM-%ssvn.so"
 const libclangSoFormat = "libclang.so.%ssvn"
 const libclangCxxSoFormat = "libclang_cxx.so.%ssvn"
+=======
+const libclangCppSoFormat = "libclang-cpp.so.%sgit"
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
+=======
+
+var (
+	// Files included in the llvm-tools filegroup in ../Android.bp
+	llvmToolsFiles = []string{
+		"bin/llvm-symbolizer",
+		"bin/llvm-cxxfilt",
+		"lib64/libc++.so.1",
+	}
+)
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 
 // This module is used to generate libfuzzer, libomp static libraries and
 // libclang_rt.* shared libraries. When LLVM_PREBUILTS_VERSION and
@@ -50,24 +66,34 @@ func init() {
 		libClangRtPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_static",
 		libClangRtPrebuiltLibraryStaticFactory)
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 	android.RegisterModuleType("libclang_rt_llndk_library",
 		libClangRtLLndkLibraryFactory)
+=======
+	android.RegisterModuleType("libclang_rt_prebuilt_object",
+		libClangRtPrebuiltObjectFactory)
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 	android.RegisterModuleType("llvm_darwin_filegroup",
 		llvmDarwinFileGroupFactory)
 	android.RegisterModuleType("clang_builtin_headers",
 		clangBuiltinHeadersFactory)
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
+=======
+	android.RegisterModuleType("llvm_tools_filegroup",
+		llvmToolsFilegroupFactory)
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
 func getClangPrebuiltDir(ctx android.LoadHookContext) string {
 	return path.Join(
 		"./",
-		ctx.AConfig().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
+		ctx.Config().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
 	)
 }
 
 func getClangResourceDir(ctx android.LoadHookContext) string {
 	clangDir := getClangPrebuiltDir(ctx)
-	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
+	releaseVersion := ctx.Config().GetenvWithDefault("LLVM_RELEASE_VERSION",
 		config.ClangDefaultShortVersion)
 	return path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
 }
@@ -84,19 +110,13 @@ func trimVersionNumbers(ver string, retain int) string {
 }
 
 func getHostLibrary(ctx android.LoadHookContext) string {
-	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
+	releaseVersion := ctx.Config().GetenvWithDefault("LLVM_RELEASE_VERSION",
 		config.ClangDefaultShortVersion)
 
 	switch ctx.ModuleName() {
-	case "prebuilt_libLLVM_host":
+	case "prebuilt_libclang-cpp_host":
 		versionStr := trimVersionNumbers(releaseVersion, 1)
-		return fmt.Sprintf(libLLVMSoFormat, versionStr)
-	case "prebuilt_libclang_host":
-		versionStr := trimVersionNumbers(releaseVersion, 1)
-		return fmt.Sprintf(libclangSoFormat, versionStr)
-	case "prebuilt_libclang_cxx_host":
-		versionStr := trimVersionNumbers(releaseVersion, 1)
-		return fmt.Sprintf(libclangCxxSoFormat, versionStr)
+		return fmt.Sprintf(libclangCppSoFormat, versionStr)
 	case "prebuilt_libc++_host":
 		return libcxxSoName
 	case "prebuilt_libc++abi_host":
@@ -109,7 +129,7 @@ func getHostLibrary(ctx android.LoadHookContext) string {
 
 func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	moduleName := ctx.ModuleName()
-	enabled := ctx.AConfig().IsEnvTrue("LLVM_BUILD_HOST_TOOLS")
+	enabled := ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS")
 
 	clangDir := getClangPrebuiltDir(ctx)
 
@@ -149,7 +169,12 @@ func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	ctx.AppendProperties(p)
 }
 
+type archInnerProps struct {
+	Srcs []string
+	Stem *string
+}
 type archProps struct {
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 	Android_arm struct {
 		Srcs []string
 	}
@@ -162,6 +187,18 @@ type archProps struct {
 	Android_x86_64 struct {
 		Srcs []string
 	}
+=======
+	Android_arm         archInnerProps
+	Android_arm64       archInnerProps
+	Android_x86         archInnerProps
+	Android_x86_64      archInnerProps
+	Linux_bionic_arm64  archInnerProps
+	Linux_bionic_x86_64 archInnerProps
+	Glibc_x86           archInnerProps
+	Glibc_x86_64        archInnerProps
+	Linux_musl_x86      archInnerProps
+	Linux_musl_x86_64   archInnerProps
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -184,6 +221,13 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
+=======
+	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
+	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+	p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-linux-musl/lib", name)}
+	p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-linux-musl/lib", name)}
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 	ctx.AppendProperties(p)
 }
 
@@ -191,15 +235,23 @@ type prebuiltLibrarySharedProps struct {
 	Has_stubs *bool
 }
 
-func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLibrarySharedProps) {
-	if ctx.AConfig().IsEnvTrue("FORCE_BUILD_SANITIZER_SHARED_OBJECTS") {
+type prebuiltLibraryProps struct {
+	Lib_name *string
+
+	Suffix *string
+}
+
+func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, libProps *prebuiltLibraryProps,
+	sharedProps *prebuiltLibrarySharedProps) {
+
+	if ctx.Config().IsEnvTrue("FORCE_BUILD_SANITIZER_SHARED_OBJECTS") {
 		return
 	}
 
 	libDir := getClangResourceDir(ctx)
 
 	type props struct {
-		Srcs               []string
+		Target             archProps
 		System_shared_libs []string
 		No_libcrt          *bool
 		Sanitize           struct {
@@ -218,9 +270,32 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLi
 
 	p := &props{}
 
-	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
+	name := proptools.StringDefault(libProps.Lib_name, strings.TrimPrefix(ctx.ModuleName(), "prebuilt_"))
+	suffix := proptools.String(libProps.Suffix)
 
-	p.Srcs = []string{path.Join(libDir, name+".so")}
+	p.Target.Android_arm.Srcs = []string{path.Join(libDir, name+"-arm-android"+suffix+".so")}
+	p.Target.Android_arm.Stem = proptools.StringPtr(name + "-arm-android" + suffix)
+	p.Target.Android_arm.Srcs = []string{path.Join(libDir, name+"-arm-android"+suffix+".so")}
+	p.Target.Android_arm.Stem = proptools.StringPtr(name + "-arm-android" + suffix)
+	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".so")}
+	p.Target.Android_arm64.Stem = proptools.StringPtr(name + "-aarch64-android" + suffix)
+	p.Target.Android_x86.Srcs = []string{path.Join(libDir, name+"-i686-android"+suffix+".so")}
+	p.Target.Android_x86.Stem = proptools.StringPtr(name + "-i686-android" + suffix)
+	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64-android"+suffix+".so")}
+	p.Target.Android_x86_64.Stem = proptools.StringPtr(name + "-x86_64-android" + suffix)
+	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".so")}
+	p.Target.Linux_bionic_arm64.Stem = proptools.StringPtr(name + "-aarch64-android" + suffix)
+	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64-android"+suffix+".so")}
+	p.Target.Linux_bionic_x86_64.Stem = proptools.StringPtr(name + "-x86_64-android" + suffix)
+	p.Target.Glibc_x86.Srcs = []string{path.Join(libDir, name+"-i386"+suffix+".so")}
+	p.Target.Glibc_x86.Stem = proptools.StringPtr(name + "-i386" + suffix)
+	p.Target.Glibc_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64"+suffix+".so")}
+	p.Target.Glibc_x86_64.Stem = proptools.StringPtr(name + "-x86_64" + suffix)
+	p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-linux-musl/lib/linux", name+"-i386"+suffix+".so")}
+	p.Target.Linux_musl_x86.Stem = proptools.StringPtr(name + "-i386" + suffix)
+	p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-linux-musl/lib/linux", name+"-x86_64"+suffix+".so")}
+	p.Target.Linux_musl_x86_64.Stem = proptools.StringPtr(name + "-x86_64" + suffix)
+
 	p.System_shared_libs = []string{}
 	p.No_libcrt = proptools.BoolPtr(true)
 	p.Sanitize.Never = proptools.BoolPtr(true)
@@ -229,34 +304,73 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext, in *prebuiltLi
 	p.Pack_relocations = &disable
 	p.Stl = proptools.StringPtr("none")
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 	if proptools.Bool(in.Has_stubs) {
 		p.Stubs.Versions = []string{"10000"}
+=======
+	if proptools.Bool(sharedProps.Is_llndk) {
+		p.Stubs.Versions = []string{"29", "10000"}
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 		p.Stubs.Symbol_file = proptools.StringPtr(getSymbolFilePath(ctx))
 	}
 
 	ctx.AppendProperties(p)
 }
 
-func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext) {
+func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext, libProps *prebuiltLibraryProps) {
 	libDir := getClangResourceDir(ctx)
 
 	type props struct {
-		Srcs               []string
+		Target             archProps
 		System_shared_libs []string
 		No_libcrt          *bool
+		Stl                *string
+	}
+
+	name := proptools.StringDefault(libProps.Lib_name, strings.TrimPrefix(ctx.ModuleName(), "prebuilt_"))
+	name = strings.TrimSuffix(name, ".static")
+	suffix := proptools.String(libProps.Suffix)
+
+	p := &props{}
+
+	p.Target.Android_arm.Srcs = []string{path.Join(libDir, name+"-arm-android"+suffix+".a")}
+	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
+	p.Target.Android_x86.Srcs = []string{path.Join(libDir, name+"-i686-android"+suffix+".a")}
+	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64-android"+suffix+".a")}
+	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, name+"-aarch64-android"+suffix+".a")}
+	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64-android"+suffix+".a")}
+	p.Target.Glibc_x86.Srcs = []string{path.Join(libDir, name+"-i386"+suffix+".a")}
+	p.Target.Glibc_x86_64.Srcs = []string{path.Join(libDir, name+"-x86_64"+suffix+".a")}
+	p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-linux-musl/lib/linux", name+"-i386"+suffix+".a")}
+	p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-linux-musl/lib/linux", name+"-x86_64"+suffix+".a")}
+	p.System_shared_libs = []string{}
+	p.No_libcrt = proptools.BoolPtr(true)
+	p.Stl = proptools.StringPtr("none")
+	ctx.AppendProperties(p)
+}
+
+func libClangRtPrebuiltObject(ctx android.LoadHookContext) {
+	libDir := getClangResourceDir(ctx)
+
+	type props struct {
+		Arch struct {
+			X86 struct {
+				Srcs []string
+			}
+			X86_64 struct {
+				Srcs []string
+			}
+		}
+		System_shared_libs []string
 		Stl                *string
 	}
 
 	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
 
 	p := &props{}
-	if strings.HasSuffix(name, ".static") {
-		p.Srcs = []string{path.Join(libDir, strings.TrimSuffix(name, ".static")+".a")}
-	} else {
-		p.Srcs = []string{path.Join(libDir, name+".a")}
-	}
+	p.Arch.X86.Srcs = []string{path.Join(libDir, name+"-i386.o")}
+	p.Arch.X86_64.Srcs = []string{path.Join(libDir, name+"-x86_64.o")}
 	p.System_shared_libs = []string{}
-	p.No_libcrt = proptools.BoolPtr(true)
 	p.Stl = proptools.StringPtr("none")
 	ctx.AppendProperties(p)
 }
@@ -305,17 +419,28 @@ func llvmHostPrebuiltLibrarySharedFactory() android.Module {
 
 func libClangRtPrebuiltLibrarySharedFactory() android.Module {
 	module, _ := cc.NewPrebuiltSharedLibrary(android.HostAndDeviceSupported)
-	props := &prebuiltLibrarySharedProps{}
-	module.AddProperties(props)
+	props := &prebuiltLibraryProps{}
+	sharedProps := &prebuiltLibrarySharedProps{}
+	module.AddProperties(props, sharedProps)
 	android.AddLoadHook(module, func(ctx android.LoadHookContext) {
-		libClangRtPrebuiltLibraryShared(ctx, props)
+		libClangRtPrebuiltLibraryShared(ctx, props, sharedProps)
 	})
 	return module.Init()
 }
 
 func libClangRtPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
-	android.AddLoadHook(module, libClangRtPrebuiltLibraryStatic)
+	props := &prebuiltLibraryProps{}
+	module.AddProperties(props)
+	android.AddLoadHook(module, func(ctx android.LoadHookContext) {
+		libClangRtPrebuiltLibraryStatic(ctx, props)
+	})
+	return module.Init()
+}
+
+func libClangRtPrebuiltObjectFactory() android.Module {
+	module := cc.NewPrebuiltObject(android.HostAndDeviceSupported)
+	android.AddLoadHook(module, libClangRtPrebuiltObject)
 	return module.Init()
 }
 
@@ -337,7 +462,7 @@ func llvmHostDefaults(ctx android.LoadHookContext) {
 	}
 
 	p := &props{}
-	if !ctx.AConfig().IsEnvTrue("LLVM_BUILD_HOST_TOOLS") {
+	if !ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS") {
 		p.Enabled = proptools.BoolPtr(false)
 	}
 	ctx.AppendProperties(p)
@@ -358,7 +483,7 @@ func clangBuiltinHeaders(ctx android.LoadHookContext) {
 	p := &props{}
 	builtinHeadersDir := path.Join(
 		getClangPrebuiltDir(ctx), "lib64", "clang",
-		ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
+		ctx.Config().GetenvWithDefault("LLVM_RELEASE_VERSION",
 			config.ClangDefaultShortVersion), "include")
 	s := "$(location) " + path.Join(ctx.ModuleDir(), builtinHeadersDir) + " $(in) >$(out)"
 	p.Cmd = &s
@@ -372,3 +497,25 @@ func clangBuiltinHeadersFactory() android.Module {
 	android.AddLoadHook(module, clangBuiltinHeaders)
 	return module
 }
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
+=======
+
+func llvmToolsFileGroup(ctx android.LoadHookContext) {
+	type props struct {
+		Srcs []string
+	}
+
+	p := &props{}
+	prebuiltDir := path.Join(getClangPrebuiltDir(ctx))
+	for _, src := range llvmToolsFiles {
+		p.Srcs = append(p.Srcs, path.Join(prebuiltDir, src))
+	}
+	ctx.AppendProperties(p)
+}
+
+func llvmToolsFilegroupFactory() android.Module {
+	module := android.FileGroupFactory()
+	android.AddLoadHook(module, llvmToolsFileGroup)
+	return module
+}
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)

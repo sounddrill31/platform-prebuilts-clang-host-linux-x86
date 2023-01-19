@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 #
 # Copyright (C) 2015 The Android Open Source Project
 #
@@ -64,3 +65,5 @@ include $(BUILD_PREBUILT)
 # There is no x86_64 prebuilt here yet.
 
 endif
+=======
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)

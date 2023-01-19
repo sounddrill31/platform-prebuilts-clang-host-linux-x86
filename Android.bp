@@ -31,6 +31,7 @@ llvm_prebuilt_library_static {
     },
 }
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-arm-android",
     sdk_version: "minimum",
@@ -53,9 +54,78 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+=======
+cc_defaults {
+    name: "libclang_rt-prebuilt-default",
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.builtins",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    native_bridge_supported: true,
+    host_supported: true,
+    sanitize: {
+        never: true,
+    },
+    stl: "none",
+    bazel_module: {
+        label: "//prebuilts/clang/host/linux-x86:libclang_rt",
+    },
+}
+
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.builtins-exported",
+    lib_name: "libclang_rt.builtins",
+    suffix: "-exported",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    native_bridge_supported: true,
+    sanitize: {
+        never: true,
+    },
+    enabled: false,
+    target: {
+        android_arm: {
+            enabled: true,
+        },
+        android_x86: {
+            enabled: true,
+        },
+    },
+    stl: "none",
+    // This exported variant of the builtins library is only intended for use in
+    // libc.so and libm.so, which exports some builtins symbols for backwards
+    // compatibility.
+    visibility: [
+        "//bionic:__subpackages__",
+        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
+    ],
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.asan",
+    defaults: ["libclang_rt-prebuilt-default"],
+    host_supported: true,
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     sanitize: {
         never: true,
     },
@@ -106,6 +176,8 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-arm-android",
+=======
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     sdk_version: "24",
     enabled: false,
     recovery_available: true,
@@ -116,6 +188,7 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     has_stubs: true,
 }
 
@@ -212,8 +285,12 @@ libclang_rt_llndk_library {
             enabled: true,
         },
     },
+=======
+    is_llndk: true,
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_llndk_library {
     name: "libclang_rt.hwasan-aarch64-android",
     enabled: false,
@@ -221,12 +298,30 @@ libclang_rt_llndk_library {
         arm64: {
             enabled: true,
         },
+=======
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_shared {
+    name: "libclang_rt.ubsan_standalone",
+    defaults: ["libclang_rt-prebuilt-default"],
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    double_loadable: true,
+    stl: "c++_shared",
+    vndk: {
+        enabled: true,
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     },
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 }
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-arm-android",
+=======
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     sdk_version: "24",
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     enabled: false,
     vendor_available: true,
     recovery_available: true,
@@ -282,9 +377,20 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-x86_64-android",
     sdk_version: "minimum",
     enabled: false,
+=======
+    check_elf_files: false,  // Bypass circular dependency between libc++
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone.static",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "24",
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     vendor_available: true,
     recovery_available: true,
     double_loadable: true,
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     vndk: {
         enabled: true,
     },
@@ -342,10 +448,35 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+=======
+    host_supported: true,
+    stl: "c++_static",
+    check_elf_files: false,  // Bypass circular dependency between libc++
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_minimal",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "24",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    double_loadable: true,
+    host_supported: true,
+    native_bridge_supported: true,
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
+}
+
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.hwasan_static-aarch64-android",
+=======
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.hwasan_static",
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
@@ -358,7 +489,7 @@ libclang_rt_prebuilt_library_static {
 }
 
 libclang_rt_prebuilt_library_shared {
-    name: "libclang_rt.hwasan-aarch64-android",
+    name: "libclang_rt.hwasan",
     sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
@@ -368,6 +499,7 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     has_stubs: true,
 }
 
@@ -421,9 +553,28 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+=======
+    is_llndk: true,
+    defaults: [
+        "libclang_rt-prebuilt-default",
+    ],
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.profile",
+    defaults: ["libclang_rt-prebuilt-default"],
+    host_supported: true,
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    check_elf_files: false,  // Bypass circular dependency between libc++
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
 libclang_rt_prebuilt_library_static {
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     name: "libclang_rt.profile-x86_64",
     sdk_version: "minimum",
     enabled: false,
@@ -475,8 +626,15 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.fuzzer-arm-android",
     sdk_version: "minimum",
     enabled: false,
+=======
+    name: "libclang_rt.fuzzer",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "minimum",
+    host_supported: true,
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     recovery_available: true,
     vendor_available: true,
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     arch: {
         arm: {
             enabled: true,
@@ -598,8 +756,17 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+=======
+    product_available: true,
+    ramdisk_available: false,
+    vendor_ramdisk_available: false,
+    sanitize: {
+        never: true,
+    },
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.scudo-arm-android.static",
     enabled: false,
@@ -655,7 +822,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
 }
+=======
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo_minimal-arm-android",
     sdk_version: "24",
@@ -718,8 +888,16 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     shared_libs: ["libc", "libdl", "liblog"],
+=======
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_object {
+    name: "clang_rt.crtbegin",
+    host_supported: true,
+    defaults: ["libclang_rt-prebuilt-default"],
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.scudo_minimal-arm-android.static",
     enabled: false,
@@ -774,8 +952,61 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+=======
+libclang_rt_prebuilt_object {
+    name: "clang_rt.crtend",
+    host_supported: true,
+    defaults: ["libclang_rt-prebuilt-default"],
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 }
 
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
+=======
+///////////////////////////////////////////////////////////////////////////////
+cc_defaults {
+    name: "libunwind-android-default",
+    defaults: [
+        "libclang_rt-prebuilt-default",
+        "linux_bionic_supported",
+    ],
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    native_bridge_supported: true,
+    sanitize: {
+        never: true,
+    },
+    stl: "none",
+    // The unwinder needs functions from libc (and libdl), but libc.so links
+    // against libunwind*.a. Clear the system_shared_libs property so that Soong
+    // doesn't complain about the cyclic dependency.
+    system_shared_libs: [],
+}
+
+llvm_prebuilt_library_static {
+    name: "libunwind",
+    defaults: ["libunwind-android-default"],
+    target: {
+        musl: {
+            enabled: true,
+        },
+    },
+}
+
+llvm_prebuilt_library_static {
+    name: "libunwind-exported",
+    defaults: ["libunwind-android-default"],
+
+    // The libunwind-exported.a library is only intended for use with libc.so,
+    // which needs to export the unwinder API.
+    visibility: [
+        "//bionic:__subpackages__",
+        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
+    ],
+}
+
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
 // -----------------------------------------------------------------------------
 // Export shared libraries for host tools (libLLVM, libclang, libc++).  These
 // are exported only when the LLVM_BUILD_HOST_TOOLS environment variable is set.
@@ -786,8 +1017,9 @@ llvm_host_defaults {
     name: "llvm-build-host-tools-defaults",
 }
 
-// Export libLLVM shared library
+// Export libclang-cpp shared library
 llvm_host_prebuilt_library_shared {
+<<<<<<< HEAD   (c958c7 Merge empty history for sparse-7779620-L15600000954195552)
     name: "libLLVM_host",
     sanitize: {
         never: true,
@@ -799,6 +1031,9 @@ llvm_host_prebuilt_library_shared {
 // Export libclang_cxx shared library
 llvm_host_prebuilt_library_shared {
     name: "libclang_cxx_host",
+=======
+    name: "libclang-cpp_host",
+>>>>>>> BRANCH (72ee4e Merge cherrypicks of ['aosp/2391481'] into sparse-8937393-L7)
     sanitize: {
         never: true,
     },
