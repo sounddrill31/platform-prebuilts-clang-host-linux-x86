@@ -1,0 +1,98 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000036496964",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2397124?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "260b8131_09c03e89",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1615,
+                "startChar": 0,
+                "endLine": 1616,
+                "endChar": 0
+              },
+              "replacement": "        [\"-Wl,--exclude-libs\u003d\" + path.path],\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "f70741d2_a0a47652",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-01-20T19:19:04Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "7c7de0fe2c5f20f165c72a72f20addce8b9572b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000036496964",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2397124?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "7f052535_7ced90a0",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 555,
+                "startChar": 0,
+                "endLine": 556,
+                "endChar": 0
+              },
+              "replacement": "        os_arch_platform.split(\":\")[-1],\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 571,
+                "startChar": 0,
+                "endLine": 572,
+                "endChar": 0
+              },
+              "replacement": "            ),\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 593,
+                "startChar": 0,
+                "endLine": 631,
+                "endChar": 0
+              },
+              "replacement": "        \"//build/bazel/platforms/os_arch:android_arm64\",\n        \"//build/bazel/platforms/os:android\",\n        \"//build/bazel/platforms/arch:arm64\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:android_x86\",\n        \"//build/bazel/platforms/os:android\",\n        \"//build/bazel/platforms/arch:x86\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:android_x86_64\",\n        \"//build/bazel/platforms/os:android\",\n        \"//build/bazel/platforms/arch:x86_64\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:linux_bionic_x86_64\",\n        \"//build/bazel/platforms/os:linux_bionic\",\n        \"//build/bazel/platforms/arch:x86_64\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:linux_glibc_x86\",\n        \"//build/bazel/platforms/os:linux\",\n        \"//build/bazel/platforms/arch:x86\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:linux_glibc_x86_64\",\n        \"//build/bazel/platforms/os:linux\",\n        \"//build/bazel/platforms/arch:x86_64\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:linux_musl_x86\",\n        \"//build/bazel/platfroms/os:linux_musl\",\n        \"//build/bazel/platforms/arch:x86\",\n    )]\n    test_names +\u003d [_exclude_ubsan_rt_test_for_os_arch(\n        \"//build/bazel/platforms/os_arch:linux_musl_x86_64\",\n        \"//build/bazel/platforms/os:linux_musl\",\n        \"//build/baeel/platfroms/arch:x86_64\",\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "b063156d_565e36f0",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-01-20T19:19:04Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "7c7de0fe2c5f20f165c72a72f20addce8b9572b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
