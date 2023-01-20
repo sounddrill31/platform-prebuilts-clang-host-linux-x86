@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a281c461_6dbd5844",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-20T19:02:16Z",
+      "side": 1,
+      "message": "nit:\n\n(related to [comment from other CL](https://android-review.git.corp.google.com/c/platform/build/soong/+/2395273/comments/c1ce3792_48589724)\n\nCould we use this combined `generated_constants` object in the lines below. Apparently Starlark guards against overwriting fields when adding structs, so this combination is always safe. You get an error like:\n```\nError: cannot add struct instances with common field \u0027x\u0027\n```\nI can imagine copy-pasting some lines below and being frustrated that some field doesn\u0027t exist in `_generated_config_constants`, but does exist in `generated_constants` and spending too much time trying to understand why I can\u0027t read.",
+      "revId": "73bbe58dc1fedc0647be596aa0732edfd9c2f358",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4b23867_d312121d",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-20T19:02:16Z",
+      "side": 1,
+      "message": "typo: `_test_device_only_features`",
+      "range": {
+        "startLine": 584,
+        "startChar": 4,
+        "endLine": 584,
+        "endChar": 30
+      },
+      "revId": "73bbe58dc1fedc0647be596aa0732edfd9c2f358",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
