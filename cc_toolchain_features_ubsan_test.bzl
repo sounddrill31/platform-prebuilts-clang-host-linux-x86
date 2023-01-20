@@ -20,6 +20,10 @@ load(
     "action_flags_present_only_for_mnemonic_test",
 )
 load(
+    ":cc_toolchain_constants.bzl",
+    "libclang_ubsan_minimal_rt_prebuilt_map",
+)
+load(
     ":cc_toolchain_features.bzl",
     "int_overflow_ignorelist_filename",
     "int_overflow_ignorelist_path",
@@ -543,6 +547,91 @@ def _test_no_undefined_flag_absent_when_not_bionic_or_musl():
 
     return test_name
 
+exclude_ubsan_rt_name = "ubsan_exclude_rt"
+
+def _exclude_ubsan_rt_test_for_os_arch(os_arch_platform, os, arch):
+    test_name = "%s_%s_test" % (
+        exclude_ubsan_rt_name,
+        os_arch_platform.split(":")[-1],
+    )
+
+    # For some reason the path returned from the map has the prefix removed
+    # for tests specifically
+    action_flags_present_only_for_mnemonic_test(
+        name = test_name,
+        target_under_test = exclude_ubsan_rt_name,
+        mnemonics = [link_action_mnemonic],
+        expected_flags = [
+            (
+                "-Wl,--exclude-libs=%s/%s" %
+                (
+                    "prebuilts/clang/host/linux-x86",
+                    libclang_ubsan_minimal_rt_prebuilt_map[os_arch_platform],
+                )
+            ),
+        ],
+        target_compatible_with = [os, arch],
+    )
+
+    return test_name
+
+def _test_exclude_ubsan_rt():
+    native.cc_binary(
+        name = exclude_ubsan_rt_name,
+        srcs = test_srcs,
+        features = ["ubsan_undefined"],
+        tags = ["manual"],
+    )
+
+    test_names = []
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:android_arm",
+        "//build/bazel/platforms/os:android",
+        "//build/bazel/platforms/arch:arm",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:android_arm64",
+        "//build/bazel/platforms/os:android",
+        "//build/bazel/platforms/arch:arm64",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:android_x86",
+        "//build/bazel/platforms/os:android",
+        "//build/bazel/platforms/arch:x86",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:android_x86_64",
+        "//build/bazel/platforms/os:android",
+        "//build/bazel/platforms/arch:x86_64",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:linux_bionic_x86_64",
+        "//build/bazel/platforms/os:linux_bionic",
+        "//build/bazel/platforms/arch:x86_64",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:linux_glibc_x86",
+        "//build/bazel/platforms/os:linux",
+        "//build/bazel/platforms/arch:x86",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:linux_glibc_x86_64",
+        "//build/bazel/platforms/os:linux",
+        "//build/bazel/platforms/arch:x86_64",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:linux_musl_x86",
+        "//build/bazel/platforms/os:linux_musl",
+        "//build/bazel/platforms/arch:x86",
+    )]
+    test_names += [_exclude_ubsan_rt_test_for_os_arch(
+        "//build/bazel/platforms/os_arch:linux_musl_x86_64",
+        "//build/bazel/platforms/os:linux_musl",
+        "//build/bazel/platforms/arch:x86_64",
+    )]
+
+    return test_names
+
 def cc_toolchain_features_ubsan_test_suite(name):
     individual_tests = [
         _test_ubsan_misc_undefined_feature(),
@@ -564,5 +653,6 @@ def cc_toolchain_features_ubsan_test_suite(name):
         tests = individual_tests +
                 _test_ubsan_no_link_runtime() +
                 _test_no_undefined_flag_present_when_bionic_or_musl() +
-                _test_ubsan_integer_overflow_feature(),
+                _test_ubsan_integer_overflow_feature() +
+                _test_exclude_ubsan_rt(),
     )
