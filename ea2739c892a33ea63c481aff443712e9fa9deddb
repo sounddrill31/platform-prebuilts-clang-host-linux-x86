@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8a65d25_725024f7",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-25T16:50:20Z",
+      "side": 1,
+      "message": "nit: maybe put this in `cc_toolchain_constants.bzl` also since `libclang_rt_prefix` and `libclang_ubsan_minimal_rt_prebuilt_map` are there too?",
+      "revId": "ea2739c892a33ea63c481aff443712e9fa9deddb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d91194d_2297c71e",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 649,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-25T16:50:20Z",
+      "side": 1,
+      "message": "This should be package private?",
+      "revId": "ea2739c892a33ea63c481aff443712e9fa9deddb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "415d5e84_a61fa762",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 665,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-01-25T16:50:20Z",
+      "side": 1,
+      "message": "nit: could use `paths.join` here rather than the hardcoded `/`",
+      "range": {
+        "startLine": 665,
+        "startChar": 38,
+        "endLine": 665,
+        "endChar": 39
+      },
+      "revId": "ea2739c892a33ea63c481aff443712e9fa9deddb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
