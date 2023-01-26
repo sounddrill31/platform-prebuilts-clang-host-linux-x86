@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5f8151c_54797fd4",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-26T19:12:38Z",
+      "side": 1,
+      "message": "Asserts failing does not exit the test...It continues to run and was printing the same thing for every flag that was not in the correct order. For the motivation behind this variable, see Zi\u0027s comment on this CL.",
+      "parentUuid": "c62327ca_d3f00277",
+      "range": {
+        "startLine": 40,
+        "startChar": 28,
+        "endLine": 40,
+        "endChar": 33
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fdd887c9_42071d97",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f06411d_3a8cbf91",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-26T19:12:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fdd887c9_42071d97",
+      "range": {
+        "startLine": 60,
+        "startChar": 25,
+        "endLine": 60,
+        "endChar": 33
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "371b396e_19ecbddb",
@@ -60,6 +108,30 @@
       "writtenOn": "2023-01-26T17:42:21Z",
       "side": 1,
       "message": "Should we move this test to https://cs.android.com/android/platform/build/bazel/+/master:rules/test_common/flags.bzl?",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 15
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff6ad317_4d701e67",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-01-26T19:12:38Z",
+      "side": 1,
+      "message": "I thought about that, but I think let\u0027s not do that unless we find a case for it in `build/bazel`",
+      "parentUuid": "371b396e_19ecbddb",
       "range": {
         "startLine": 70,
         "startChar": 0,
