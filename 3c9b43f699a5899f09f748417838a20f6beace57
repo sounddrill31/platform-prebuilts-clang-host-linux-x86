@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c62327ca_d3f00277",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-26T17:42:21Z",
+      "side": 1,
+      "message": "IIUC, this always causes this assert to fail and exit. If so, what\u0027s the intention of setting `out_of_order` the line above?",
+      "range": {
+        "startLine": 40,
+        "startChar": 28,
+        "endLine": 40,
+        "endChar": 33
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdd887c9_42071d97",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-26T17:42:21Z",
+      "side": 1,
+      "message": "Nit: typo",
+      "range": {
+        "startLine": 60,
+        "startChar": 25,
+        "endLine": 60,
+        "endChar": 33
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "371b396e_19ecbddb",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-26T17:42:21Z",
+      "side": 1,
+      "message": "Should we move this test to https://cs.android.com/android/platform/build/bazel/+/master:rules/test_common/flags.bzl?",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 15
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
