@@ -16,6 +16,29 @@
       "message": "kokoro rerun",
       "revId": "8f8abaa4463e9d4662bda020c90a732106eff382",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e44e2562_9d7448b0",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1960090
+      },
+      "writtenOn": "2023-01-26T00:34:18Z",
+      "side": 1,
+      "message": "nit: do you think it would be better to print expected flags and actual flags outside the for loop just once, only when `ctx.attr.expected_flags_in_order[expected_index] !\u003d flag` actually happens?\n\nThis update will make the time of for loop from O(n**2) to O(n) without losing readability of the logs.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 52
+      },
+      "revId": "8f8abaa4463e9d4662bda020c90a732106eff382",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
