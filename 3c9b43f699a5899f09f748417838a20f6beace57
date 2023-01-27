@@ -188,6 +188,30 @@
       },
       "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0511a55_62a38c01",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-01-27T20:24:13Z",
+      "side": 1,
+      "message": "\u003e \u003e I think let\u0027s not do that unless we find a case for it in build/bazel\n\u003e \n\u003e IMO I don\u0027t think this is a valid reasoning for not putting it in build/bazel.\n\u003e \n\nNot moving this into a utility function at this time is reasonable to me. My general principle is that we don\u0027t need to worry about extracting something out into a helper/utility until we are hitting our third case of writing the same code. This helps reduce go/yagni.\n\n\u003e The pro of having it in build/bazel is that it\u0027s reusable whenever we need it without having to move it from this repo to build/bazel repo later. I don\u0027t see any con of doing it now other than an extra CL.\n\u003e \n\nThe work to do so now or later is fairly equivalent, as it requires moving code to a different repo, additional CLs, reviews, presubmits. Given that we have no planned use cases for this at this time, it makes sense to delay that work to when it is necessary.\n\n\u003e The risk of having it here is that it\u0027s less visible than `build/bazel/test_common/flags.bzl`. Hence, we likely won\u0027t notice and use it.\n\nThe same is true for any individual test implementation. Unless we have specific use cases that necessitate making something a utility, it makes sense to keep the implementation specific to the test file we are working within. As mentioned above, it\u0027s acceptable to have some duplication in our codebase until we are sure something is worth extracting out.",
+      "parentUuid": "d1a74216_1119b28c",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 15
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
