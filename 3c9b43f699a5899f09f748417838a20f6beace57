@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "18732822_4a1f1c26",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-27T19:26:51Z",
+      "side": 1,
+      "message": "Are we using `asserts.true(env, False, \"...\")` here just to persist the test failures? If so, we should use `analysistest.fail` though. `asserts.true` is a wrapper of `analysistest.fail` with condition validation. Because we don\u0027t have any condition to validate, we can use `analysistest.fail` directly.",
+      "parentUuid": "c5f8151c_54797fd4",
+      "range": {
+        "startLine": 40,
+        "startChar": 28,
+        "endLine": 40,
+        "endChar": 33
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "fdd887c9_42071d97",
         "filename": "cc_toolchain_features_flag_order_test.bzl",
         "patchSetId": 2
@@ -132,6 +156,30 @@
       "side": 1,
       "message": "I thought about that, but I think let\u0027s not do that unless we find a case for it in `build/bazel`",
       "parentUuid": "371b396e_19ecbddb",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 15
+      },
+      "revId": "3c9b43f699a5899f09f748417838a20f6beace57",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1a74216_1119b28c",
+        "filename": "cc_toolchain_features_flag_order_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-27T19:26:51Z",
+      "side": 1,
+      "message": "\u003e I think let\u0027s not do that unless we find a case for it in build/bazel\n\nIMO I don\u0027t think this is a valid reasoning for not putting it in build/bazel.\n\nThe pro of having it in build/bazel is that it\u0027s reusable whenever we need it without having to move it from this repo to build/bazel repo later. I don\u0027t see any con of doing it now other than an extra CL.\n\nThe risk of having it here is that it\u0027s less visible than `build/bazel/test_common/flags.bzl`. Hence, we likely won\u0027t notice and use it.",
+      "parentUuid": "ff6ad317_4d701e67",
       "range": {
         "startLine": 70,
         "startChar": 0,
