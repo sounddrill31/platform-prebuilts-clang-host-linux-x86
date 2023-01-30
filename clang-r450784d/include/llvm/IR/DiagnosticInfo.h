@@ -189,7 +189,7 @@ private:
   /// The computed size usage
   uint64_t ResourceSize;
 
-  // Threshould passed
+  // Threshold passed
   uint64_t ResourceLimit;
 
 public:
