@@ -326,20 +326,6 @@ def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
             ),
         ],
     ))
-    features.append(feature(
-        name = "common_compiler_flags",
-        enabled = True,
-        flag_sets = [
-            flag_set(
-                actions = _actions.compile,
-                flag_groups = [
-                    flag_group(
-                        flags = compiler_flags,
-                    ),
-                ],
-            ),
-        ],
-    ))
 
     # bpf only needs the flag below instead of all the flags in
     # common_compiler_flags
@@ -446,10 +432,23 @@ def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
                 actions = _actions.compile,
                 flag_groups = [
                     flag_group(
-                        flags = [
-                            "-mthumb",
-                            "-Os",
-                        ],
+                        flags = _generated_config_constants.ArmThumbCflags,
+                    ),
+                ],
+            ),
+        ],
+    ))
+
+    # Must follow arm_isa_thumb for flag ordering
+    features.append(feature(
+        name = "common_compiler_flags",
+        enabled = True,
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = compiler_flags,
                     ),
                 ],
             ),
@@ -1561,6 +1560,7 @@ def _get_thinlto_features():
                     ],
                     with_features = [
                         with_feature_set(
+                            features = ["android_thin_lto"],
                             not_features = ["disable_android_thin_lto"],
                         ),
                     ],
@@ -1569,7 +1569,7 @@ def _get_thinlto_features():
         ),
         feature(
             name = "android_thin_lto_limit_cross_tu_inline",
-            enabled = False,
+            enabled = True,
             requires = [feature_set(features = ["android_thin_lto"])],
             flag_sets = [
                 flag_set(
@@ -1581,7 +1581,12 @@ def _get_thinlto_features():
                     ],
                     with_features = [
                         with_feature_set(
-                            not_features = ["disable_android_thin_lto"],
+                            features = ["android_thin_lto"],
+                            not_features = [
+                                "disable_android_thin_lto",
+                                # TODO(b/267220812): Update for PGO
+                                "autofdo",
+                            ],
                         ),
                     ],
                 ),
