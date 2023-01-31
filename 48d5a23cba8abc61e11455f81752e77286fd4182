@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ebc8d09_d36307fe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-31T01:00:47Z",
+      "side": 1,
+      "message": "This CL seems to not make any change to the `android_thin_lto` feature. Should we explicitly say `android_thin_lto_limit_cross_tu_inline` here?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "48d5a23cba8abc61e11455f81752e77286fd4182",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88b30139_19b21207",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-31T01:00:47Z",
+      "side": 1,
+      "message": "Nit: when_autofdo_enabled?",
+      "range": {
+        "startLine": 149,
+        "startChar": 40,
+        "endLine": 149,
+        "endChar": 52
+      },
+      "revId": "48d5a23cba8abc61e11455f81752e77286fd4182",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a3644fa_f81ff48e",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-31T01:00:47Z",
+      "side": 1,
+      "message": "This doesn\u0027t mimic how the `autofdo` feature is enabled in native cc rules. The feature is [implicitly enabled](https://github.com/bazelbuild/bazel/blob/8e41dce65b97a3d466d6b1e65005abc52a07b90b/src/main/java/com/google/devtools/build/lib/rules/cpp/CcCommon.java) a the afdo file is provided. The afdo file is provided via `//command_line_option:fdo_profile`.\n\nIMO we should figure how to trigger enabling `autofdo` feature in a similar way to get better test coverage.\n\nThoughts?",
+      "range": {
+        "startLine": 158,
+        "startChar": 13,
+        "endLine": 158,
+        "endChar": 20
+      },
+      "revId": "48d5a23cba8abc61e11455f81752e77286fd4182",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
