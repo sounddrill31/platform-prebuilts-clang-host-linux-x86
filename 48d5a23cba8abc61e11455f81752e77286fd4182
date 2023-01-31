@@ -26,6 +26,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e059dea_8839d28e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-31T17:46:33Z",
+      "side": 1,
+      "message": "Can we add link to Soong code why we need to replicate this logic?",
+      "range": {
+        "startLine": 1586,
+        "startChar": 33,
+        "endLine": 1586,
+        "endChar": 57
+      },
+      "revId": "48d5a23cba8abc61e11455f81752e77286fd4182",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88b30139_19b21207",
         "filename": "cc_toolchain_features_thinlto_test.bzl",
         "patchSetId": 2
@@ -60,6 +83,30 @@
       "writtenOn": "2023-01-31T01:00:47Z",
       "side": 1,
       "message": "This doesn\u0027t mimic how the `autofdo` feature is enabled in native cc rules. The feature is [implicitly enabled](https://github.com/bazelbuild/bazel/blob/8e41dce65b97a3d466d6b1e65005abc52a07b90b/src/main/java/com/google/devtools/build/lib/rules/cpp/CcCommon.java) a the afdo file is provided. The afdo file is provided via `//command_line_option:fdo_profile`.\n\nIMO we should figure how to trigger enabling `autofdo` feature in a similar way to get better test coverage.\n\nThoughts?",
+      "range": {
+        "startLine": 158,
+        "startChar": 13,
+        "endLine": 158,
+        "endChar": 20
+      },
+      "revId": "48d5a23cba8abc61e11455f81752e77286fd4182",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92f35ba4_80c18ca8",
+        "filename": "cc_toolchain_features_thinlto_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-01-31T17:46:33Z",
+      "side": 1,
+      "message": "Chatted with Trevor offline.\n\nSince this test only cares about whether `autofdo` is enabled and focuses on `lto`, setting it directly here is ok.",
+      "parentUuid": "2a3644fa_f81ff48e",
       "range": {
         "startLine": 158,
         "startChar": 13,
