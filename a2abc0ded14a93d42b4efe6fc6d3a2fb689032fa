@@ -47,6 +47,78 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a95810e8_e20231b6",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T20:45:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "250cb70d_1643bcf0",
+      "range": {
+        "startLine": 1586,
+        "startChar": 28,
+        "endLine": 1586,
+        "endChar": 59
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f476b68e_d711db8c",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T20:45:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "250cb70d_1643bcf0",
+      "range": {
+        "startLine": 1586,
+        "startChar": 28,
+        "endLine": 1586,
+        "endChar": 59
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9f8da6e_9a9eddd3",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T20:45:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "250cb70d_1643bcf0",
+      "range": {
+        "startLine": 1586,
+        "startChar": 28,
+        "endLine": 1586,
+        "endChar": 59
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f861dc71_376e6e4f",
@@ -60,6 +132,30 @@
       "writtenOn": "2023-02-01T20:20:48Z",
       "side": 1,
       "message": "We probably want to remove this line from here as well even if we haven\u0027t decided that we should remove `disable_android_thin_lto` feature completely. That\u0027s because semantically, `android_thin_lto` in `requires` implies that `disable_android_thin_lto` should never be enabled at this level.\n\nThoughts?",
+      "range": {
+        "startLine": 1588,
+        "startChar": 33,
+        "endLine": 1588,
+        "endChar": 57
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0458a777_7cdc1c22",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1588,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T20:45:39Z",
+      "side": 1,
+      "message": "I don\u0027t think that\u0027s true. `not_features` doesn\u0027t exist in `requires`, so we can\u0027t implement this in such a way that `android_thin_lto` cannot be technically be enabled when `disable_android_thin_lto` is enabled. More specifically, the *feature* could be enabled while the flag set is implicitly disabled because of `not_features`. Does that make sense? I\u0027m pretty sure we ultimately will need to have a `with_features` that specifies to disable when thin lto is fully disabled, whether we achieve that with `disable_android_thin_lto` or `fuzzer`.",
+      "parentUuid": "f861dc71_376e6e4f",
       "range": {
         "startLine": 1588,
         "startChar": 33,
