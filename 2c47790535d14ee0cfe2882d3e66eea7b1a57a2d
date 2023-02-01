@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c841eba_9fc97e26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T19:40:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "152c5693_59dee901",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "2c47790535d14ee0cfe2882d3e66eea7b1a57a2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f4715233_32eadc25",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-02-01T16:21:10Z",
       "side": 1,
       "message": "Can we file a bug to remove `disable_android_thin_lto`?\n\nCurrently, `disable_android_thin_lto` is no-op because there is no other feature that implies `disable_android_thin_lto` and `disable_android_thin_lto` sets `enabled` to `False` by default. In other words, `not_features \u003d [\"disable_android_thin_lto]\"` is no-op here and other places.\n\nWe discussed offline and I learned that `disable_android_thin_lto` will be implied/enabled when `fuzzer` is implemented and enabled. We needed `disable_android_thin_lto` because it will expand `-fno-lto` flag. However, if `fuzzer` is the only factor that enable `disable_android_thin_lto`, we can have `fuzzer` to expand `-fno-lto` instead.\n\nRemoving `disable_android_thin_lto` reduces the code redirection and help reasoning about these features better.",
+      "range": {
+        "startLine": 1588,
+        "startChar": 33,
+        "endLine": 1588,
+        "endChar": 57
+      },
+      "revId": "2c47790535d14ee0cfe2882d3e66eea7b1a57a2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05bf9426_cb57ee38",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 1588,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-01T19:40:10Z",
+      "side": 1,
+      "message": "Let\u0027s talk about this with Liz, but not block the CL on it.",
+      "parentUuid": "f4715233_32eadc25",
       "range": {
         "startLine": 1588,
         "startChar": 33,
