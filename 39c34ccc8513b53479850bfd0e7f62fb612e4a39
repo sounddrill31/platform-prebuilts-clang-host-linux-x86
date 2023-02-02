@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000037345264",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2267128?revision\u003d17",
+      "fixSuggestions": [
+        {
+          "fixId": "2c512a54_86db7c2e",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 254,
+                "startChar": 0,
+                "endLine": 254,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "42339a32_9eeb339f",
+        "filename": "BUILD.bazel",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-02-02T20:01:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "39c34ccc8513b53479850bfd0e7f62fb612e4a39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000037345264",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2267128?revision\u003d17",
+      "fixSuggestions": [
+        {
+          "fixId": "177bff0c_f1987efa",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_constants.bzl",
+              "range": {
+                "startLine": 268,
+                "startChar": 0,
+                "endLine": 269,
+                "endChar": 0
+              },
+              "replacement": "    \"//build/bazel/platforms/os_arch:linux_bionic_arm64\": _libclang_rt_prefix + \"/libclang_rt.builtins-aarch64-android.a\",\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "c93c046a_1d7258fb",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-02-02T20:01:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_constants.bzl` to format the file, or apply the suggested fix.",
+      "revId": "39c34ccc8513b53479850bfd0e7f62fb612e4a39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
