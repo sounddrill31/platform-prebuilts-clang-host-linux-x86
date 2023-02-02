@@ -47,6 +47,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f2caf91_c156b046",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1563,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-02T17:54:17Z",
+      "side": 1,
+      "message": "Will do in anotehr CL",
+      "parentUuid": "84ed4511_5166a61a",
+      "range": {
+        "startLine": 1563,
+        "startChar": 41,
+        "endLine": 1563,
+        "endChar": 57
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "250cb70d_1643bcf0",
@@ -227,6 +251,30 @@
       "side": 1,
       "message": "I made a typo. I meant \"when `android_thin_lto` is enabled and the `flag_sets` attr is evaluated, semantically `disable_android_thin_lto` should never be enabled. We shouldn\u0027t have to check it in every flag set of every thin lto feature\".",
       "parentUuid": "2bedc047_8dbd3314",
+      "range": {
+        "startLine": 1588,
+        "startChar": 33,
+        "endLine": 1588,
+        "endChar": 57
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a684d86a_dc4f230b",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1588,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-02-02T17:54:17Z",
+      "side": 1,
+      "message": "Discussed offline. I\u0027m gonna remove all of the `disable...` stuff in another CL anyway so let\u0027s not worry about it here.",
+      "parentUuid": "3ad3aff3_bf0e483a",
       "range": {
         "startLine": 1588,
         "startChar": 33,
