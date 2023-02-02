@@ -26,6 +26,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "84ed4511_5166a61a",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1563,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-02-02T00:11:28Z",
+      "side": 1,
+      "message": "Nit: We should remove this as well.",
+      "range": {
+        "startLine": 1563,
+        "startChar": 41,
+        "endLine": 1563,
+        "endChar": 57
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "250cb70d_1643bcf0",
         "filename": "cc_toolchain_features.bzl",
         "patchSetId": 5
@@ -156,6 +179,30 @@
       "side": 1,
       "message": "I don\u0027t think that\u0027s true. `not_features` doesn\u0027t exist in `requires`, so we can\u0027t implement this in such a way that `android_thin_lto` cannot be technically be enabled when `disable_android_thin_lto` is enabled. More specifically, the *feature* could be enabled while the flag set is implicitly disabled because of `not_features`. Does that make sense? I\u0027m pretty sure we ultimately will need to have a `with_features` that specifies to disable when thin lto is fully disabled, whether we achieve that with `disable_android_thin_lto` or `fuzzer`.",
       "parentUuid": "f861dc71_376e6e4f",
+      "range": {
+        "startLine": 1588,
+        "startChar": 33,
+        "endLine": 1588,
+        "endChar": 57
+      },
+      "revId": "a2abc0ded14a93d42b4efe6fc6d3a2fb689032fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bedc047_8dbd3314",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1588,
+      "author": {
+        "id": 1938760
+      },
+      "writtenOn": "2023-02-02T00:11:28Z",
+      "side": 1,
+      "message": "From the code readiness perspective, I think it\u0027s a little counter-intuitive to `require` something to be enabled at the feature level and then check that it\u0027s not disabled at the flag-set level. \n\nThere might a bit of gray area in how we define `android_thin_lto` and `disable_android_thin_lto` here. Is it true that `android_thin_lto` is always the opposite of `disable_android_thin_lto`? Meaning when one is enabled, the other is disabled? I thought so unless I\u0027m misunderstanding something here.\n\nIIUC let\u0027s take `android_thin_lto_limit_cross_tu_inline` for example.\n\n```\nfeature(\n  name \u003d \"android_thin_lto_limit_cross_tu_inline\",\n  enabled \u003d True,\n  requires \u003d [feature_set(features \u003d [\"android_thin_lto\"])],\n  flag_sets \u003d [\n    flag_set(\n      actions \u003d _actions.link,\n      flag_groups \u003d [],\n      with_features \u003d [\n        with_feature_set(\n          not_features \u003d [\n            \"disable_android_thin_lto\",\n            \"autofdo\",\n          ]\n      ],\n    )\n  ]\n)\n```\n\nPer https://bazel.build/docs/cc-toolchain-config-reference#feature-relationships, `android_thin_lto_limit_cross_tu_inline` is supported only if `android_thin_lto` is enabled. When `android_thin_lto` is enabled and the `flag_sets` attr is evaluated, semantically `disable_android_thin_lto` shouldn\u0027t be disabled. Because if not, it kinda violate the definition of `android_thin_lto` and `disable_anroid_thin_lto`.\n\n\u003e I don\u0027t think that\u0027s true. not_features doesn\u0027t exist in requires, so we can\u0027t implement this in such a way that android_thin_lto cannot be technically be enabled when disable_android_thin_lto is enabled.\n\nThat\u0027s true. But we can achieve the same goal with another way\n\n```\n        feature(\n            name \u003d \"disable_android_thin_lto\",\n            enabled \u003d False,\n            flag_sets \u003d [\n                flag_set(\n                    actions \u003d _actions.compile + _actions.link,\n                    flag_groups \u003d [\n                        flag_group(\n                            flags \u003d [\"-fno-lto\"],\n                        ),\n                    ],\n                    with_features \u003d [\n                        with_feature_set(\n                            not_features \u003d [\"android_thin_lto\"]\n                        )\n                    ]\n                ),\n            ],\n        ),\n```\nthough. I\u0027m surprised that we don\u0027t currently have this. Is there any reason for that? With this approach, we don\u0027t have to repeatedly set `requires \u003d android_thin_lto` and `not_features \u003d disable_android_thin_lto` for each of the lto features.",
+      "parentUuid": "0458a777_7cdc1c22",
       "range": {
         "startLine": 1588,
         "startChar": 33,
