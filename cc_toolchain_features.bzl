@@ -729,8 +729,8 @@ def _rpath_features(target_os, arch_is_64_bit):
                     flag_groups = [
                         flag_group(
                             flags = [
-                                "-Wl,-rpath,$ORIGIN/../lib64",
-                                "-Wl,-rpath,$ORIGIN/lib64",
+                                "-Wl,-rpath,$ORIGIN/../lib",
+                                "-Wl,-rpath,$ORIGIN/lib",
                             ],
                         ),
                     ],
