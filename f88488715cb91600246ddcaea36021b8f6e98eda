@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000038163801",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2346782?revision\u003d9",
+      "fixSuggestions": [
+        {
+          "fixId": "3366730e_d0c62d61",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 18,
+                "startChar": 0,
+                "endLine": 19,
+                "endChar": 0
+              },
+              "replacement": "    ],\n"
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 26,
+                "startChar": 0,
+                "endLine": 27,
+                "endChar": 0
+              },
+              "replacement": "    ],\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "39338605_593477af",
+        "filename": "kleaf/BUILD.bazel",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-02-13T23:00:39Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "f88488715cb91600246ddcaea36021b8f6e98eda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000038163801",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2346782?revision\u003d9",
+      "fixSuggestions": [
+        {
+          "fixId": "93e6547f_53edcafb",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 120,
+                "startChar": 0,
+                "endLine": 121,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "kleaf/cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 169,
+                "startChar": 0,
+                "endLine": 170,
+                "endChar": 0
+              },
+              "replacement": "            includes \u003d _system_include_dirs(ctx),\n"
+            },
+            {
+              "path": "kleaf/cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 174,
+                "startChar": 0,
+                "endLine": 175,
+                "endChar": 0
+              },
+              "replacement": "            includes \u003d _include_dirs(sysroot \u003d sysroot),\n"
+            },
+            {
+              "path": "kleaf/cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 189,
+                "startChar": 0,
+                "endLine": 190,
+                "endChar": 0
+              },
+              "replacement": "        #        cxx_builtin_include_directories \u003d _include_dirs(_sysroot()),\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "3c89e8cd_41a993e2",
+        "filename": "kleaf/cc_toolchain_config.bzl",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-02-13T23:00:39Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/cc_toolchain_config.bzl` to format the file, or apply the suggested fix.",
+      "revId": "f88488715cb91600246ddcaea36021b8f6e98eda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
