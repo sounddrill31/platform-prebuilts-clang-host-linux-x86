@@ -13,6 +13,34 @@ load(
     "ALL_CC_LINK_ACTION_NAMES",
 )
 
+def _toolchain_include_feature(
+        name,
+        include_flag = None,
+        includes = None):
+    flags = []
+    for include in (includes or []):
+        flags.append(include_flag)
+        flags.append(include)
+    if not flags:
+        return feature(
+            name = name,
+            enabled = True,
+        )
+    return feature(
+        name = name,
+        enabled = True,
+        flag_sets = [
+            flag_set(
+                actions = ALL_CC_COMPILE_ACTION_NAMES,
+                flag_groups = [
+                    flag_group(
+                        flags = flags,
+                    ),
+                ],
+            ),
+        ],
+    )
+
 def _tool_paths(ctx):
     # From _setup_env.sh
     #  HOSTCC=clang
@@ -111,5 +139,6 @@ def _common_features(_ctx):
 
 common = struct(
     features = _common_features,
+    toolchain_include_feature = _toolchain_include_feature,
     tool_paths = _tool_paths,
 )
