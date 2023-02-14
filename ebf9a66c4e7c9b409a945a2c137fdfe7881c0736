@@ -16,6 +16,24 @@
       "message": "I know nothing of bazel so forgive me if this is a silly question but did you mean `target_page_size` here?",
       "revId": "ebf9a66c4e7c9b409a945a2c137fdfe7881c0736",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1c5bd28_30db7128",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1889140
+      },
+      "writtenOn": "2023-02-14T01:05:26Z",
+      "side": 1,
+      "message": "That line is importing the `default_page_size` function defined in common.bzl. It is defined in this cl https://android-review.git.corp.google.com/c/platform/build/bazel/+/2434572/1/flags/common.bzl\n\nI can rename it if the name is confusing. Maybe get_default_page_size?",
+      "parentUuid": "899dde6a_496b825a",
+      "revId": "ebf9a66c4e7c9b409a945a2c137fdfe7881c0736",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
