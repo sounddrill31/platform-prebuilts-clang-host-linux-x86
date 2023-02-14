@@ -34,6 +34,24 @@
       "parentUuid": "899dde6a_496b825a",
       "revId": "ebf9a66c4e7c9b409a945a2c137fdfe7881c0736",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68208c0e_b9b2540d",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1965080
+      },
+      "writtenOn": "2023-02-14T01:25:40Z",
+      "side": 1,
+      "message": "Ahh ok yeah a rename would definitely help readability. `get_default_page_size` works great in that regard.",
+      "parentUuid": "e1c5bd28_30db7128",
+      "revId": "ebf9a66c4e7c9b409a945a2c137fdfe7881c0736",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
