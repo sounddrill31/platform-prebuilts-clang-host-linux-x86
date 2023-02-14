@@ -14,12 +14,18 @@
 
 """Configure CC toolchain for Android kernel."""
 
+load(":android_arm64.bzl", "android_arm64")
 load(":common.bzl", "common")
 load(":linux.bzl", "linux")
 
 def _impl(ctx):
     if ctx.attr.target_os == "linux":
         features = linux.features(ctx)
+    elif ctx.attr.target_os == "android":
+        if ctx.attr.target_cpu == "arm64":
+            features = android_arm64.features()
+        else:
+            fail("{} {} is not supported yet".format(ctx.attr.target_os, ctx.attr.target_cpu))
     else:
         fail("target_os == {} is not supported yet".format(ctx.attr.target_os))
 
@@ -47,9 +53,11 @@ clang_config = rule(
     implementation = _impl,
     attrs = {
         "target_cpu": attr.string(mandatory = True, values = [
+            "arm64",
             "x86_64",
         ]),
         "target_os": attr.string(mandatory = True, values = [
+            "android",
             "linux",
         ]),
         "sysroot": attr.string(mandatory = True),

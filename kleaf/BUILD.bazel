@@ -97,3 +97,75 @@ clang_config(
     target_os = "linux",
     toolchain_identifier = "linux_x86_64_clang_id",
 )
+
+## CC: android arm64
+
+# From _setup_env.sh
+# --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
+_ANDROID_ARM64_SYSROOT = dict(
+    label = "@prebuilt_ndk//:sysroot",
+    path = "external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+)
+
+filegroup(
+    name = "android_arm64_compiler_files",
+    srcs = [
+        ":clang_bin",
+        _ANDROID_ARM64_SYSROOT["label"],
+        "//prebuilts/clang/host/linux-x86/kleaf/parent/clang-{}:includes".format(CLANG_VERSION),
+    ],
+)
+
+filegroup(
+    name = "android_arm64_linker_files",
+    srcs = [
+        ":clang_bin",
+        _ANDROID_ARM64_SYSROOT["label"],
+    ],
+)
+
+filegroup(
+    name = "android_arm64_all_files",
+    srcs = [
+        ":android_arm64_compiler_files",
+        ":android_arm64_linker_files",
+        ":clang_bin",
+    ],
+)
+
+toolchain(
+    name = "android_arm64_clang_toolchain",
+    exec_compatible_with = [
+        "@platforms//os:android",
+        "@platforms//cpu:arm64",
+    ],
+    target_compatible_with = [
+        "@platforms//os:android",
+        "@platforms//cpu:arm64",
+    ],
+    toolchain = ":android_arm64_clang",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)
+
+cc_toolchain(
+    name = "android_arm64_clang",
+    all_files = ":android_arm64_all_files",
+    ar_files = ":clang_bin",
+    compiler_files = ":android_arm64_compiler_files",
+    dwp_files = ":clang_bin",
+    linker_files = ":android_arm64_linker_files",
+    objcopy_files = ":clang_bin",
+    strip_files = ":clang_bin",
+    supports_param_files = False,
+    toolchain_config = ":android_arm64_toolchain_config",
+    toolchain_identifier = "android_arm64_clang_id",
+)
+
+clang_config(
+    name = "android_arm64_toolchain_config",
+    clang_version = CLANG_VERSION,
+    sysroot = _ANDROID_ARM64_SYSROOT["path"],
+    target_cpu = "arm64",
+    target_os = "android",
+    toolchain_identifier = "android_arm64_clang_id",
+)
