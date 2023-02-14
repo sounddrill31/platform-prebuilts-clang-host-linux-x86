@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "899dde6a_496b825a",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1965080
+      },
+      "writtenOn": "2023-02-14T01:03:00Z",
+      "side": 1,
+      "message": "I know nothing of bazel so forgive me if this is a silly question but did you mean `target_page_size` here?",
+      "revId": "ebf9a66c4e7c9b409a945a2c137fdfe7881c0736",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
