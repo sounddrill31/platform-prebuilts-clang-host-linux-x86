@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3980484d_48134c89",
+        "filename": "kleaf/linux.bzl",
+        "patchSetId": 20
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-02-15T21:30:17Z",
+      "side": 1,
+      "message": "These should be a separate cc_library",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 75
+      },
+      "revId": "db3b4a7d26c0506e6669a019b60b5b2afaa35592",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
