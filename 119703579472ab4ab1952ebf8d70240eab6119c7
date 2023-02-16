@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "884fecea_23e88f87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "Do you think it might be useful to add `Include-Buildifier-Warnings: enabled` to this change? I caught a couple of warnings but the tool will do it better.",
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc024c45_c7152164",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "I think this is already included twice as linker and compiler flag, might be ok to not include it again?",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 21
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca5744f6_4f95c5f1",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "typo: accepts",
+      "range": {
+        "startLine": 44,
+        "startChar": 71,
+        "endLine": 44,
+        "endChar": 77
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f8ab52f_9373e431",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "is this private to this file, I think it\u0027s Ok to drop the `_common` part.",
+      "range": {
+        "startLine": 79,
+        "startChar": 5,
+        "endLine": 79,
+        "endChar": 12
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3966418_93fb28ff",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "ditto.",
+      "range": {
+        "startLine": 119,
+        "startChar": 5,
+        "endLine": 119,
+        "endChar": 11
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8e6d84d_3b5ed49f",
+        "filename": "kleaf/linux.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "is this used?",
+      "range": {
+        "startLine": 23,
+        "startChar": 21,
+        "endLine": 23,
+        "endChar": 27
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1debe8b4_20dcf855",
+        "filename": "kleaf/linux.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-16T20:01:39Z",
+      "side": 1,
+      "message": "is this used?",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 29
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
