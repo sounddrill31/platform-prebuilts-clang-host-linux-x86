@@ -16,6 +16,23 @@
       "message": "can we add this to the script that packages the clang distribution?\n\nhttps://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/do_build.py#654",
       "revId": "8702c2eb21891e5b9988f4196cba7f8bd011f54e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3eaec3f_90f6908b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2023-02-17T17:14:06Z",
+      "side": 1,
+      "message": "The update script is a good idea; I\u0027m concerned that it\u0027s yet another thing we need to do when upgrading toolchains.",
+      "revId": "8702c2eb21891e5b9988f4196cba7f8bd011f54e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
