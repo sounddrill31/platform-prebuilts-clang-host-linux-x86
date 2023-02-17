@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9014f120_cb1668e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2023-02-17T13:21:32Z",
+      "side": 1,
+      "message": "can we add this to the script that packages the clang distribution?\n\nhttps://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/do_build.py#654",
+      "revId": "8702c2eb21891e5b9988f4196cba7f8bd011f54e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
