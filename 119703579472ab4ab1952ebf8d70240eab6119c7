@@ -273,6 +273,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "13ba6b5d_40542741",
+        "filename": "kleaf/linux.bzl",
+        "patchSetId": 22
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-02-17T11:27:30Z",
+      "side": 1,
+      "message": "It seems that this and the other changes were removed in PS24",
+      "parentUuid": "9bbe175b_12c06329",
+      "range": {
+        "startLine": 23,
+        "startChar": 21,
+        "endLine": 23,
+        "endChar": 27
+      },
+      "revId": "119703579472ab4ab1952ebf8d70240eab6119c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1debe8b4_20dcf855",
         "filename": "kleaf/linux.bzl",
         "patchSetId": 22
