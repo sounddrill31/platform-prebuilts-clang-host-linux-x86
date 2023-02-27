@@ -69,6 +69,23 @@
       "parentUuid": "9014f120_cb1668e5",
       "revId": "8702c2eb21891e5b9988f4196cba7f8bd011f54e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e69ccb18_b308f66c",
+        "filename": "kleaf/update_parent.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-02-27T23:26:33Z",
+      "side": 1,
+      "message": "Do I still need this script with CL:2444103 ?",
+      "revId": "8702c2eb21891e5b9988f4196cba7f8bd011f54e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
