@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f24bb8d_91b1d8a5",
+        "filename": "kleaf/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2023-03-02T19:22:31Z",
+      "side": 1,
+      "message": "We should check if this implies the existing OWNERS are part of this group or excluded.",
+      "revId": "bc6552a5f589fcf68efacbd903ccbd184172de9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
