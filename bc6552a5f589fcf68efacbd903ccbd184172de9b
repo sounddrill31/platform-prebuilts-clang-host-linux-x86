@@ -34,6 +34,24 @@
       "parentUuid": "0f24bb8d_91b1d8a5",
       "revId": "bc6552a5f589fcf68efacbd903ccbd184172de9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84249cca_cb8cd47e",
+        "filename": "kleaf/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-03-02T20:12:00Z",
+      "side": 1,
+      "message": "it implies existing owners; I think that\u0027s what we want unless your team wants to be excluded from the list 😊",
+      "parentUuid": "f5905e52_d16d834a",
+      "revId": "bc6552a5f589fcf68efacbd903ccbd184172de9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
