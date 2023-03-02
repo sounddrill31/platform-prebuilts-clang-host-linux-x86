@@ -16,6 +16,24 @@
       "message": "We should check if this implies the existing OWNERS are part of this group or excluded.",
       "revId": "bc6552a5f589fcf68efacbd903ccbd184172de9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5905e52_d16d834a",
+        "filename": "kleaf/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-03-02T20:03:12Z",
+      "side": 1,
+      "message": "It\u0027s additive unless you add other syntax to remove hierarchical OWNERS.",
+      "parentUuid": "0f24bb8d_91b1d8a5",
+      "revId": "bc6552a5f589fcf68efacbd903ccbd184172de9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
