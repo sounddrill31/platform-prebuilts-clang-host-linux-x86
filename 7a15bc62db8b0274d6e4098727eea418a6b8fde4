@@ -22,6 +22,30 @@
       },
       "revId": "7a15bc62db8b0274d6e4098727eea418a6b8fde4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a39c0b88_68c822b0",
+        "filename": "kleaf/android.bzl",
+        "patchSetId": 14
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-03-02T02:10:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b213e58a_57ba7189",
+      "range": {
+        "startLine": 70,
+        "startChar": 100,
+        "endLine": 70,
+        "endChar": 103
+      },
+      "revId": "7a15bc62db8b0274d6e4098727eea418a6b8fde4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
