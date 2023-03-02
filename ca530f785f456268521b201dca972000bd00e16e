@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "061af719_21fa5276",
+        "filename": "kleaf/BUILD.bazel",
+        "patchSetId": 26
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-03-02T02:11:08Z",
+      "side": 1,
+      "message": "@ndesaulniers@google.com do you know if we are going to set NDK_TRIPLE for riscv? Is there a bug?",
+      "revId": "ca530f785f456268521b201dca972000bd00e16e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
