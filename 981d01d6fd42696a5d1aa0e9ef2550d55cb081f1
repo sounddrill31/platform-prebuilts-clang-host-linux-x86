@@ -16,6 +16,24 @@
       "message": "load(\"@bazel_tools//tools/cpp:toolchain_utils.bzl\", \"CPP_TOOLCHAIN_TYPE\",)",
       "revId": "981d01d6fd42696a5d1aa0e9ef2550d55cb081f1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75a428e5_16012125",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 36
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-03-03T23:32:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "502fa9e4_dafc78d6",
+      "revId": "981d01d6fd42696a5d1aa0e9ef2550d55cb081f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
