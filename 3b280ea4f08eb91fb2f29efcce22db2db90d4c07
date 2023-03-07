@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8cdd0240_b8a5df48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-03-07T23:58:46Z",
+      "side": 1,
+      "message": "unrelated TH error fixed by CL:2475425",
+      "revId": "3b280ea4f08eb91fb2f29efcce22db2db90d4c07",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
