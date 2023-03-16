@@ -81,7 +81,7 @@ clang_version(
         libclang_rt_ubsan_minimal = libclang_ubsan_minimal_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_x86_64"],
         linker_flags = generated_config_constants.X86_64ToolchainLdflags + generated_config_constants.X86_64Lldflags,
         target_arch = arches.X86_64,
-        target_flags = generated_config_constants.X86_64ToolchainCflags +
+        compiler_flags = generated_config_constants.X86_64ToolchainCflags +
                        generated_config_constants.X86_64ArchVariantCflags[variant.arch_variant] +
                        expand_feature_flags(
                            variant.arch_variant,
@@ -105,7 +105,7 @@ clang_version(
         libclang_rt_ubsan_minimal = libclang_ubsan_minimal_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_x86"],
         linker_flags = generated_config_constants.X86ToolchainLdflags + generated_config_constants.X86Lldflags,
         target_arch = arches.X86,
-        target_flags = generated_config_constants.X86ToolchainCflags +
+        compiler_flags = generated_config_constants.X86ToolchainCflags +
                        generated_config_constants.X86ArchVariantCflags[variant.arch_variant] +
                        expand_feature_flags(
                            variant.arch_variant,
@@ -132,7 +132,7 @@ clang_version(
             [],
         ) + generated_config_constants.Arm64Lldflags,
         target_arch = arches.Arm64,
-        target_flags = generated_config_constants.Arm64Cflags +
+        compiler_flags = generated_config_constants.Arm64Cflags +
                        generated_config_constants.Arm64ArchVariantCflags[variant.arch_variant] +
                        generated_config_constants.Arm64CpuVariantCflags.get(
                            variant.cpu_variant,
@@ -156,7 +156,7 @@ clang_version(
         # do not pass "ld"-only flags as Bazel is only using lld. Ensure that all flags are lld-compatible.
         linker_flags = generated_config_constants.ArmLldflags,
         target_arch = arches.Arm,
-        target_flags = generated_config_constants.ArmCflags +
+        compiler_flags = generated_config_constants.ArmCflags +
                        generated_config_constants.ArmToolchainCflags +
                        generated_config_constants.ArmArchVariantCflags[variant.arch_variant] +
                        generated_config_constants.ArmCpuVariantCflags.get(
