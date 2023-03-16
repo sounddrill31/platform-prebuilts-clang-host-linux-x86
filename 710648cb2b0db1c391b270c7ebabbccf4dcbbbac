@@ -1,0 +1,111 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000040619499",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2494435?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "de9ccf81_ccd3701d",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 79,
+                "startChar": 0,
+                "endLine": 79,
+                "endChar": 0
+              },
+              "replacement": "        compiler_flags \u003d generated_config_constants.X86_64ToolchainCflags +\n                         generated_config_constants.X86_64ArchVariantCflags[variant.arch_variant] +\n                         expand_feature_flags(\n                             variant.arch_variant,\n                             _arch_constants.AndroidArchToVariantToFeatures[arches.X86_64],\n                             generated_config_constants.X86_64ArchFeatureCflags,\n                         ) + generated_config_constants.X86_64Cflags,\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 84,
+                "startChar": 0,
+                "endLine": 91,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 103,
+                "startChar": 0,
+                "endLine": 103,
+                "endChar": 0
+              },
+              "replacement": "        compiler_flags \u003d generated_config_constants.X86ToolchainCflags +\n                         generated_config_constants.X86ArchVariantCflags[variant.arch_variant] +\n                         expand_feature_flags(\n                             variant.arch_variant,\n                             _arch_constants.AndroidArchToVariantToFeatures[arches.X86],\n                             generated_config_constants.X86ArchFeatureCflags,\n                         ) + generated_config_constants.X86Cflags,\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 108,
+                "startChar": 0,
+                "endLine": 115,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 127,
+                "startChar": 0,
+                "endLine": 127,
+                "endChar": 0
+              },
+              "replacement": "        compiler_flags \u003d generated_config_constants.Arm64Cflags +\n                         generated_config_constants.Arm64ArchVariantCflags[variant.arch_variant] +\n                         generated_config_constants.Arm64CpuVariantCflags.get(\n                             variant.cpu_variant,\n                             [],\n                         ),\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 135,
+                "startChar": 0,
+                "endLine": 141,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 153,
+                "startChar": 0,
+                "endLine": 153,
+                "endChar": 0
+              },
+              "replacement": "        compiler_flags \u003d generated_config_constants.ArmCflags +\n                         generated_config_constants.ArmToolchainCflags +\n                         generated_config_constants.ArmArchVariantCflags[variant.arch_variant] +\n                         generated_config_constants.ArmCpuVariantCflags.get(\n                             variant.cpu_variant,\n                             [],\n                         ),\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 159,
+                "startChar": 0,
+                "endLine": 166,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "6d5d2f72_adfa6fc0",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-03-16T15:45:05Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "710648cb2b0db1c391b270c7ebabbccf4dcbbbac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
