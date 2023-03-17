@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90827aeb_8a49cbcb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-03-17T20:33:04Z",
+      "side": 1,
+      "message": "The only thing I can think of that might be problematic with doing this is that if LTO is enabled, there are many CFLAGS that are supposed to be passed into the linker which were passed during compilation.",
+      "revId": "12cd8a5633acf5e7f2c22e26a282574cfcfac37b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
