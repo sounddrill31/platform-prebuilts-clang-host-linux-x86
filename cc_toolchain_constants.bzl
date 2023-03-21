@@ -163,6 +163,7 @@ arches = struct(
     Arm64 = "arm64",
     X86 = "x86",
     X86_64 = "x86_64",
+    Riscv64 = "riscv64",
 )
 
 oses = struct(
@@ -188,6 +189,7 @@ arch_to_variants = {
     arches.Arm64: _variant_combinations(arch_variants = generated_config_constants.Arm64ArchVariantCflags, cpu_variants = generated_config_constants.Arm64CpuVariantCflags),
     arches.X86: _variant_combinations(arch_variants = generated_config_constants.X86ArchVariantCflags),
     arches.X86_64: _variant_combinations(arch_variants = generated_config_constants.X86_64ArchVariantCflags),
+    arches.Riscv64: _variant_combinations(arch_variants = generated_config_constants.Riscv64ArchVariantCflags, cpu_variants = generated_config_constants.Riscv64CpuVariantCflags),
 }
 
 # enabled_features returns a list of enabled features for the given arch variant, defaults to empty list
@@ -244,6 +246,7 @@ _libclang_rt_prefix = "%s/lib/clang/%s/lib/linux" % (
 libclang_rt_prebuilt_map = {
     "//build/bazel/platforms/os_arch:android_arm": _libclang_rt_prefix + "/libclang_rt.builtins-arm-android.a",
     "//build/bazel/platforms/os_arch:android_arm64": _libclang_rt_prefix + "/libclang_rt.builtins-aarch64-android.a",
+    "//build/bazel/platforms/os_arch:android_riscv64": _libclang_rt_prefix + "/libclang_rt.builtins-riscv64-android.a",
     "//build/bazel/platforms/os_arch:android_x86": _libclang_rt_prefix + "/libclang_rt.builtins-i686-android.a",
     "//build/bazel/platforms/os_arch:android_x86_64": _libclang_rt_prefix + "/libclang_rt.builtins-x86_64-android.a",
     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": _libclang_rt_prefix + "/libclang_rt.builtins-x86_64-android.a",
@@ -257,6 +260,7 @@ libclang_rt_prebuilt_map = {
 libclang_ubsan_minimal_rt_prebuilt_map = {
     "//build/bazel/platforms/os_arch:android_arm": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-arm-android.a",
     "//build/bazel/platforms/os_arch:android_arm64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-aarch64-android.a",
+    "//build/bazel/platforms/os_arch:android_riscv64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-riscv64-android.a",
     "//build/bazel/platforms/os_arch:android_x86": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-i686-android.a",
     "//build/bazel/platforms/os_arch:android_x86_64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-x86_64-android.a",
     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": _libclang_rt_prefix + "/libclang_rt.ubsan_minimal-x86_64-android.a",

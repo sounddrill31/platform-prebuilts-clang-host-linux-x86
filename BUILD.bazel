@@ -169,6 +169,22 @@ clang_version(
     for variant in arch_to_variants[arches.Arm]
 ]
 
+# riscv64 toolchain definition.
+android_cc_toolchain(
+    name = "cc_toolchain_riscv64",
+    clang_version = ":clang",
+    clang_version_directory = generated_config_constants.ClangVersion,
+    compiler_flags = generated_config_constants.Riscv64Cflags,
+    crt = _bionic_crt,
+    libclang_rt_builtin = libclang_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_riscv64"],
+    libclang_rt_ubsan_minimal = libclang_ubsan_minimal_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_riscv64"],
+    # do not pass "ld"-only flags as Bazel is only using lld. Ensure that all flags are lld-compatible.
+    linker_flags = generated_config_constants.Riscv64Lldflags,
+    target_arch = arches.Riscv64,
+    target_os = "android",
+    toolchain_identifier = "riscv64-toolchain",
+)
+
 # Toolchain to compile for the linux host.
 # TODO(b/186628704): automatically generate from Soong.
 android_cc_toolchain(
