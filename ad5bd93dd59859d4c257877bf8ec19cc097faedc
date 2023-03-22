@@ -1,0 +1,212 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000041051802",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2503355?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "8699ff6c_2a141493",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 342,
+                "startChar": 0,
+                "endLine": 343,
+                "endChar": 0
+              },
+              "replacement": "        _generated_sanitizer_constants.CfiExportsMapFilename,\n"
+            },
+            {
+              "path": "cc_toolchain_config.bzl",
+              "range": {
+                "startLine": 346,
+                "startChar": 0,
+                "endLine": 347,
+                "endChar": 0
+              },
+              "replacement": "        _generated_sanitizer_constants.CfiBlocklistFilename,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "c0218184_203c60d9",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-03-22T20:19:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_config.bzl` to format the file, or apply the suggested fix.",
+      "revId": "ad5bd93dd59859d4c257877bf8ec19cc097faedc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000041051802",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2503355?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "d36a4c27_c37abcbc",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_constants.bzl",
+              "range": {
+                "startLine": 64,
+                "startChar": 0,
+                "endLine": 65,
+                "endChar": 0
+              },
+              "replacement": "        ACTION_NAMES.cpp_compile,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "429025d9_6ada3784",
+        "filename": "cc_toolchain_constants.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-03-22T20:19:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_constants.bzl` to format the file, or apply the suggested fix.",
+      "revId": "ad5bd93dd59859d4c257877bf8ec19cc097faedc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000041051802",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2503355?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "de1ad544_69480701",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 1656,
+                "startChar": 0,
+                "endLine": 1658,
+                "endChar": 0
+              },
+              "replacement": "                                _generated_sanitizer_constants.CfiExportsMapFilename,\n                            ],\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "d37d1b92_58a1c5ec",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-03-22T20:19:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "ad5bd93dd59859d4c257877bf8ec19cc097faedc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000041051802",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2503355?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "8a8c5add_61d8d4a2",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 25,
+                "startChar": 0,
+                "endLine": 25,
+                "endChar": 0
+              },
+              "replacement": "    \"action_flags_present_for_mnemonic_nonexclusive_test\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 26,
+                "startChar": 0,
+                "endLine": 27,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 107,
+                "startChar": 0,
+                "endLine": 108,
+                "endChar": 0
+              },
+              "replacement": "        ],\n"
+            },
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 137,
+                "startChar": 0,
+                "endLine": 138,
+                "endChar": 0
+              },
+              "replacement": "            generated_sanitizer_constants.CfiAssemblySupportFlag,\n"
+            },
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 150,
+                "startChar": 0,
+                "endLine": 151,
+                "endChar": 0
+              },
+              "replacement": "            \"android_cfi_exports_map\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_cfi_test.bzl",
+              "range": {
+                "startLine": 163,
+                "startChar": 0,
+                "endLine": 164,
+                "endChar": 0
+              },
+              "replacement": "            generated_sanitizer_constants.CfiExportsMapFilename,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "6fbae400_0b81710f",
+        "filename": "cc_toolchain_features_cfi_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-03-22T20:19:02Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_cfi_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "ad5bd93dd59859d4c257877bf8ec19cc097faedc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
