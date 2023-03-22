@@ -1586,6 +1586,84 @@ def _get_thinlto_features():
     ]
     return features
 
+def _get_cfi_features():
+    features = [
+        feature(
+            name = "android_cfi",
+            enabled = False,
+            flag_sets = [
+                flag_set(
+                    actions = _actions.c_and_cpp_compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = _generated_sanitizer_constants.CfiCFlags,
+                        ),
+                    ],
+                ),
+                flag_set(
+                    actions = _actions.link,
+                    flag_groups = [
+                        flag_group(
+                            flags = _generated_sanitizer_constants.CfiLdFlags,
+                        ),
+                    ],
+                ),
+                flag_set(
+                    actions = _actions.assemble,
+                    flag_groups = [
+                        flag_group(
+                            flags = _generated_sanitizer_constants.CfiAsFlags,
+                        ),
+                    ],
+                ),
+            ],
+            implies = ["android_thin_lto"],
+        ),
+    ]
+
+    features += [
+        feature(
+            name = "android_cfi_assembly_support",
+            enabled = False,
+            requires = [feature_set(features = ["android_cfi"])],
+            flag_sets = [
+                flag_set(
+                    actions = _actions.c_and_cpp_compile,
+                    flag_groups = [
+                        flag_group(
+                            flags = [_generated_sanitizer_constants.CfiAssemblySupportFlag],
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
+    features += [
+        feature(
+            name = "android_cfi_exports_map",
+            enabled = False,
+            requires = [feature_set(features = ["android_cfi"])],
+            flag_sets = [
+                flag_set(
+                    actions = _actions.link,
+                    flag_groups = [
+                        flag_group(
+                            flags = [
+                                _generated_config_constants.VersionScriptFlagPrefix +
+                                _generated_sanitizer_constants.CfiExportsMapPath +
+                                "/" +
+                                _generated_sanitizer_constants.CfiExportsMapFilename
+                            ]
+                        ),
+                    ],
+                ),
+            ],
+        ),
+    ]
+
+    return features
+
 def _ubsan_flag_feature(name, actions, flags):
     return feature(
         name = name,
@@ -1937,6 +2015,7 @@ def get_features(
         # Optimization
         _get_thinlto_features(),
         # Sanitizers
+        _get_cfi_features(),
         _get_ubsan_features(target_os, libclang_rt_ubsan_minimal),
         # This must always come last.
         _link_crtend(crt_files),
