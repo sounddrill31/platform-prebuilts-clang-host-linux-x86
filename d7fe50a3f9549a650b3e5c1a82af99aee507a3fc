@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f57b1aa_df59e12d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-03-24T19:07:57Z",
+      "side": 1,
+      "message": "Thanks for all the work! To aid readability, I\u0027ve recommended a possible refactoring. LGTM",
+      "revId": "d7fe50a3f9549a650b3e5c1a82af99aee507a3fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65ff6aa0_d2b40248",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 1597,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-03-24T19:07:57Z",
+      "side": 1,
+      "message": "Is there any way we could cut down on the visual noise in all of these similar stanzas? e.g.\n```\nmk_flag_sets \u003d lambda actions, flags:\n    return [flag_set(\n        actions \u003d actions_,\n        flag_groups \u003d flag_group(\n             flags \u003d flags_,\n        ) for (actions_, flags_) in (actions, flags)\n    ] \n\nfeatures \u003d [\n    feature(\n        name \u003d \"android_cfi\",\n        enabled \u003d False,\n        flag_sets \u003d mk_flag_sets([\n            (_actions.c_and_cpp_compile, _generated_sanitizer_constants.CfiCFlags),\n            (_actions.link, _generated_sanitizer_constants.CfiLdFlags),\n            (_actions.assemble, _generated_sanitizer_constants.CfiAsFlags),\n        ]),\n        implies \u003d ......\n    ),\n    feature(\n        name \u003d \"android_cfi_foo\",\n        enabled \u003d False,\n        flag_sets \u003d mk_flag_sets([\n            ......\n        ])\n        ....\n    ),\n    ....    \n]\n```",
+      "revId": "d7fe50a3f9549a650b3e5c1a82af99aee507a3fc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
