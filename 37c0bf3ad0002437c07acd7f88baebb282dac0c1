@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b57b344_7fb7cdbb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-03-24T18:45:09Z",
+      "side": 1,
+      "message": "LGTM; tho potential simplification. Thanks for the work!",
+      "revId": "37c0bf3ad0002437c07acd7f88baebb282dac0c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a734980_c52d21e0",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1589,
+      "author": {
+        "id": 1887575
+      },
+      "writtenOn": "2023-03-24T18:45:09Z",
+      "side": 1,
+      "message": "Will this be reused? I only see one use, wherein we could inline this as e.g.:\n`[\"android_thin_lto\"] + ([\"arm_isa_thumb\"] if target_arch \u003d\u003d _arches.Arm else [])`",
+      "revId": "37c0bf3ad0002437c07acd7f88baebb282dac0c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
