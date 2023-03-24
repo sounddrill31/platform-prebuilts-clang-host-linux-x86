@@ -33,6 +33,24 @@
       "message": "Will this be reused? I only see one use, wherein we could inline this as e.g.:\n`[\"android_thin_lto\"] + ([\"arm_isa_thumb\"] if target_arch \u003d\u003d _arches.Arm else [])`",
       "revId": "37c0bf3ad0002437c07acd7f88baebb282dac0c1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7931693c_bb9ddc90",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 1589,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-03-24T18:51:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4a734980_c52d21e0",
+      "revId": "37c0bf3ad0002437c07acd7f88baebb282dac0c1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
