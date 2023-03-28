@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb2e142_4a8fbd98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2023-03-28T18:07:51Z",
+      "side": 1,
+      "message": "Pending all the upgrade CLs to be checked in...",
+      "revId": "77a886c2cc23760ba2f9e2a36a08fcf000689e21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
