@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0e44de2_f16ee56b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-03-28T18:11:24Z",
+      "side": 1,
+      "message": "Bug number for the update? Maybe also mention the revision that we moved to in the commit message so it\u0027s easier to grep for in git log?",
+      "revId": "05fbc631908faec0f966241ebb488fe5458ad5bd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
