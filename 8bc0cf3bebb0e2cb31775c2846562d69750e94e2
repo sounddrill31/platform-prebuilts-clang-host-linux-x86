@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "296665b4_874a2379",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1978766
+      },
+      "writtenOn": "2023-03-29T15:54:58Z",
+      "side": 1,
+      "message": "is there a place we can track all the targets where cfi is getting disabled?",
+      "revId": "8bc0cf3bebb0e2cb31775c2846562d69750e94e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
