@@ -387,25 +387,7 @@ def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
                 ),
             ],
         ))
-    features.append(feature(
-        name = "external_compiler_flags",
-        enabled = True,
-        flag_sets = [
-            flag_set(
-                actions = _actions.compile,
-                flag_groups = [
-                    flag_group(
-                        flags = _generated_config_constants.ExternalCflags,
-                    ),
-                ],
-                with_features = [
-                    with_feature_set(
-                        not_features = ["non_external_compiler_flags"],
-                    ),
-                ],
-            ),
-        ],
-    ))
+
 
     features.append(feature(
         name = "arm_isa_arm",
@@ -454,6 +436,27 @@ def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
             ),
         ],
     ))
+
+    features.append(feature(
+        name = "external_compiler_flags",
+        enabled = True,
+        flag_sets = [
+            flag_set(
+                actions = _actions.compile,
+                flag_groups = [
+                    flag_group(
+                        flags = _generated_config_constants.ExternalCflags,
+                    ),
+                ],
+                with_features = [
+                    with_feature_set(
+                        not_features = ["non_external_compiler_flags"],
+                    ),
+                ],
+            ),
+        ],
+    ))
+
 
     # The user_compile_flags feature is used by Bazel to add --copt, --conlyopt,
     # and --cxxopt values. Any features added above this call will thus appear
