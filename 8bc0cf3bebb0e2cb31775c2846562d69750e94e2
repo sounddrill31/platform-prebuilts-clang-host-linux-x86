@@ -87,6 +87,42 @@
       "parentUuid": "2a9184e2_ab87fb11",
       "revId": "8bc0cf3bebb0e2cb31775c2846562d69750e94e2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d752c0c3_1328df75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-04-01T00:12:58Z",
+      "side": 1,
+      "message": "It\u0027s already disabled in Soong builds as well if you look at https://android.googlesource.com/platform/build/soong/+/refs/heads/master/cc/sanitize.go#649.",
+      "parentUuid": "8fe36989_c05fe62d",
+      "revId": "8bc0cf3bebb0e2cb31775c2846562d69750e94e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93cb4026_6bc6240e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-04-01T00:12:58Z",
+      "side": 1,
+      "message": "It\u0027s already disabled in Soong builds as well if you look at https://android.googlesource.com/platform/build/soong/+/refs/heads/master/cc/sanitize.go#649. I think that this CL is merely making it equivalent to what is already happening. As for enabling CFI on musl, I think that\u0027s a separate conversation, but not one that\u0027s needed for unblocking this change.",
+      "parentUuid": "da6b1b92_ad561e61",
+      "revId": "8bc0cf3bebb0e2cb31775c2846562d69750e94e2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
