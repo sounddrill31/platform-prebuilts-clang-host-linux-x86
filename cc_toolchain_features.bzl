@@ -1596,6 +1596,8 @@ def _make_flag_set(actions, flags):
         ],
     )
 
+# TODO(b/276756817): Restrict for VNDK when we have VNDK in Bazel
+# TODO(b/276756319): Restrict for riscv64 when we have Riscv64 in Bazel
 def _get_cfi_features(target_arch, target_os):
     if target_os in [_oses.Windows, _oses.Darwin]:
         return []
