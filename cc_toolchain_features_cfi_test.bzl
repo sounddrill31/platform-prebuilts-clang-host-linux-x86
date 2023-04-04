@@ -171,6 +171,50 @@ def test_cfi_exports_map_has_correct_flags():
 
     return test_name
 
+def test_cfi_cross_dso_has_correct_flags():
+    name = "cfi_cross_dso_has_correct_flags"
+    native.cc_binary(
+        name = name,
+        srcs = ["foo.c", "bar.cpp"],
+        features = [
+            "android_cfi",
+            "android_cfi_cross_dso",
+        ],
+        tags = ["manual"],
+    )
+
+    test_name = name + "_test"
+    action_flags_present_only_for_mnemonic_test(
+        name = test_name,
+        target_under_test = name,
+        mnemonics = [compile_action_mnemonic, link_action_mnemonic],
+        expected_flags = [generated_sanitizer_constants.CfiCrossDsoFlag],
+    )
+
+    return test_name
+
+def test_cfi_cross_dso_does_not_add_flags_for_s():
+    name = "cfi_cross_dso_does_not_add_flags_for_s"
+    native.cc_binary(
+        name = name,
+        srcs = ["baz.s", "blah.S"],
+        features = [
+            "android_cfi",
+            "android_cfi_cross_dso",
+        ],
+        tags = ["manual"],
+    )
+
+    test_name = name + "_test"
+    action_flags_absent_for_mnemonic_test(
+        name = test_name,
+        target_under_test = name,
+        mnemonics = [compile_action_mnemonic],
+        expected_absent_flags = [generated_sanitizer_constants.CfiCrossDsoFlag],
+    )
+
+    return test_name
+
 def test_cfi_implies_lto():
     name = "cfi_implies_lto"
     native.cc_binary(
@@ -241,6 +285,8 @@ def cc_toolchain_features_cfi_test_suite(name):
         test_cfi_assembly_support_has_correct_flags(),
         test_cfi_assembly_support_does_not_add_flags_for_s(),
         test_cfi_exports_map_has_correct_flags(),
+        test_cfi_cross_dso_has_correct_flags(),
+        test_cfi_cross_dso_does_not_add_flags_for_s(),
         test_cfi_implies_lto(),
         test_cfi_and_arm_uses_thumb(),
         # TODO(b/274924237): Uncomment after Darwin and Windows have toolchains

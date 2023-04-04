@@ -1625,6 +1625,20 @@ def _get_cfi_features(target_arch, target_os):
 
     features += [
         feature(
+            name = "android_cfi_cross_dso",
+            enabled = False,
+            requires = [feature_set(features = ["android_cfi"])],
+            flag_sets = [
+                _make_flag_set(
+                    _actions.c_and_cpp_compile + _actions.link,
+                    [_generated_sanitizer_constants.CfiCrossDsoFlag],
+                ),
+            ],
+        ),
+    ]
+
+    features += [
+        feature(
             name = "android_cfi_assembly_support",
             enabled = False,
             requires = [feature_set(features = ["android_cfi"])],
