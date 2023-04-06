@@ -1811,6 +1811,11 @@ def _get_ubsan_features(target_os, libclang_rt_ubsan_minimal):
     ]
 
     ubsan_features += [
+        _host_or_device_specific_ubsan_feature(target_os),
+        _exclude_ubsan_rt_feature(libclang_rt_ubsan_minimal),
+    ]
+
+    ubsan_features += [
         feature(
             name = "ubsan_minimal_runtime",
             enabled = False,
@@ -1937,11 +1942,6 @@ def _get_ubsan_features(target_os, libclang_rt_ubsan_minimal):
                 ),
             ],
         ),
-    ]
-
-    ubsan_features += [
-        _host_or_device_specific_ubsan_feature(target_os),
-        _exclude_ubsan_rt_feature(libclang_rt_ubsan_minimal),
     ]
 
     return ubsan_features
