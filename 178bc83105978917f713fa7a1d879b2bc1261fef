@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "396b06df_a1fa37b9",
+        "filename": "cc_toolchain_features_cfi_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-04-07T15:30:03Z",
+      "side": 1,
+      "message": "could you add a test that cross_dso doesn\u0027t get added when android_cfi is not enabled?",
+      "revId": "178bc83105978917f713fa7a1d879b2bc1261fef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
