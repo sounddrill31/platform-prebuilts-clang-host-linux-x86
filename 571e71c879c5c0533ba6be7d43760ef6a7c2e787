@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb222e12_8bb7d8e3",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1597,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-04-07T18:22:21Z",
+      "side": 1,
+      "message": "Right you are!",
+      "parentUuid": "899c4122_14f76c4b",
+      "range": {
+        "startLine": 1590,
+        "startChar": 0,
+        "endLine": 1597,
+        "endChar": 9
+      },
+      "revId": "571e71c879c5c0533ba6be7d43760ef6a7c2e787",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9d83edb1_48a27c1f",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-04-07T18:12:41Z",
       "side": 1,
       "message": "fwiw, I was thinking this:\n```\n    native.cc_binary(\n        name \u003d name,\n        srcs \u003d [\"foo.c\", \"bar.cpp\"],\n        features \u003d [\n            \"android_cfi_cross_dso\",\n        ],\n        tags \u003d [\"manual\"],\n    )\n```\nbut this is the same effect",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 21
+      },
+      "revId": "571e71c879c5c0533ba6be7d43760ef6a7c2e787",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80a45c17_c643d012",
+        "filename": "cc_toolchain_features_cfi_test.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-04-07T18:22:21Z",
+      "side": 1,
+      "message": "I think given that its enabled value is now set to `True` I thought it made sense this way, but, reflecting on it now, I see the value in making it more explicit. I will change it.",
+      "parentUuid": "9d83edb1_48a27c1f",
       "range": {
         "startLine": 106,
         "startChar": 0,
