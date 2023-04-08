@@ -29,7 +29,6 @@ import (
 	"android/soong/genrule"
 )
 
-const libclangCppSoFormat = "libclang-cpp.so.%s"
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
 
@@ -49,8 +48,8 @@ var (
 func init() {
 	android.RegisterModuleType("llvm_host_defaults",
 		llvmHostDefaultsFactory)
-	android.RegisterModuleType("llvm_host_prebuilt_library_shared",
-		llvmHostPrebuiltLibrarySharedFactory)
+	android.RegisterModuleType("llvm_prebuilt_library_shared",
+		llvmPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("llvm_prebuilt_library_static",
 		llvmPrebuiltLibraryStaticFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
@@ -92,70 +91,113 @@ func trimVersionNumbers(ver string, retain int) string {
 	return strings.Join(versions[0:retain], sep)
 }
 
-func getHostLibrary(ctx android.LoadHookContext) string {
+func getClangCppSoName(ctx android.LoadHookContext) string {
 	releaseVersion := ctx.Config().GetenvWithDefault("LLVM_RELEASE_VERSION",
 		config.ClangDefaultShortVersion)
-
-	switch ctx.ModuleName() {
-	case "prebuilt_libclang-cpp_host":
-		versionStr := trimVersionNumbers(releaseVersion, 1)
-		return fmt.Sprintf(libclangCppSoFormat, versionStr)
-	case "prebuilt_libc++_host":
-		return libcxxSoName
-	case "prebuilt_libc++abi_host":
-		return libcxxabiSoName
-	default:
-		ctx.ModuleErrorf("unsupported host LLVM module: " + ctx.ModuleName())
-		return ""
-	}
+	versionStr := trimVersionNumbers(releaseVersion, 1)
+	return fmt.Sprintf("libclang-cpp.so.%s", versionStr)
 }
 
-func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
+func libcxxHeaderDir(ctx android.LoadHookContext) string {
+	// TODO: Add the directory containing the right __config_site?
+	clangDir := getClangPrebuiltDir(ctx)
+	return path.Join(clangDir, "include", "c++", "v1")
+}
+
+type archInnerProps struct {
+	Enabled *bool
+	Srcs    []string
+	Stem    *string
+}
+
+func llvmPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	moduleName := ctx.ModuleName()
-	enabled := ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS")
+	// XXX: Hack this on by default.
+	//enabled := ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS")
 
 	clangDir := getClangPrebuiltDir(ctx)
 
-	headerDir := path.Join(clangDir, "include")
-	if moduleName == "prebuilt_libc++_host" {
-		headerDir = path.Join(headerDir, "c++", "v1")
-	}
-
-	linuxLibrary := path.Join(clangDir, "lib", getHostLibrary(ctx))
-	darwinFileGroup := strings.TrimSuffix(strings.TrimPrefix(
-		moduleName, "prebuilt_"), "_host") + "_darwin"
-
 	type props struct {
-		Enabled             *bool
+		//Enabled             *bool
 		Export_include_dirs []string
 		Target              struct {
-			Linux_glibc_x86_64 struct {
-				Srcs []string
-			}
-			Darwin_x86_64 struct {
-				Srcs []string
-			}
-			Windows struct {
-				Enabled *bool
-			}
+			Android_arm        archInnerProps
+			Android_arm64      archInnerProps
+			Android_x86        archInnerProps
+			Android_x86_64     archInnerProps
+			Glibc_x86          archInnerProps
+			Glibc_x86_64       archInnerProps
+			Linux_musl_x86     archInnerProps
+			Linux_musl_x86_64  archInnerProps
+			Darwin_x86_64      archInnerProps
+			Windows_x86        archInnerProps
+			Windows_x86_64     archInnerProps
 		}
 		Stl *string
 	}
 
 	p := &props{}
-	p.Enabled = proptools.BoolPtr(enabled)
-	p.Export_include_dirs = []string{headerDir}
-	p.Target.Linux_glibc_x86_64.Srcs = []string{linuxLibrary}
+	//p.Enabled = proptools.BoolPtr(true)
+	if moduleName == "prebuilt_libc++" {
+		p.Export_include_dirs = []string{libcxxHeaderDir(ctx)}
+	} else if moduleName == "prebuilt_libc++abi_shared" {
+		// Do nothing
+	} else {
+		p.Export_include_dirs = []string{path.Join(clangDir, "include")}
+	}
+
+	fmt.Printf("XXX: moduleName=%s\n", moduleName)
+
+	// XXX: distinguish between ndk, apex, and platform...
+	if moduleName == "prebuilt_libc++" {
+		makeSrcs := func(arch string) []string {
+			return []string{path.Join(clangDir, "android_libc++", "platform",
+				arch, "lib", "libc++.so")}
+		}
+		p.Target.Android_arm.Srcs = makeSrcs("arm")
+		p.Target.Android_arm.Enabled = proptools.BoolPtr(true)
+		p.Target.Android_arm64.Srcs = makeSrcs("aarch64")
+		p.Target.Android_arm64.Enabled = proptools.BoolPtr(true)
+		p.Target.Android_x86.Srcs = makeSrcs("i386")
+		p.Target.Android_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Android_x86_64.Srcs = makeSrcs("x86_64")
+		p.Target.Android_x86_64.Enabled = proptools.BoolPtr(true)
+	} else {
+		// XXX: Do we need to explicitly disable these? We can simplify if we don't need to, I think.
+		p.Target.Android_arm.Enabled = proptools.BoolPtr(false)
+		p.Target.Android_arm64.Enabled = proptools.BoolPtr(false)
+		p.Target.Android_x86.Enabled = proptools.BoolPtr(false)
+		p.Target.Android_x86_64.Enabled = proptools.BoolPtr(false)
+	}
+
+	if moduleName == "prebuilt_libc++" {
+		// XXX: Do we even need to set Enabled on a per-target basis? We don't do that consistently later on, e.g. for static libs.
+		p.Target.Glibc_x86.Srcs = []string{path.Join(clangDir, "lib", "i386-unknown-linux-gnu", libcxxSoName)}
+		p.Target.Glibc_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-unknown-linux-gnu", libcxxSoName)}
+		p.Target.Glibc_x86_64.Enabled = proptools.BoolPtr(true)
+		p.Target.Linux_musl_x86.Srcs = []string{path.Join(clangDir, "musl", "lib", "i686-unknown-linux-musl", libcxxSoName)}
+		p.Target.Linux_musl_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(clangDir, "musl", "lib", "x86_64-unknown-linux-musl", libcxxSoName)}
+		p.Target.Linux_musl_x86_64.Enabled = proptools.BoolPtr(true)
+	} else if moduleName == "prebuilt_libc++abi" {
+		p.Target.Glibc_x86.Srcs = []string{path.Join(clangDir, "lib", "i386-unknown-linux-gnu", libcxxabiSoName)}
+		p.Target.Glibc_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-unknown-linux-gnu", libcxxabiSoName)}
+		p.Target.Glibc_x86_64.Enabled = proptools.BoolPtr(true)
+	} else if moduleName == "prebuilt_libclang-cpp_host" {
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(clangDir, "lib", getClangCppSoName(ctx))}
+		p.Target.Glibc_x86_64.Enabled = proptools.BoolPtr(true)
+	}
+
+	darwinFileGroup := strings.TrimPrefix(moduleName, "prebuilt_") + "_darwin"
 	p.Target.Darwin_x86_64.Srcs = []string{":" + darwinFileGroup}
-	p.Target.Windows.Enabled = proptools.BoolPtr(false)
+	p.Target.Darwin_x86_64.Enabled = proptools.BoolPtr(true)
+	//p.Target.Windows.Enabled = proptools.BoolPtr(false)
 	p.Stl = proptools.StringPtr("none")
 	ctx.AppendProperties(p)
 }
 
-type archInnerProps struct {
-	Srcs []string
-	Stem *string
-}
 type archProps struct {
 	Android_arm         archInnerProps
 	Android_arm64       archInnerProps
@@ -170,11 +212,15 @@ type archProps struct {
 	Linux_musl_x86_64   archInnerProps
 	Linux_musl_arm      archInnerProps
 	Linux_musl_arm64    archInnerProps
+	Darwin_x86_64       archInnerProps
+	Windows_x86         archInnerProps
+	Windows_x86_64      archInnerProps
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
+	clangDir := getClangPrebuiltDir(ctx)
 	libDir := getClangResourceDir(ctx)
-	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_") + ".a"
+	moduleName := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
 
 	type props struct {
 		Export_include_dirs []string
@@ -183,22 +229,79 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 
 	p := &props{}
 
-	if name == "libFuzzer.a" {
-		headerDir := path.Join(getClangPrebuiltDir(ctx), "prebuilt_include", "llvm", "lib", "Fuzzer")
-		p.Export_include_dirs = []string{headerDir}
+	if moduleName == "libc++_static" {
+		p.Export_include_dirs = []string{libcxxHeaderDir(ctx)}
+		// XXX: Distinguish between NDK, apex, and platform (they probably share headers though?)
+		makeAndroidSrcs := func(arch string) []string {
+			return []string{path.Join(clangDir, "android_libc++", "platform",
+				arch, "lib", "libc++_static.a")}
+		}
+		p.Target.Android_arm.Srcs = makeAndroidSrcs("arm")
+		p.Target.Android_arm64.Srcs = makeAndroidSrcs("aarch64")
+		p.Target.Android_riscv64.Srcs = makeAndroidSrcs("riscv64")
+		p.Target.Android_x86.Srcs = makeAndroidSrcs("i386")
+		p.Target.Android_x86_64.Srcs = makeAndroidSrcs("x86_64")
+		p.Target.Glibc_x86.Srcs = []string{path.Join(clangDir, "lib", "i386-unknown-linux-gnu", "libc++.a")}
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-unknown-linux-gnu", "libc++.a")}
+		p.Target.Darwin_x86_64.Srcs = []string{":libc++_static_darwin"}
+		p.Target.Windows_x86.Srcs = []string{path.Join(clangDir, "lib", "i686-w64-windows-gnu", "libc++.a")}
+		p.Target.Windows_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-w64-windows-gnu", "libc++.a")}
+		p.Target.Windows_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Windows_x86_64.Enabled = proptools.BoolPtr(true)
+	} else if moduleName == "libc++demangle" {
+		// XXX: Distinguish between NDK, apex, and platform (they probably share headers though?)
+		makeAndroidSrcs := func(arch string) []string {
+			return []string{path.Join(clangDir, "android_libc++", "platform",
+				arch, "lib", "libc++demangle.a")}
+		}
+		p.Target.Android_arm.Srcs = makeAndroidSrcs("arm")
+		p.Target.Android_arm64.Srcs = makeAndroidSrcs("aarch64")
+		p.Target.Android_riscv64.Srcs = makeAndroidSrcs("riscv64")
+		p.Target.Android_x86.Srcs = makeAndroidSrcs("i386")
+		p.Target.Android_x86_64.Srcs = makeAndroidSrcs("x86_64")
+	} else if moduleName == "libc++abi_static" {
+		// XXX: Distinguish between NDK, apex, and platform (they probably share headers though?)
+		// makeAndroidSrcs := func(arch string) {
+		// 	return []string{path.Join(clangDir, "android_libc++", "platform",
+		// 		arch, "lib", "libc++abi.a")}
+		// }
+		// p.Target.Android_arm.Srcs = makeAndroidSrcs("arm")
+		// p.Target.Android_arm64.Srcs = makeAndroidSrcs("aarch64")
+		// p.Target.Android_x86.Srcs = makeAndroidSrcs("i386")
+		// p.Target.Android_x86_64.Srcs = makeAndroidSrcs("x86_64")
+		//
+		// On the platform, libc++abi is only used by the memtrack executable and it
+		// (seemingly?) isn't necessary there. The LLVM build *does* produce a libc++abi.a,
+		// but its contents are also included in libc++_static.a, so there's no need to
+		// enable the libc++abi soong module for the Android platform. (The APEX build is
+		// probably the same, but the NDK build of libc++ doesn't include libc++abi in
+		// libc++_static. We could conceivably change the NDK to match the platform
+		// behavior...)
+		p.Target.Glibc_x86.Srcs = []string{path.Join(clangDir, "lib", "i386-unknown-linux-gnu", "libc++abi.a")}
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-unknown-linux-gnu", "libc++abi.a")}
+		p.Target.Darwin_x86_64.Srcs = []string{":libc++abi_darwin"}
+		p.Target.Windows_x86.Srcs = []string{path.Join(clangDir, "lib", "i686-w64-windows-gnu", "libc++abi.a")}
+		p.Target.Windows_x86_64.Srcs = []string{path.Join(clangDir, "lib", "x86_64-w64-windows-gnu", "libc++abi.a")}
+		p.Target.Windows_x86.Enabled = proptools.BoolPtr(true)
+		p.Target.Windows_x86_64.Enabled = proptools.BoolPtr(true)
+	} else {
+		name := moduleName + ".a"
+		if name == "libFuzzer.a" {
+			headerDir := path.Join(clangDir, "prebuilt_include", "llvm", "lib", "Fuzzer")
+			p.Export_include_dirs = []string{headerDir}
+		}
+		p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
+		p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
+		p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, "riscv64", name)}
+		p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
+		p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+		p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
+		p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+		p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-linux-musl/lib", name)}
+		p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-linux-musl/lib", name)}
+		p.Target.Linux_musl_arm.Srcs = []string{path.Join(libDir, "arm-linux-musleabihf/lib", name)}
+		p.Target.Linux_musl_arm64.Srcs = []string{path.Join(libDir, "aarch64-linux-musl/lib", name)}
 	}
-
-	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
-	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
-	p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, "riscv64", name)}
-	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
-	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
-	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
-	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
-	p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-unknown-linux-musl/lib", name)}
-	p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-unknown-linux-musl/lib", name)}
-	p.Target.Linux_musl_arm.Srcs = []string{path.Join(libDir, "arm-unknown-linux-musleabihf/lib", name)}
-	p.Target.Linux_musl_arm64.Srcs = []string{path.Join(libDir, "aarch64-unknown-linux-musl/lib", name)}
 	ctx.AppendProperties(p)
 }
 
@@ -366,11 +469,25 @@ func libClangRtPrebuiltObject(ctx android.LoadHookContext) {
 
 func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 	clangDir := getClangPrebuiltDir(ctx)
-	libName := strings.TrimSuffix(ctx.ModuleName(), "_darwin")
-	if libName == "libc++" || libName == "libc++abi" {
-		libName += ".1"
+	moduleName := ctx.ModuleName()
+	var libName string
+
+	switch moduleName {
+	case "libclang-cpp_darwin":
+		libName = "libclang-cpp.dylib"
+	case "libc++_darwin":
+		libName = "libc++.1.dylib"
+	case "libc++abi_shared_darwin":
+		libName = "libc++abi.1.dylib"
+	case "libc++_static_darwin":
+		libName = "libc++.a"
+	case "libc++abi_static_darwin":
+		libName = "libc++abi.a"
+	default:
+		ctx.ModuleErrorf("unsupported host LLVM file group: " + moduleName)
 	}
-	lib := path.Join(clangDir, "lib", libName+".dylib")
+
+	lib := path.Join(clangDir, "lib", libName)
 
 	type props struct {
 		Srcs []string
@@ -390,9 +507,9 @@ func llvmPrebuiltLibraryStaticFactory() android.Module {
 	return module.Init()
 }
 
-func llvmHostPrebuiltLibrarySharedFactory() android.Module {
-	module, _ := cc.NewPrebuiltSharedLibrary(android.HostSupported)
-	android.AddLoadHook(module, llvmHostPrebuiltLibraryShared)
+func llvmPrebuiltLibrarySharedFactory() android.Module {
+	module, _ := cc.NewPrebuiltSharedLibrary(android.HostAndDeviceSupported)
+	android.AddLoadHook(module, llvmPrebuiltLibraryShared)
 	return module.Init()
 }
 
@@ -435,9 +552,10 @@ func llvmHostDefaults(ctx android.LoadHookContext) {
 	}
 
 	p := &props{}
-	if !ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS") {
-		p.Enabled = proptools.BoolPtr(false)
-	}
+	// XXX: Omit the !enabled, so modules are enabled by default.
+	// if !ctx.Config().IsEnvTrue("LLVM_BUILD_HOST_TOOLS") {
+	// 	p.Enabled = proptools.BoolPtr(false)
+	// }
 	ctx.AppendProperties(p)
 }
 
