@@ -33,7 +33,10 @@ license {
         "SPDX-license-identifier-Zlib",
         "legacy_unencumbered",
     ],
-    // large-scale-change unable to identify any license_text files
+    license_text: [
+        // TODO(add others)
+        "clang-r487747/NOTICE",
+    ]
 }
 
 llvm_prebuilt_library_static {
