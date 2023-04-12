@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12898ec8_18962010",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 678,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-04-12T17:54:40Z",
+      "side": 1,
+      "message": "I had to make a change to the function to just pass the string versions of the os/arch anyways, so I just restructured it to look more like a Go test.",
+      "range": {
+        "startLine": 678,
+        "startChar": 4,
+        "endLine": 678,
+        "endChar": 14
+      },
+      "revId": "ad5fd8db257db61b6c55f6952be9b9022cab6f8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
