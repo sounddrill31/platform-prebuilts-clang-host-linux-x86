@@ -86,6 +86,93 @@
       "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
       "revId": "157527a17df6010fa2f9dd86ee4f098bb12b02ea",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000042750698",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2536930?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "b50c1c70_702f16b5",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 19,
+                "startChar": 0,
+                "endLine": 19,
+                "endChar": 0
+              },
+              "replacement": "    \"android_cc_toolchain\",\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 21,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 32,
+                "startChar": 0,
+                "endLine": 32,
+                "endChar": 0
+              },
+              "replacement": "    \"libclang_rt_prebuilt_filegroups\",\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 34,
+                "startChar": 0,
+                "endLine": 35,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 464,
+                "startChar": 0,
+                "endLine": 465,
+                "endChar": 0
+              },
+              "replacement": "    build_setting_default \u003d env.get(\n        \"LLVM_PREBUILTS_VERSION\",\n        generated_config_constants.ClangVersion,\n    ),\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 469,
+                "startChar": 0,
+                "endLine": 471,
+                "endChar": 0
+              },
+              "replacement": "    build_setting_default \u003d env.get(\n        \"LLVM_RELEASE_VERSION\",\n        generated_config_constants.ClangShortVersion,\n    ),\n)\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "e6dd3b8e_8131cd15",
+        "filename": "BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-04-13T21:34:52Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "157527a17df6010fa2f9dd86ee4f098bb12b02ea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
