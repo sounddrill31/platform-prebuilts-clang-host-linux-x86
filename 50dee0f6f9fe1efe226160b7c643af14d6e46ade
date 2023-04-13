@@ -36,6 +36,43 @@
       "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
       "revId": "50dee0f6f9fe1efe226160b7c643af14d6e46ade",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000042767654",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2534265?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "3db61520_26ebf76b",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 2050,
+                "startChar": 0,
+                "endLine": 2052,
+                "endChar": 0
+              },
+              "replacement": "        linker_only_flags \u003d ctx.attr.linker_flags + \\\n                            [\"-Wl,-z,max-page-size\u003d\" + ctx.attr._product_variables[ProductVariablesInfo].DeviceMaxPageSizeSupported]\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "4194e3bf_400170de",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-04-13T23:49:17Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "50dee0f6f9fe1efe226160b7c643af14d6e46ade",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
