@@ -13,6 +13,7 @@ load(
     "variable_with_value",
     "with_feature_set",
 )
+load("//build/bazel/product_config:product_variables_providing_rule.bzl", "ProductVariablesInfo")
 load(
     ":cc_toolchain_constants.bzl",
     _actions = "actions",
@@ -2044,6 +2045,8 @@ def get_features(
     target_flags = ctx.attr.target_flags
     compile_only_flags = ctx.attr.compiler_flags
     linker_only_flags = ctx.attr.linker_flags
+    if target_arch == "arm64":
+        linker_only_flags += ctx.attr._product_variables[ProductVariablesInfo].DeviceMaxPageSizeSupported
     libclang_rt_builtin = ctx.file.libclang_rt_builtin
     libclang_rt_ubsan_minimal = ctx.file.libclang_rt_ubsan_minimal
     rtti_toggle = ctx.attr.rtti_toggle
