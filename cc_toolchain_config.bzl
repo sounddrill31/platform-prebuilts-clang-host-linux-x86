@@ -256,6 +256,30 @@ _cc_toolchain_config = rule(
         "static_binary_crtbegin": attr.label(allow_single_file = True, cfg = "target"),
         "binary_crtend": attr.label(allow_single_file = True, cfg = "target"),
         "rtti_toggle": attr.bool(default = True),
+<<<<<<< HEAD   (182ae9 Snap for 8540474 from 3e473165be9dcddf80705ceecced66aec172e5)
+=======
+        "_auto_zero_initialize": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:auto_zero_initialize_env",
+        ),
+        "_auto_pattern_initialize": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:auto_pattern_initialize_env",
+        ),
+        "_auto_uninitialize": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:auto_uninitialize_env",
+        ),
+        "_use_ccache": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:use_ccache_env",
+        ),
+        "_llvm_next": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:llvm_next_env",
+        ),
+        "_allow_unknown_warning_option": attr.label(
+            default = "//prebuilts/clang/host/linux-x86:allow_unknown_warning_option_env",
+        ),
+        "_product_variables": attr.label(
+            default = "//build/bazel/product_config:product_vars",
+        ),
+>>>>>>> CHANGE (77b0c0 16K: Add linker alignment config to arm/arm64 targets in Baz)
     },
     provides = [CcToolchainConfigInfo],
 )

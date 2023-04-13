@@ -11,6 +11,7 @@ load(
     "variable_with_value",
     "with_feature_set",
 )
+load("//build/bazel/product_config:product_variables_providing_rule.bzl", "ProductVariablesInfo")
 load(
     ":cc_toolchain_constants.bzl",
     _actions = "actions",
@@ -1310,10 +1311,29 @@ def get_features(
         compile_only_flags,
         linker_only_flags,
         builtin_include_dirs,
+<<<<<<< HEAD   (182ae9 Snap for 8540474 from 3e473165be9dcddf80705ceecced66aec172e5)
         libclang_rt_builtin,
         crt_files,
         rtti_toggle):
     os_is_device = target_os == "android"
+=======
+        crt_files):
+    target_os = ctx.attr.target_os
+    target_arch = ctx.attr.target_arch
+    target_flags = ctx.attr.target_flags
+    compile_only_flags = ctx.attr.compiler_flags
+    linker_only_flags = ctx.attr.linker_flags
+    deviceMaxPageSize = ctx.attr._product_variables[ProductVariablesInfo].DeviceMaxPageSizeSupported
+    if deviceMaxPageSize and (target_arch == "arm" or target_arch == "arm64"):
+        linker_only_flags = ctx.attr.linker_flags + \
+                            ["-Wl,-z,max-page-size=" + deviceMaxPageSize]
+
+    libclang_rt_builtin = ctx.file.libclang_rt_builtin
+    libclang_rt_ubsan_minimal = ctx.file.libclang_rt_ubsan_minimal
+    rtti_toggle = ctx.attr.rtti_toggle
+
+    os_is_device = is_os_device(target_os)
+>>>>>>> CHANGE (77b0c0 16K: Add linker alignment config to arm/arm64 targets in Baz)
     arch_is_64_bit = target_arch.endswith("64")
 
     # Aggregate all features in order.

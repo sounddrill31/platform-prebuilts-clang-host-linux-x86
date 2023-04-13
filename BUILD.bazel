@@ -29,6 +29,38 @@ load(
     "variant_constraints",
     "variant_name",
 )
+<<<<<<< HEAD   (182ae9 Snap for 8540474 from 3e473165be9dcddf80705ceecced66aec172e5)
+=======
+load(
+    ":cc_toolchain_features_cfi_test.bzl",
+    "cc_toolchain_features_cfi_test_suite",
+)
+load(
+    ":cc_toolchain_features_pack_relocation_test.bzl",
+    "cc_toolchain_features_pack_relocation_test_suite",
+)
+load(
+    ":cc_toolchain_features_thinlto_test.bzl",
+    "cc_toolchain_features_lto_test_suite",
+)
+load(
+    ":cc_toolchain_features_ubsan_test.bzl",
+    "cc_toolchain_features_ubsan_test_suite",
+)
+load(
+    ":cc_toolchain_features_env_based_flags_test.bzl",
+    "cc_toolchain_features_env_based_flags_test_suite",
+)
+load(
+    ":cc_toolchain_features_flag_order_test.bzl",
+    "cc_toolchain_features_flag_order_test_suite",
+)
+load(
+    ":cc_toolchain_features_linker_alignment_test.bzl",
+    "cc_toolchain_features_linker_alignment_test_suite",
+)
+load("//build/bazel/flags:common.bzl", "is_env_true")
+>>>>>>> CHANGE (77b0c0 16K: Add linker alignment config to arm/arm64 targets in Baz)
 load("//build/bazel/platforms/arch/variants:constants.bzl", _arch_constants = "constants")
 
 # Different clang versions are configured here.
@@ -328,3 +360,64 @@ filegroup(
     ],
     visibility = ["//build/bazel/tests:__subpackages__"],
 )
+<<<<<<< HEAD   (182ae9 Snap for 8540474 from 3e473165be9dcddf80705ceecced66aec172e5)
+=======
+
+cc_toolchain_features_cfi_test_suite(
+    name = "cc_toolchain_features_cfi_tests",
+)
+
+cc_toolchain_features_pack_relocation_test_suite(
+    name = "cc_toolchain_features_pack_relocation_tests",
+)
+
+cc_toolchain_features_lto_test_suite(
+    name = "cc_toolchain_features_thinlto_tests",
+)
+
+cc_toolchain_features_ubsan_test_suite(
+    name = "cc_toolchain_features_ubsan_tests",
+)
+
+cc_toolchain_features_env_based_flags_test_suite(
+    name = "cc_toolchain_features_env_based_flags_tests",
+)
+
+cc_toolchain_features_flag_order_test_suite(
+    name = "cc_toolchain_features_flag_order_tests",
+)
+
+cc_toolchain_features_linker_alignment_test_suite(
+    name = "cc_toolchain_features_linker_alignment_tests",
+)
+
+bool_flag(
+    name = "auto_zero_initialize_env",
+    build_setting_default = is_env_true(env.get("AUTO_ZERO_INITIALIZE")),
+)
+
+bool_flag(
+    name = "auto_pattern_initialize_env",
+    build_setting_default = is_env_true(env.get("AUTO_PATTERN_INITIALIZE")),
+)
+
+bool_flag(
+    name = "auto_uninitialize_env",
+    build_setting_default = is_env_true(env.get("AUTO_UNINITIALIZE")),
+)
+
+bool_flag(
+    name = "use_ccache_env",
+    build_setting_default = is_env_true(env.get("USE_CCACHE")),
+)
+
+bool_flag(
+    name = "llvm_next_env",
+    build_setting_default = is_env_true(env.get("LLVM_NEXT")),
+)
+
+bool_flag(
+    name = "allow_unknown_warning_option_env",
+    build_setting_default = is_env_true(env.get("ALLOW_UNKNOWN_WARNING_OPTION")),
+)
+>>>>>>> CHANGE (77b0c0 16K: Add linker alignment config to arm/arm64 targets in Baz)
