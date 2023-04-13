@@ -62,6 +62,7 @@ load(
 )
 load("//build/bazel/flags:common.bzl", "is_env_true")
 load("//build/bazel/platforms/arch/variants:constants.bzl", _arch_constants = "constants")
+load("@soong_injection//product_config:product_variables.bzl", "product_vars")
 
 filegroup(name = "empty")
 
@@ -140,7 +141,7 @@ clang_version(
         linker_flags = generated_config_constants.Arm64CpuVariantLdflags.get(
             variant.cpu_variant,
             [],
-        ) + generated_config_constants.Arm64Lldflags,
+        ) + generated_config_constants.Arm64Lldflags + ["-Wl,-z,max-page-size=" + str(product_vars["DeviceMaxPageSizeSupported"])],
         target_arch = arches.Arm64,
         target_os = "android",
         toolchain_identifier = "arm64-toolchain",
@@ -165,7 +166,7 @@ clang_version(
         libclang_rt_builtin = libclang_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_arm"],
         libclang_rt_ubsan_minimal = libclang_ubsan_minimal_rt_prebuilt_map["//build/bazel/platforms/os_arch:android_arm"],
         # do not pass "ld"-only flags as Bazel is only using lld. Ensure that all flags are lld-compatible.
-        linker_flags = generated_config_constants.ArmLldflags,
+        linker_flags = generated_config_constants.ArmLldflags + ["-Wl,-z,max-page-size=" + str(product_vars["DeviceMaxPageSizeSupported"])],
         target_arch = arches.Arm,
         target_os = "android",
         toolchain_identifier = "arm-toolchain",
