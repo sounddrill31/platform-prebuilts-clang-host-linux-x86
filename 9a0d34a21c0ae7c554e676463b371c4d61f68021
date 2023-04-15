@@ -46,6 +46,53 @@
       "message": "File is not formatted. Run `buildifier cc_toolchain_features_linker_alignment_test.bzl` to format the file, or apply the suggested fix.",
       "revId": "9a0d34a21c0ae7c554e676463b371c4d61f68021",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000042867981",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2534265?revision\u003d4",
+      "fixSuggestions": [
+        {
+          "fixId": "912958da_bcaa24df",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_linker_alignment_test.bzl",
+              "range": {
+                "startLine": 63,
+                "startChar": 0,
+                "endLine": 64,
+                "endChar": 0
+              },
+              "replacement": "        doc \u003d \"Flags expected to be supplied to the command line\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_linker_alignment_test.bzl",
+              "range": {
+                "startLine": 196,
+                "startChar": 0,
+                "endLine": 201,
+                "endChar": 0
+              },
+              "replacement": "        tests \u003d [\n            test_linker_alignment_flag_arm(),\n            test_linker_alignment_flag_arm64(),\n            test_linker_alignment_flag_x86(),\n            test_linker_alignment_flag_x86_64(),\n        ],\n    )\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "72d5e812_0f484ce5",
+        "filename": "cc_toolchain_features_linker_alignment_test.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-04-15T00:50:56Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_linker_alignment_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "9a0d34a21c0ae7c554e676463b371c4d61f68021",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
