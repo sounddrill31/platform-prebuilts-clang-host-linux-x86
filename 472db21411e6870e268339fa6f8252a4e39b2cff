@@ -36,6 +36,43 @@
       "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
       "revId": "472db21411e6870e268339fa6f8252a4e39b2cff",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000042869371",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2534265?revision\u003d6",
+      "fixSuggestions": [
+        {
+          "fixId": "a29bbc2c_7bda20f1",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 2051,
+                "startChar": 0,
+                "endLine": 2052,
+                "endChar": 0
+              },
+              "replacement": "                            [\"-Wl,-z,max-page-size\u003d\" + deviceMaxPageSize]\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "32ee16bf_f9387837",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-04-15T01:29:09Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "472db21411e6870e268339fa6f8252a4e39b2cff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
