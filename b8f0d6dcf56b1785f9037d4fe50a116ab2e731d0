@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ddf1718_31cb37aa",
+        "filename": "BUILD.bazel",
+        "patchSetId": 11
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-04-16T23:19:35Z",
+      "side": 1,
+      "message": "Yeah  I thought about putting it inline, but I thought the nested list comprehensions got a little too busy since there has to be a second layer. I felt that it might be clearer to just have the for-loops even though it requires leaving the file to read.\n```\n[\n    [  # \u003c-- have to use a nested list comp to get the arch from the list\n        filegroup(\n            name \u003d \"libclang_rt_%s_%s_%s\" % (prefix, os, arch),\n            srcs \u003d [\":clang\"],\n            output_group \u003d \"libclang_rt_%s_%s_%s\" % (prefix, os, arch),\n        )\n        for arch in arches\n    ]\n    for os, arches in {\n        \"android\": [\n            \"arm\",\n            \"arm64\",\n            \"x86\",\n            \"x86_64\",\n        ],\n        \"linux\": [\n            \"bionic_x86_64\",\n            \"glibc_x86\",\n            \"glibc_x86_64\",\n            \"musl_x86\",\n            \"musl_x86_64\",\n        ],\n    }.items()\n    for prefix in [\n        \"builtins\",\n        \"ubsan_minimal\",\n    ]\n]\n```",
+      "parentUuid": "0a75d8e4_acf30de5",
+      "range": {
+        "startLine": 364,
+        "startChar": 0,
+        "endLine": 384,
+        "endChar": 1
+      },
+      "revId": "b8f0d6dcf56b1785f9037d4fe50a116ab2e731d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "203aa943_3be7f82f",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "82acf763_4a9b465e",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 11
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-04-16T23:19:35Z",
+      "side": 1,
+      "message": "Done. I actually like explicitly specifying the hidden attrs too now that you mention it. I think we could make versioned clang targets by hand without needed to use the envvar in that case.",
+      "parentUuid": "203aa943_3be7f82f",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 5
+      },
+      "revId": "b8f0d6dcf56b1785f9037d4fe50a116ab2e731d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8b500849_eade788a",
@@ -60,6 +108,30 @@
       "writtenOn": "2023-04-14T20:37:42Z",
       "side": 1,
       "message": "I think this comment can go now right?",
+      "range": {
+        "startLine": 418,
+        "startChar": 0,
+        "endLine": 419,
+        "endChar": 71
+      },
+      "revId": "b8f0d6dcf56b1785f9037d4fe50a116ab2e731d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e33ed02_a2579979",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 11
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-04-16T23:19:35Z",
+      "side": 1,
+      "message": "Done thanks",
+      "parentUuid": "8b500849_eade788a",
       "range": {
         "startLine": 418,
         "startChar": 0,
