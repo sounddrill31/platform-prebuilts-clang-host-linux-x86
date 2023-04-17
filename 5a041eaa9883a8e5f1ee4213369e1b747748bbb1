@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3b8100_63f0d9e9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 9
+      },
+      "lineNbr": 2053,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2023-04-17T19:08:06Z",
+      "side": 1,
+      "message": "We don\u0027t need this else branch because linker_only_flags is already set above.",
+      "revId": "5a041eaa9883a8e5f1ee4213369e1b747748bbb1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
