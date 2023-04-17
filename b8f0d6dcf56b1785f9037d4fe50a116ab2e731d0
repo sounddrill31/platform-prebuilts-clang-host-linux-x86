@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5424e154_176317b5",
+        "filename": "BUILD.bazel",
+        "patchSetId": 11
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1888650
+      },
+      "writtenOn": "2023-04-17T00:41:14Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it also work as \n```\n[\n    filegroup(\n        name \u003d \"libclang_rt_%s_%s_%s\" % (prefix, os, arch),\n        srcs \u003d [\":clang\"],\n        output_group \u003d \"libclang_rt_%s_%s_%s\" % (prefix, os, arch),\n    ) for os,arches in {\n        \"android\": [\n            \"arm\",\n            \"arm64\",\n            \"x86\",\n            \"x86_64\",\n        ],\n        \"linux\": [\n            \"bionic_x86_64\",\n            \"glibc_x86\",\n            \"glibc_x86_64\",\n            \"musl_x86\",\n            \"musl_x86_64\",\n        ],\n    }.items() for arch in arches for prefix in [\n        \"builtins\",\n        \"ubsan_minimal\",\n    ]\n]\n```\n?",
+      "parentUuid": "5ddf1718_31cb37aa",
+      "range": {
+        "startLine": 364,
+        "startChar": 0,
+        "endLine": 384,
+        "endChar": 1
+      },
+      "revId": "b8f0d6dcf56b1785f9037d4fe50a116ab2e731d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "203aa943_3be7f82f",
