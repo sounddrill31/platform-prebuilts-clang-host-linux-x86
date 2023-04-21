@@ -16,6 +16,14 @@ load(
     "@kernel_toolchain_info//:dict.bzl",
     "VARS",
 )
+load(":versions.bzl", "VERSIONS")
+load(
+    ":clang_toolchain.bzl",
+    "android_arm64_clang_toolchain",
+    "android_riscv64_clang_toolchain",
+    "android_x86_64_clang_toolchain",
+    "linux_x86_64_clang_toolchain",
+)
 
 # Default toolchain for cc_* rules.
 
@@ -38,3 +46,36 @@ android_riscv64_clang_toolchain(
     name = "android_riscv64_clang_toolchain",
     clang_version = VARS["CLANG_VERSION"],
 )
+
+# Extra toolchain for kernel_* rules
+
+constraint_setting(name = "clang_version")
+
+[constraint_value(
+    name = version,
+    constraint_setting = ":clang_version",
+) for version in VERSIONS]
+
+[linux_x86_64_clang_toolchain(
+    name = version + "_linux_x86_64_clang_toolchain",
+    clang_version = version,
+    extra_compatible_with = [version],
+) for version in VERSIONS]
+
+[android_arm64_clang_toolchain(
+    name = version + "_android_arm64_clang_toolchain",
+    clang_version = version,
+    extra_compatible_with = [version],
+) for version in VERSIONS]
+
+[android_x86_64_clang_toolchain(
+    name = version + "_android_x86_64_clang_toolchain",
+    clang_version = version,
+    extra_compatible_with = [version],
+) for version in VERSIONS]
+
+[android_riscv64_clang_toolchain(
+    name = version + "_android_riscv64_clang_toolchain",
+    clang_version = version,
+    extra_compatible_with = [version],
+) for version in VERSIONS]
