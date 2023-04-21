@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c44c9aa0_1fd6086f",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1124746
+      },
+      "writtenOn": "2023-04-21T23:52:54Z",
+      "side": 1,
+      "message": "is this the same as this one? https://source.corp.google.com/piper///depot/google3/tools/build_defs/cc/action_names.bzl;l\u003d97, if yes you might be want to use that name?",
+      "range": {
+        "startLine": 80,
+        "startChar": 20,
+        "endLine": 80,
+        "endChar": 27
+      },
+      "revId": "e42826d6bd30bff4b46e2a53494c6c61aa86d708",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
