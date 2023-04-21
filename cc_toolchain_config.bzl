@@ -77,6 +77,10 @@ def _tool_paths(clang_version_info):
             path = clang_version_info.directory.basename + "/bin/llvm-nm",
         ),
         tool_path(
+            name = "objcopy",
+            path = clang_version_info.directory.basename + "/bin/llvm-objcopy",
+        ),
+        tool_path(
             name = "objdump",
             path = clang_version_info.directory.basename + "/bin/llvm-objdump",
         ),
@@ -199,6 +203,13 @@ def _create_action_configs(tool_paths, target_os):
         tools = [tool_name_to_tool["strip"]],
         # This doesn't imply any feature, because Bazel currently mimics
         # Soong by running strip actions in a rule (stripped_shared_library).
+    ))
+
+    # use llvm-objcopy to remove addrsig sections from partially linked objects
+    action_configs.append(action_config(
+        action_name = "objcopy",
+        enabled = True,
+        tools = [tool_name_to_tool["objcopy"]],
     ))
 
     return action_configs
