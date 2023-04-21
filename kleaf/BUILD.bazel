@@ -113,3 +113,39 @@ constraint_setting(name = "clang_version")
     clang_version = version,
     extra_compatible_with = [version],
 ) for version in VERSIONS]
+
+[platform(
+    name = version + "_linux_x86_64",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+        version,
+    ],
+) for version in VERSIONS]
+
+[platform(
+    name = version + "_android_arm64",
+    constraint_values = [
+        "@platforms//os:android",
+        "@platforms//cpu:arm64",
+        version,
+    ],
+) for version in VERSIONS]
+
+[platform(
+    name = version + "_android_x86_64",
+    constraint_values = [
+        "@platforms//os:android",
+        "@platforms//cpu:x86_64",
+        version,
+    ],
+) for version in VERSIONS]
+
+[platform(
+    name = version + "_android_riscv64",
+    constraint_values = [
+        "@platforms//os:android",
+        "@platforms//cpu:riscv64",
+        version,
+    ],
+) for version in VERSIONS]
