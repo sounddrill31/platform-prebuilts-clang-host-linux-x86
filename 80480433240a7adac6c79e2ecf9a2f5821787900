@@ -16,6 +16,24 @@
       "message": "I need to think about this. Once rust also uses toolchain resolution, there\u0027ll be O(m * n) platforms exists (m is the number of clang toolchains and n is the number of rust toolchains). So maybe this belongs to kernel_build() instead.",
       "revId": "80480433240a7adac6c79e2ecf9a2f5821787900",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26adce47_210ccde3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-04-25T16:20:07Z",
+      "side": 1,
+      "message": "is it possible to help bazel somehow with hints?",
+      "parentUuid": "b82cbb31_f4ca3da3",
+      "revId": "80480433240a7adac6c79e2ecf9a2f5821787900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
