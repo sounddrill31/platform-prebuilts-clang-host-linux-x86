@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5f1d4ec_93c4db71",
+        "filename": "kleaf/BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-04-25T18:04:20Z",
+      "side": 1,
+      "message": "Do you need a load statement to use these here?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 28
+      },
+      "revId": "b723e8e8c225db453b8c7fabab32c6a77b9ddc3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
