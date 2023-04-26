@@ -49,13 +49,13 @@ def clang_toolchain(
     if linker_files == None:
         linker_files = []
 
-    clang = "//{}/parent/clang-{}".format(native.package_name(), clang_version)
-    clang_includes = "{}:includes".format(clang)
+    clang_pkg = "//prebuilts/clang/host/linux-x86/clang-{}".format(clang_version)
+    clang_includes = "{}:includes".format(clang_pkg)
 
     # Technically we can split the binaries into those for compiler, linker
     # etc., but since these binaries are usually updated together, it is okay
     # to use a superset here.
-    clang_bin = "{}:binaries".format(clang)
+    clang_bin = "{}:binaries".format(clang_pkg)
 
     native.filegroup(
         name = name + "_compiler_files",
