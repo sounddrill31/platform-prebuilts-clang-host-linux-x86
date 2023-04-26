@@ -16,18 +16,20 @@
 
 load(
     "@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
+    "action_config",
     "feature",
     "flag_group",
     "flag_set",
-    "tool_path",
+    "variable_with_value",
 )
 load(
     "@rules_cc//cc:action_names.bzl",
+    "ACTION_NAMES",
     "ALL_CC_COMPILE_ACTION_NAMES",
     "ALL_CC_LINK_ACTION_NAMES",
 )
 
-def _tool_paths(ctx):
+def _action_configs(ctx):
     # From _setup_env.sh
     #  HOSTCC=clang
     #  HOSTCXX=clang++
@@ -46,35 +48,117 @@ def _tool_paths(ctx):
     # https://github.com/bazelbuild/bazel/issues/8438
 
     return [
-        tool_path(
-            name = "gcc",
-            path = "parent/clang-{}/bin/clang".format(ctx.attr.clang_version),
+        action_config(
+            action_name = ACTION_NAMES.c_compile,
+            tools = [
+                struct(
+                    type_name = "tool",
+                    tool = ctx.file._clang,
+                ),
+            ],
         ),
-        tool_path(
-            name = "ld",
-            path = "parent/clang-{}/bin/ld.lld".format(ctx.attr.clang_version),
+        action_config(
+            action_name = ACTION_NAMES.cpp_compile,
+            tools = [
+                struct(
+                    type_name = "tool",
+                    tool = ctx.file._clang_plus_plus,
+                ),
+            ],
         ),
-        tool_path(
-            name = "ar",
-            path = "parent/clang-{}/bin/llvm-ar".format(ctx.attr.clang_version),
+        action_config(
+            action_name = ACTION_NAMES.cpp_link_executable,
+            tools = [
+                struct(
+                    type_name = "tool",
+                    # ld.lld does not recognize --target for android-ism,
+                    # so just use clang directly
+                    tool = ctx.file._clang,
+                ),
+            ],
         ),
-        tool_path(
-            name = "cpp",
-            path = "parent/clang-{}/bin/clang++".format(ctx.attr.clang_version),
+        action_config(
+            action_name = ACTION_NAMES.cpp_link_static_library,
+            tools = [
+                struct(
+                    type_name = "tool",
+                    tool = ctx.file._ar,
+                ),
+            ],
+            flag_sets = [
+                flag_set(
+                    flag_groups = [
+                        flag_group(
+                            flags = ["rcsD", "%{output_execpath}"],
+                            expand_if_available = "output_execpath",
+                        ),
+                    ],
+                ),
+                flag_set(
+                    flag_groups = [
+                        flag_group(
+                            iterate_over = "libraries_to_link",
+                            flag_groups = [
+                                flag_group(
+                                    flags = ["%{libraries_to_link.name}"],
+                                    expand_if_equal = variable_with_value(
+                                        name = "libraries_to_link.type",
+                                        value = "object_file",
+                                    ),
+                                ),
+                                flag_group(
+                                    flags = ["%{libraries_to_link.object_files}"],
+                                    iterate_over = "libraries_to_link.object_files",
+                                    expand_if_equal = variable_with_value(
+                                        name = "libraries_to_link.type",
+                                        value = "object_file_group",
+                                    ),
+                                ),
+                            ],
+                            expand_if_available = "libraries_to_link",
+                        ),
+                    ],
+                ),
+                flag_set(
+                    flag_groups = [
+                        flag_group(
+                            flags = ["@%{linker_param_file}"],
+                            expand_if_available = "linker_param_file",
+                        ),
+                    ],
+                ),
+            ],
         ),
-        tool_path(
-            name = "nm",
-            path = "parent/clang-{}/bin/llvm-nm".format(ctx.attr.clang_version),
-        ),
-        tool_path(
-            name = "objdump",
-            path = "parent/clang-{}/bin/llvm-objdump".format(ctx.attr.clang_version),
-        ),
-        tool_path(
-            name = "strip",
-            path = "parent/clang-{}/bin/llvm-strip".format(ctx.attr.clang_version),
+        action_config(
+            action_name = ACTION_NAMES.strip,
+            tools = [
+                struct(
+                    type_name = "tool",
+                    tool = ctx.file._strip,
+                ),
+            ],
         ),
     ]
+
+def _tool_attrs():
+    return {
+        "_clang": attr.label(default = _get_clang, allow_single_file = True),
+        "_clang_plus_plus": attr.label(default = _get_clang_plus_plus, allow_single_file = True),
+        "_strip": attr.label(default = _get_strip, allow_single_file = True),
+        "_ar": attr.label(default = _get_ar, allow_single_file = True),
+    }
+
+def _get_clang(clang_version):
+    return Label("//prebuilts/clang/host/linux-x86/clang-{}:bin/clang".format(clang_version))
+
+def _get_clang_plus_plus(clang_version):
+    return Label("//prebuilts/clang/host/linux-x86/clang-{}:bin/clang++".format(clang_version))
+
+def _get_strip(clang_version):
+    return Label("//prebuilts/clang/host/linux-x86/clang-{}:bin/llvm-strip".format(clang_version))
+
+def _get_ar(clang_version):
+    return Label("//prebuilts/clang/host/linux-x86/clang-{}:bin/llvm-ar".format(clang_version))
 
 def _common_cflags():
     return feature(
@@ -125,5 +209,6 @@ def _common_features(_ctx):
 
 common = struct(
     features = _common_features,
-    tool_paths = _tool_paths,
+    action_configs = _action_configs,
+    tool_attrs = _tool_attrs,
 )
