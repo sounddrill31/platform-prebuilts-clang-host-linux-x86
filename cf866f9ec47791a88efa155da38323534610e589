@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c876556_4d015afb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-04-26T15:44:11Z",
+      "side": 1,
+      "message": "The presubmit error seems legit:\n\n```\nERROR: /buildbot/src/android/common-android-mainline/build/kernel/kleaf/BUILD.bazel:328:5: Generating proto for Starlark doc for docs-workspace.bzl failed: (Exit 1): stardoc failed: error executing command (from target //build/kernel/kleaf:docs-workspace.bzl)\n\n\u003comitted\u003e\n\ncom.google.devtools.build.skydoc.SkydocMain$StarlarkEvaluationException: File build/kernel/kleaf/workspace.bzl imported \u0027//prebuilts/clang/host/linux-x86/kleaf:register.bzl\u0027, yet prebuilts/clang/host/linux-x86/kleaf/register.bzl was not found, even at roots [., external/__main__].\n```",
+      "revId": "cf866f9ec47791a88efa155da38323534610e589",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
