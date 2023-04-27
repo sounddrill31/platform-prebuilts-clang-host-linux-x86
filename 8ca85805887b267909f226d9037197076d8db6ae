@@ -16,6 +16,29 @@
       "message": "Awesome, thank you!",
       "revId": "8ca85805887b267909f226d9037197076d8db6ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f104945_ae921ff4",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 2005106
+      },
+      "writtenOn": "2023-04-27T13:46:03Z",
+      "side": 1,
+      "message": "Not sure but maybe you can get rid of this by adding implies: https://cs.opensource.google/bazel/bazel/+/master:src/main/java/com/google/devtools/build/lib/rules/cpp/CppActionConfigs.java;drc\u003dae7cfa59461b2c694226be689662d387e9c38427;l\u003d1329",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 68,
+        "endChar": 17
+      },
+      "revId": "8ca85805887b267909f226d9037197076d8db6ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
