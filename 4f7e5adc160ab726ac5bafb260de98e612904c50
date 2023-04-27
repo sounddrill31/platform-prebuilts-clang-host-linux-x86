@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8445fa8_2ab80e75",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-04-27T10:50:17Z",
+      "side": 0,
+      "message": "Those are intentionally left out, right?",
+      "range": {
+        "startLine": 65,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 10
+      },
+      "revId": "4f7e5adc160ab726ac5bafb260de98e612904c50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
