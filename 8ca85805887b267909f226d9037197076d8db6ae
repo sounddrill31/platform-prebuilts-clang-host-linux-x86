@@ -39,6 +39,30 @@
       },
       "revId": "8ca85805887b267909f226d9037197076d8db6ae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59c7c1bd_801c382b",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-04-27T19:08:26Z",
+      "side": 1,
+      "message": "Done.\n\nWhere\u0027s this documented? I only see it briefly mentioned in  https://bazel.build/docs/cc-toolchain-config-reference.\n\nAlso, it seems that I don\u0027t need `linker_param_file`. Maybe I worry about command line length later.",
+      "parentUuid": "5f104945_ae921ff4",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 68,
+        "endChar": 17
+      },
+      "revId": "8ca85805887b267909f226d9037197076d8db6ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

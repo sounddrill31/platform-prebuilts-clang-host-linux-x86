@@ -22,6 +22,30 @@
       },
       "revId": "4f7e5adc160ab726ac5bafb260de98e612904c50",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e94d1f64_857ea62b",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-04-27T19:08:26Z",
+      "side": 0,
+      "message": "Yes. I don\u0027t think cc_* rules uses these; there are no action names for them.\n\nThis won\u0027t affect kernel builds because nm and objdump are still included in all_files.",
+      "parentUuid": "c8445fa8_2ab80e75",
+      "range": {
+        "startLine": 65,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 10
+      },
+      "revId": "4f7e5adc160ab726ac5bafb260de98e612904c50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
