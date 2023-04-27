@@ -46,6 +46,30 @@
       },
       "revId": "4f7e5adc160ab726ac5bafb260de98e612904c50",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "777b45c8_cc9502cf",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-04-27T19:09:25Z",
+      "side": 0,
+      "message": "See cc_toolchain.bzl, L82 in patchset 6",
+      "parentUuid": "e94d1f64_857ea62b",
+      "range": {
+        "startLine": 65,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 10
+      },
+      "revId": "4f7e5adc160ab726ac5bafb260de98e612904c50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
