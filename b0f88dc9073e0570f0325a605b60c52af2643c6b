@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5557f79_35c97ca6",
+        "filename": "kleaf/versions.bzl",
+        "patchSetId": 17
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-04-28T14:30:15Z",
+      "side": 1,
+      "message": "nit: License header?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "b0f88dc9073e0570f0325a605b60c52af2643c6b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
