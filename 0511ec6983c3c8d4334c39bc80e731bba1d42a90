@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6ee3cbc_079db556",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1307979
+      },
+      "writtenOn": "2023-05-05T22:54:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6b3c5ef8_362294a7",
+      "revId": "0511ec6983c3c8d4334c39bc80e731bba1d42a90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a9941dc7_1428673e",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-05-05T17:37:22Z",
       "side": 1,
       "message": "yahan@:  The emulator build failure implies the coverage run is still not in sync with the emulator build.  Any progress on b/268674933?  If not, please switch it to r487747.\n\nkrzysio@: We should also delete corresponding prebuilts in prebuilts/clang/host/windows-x86 but this project wouldn\u0027t be in any of the platform checkouts.  Unless you have an llvm-toolchain tree, I can take care of it after the update to the commit message.",
+      "revId": "0511ec6983c3c8d4334c39bc80e731bba1d42a90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28350e91_93cb9a49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1307979
+      },
+      "writtenOn": "2023-05-05T22:54:35Z",
+      "side": 1,
+      "message": "I restored clang-r450784e for now, will remove it after that bug is addressed.",
+      "parentUuid": "a9941dc7_1428673e",
       "revId": "0511ec6983c3c8d4334c39bc80e731bba1d42a90",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
