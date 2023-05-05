@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d5d81de_b3545524",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-05-05T19:33:59Z",
+      "side": 1,
+      "message": "Maybe consider naming this file `cc_toolchain_features_misc_test.bzl` or `cc_toolchain_features_general_test.bzl` or something like that, so that there is no confusion around the fact that there are multiple test files for `cc_toolchain_features.bzl`.",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b6ddb79_fd2db306",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-05-05T19:33:59Z",
+      "side": 1,
+      "message": "Unused",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62a1eed9_569b5494",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-05-05T19:33:59Z",
+      "side": 1,
+      "message": "Nit: It would be more consistent with the style in our other tests to split this up into two macros. Usually, I only combine multiple into one if they follow the same pattern and typically only if they use one or more of the same target(s) under test.",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
