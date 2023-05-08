@@ -4,7 +4,7 @@ clang.real
 clang++.real
 clang-tidy
 clang-tidy.real
-../lib/libc++.so.1
+../lib/libc++.so
 lld
 ld64.lld
 ld.lld
