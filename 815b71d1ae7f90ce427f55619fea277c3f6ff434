@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15f24894_b129db39",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-05-09T20:30:33Z",
+      "side": 1,
+      "message": "should we test these failures in the test as well?",
+      "range": {
+        "startLine": 125,
+        "startChar": 8,
+        "endLine": 132,
+        "endChar": 102
+      },
+      "revId": "815b71d1ae7f90ce427f55619fea277c3f6ff434",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
