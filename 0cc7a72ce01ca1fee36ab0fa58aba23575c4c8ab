@@ -16,6 +16,24 @@
       "message": "Not sure why this showed up twice, but I deleted it in another PS.",
       "revId": "0cc7a72ce01ca1fee36ab0fa58aba23575c4c8ab",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59a0004d_a1e1bc1d",
+        "filename": "kleaf/versions.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2023-05-09T18:59:09Z",
+      "side": 1,
+      "message": "Fixed by https://r.android.com/c/2583975",
+      "parentUuid": "adc83483_462270d0",
+      "revId": "0cc7a72ce01ca1fee36ab0fa58aba23575c4c8ab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
