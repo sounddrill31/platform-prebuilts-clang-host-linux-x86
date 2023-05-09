@@ -100,7 +100,7 @@ def _clang_version_path_test(clang_version, clang_short_version):
         },
     )
 
-_clang_15_0_1_path_test = _clang_version_path_test("clang-r458507", "15.0.1")
+_clang_17_path_test = _clang_version_path_test("clang-r487747", "17")
 
 _clang_16_0_2_path_test = _clang_version_path_test("clang-r475365b", "16.0.2")
 
@@ -133,10 +133,10 @@ def _create_clang_version_tests():
         {
             "os": "android",
             "arch": "arm64",
-            "clang_short_version": "15.0.1",
-            "clang_version_test": _clang_15_0_1_path_test,
-            "expected_clang_path": "prebuilts/clang/host/linux-x86/clang-r458507/bin/clang",
-            "expected_libclang_rt_path": "prebuilts/clang/host/linux-x86/clang-r458507/lib/clang/15.0.1/lib/linux/libclang_rt.builtins-aarch64-android.a",
+            "clang_short_version": "17",
+            "clang_version_test": _clang_17_path_test,
+            "expected_clang_path": "prebuilts/clang/host/linux-x86/clang-r487747/bin/clang",
+            "expected_libclang_rt_path": "prebuilts/clang/host/linux-x86/clang-r487747/lib/clang/17/lib/linux/libclang_rt.builtins-aarch64-android.a",
         },
         {
             "os": "android",
