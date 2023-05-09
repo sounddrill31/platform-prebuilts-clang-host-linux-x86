@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adc83483_462270d0",
+        "filename": "kleaf/versions.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-05-09T18:11:31Z",
+      "side": 1,
+      "message": "Not sure why this showed up twice, but I deleted it in another PS.",
+      "revId": "0cc7a72ce01ca1fee36ab0fa58aba23575c4c8ab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
