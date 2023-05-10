@@ -16,6 +16,24 @@
       "message": "I doubt that the new (and unused) binaries are causing this error. 😭\n\n```\nprebuilts/clang/host/linux-x86/clang-r487747b/bin/llvm-readelf: error: \u0027bazel-out/aosp_arm64-eng-opt/bin/build/bazel/examples/apex/minimal/build.bazel.examples.apex.minimal_staging_dir/etc/dummy_sub_dir/dummy_prebuilt_etc_data_1_renamed\u0027: The file was not recognized as a valid object file\nprebuilts/clang/host/linux-x86/clang-r487747b/bin/llvm-readelf: error: \u0027bazel-out/aosp_arm64-eng-opt/bin/build/bazel/examples/apex/minimal/build.bazel.examples.apex.minimal_staging_dir/etc/dummy_sub_dir/build.bazel.examples.apex.minimal_dummy_unnamed_prebuilt_etc\u0027: The file was not recognized as a valid object file\nprebuilts/clang/host/linux-x86/clang-r487747b/bin/llvm-readelf: error: \u0027bazel-out/aosp_arm64-eng-opt/bin/build/bazel/examples/apex/minimal/build.bazel.examples.apex.minimal_staging_dir/etc/build.bazel.examples.apex.minimal_dummy_prebuilt_etc_without_subdir\u0027: The file was not recognized as a valid object file\n```",
       "revId": "f7de4376c4a749c1dde95c6f55d6c44cda883fce",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "334a9e63_5e2e9d3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-05-10T01:20:58Z",
+      "side": 1,
+      "message": "It\u0027s an existing build breakage internally. It has been broken for 4 days (since May 5).",
+      "parentUuid": "7d20b668_4faa0562",
+      "revId": "f7de4376c4a749c1dde95c6f55d6c44cda883fce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
