@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d263cb87_b73d1672",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2023-05-11T17:27:20Z",
+      "side": 1,
+      "message": "Do not submit until https://android-review.googlesource.com/c/platform/ndk/+/2585913 lands, but otherwise LGTM",
+      "revId": "65a22f457f16fe5c755fbe7173d540641b531b94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
