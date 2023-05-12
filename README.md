@@ -37,6 +37,7 @@ LLVM Users
     * Look for "clang-" in [mainline build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android-mainline/build.config.constants).
     * Look for "clang-" in [android14-6.1 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android14-6.1/build.config.constants)
     * Look for "clang-" in [android14-5.15 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android14-5.15/build.config.constants)
+  * When adding or removing a compiler version, the list in `kleaf/versions.bzl` needs to be updated.
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
 * [**NDK**](https://developer.android.com/ndk)
@@ -140,6 +141,7 @@ Prebuilt Versions
 * [clang-r468909b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r468909b) - October 2022
 * [clang-r475365b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r475365b) - December 2022
 * [clang-r487747](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747) - March 2023
+* [clang-r487747b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747b) - April 2023
 
 
 More Information
