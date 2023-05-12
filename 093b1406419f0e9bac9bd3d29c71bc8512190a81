@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "934d0514_7fc0cbc2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "Thanks for updating the docs!  I added some suggestions below with the hope gerrit just lets you accept them with a click.",
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b45de372_17698f5f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "```suggestion\n  * Currently clang-r487747c\n```",
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ab2a42b_89f6910d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "```suggestion\n  * clang-r487747c for Android U release\n```",
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98e42607_16b8c7cf",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "```suggestion\n  * When adding or removing a clang prebuilt, the list in `kleaf/versions.bzl` needs to be updated.\n```",
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8d7ac68_6b2737e4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "It\u0027s good to note this point and LGTM here, mainly because I cannot think of a better location where this\u0027d be a stronger remainder for the person doing the removal.  Maybe it\u0027d be good to add a ayeaye linter (or a repo hook if they\u0027re still being supported).\n\nWe should also add this operation to llvm_android/remove-prebuilts.py - b/282100550.",
+      "range": {
+        "startLine": 40,
+        "startChar": 30,
+        "endLine": 40,
+        "endChar": 46
+      },
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8e79f255_692d52d4",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-12T04:39:46Z",
+      "side": 1,
+      "message": "```suggestion\n* [clang-r487747b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747b) - April 2023\n* [clang-r487747c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747c) - May 2023\n\n```",
+      "range": {
+        "startLine": 144,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 140
+      },
+      "revId": "093b1406419f0e9bac9bd3d29c71bc8512190a81",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
