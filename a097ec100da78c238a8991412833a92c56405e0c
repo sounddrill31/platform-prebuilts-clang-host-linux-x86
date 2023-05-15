@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0947dcb7_363ff437",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-05-15T18:17:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d5d81de_b3545524",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3b6ddb79_fd2db306",
@@ -35,6 +53,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "997b1af7_0e1f1488",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-05-15T18:17:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b6ddb79_fd2db306",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62a1eed9_569b5494",
@@ -48,6 +84,24 @@
       "writtenOn": "2023-05-05T19:33:59Z",
       "side": 1,
       "message": "Nit: It would be more consistent with the style in our other tests to split this up into two macros. Usually, I only combine multiple into one if they follow the same pattern and typically only if they use one or more of the same target(s) under test.",
+      "revId": "a097ec100da78c238a8991412833a92c56405e0c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26e07900_466107e0",
+        "filename": "cc_toolchain_features_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-05-15T18:17:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62a1eed9_569b5494",
       "revId": "a097ec100da78c238a8991412833a92c56405e0c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
