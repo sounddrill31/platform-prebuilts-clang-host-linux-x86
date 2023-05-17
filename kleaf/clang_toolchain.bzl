@@ -179,7 +179,7 @@ def linux_x86_64_clang_toolchain(
         sysroot_label = "//build/kernel:sysroot",
         sysroot_path = "build/kernel/build-tools/sysroot",
         target_cpu = "x86_64",
-        target_os = "linux",
+        target_os = "linux_glibc",
         extra_compatible_with = extra_compatible_with,
     )
 
