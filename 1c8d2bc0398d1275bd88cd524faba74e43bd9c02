@@ -34,6 +34,24 @@
       "parentUuid": "e5837811_f17a8d33",
       "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7aa3ea1_03b163a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-19T21:01:23Z",
+      "side": 1,
+      "message": "Ping... Jiyong, just confirming that the symbol files are unused considering this change passed presubmit.  In that case, we can remove these files and their creation in future prebuilts.",
+      "parentUuid": "af351961_7df02f50",
+      "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
