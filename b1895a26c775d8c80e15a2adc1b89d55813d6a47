@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67213913_a2df0e03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1247518
+      },
+      "writtenOn": "2023-05-21T21:40:21Z",
+      "side": 1,
+      "message": "The breakage was not existing... facepalm 😞",
+      "revId": "b1895a26c775d8c80e15a2adc1b89d55813d6a47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
