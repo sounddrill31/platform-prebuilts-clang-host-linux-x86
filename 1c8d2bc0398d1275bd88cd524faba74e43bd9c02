@@ -52,6 +52,24 @@
       "parentUuid": "af351961_7df02f50",
       "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8eef6a07_7a4f0309",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2023-05-22T02:28:48Z",
+      "side": 1,
+      "message": "Hi,\n\nSorry for the delay.\n\n\nIf my reading of the code is correct, these map files are still needed for the libraries that are marked as `is_llndk: true` in the bp file. Currently, `libclang_rt.asan` and `libclang_rt.hwasan` are those.\n\nI don\u0027t understand why the build succeeded though. Places like [1] require that symbol file exists. Dan might know better since parseNativeAbiDefinition is from him.\n\n[1] https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/library.go;drc\u003de684294fb2f0407cd2e0cbfd8663542d3185b570;l\u003d1258",
+      "parentUuid": "c7aa3ea1_03b163a8",
+      "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
