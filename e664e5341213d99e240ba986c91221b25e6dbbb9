@@ -16,6 +16,24 @@
       "message": "Did you actually check if this was still needed? The brokenness was other builds depending on a deprecated (thus slated for proper removal) prebuilt. Build monitors should verify that the problem hasn\u0027t been fixed another way before creating/submitting CLs like this. This just adds extra churn to everyone (not to mention re-downloading extra unnecessary binaries).",
       "revId": "e664e5341213d99e240ba986c91221b25e6dbbb9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc20653d_72b7589b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1948631
+      },
+      "writtenOn": "2023-05-22T02:53:51Z",
+      "side": 1,
+      "message": "Hi Stephen, it\u0027s Culprit verified.\nI\u0027m sorry to make you feel like that, I think the duty of daily BuildMonitor is to fix the build breakage, and there is a lot build breakage everyday, all I can do is to revert it or leave it to the next BuildMonitor.\nIf this\u0027 not the correct solution, please help with it, thank you.",
+      "parentUuid": "a18c1c61_24285643",
+      "revId": "e664e5341213d99e240ba986c91221b25e6dbbb9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
