@@ -70,6 +70,24 @@
       "parentUuid": "c7aa3ea1_03b163a8",
       "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "346ed77d_c7002704",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-05-24T17:41:13Z",
+      "side": 1,
+      "message": "\u003e I don\u0027t understand why the build succeeded though. Places like [1] require that symbol file exists. Dan might know better since parseNativeAbiDefinition is from him.\n\nThe asan map file may not trigger a failure since no postsubmit builds still use asan.  But it\u0027s odd that the hwasan targets also passed presubmit.  Let me check on a local build.",
+      "parentUuid": "8eef6a07_7a4f0309",
+      "revId": "1c8d2bc0398d1275bd88cd524faba74e43bd9c02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
