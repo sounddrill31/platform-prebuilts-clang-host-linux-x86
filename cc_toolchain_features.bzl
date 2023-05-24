@@ -228,6 +228,10 @@ def _env_based_common_global_cflags(ctx):
     if ctx.attr._allow_unknown_warning_option[BuildSettingInfo].value:
         flags.extend(["-Wno-error=unknown-warning-option"])
 
+    kernelPageSize = ctx.attr._product_variables[ProductVariablesInfo].Kernel_page_size
+    if kernelPageSize:
+        flags.extend(["-DTARGET_KERNEL_PAGE_SIZE=" + kernelPageSize])
+
     return flags
 
 def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
