@@ -518,12 +518,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clang-refactor "${_IMPORT_PREFIX}/bin/clang-
 # Import target "clang-cpp" for configuration "Release"
 set_property(TARGET clang-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clang-cpp PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so.17"
-  IMPORTED_SONAME_RELEASE "libclang-cpp.so.17"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang-cpp.so"
+  IMPORTED_SONAME_RELEASE "libclang-cpp.so"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-cpp )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so.17" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clang-cpp "${_IMPORT_PREFIX}/lib/libclang-cpp.so" )
 
 # Import target "clang-check" for configuration "Release"
 set_property(TARGET clang-check APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -1132,12 +1132,12 @@ list(APPEND _IMPORT_CHECK_FILES_FOR_clangdRemoteIndex "${_IMPORT_PREFIX}/lib/lib
 # Import target "libclang" for configuration "Release"
 set_property(TARGET libclang APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libclang PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so.17.0.2"
-  IMPORTED_SONAME_RELEASE "libclang.so.17"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclang.so"
+  IMPORTED_SONAME_RELEASE "libclang.so"
   )
 
 list(APPEND _IMPORT_CHECK_TARGETS libclang )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib/libclang.so.17.0.2" )
+list(APPEND _IMPORT_CHECK_FILES_FOR_libclang "${_IMPORT_PREFIX}/lib/libclang.so" )
 
 # Import target "amdgpu-arch" for configuration "Release"
 set_property(TARGET amdgpu-arch APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
