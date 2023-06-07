@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25696e0b_7b97504e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1842,
+      "author": {
+        "id": 1124746
+      },
+      "writtenOn": "2023-06-07T16:51:44Z",
+      "side": 1,
+      "message": "are you going to get multiple duplicated flags with this?",
+      "range": {
+        "startLine": 1842,
+        "startChar": 12,
+        "endLine": 1842,
+        "endChar": 24
+      },
+      "revId": "24f4b2f0dbef8bb16627a02f7c42c5517b0266b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
