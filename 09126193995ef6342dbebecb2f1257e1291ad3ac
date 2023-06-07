@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce8a7450_c41c95cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-06-07T17:37:32Z",
+      "side": 1,
+      "message": "Filed b/286250297 for presubmit error, retrying to see if it is transient",
+      "revId": "09126193995ef6342dbebecb2f1257e1291ad3ac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
