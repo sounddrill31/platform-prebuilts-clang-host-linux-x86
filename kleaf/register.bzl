@@ -19,6 +19,14 @@ load(":versions.bzl", "VERSIONS")
 # buildifier: disable=unnamed-macro
 def register_clang_toolchains():
     """Registers all clang toolchains defined in this package."""
+
+    native.register_toolchains(
+        "//prebuilts/clang/host/linux-x86/kleaf:custom_android_arm64_clang_toolchain",
+        "//prebuilts/clang/host/linux-x86/kleaf:custom_android_x86_64_clang_toolchain",
+        "//prebuilts/clang/host/linux-x86/kleaf:custom_android_riscv64_clang_toolchain",
+        "//prebuilts/clang/host/linux-x86/kleaf:custom_linux_x86_64_clang_toolchain",
+    )
+
     for version in VERSIONS:
         native.register_toolchains(
             "//prebuilts/clang/host/linux-x86/kleaf:{}_android_arm64_clang_toolchain".format(version),

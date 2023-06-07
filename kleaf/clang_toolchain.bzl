@@ -23,7 +23,7 @@ load(":clang_config.bzl", "clang_config")
 
 def clang_toolchain(
         name,
-        clang_version,
+        clang_pkg,
         target_cpu,
         target_os,
         linker_files = None,
@@ -35,7 +35,7 @@ def clang_toolchain(
 
     Args:
         name: name of the toolchain
-        clang_version: value of `CLANG_VERSION`, e.g. `r475365b`.
+        clang_pkg: FIXME
         target_cpu: CPU that the toolchain cross-compiles to
         target_os: OS that the toolchain cross-compiles to
         linker_files: Additional dependencies to the linker
@@ -58,7 +58,6 @@ def clang_toolchain(
     if extra_compatible_with == None:
         extra_compatible_with = []
 
-    clang_pkg = "//prebuilts/clang/host/linux-x86/clang-{}".format(clang_version)
     clang_includes = Label("{}:includes".format(clang_pkg))
 
     # Technically we can split the binaries into those for compiler, linker
@@ -114,7 +113,8 @@ def clang_toolchain(
 
     clang_config(
         name = name + "_clang_config",
-        clang_version = clang_version,
+        # FIXME
+        clang_version = clang_pkg.split("/")[-1].removeprefix("clang-"),
         sysroot = sysroot_path,
         target_cpu = target_cpu,
         target_os = target_os,
@@ -158,18 +158,18 @@ def clang_toolchain(
 
 def linux_x86_64_clang_toolchain(
         name,
-        clang_version,
+        clang_pkg,
         extra_compatible_with = None):
     """Declare an linux_x86_64 toolchain.
 
     Args:
         name: name prefix
-        clang_version: `CLANG_VERSION`
+        clang_pkg: FIXME
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
-        clang_version = clang_version,
+        clang_pkg = clang_pkg,
         linker_files = [
             # From _setup_env.sh, HOSTLDFLAGS
             "//prebuilts/kernel-build-tools:linux-x86-libs",
@@ -185,18 +185,18 @@ def linux_x86_64_clang_toolchain(
 
 def android_arm64_clang_toolchain(
         name,
-        clang_version,
+        clang_pkg,
         extra_compatible_with = None):
     """Declare an android_arm64 toolchain.
 
     Args:
         name: name prefix
-        clang_version: `CLANG_VERSION`
+        clang_pkg: FIXME
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
-        clang_version = clang_version,
+        clang_pkg = clang_pkg,
         ndk_triple = VARS.get("AARCH64_NDK_TRIPLE"),
         # From _setup_env.sh: when NDK triple is set,
         # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
@@ -209,18 +209,18 @@ def android_arm64_clang_toolchain(
 
 def android_x86_64_clang_toolchain(
         name,
-        clang_version,
+        clang_pkg,
         extra_compatible_with = None):
     """Declare an android_x86_64 toolchain.
 
     Args:
         name: name prefix
-        clang_version: `CLANG_VERSION`
+        clang_pkg: FIXME
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
-        clang_version = clang_version,
+        clang_pkg = clang_pkg,
         ndk_triple = VARS.get("X86_64_NDK_TRIPLE"),
         # From _setup_env.sh: when NDK triple is set,
         # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
@@ -233,18 +233,18 @@ def android_x86_64_clang_toolchain(
 
 def android_riscv64_clang_toolchain(
         name,
-        clang_version,
+        clang_pkg,
         extra_compatible_with = None):
     """Declare an android_riscv toolchain.
 
     Args:
         name: name prefix
-        clang_version: `CLANG_VERSION`
+        clang_pkg: FIXME
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
-        clang_version = clang_version,
+        clang_pkg = clang_pkg,
         target_cpu = "riscv64",
         target_os = "android",
         extra_compatible_with = extra_compatible_with,
