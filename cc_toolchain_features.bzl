@@ -225,6 +225,9 @@ def _env_based_common_global_cflags(ctx):
     if ctx.attr._allow_unknown_warning_option[BuildSettingInfo].value:
         flags.extend(["-Wno-error=unknown-warning-option"])
 
+    deviceMaxPageSizeSupported = ctx.attr._product_variables[ProductVariablesInfo].DeviceMaxPageSizeSupported
+    flags.extend(["-DTARGET_MAX_PAGE_SIZE_SUPPORTED=" + deviceMaxPageSizeSupported])
+
     return flags
 
 def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
