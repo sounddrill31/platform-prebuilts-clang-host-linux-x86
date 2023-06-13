@@ -18,7 +18,7 @@ load(
     "VARS",
 )
 load(":architecture_constants.bzl", "SUPPORTED_ARCHITECTURES")
-load(":clang_toolchain.bzl", "prebuilt_clang_toolchain")
+load(":clang_toolchain.bzl", "prebuilt_clang_toolchain", "user_clang_toolchain")
 load(":versions.bzl", "VERSIONS")
 
 bzl_library(
@@ -69,3 +69,11 @@ constraint_setting(name = "clang_version")
     target_cpu = target_cpu,
     target_os = target_os,
 ) for version in VERSIONS for target_os, target_cpu in SUPPORTED_ARCHITECTURES]
+
+# User toolchain specified via command line flags.
+
+[user_clang_toolchain(
+    name = "user_{}_{}_clang_toolchain".format(target_os, target_cpu),
+    target_cpu = target_cpu,
+    target_os = target_os,
+) for target_os, target_cpu in SUPPORTED_ARCHITECTURES]

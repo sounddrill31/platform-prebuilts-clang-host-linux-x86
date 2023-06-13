@@ -14,6 +14,7 @@
 
 """List of supported architectures by Kleaf."""
 
+# Sync with toolchains.bazelrc
 SUPPORTED_ARCHITECTURES = [
     ("linux", "x86_64"),
     ("android", "arm64"),
