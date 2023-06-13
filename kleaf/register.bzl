@@ -18,8 +18,23 @@ load(":architecture_constants.bzl", "SUPPORTED_ARCHITECTURES")
 load(":versions.bzl", "VERSIONS")
 
 # buildifier: disable=unnamed-macro
-def register_clang_toolchains():
-    """Registers all clang toolchains defined in this package."""
+def register_clang_toolchains(
+        user_clang_toolchain_repository):
+    """Registers all clang toolchains defined in this package.
+
+    Args:
+        user_clang_toolchain_repository: name of user_clang_toolchain_repository(),
+            prefixed with "@"
+    """
+    for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
+        native.register_toolchains(
+            "{}//:user_{}_{}_clang_toolchain".format(
+                user_clang_toolchain_repository,
+                target_os,
+                target_cpu,
+            ),
+        )
+
     for version in VERSIONS:
         for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
             native.register_toolchains(
