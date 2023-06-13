@@ -196,6 +196,34 @@ def prebuilt_clang_toolchain(
         **extra_kwargs
     )
 
+def user_clang_toolchain(
+        name,
+        target_cpu,
+        target_os,
+        clang_pkg):
+    """Declare a user clang toolchain for the given OS-architecture.
+
+    Args:
+        name: name of the toolchain
+        target_cpu: nonconfigurable. CPU of the toolchain
+        target_os: nonconfigurable. OS of the toolchain
+        clang_pkg: Label to package to clang toolchain
+    """
+
+    if sorted(ARCH_CONFIG.keys()) != sorted(SUPPORTED_ARCHITECTURES):
+        fail("FATAL: ARCH_CONFIG is not up-to-date with SUPPORTED_ARCHITECTURES!")
+
+    extra_kwargs = ARCH_CONFIG[(target_os, target_cpu)]
+
+    _clang_toolchain(
+        name = name,
+        clang_version = "unknown",
+        target_os = target_os,
+        target_cpu = target_cpu,
+        clang_pkg = clang_pkg,
+        **extra_kwargs
+    )
+
 # Keys: (target_os, target_cpu)
 # Values: arguments to clang_toolchain()
 ARCH_CONFIG = {
