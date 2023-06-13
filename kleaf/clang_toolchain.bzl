@@ -26,6 +26,9 @@ def clang_toolchain(
         clang_version,
         target_cpu,
         target_os,
+        common_prefix,
+        includes,
+        all_binaries,
         linker_files = None,
         sysroot_label = None,
         sysroot_path = None,
@@ -36,6 +39,9 @@ def clang_toolchain(
     Args:
         name: name of the toolchain
         clang_version: value of `CLANG_VERSION`, e.g. `r475365b`.
+        common_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        includes: a target for `include/`
+        all_binaries: a target for all executables for this toolchain
         target_cpu: CPU that the toolchain cross-compiles to
         target_os: OS that the toolchain cross-compiles to
         linker_files: Additional dependencies to the linker
@@ -58,14 +64,6 @@ def clang_toolchain(
     if extra_compatible_with == None:
         extra_compatible_with = []
 
-    clang_pkg = "//prebuilts/clang/host/linux-x86/clang-{}".format(clang_version)
-    clang_includes = Label("{}:includes".format(clang_pkg))
-
-    # Technically we can split the binaries into those for compiler, linker
-    # etc., but since these binaries are usually updated together, it is okay
-    # to use a superset here.
-    clang_all_binaries = Label("{}:binaries".format(clang_pkg))
-
     # Individual binaries
     # From _setup_env.sh
     #  HOSTCC=clang
@@ -82,31 +80,31 @@ def clang_toolchain(
     #
     # Note: ld.lld does not recognize --target etc. from android.bzl,
     # so just use clang directly
-    clang = Label("{}:bin/clang".format(clang_pkg))
-    clang_plus_plus = Label("{}:bin/clang++".format(clang_pkg))
+    clang = "{}bin/clang".format(common_prefix)
+    clang_plus_plus = "{}bin/clang++".format(common_prefix)
     ld = clang
-    strip = Label("{}:bin/llvm-strip".format(clang_pkg))
-    ar = Label("{}:bin/llvm-ar".format(clang_pkg))
-    objcopy = Label("{}:bin/llvm-objcopy".format(clang_pkg))
+    strip = "{}bin/llvm-strip".format(common_prefix)
+    ar = "{}bin/llvm-ar".format(common_prefix)
+    objcopy = "{}bin/llvm-objcopy".format(common_prefix)
     # cc_* rules doesn't seem to need nm, obj-dump, size, and readelf
 
     native.filegroup(
         name = name + "_compiler_files",
         srcs = [
-            clang_all_binaries,
-            clang_includes,
+            all_binaries,
+            includes,
         ] + sysroot_labels,
     )
 
     native.filegroup(
         name = name + "_linker_files",
-        srcs = [clang_all_binaries] + sysroot_labels + linker_files,
+        srcs = [all_binaries] + sysroot_labels + linker_files,
     )
 
     native.filegroup(
         name = name + "_all_files",
         srcs = [
-            clang_all_binaries,
+            all_binaries,
             name + "_compiler_files",
             name + "_linker_files",
         ],
@@ -131,12 +129,12 @@ def clang_toolchain(
     native.cc_toolchain(
         name = name + "_cc_toolchain",
         all_files = name + "_all_files",
-        ar_files = clang_all_binaries,
+        ar_files = all_binaries,
         compiler_files = name + "_compiler_files",
-        dwp_files = clang_all_binaries,
+        dwp_files = all_binaries,
         linker_files = name + "_linker_files",
-        objcopy_files = clang_all_binaries,
-        strip_files = clang_all_binaries,
+        objcopy_files = all_binaries,
+        strip_files = all_binaries,
         supports_param_files = False,
         toolchain_config = name + "_clang_config",
         toolchain_identifier = name + "_clang_id",
@@ -159,17 +157,26 @@ def clang_toolchain(
 def linux_x86_64_clang_toolchain(
         name,
         clang_version,
+        common_prefix,
+        includes,
+        all_binaries,
         extra_compatible_with = None):
     """Declare an linux_x86_64 toolchain.
 
     Args:
         name: name prefix
         clang_version: `CLANG_VERSION`
+        common_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        includes: a target for `include/`
+        all_binaries: a target for all executables for this toolchain
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
         clang_version = clang_version,
+        common_prefix = common_prefix,
+        includes = includes,
+        all_binaries = all_binaries,
         linker_files = [
             # From _setup_env.sh, HOSTLDFLAGS
             Label("//prebuilts/kernel-build-tools:linux-x86-libs"),
@@ -186,17 +193,26 @@ def linux_x86_64_clang_toolchain(
 def android_arm64_clang_toolchain(
         name,
         clang_version,
+        common_prefix,
+        includes,
+        all_binaries,
         extra_compatible_with = None):
     """Declare an android_arm64 toolchain.
 
     Args:
         name: name prefix
         clang_version: `CLANG_VERSION`
+        common_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        includes: a target for `include/`
+        all_binaries: a target for all executables for this toolchain
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
         clang_version = clang_version,
+        common_prefix = common_prefix,
+        includes = includes,
+        all_binaries = all_binaries,
         ndk_triple = VARS.get("AARCH64_NDK_TRIPLE"),
         # From _setup_env.sh: when NDK triple is set,
         # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
@@ -234,17 +250,26 @@ def android_arm_clang_toolchain(
 def android_x86_64_clang_toolchain(
         name,
         clang_version,
+        common_prefix,
+        includes,
+        all_binaries,
         extra_compatible_with = None):
     """Declare an android_x86_64 toolchain.
 
     Args:
         name: name prefix
         clang_version: `CLANG_VERSION`
+        common_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        includes: a target for `include/`
+        all_binaries: a target for all executables for this toolchain
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
         clang_version = clang_version,
+        common_prefix = common_prefix,
+        includes = includes,
+        all_binaries = all_binaries,
         ndk_triple = VARS.get("X86_64_NDK_TRIPLE"),
         # From _setup_env.sh: when NDK triple is set,
         # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
@@ -283,17 +308,26 @@ def android_i386_clang_toolchain(
 def android_riscv64_clang_toolchain(
         name,
         clang_version,
+        common_prefix,
+        includes,
+        all_binaries,
         extra_compatible_with = None):
     """Declare an android_riscv toolchain.
 
     Args:
         name: name prefix
         clang_version: `CLANG_VERSION`
+        common_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        includes: a target for `include/`
+        all_binaries: a target for all executables for this toolchain
         extra_compatible_with: extra `exec_compatible_with` and `target_compatible_with`
     """
     clang_toolchain(
         name = name,
         clang_version = clang_version,
+        common_prefix = common_prefix,
+        includes = includes,
+        all_binaries = all_binaries,
         target_cpu = "riscv64",
         target_os = "android",
         extra_compatible_with = extra_compatible_with,
