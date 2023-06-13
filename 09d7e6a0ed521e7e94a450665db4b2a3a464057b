@@ -1,0 +1,111 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000046781697",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2619895?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "536752f3_249323fc",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 46,
+                "startChar": 0,
+                "endLine": 46,
+                "endChar": 0
+              },
+              "replacement": "    all_binaries \u003d \"@kleaf_custom_clang//:binaries\",\n"
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 49,
+                "startChar": 0,
+                "endLine": 50,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 54,
+                "startChar": 0,
+                "endLine": 54,
+                "endChar": 0
+              },
+              "replacement": "    all_binaries \u003d \"@kleaf_custom_clang//:binaries\",\n"
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 57,
+                "startChar": 0,
+                "endLine": 58,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 62,
+                "startChar": 0,
+                "endLine": 62,
+                "endChar": 0
+              },
+              "replacement": "    all_binaries \u003d \"@kleaf_custom_clang//:binaries\",\n"
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 65,
+                "startChar": 0,
+                "endLine": 66,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 70,
+                "startChar": 0,
+                "endLine": 70,
+                "endChar": 0
+              },
+              "replacement": "    all_binaries \u003d \"@kleaf_custom_clang//:binaries\",\n"
+            },
+            {
+              "path": "kleaf/BUILD.bazel",
+              "range": {
+                "startLine": 73,
+                "startChar": 0,
+                "endLine": 74,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "ad95325a_f20dee5e",
+        "filename": "kleaf/BUILD.bazel",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-06-13T23:59:22Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "09d7e6a0ed521e7e94a450665db4b2a3a464057b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
