@@ -15,11 +15,41 @@
 """Registers all clang toolchains defined in this package."""
 
 load(":architecture_constants.bzl", "SUPPORTED_ARCHITECTURES")
+load(":user_clang_toolchain_repository.bzl", "user_clang_toolchain_repository")
 load(":versions.bzl", "VERSIONS")
 
 # buildifier: disable=unnamed-macro
-def register_clang_toolchains():
-    """Registers all clang toolchains defined in this package."""
+def register_clang_toolchains(
+        user_clang_toolchain_repository_name,
+        user_clang_toolchain_repository_local_symlink_name):
+    """Registers all clang toolchains defined in this package.
+
+    The user clang toolchain is expected from the path defined in the
+    `KLEAF_USER_CLANG_TOOLCHAIN_PATH` environment variable, if set.
+
+    If there is a `BUILD` file in the user clang toolchain path,
+    `--deleted_packages=@{repository_name}//{local_symlink_name}` must be set.
+
+    Args:
+        user_clang_toolchain_repository_name: name of user_clang_toolchain_repository
+        user_clang_toolchain_repository_local_symlink_name: `local_symlink_name` of
+          user_clang_toolchain_repository
+    """
+
+    user_clang_toolchain_repository(
+        name = user_clang_toolchain_repository_name,
+        local_symlink_name = user_clang_toolchain_repository_local_symlink_name,
+    )
+
+    for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
+        native.register_toolchains(
+            "@{}//:user_{}_{}_clang_toolchain".format(
+                user_clang_toolchain_repository_name,
+                target_os,
+                target_cpu,
+            ),
+        )
+
     for version in VERSIONS:
         for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
             native.register_toolchains(
