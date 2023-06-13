@@ -1,0 +1,25 @@
+# Copyright (C) 2023 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Register the user toolchains if --config=kleaf_internal_user_clang_toolchain
+# Sync with architecture_constants.bzl
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_android_arm_clang_toolchain
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_android_arm64_clang_toolchain
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_android_i386_clang_toolchain
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_android_riscv64_clang_toolchain
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_android_x86_64_clang_toolchain
+build:kleaf_internal_user_clang_toolchain --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:user_linux_x86_64_clang_toolchain
+
+# If the user provided clang toolchain has a BUILD file in it, ignore
+build:kleaf_internal_user_clang_toolchain --deleted_packages=@kleaf_user_clang_toolchain//clang-user
