@@ -1,0 +1,4 @@
+build:custom_clang --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:custom_android_arm64_clang_toolchain
+build:custom_clang --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:custom_android_x86_64_clang_toolchain
+build:custom_clang --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:custom_android_riscv64_clang_toolchain
+build:custom_clang --extra_toolchains=//prebuilts/clang/host/linux-x86/kleaf:custom_linux_x86_64_clang_toolchain
