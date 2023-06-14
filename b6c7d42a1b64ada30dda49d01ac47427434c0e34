@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e19b90f_27a2f9c4",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-06-14T16:22:55Z",
+      "side": 1,
+      "message": "(here and below) was the removal of `Label` intentional?",
+      "range": {
+        "startLine": 83,
+        "startChar": 12,
+        "endLine": 83,
+        "endChar": 13
+      },
+      "revId": "b6c7d42a1b64ada30dda49d01ac47427434c0e34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
