@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1f326fc_e170790e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2023-06-15T15:29:37Z",
+      "side": 1,
+      "message": "same as in the other change, I think `custom_clang_toolchain` captures better what it is than `custom_clang`.",
+      "revId": "71124dea2e74c5fdf2300d7a5715315b619df882",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
