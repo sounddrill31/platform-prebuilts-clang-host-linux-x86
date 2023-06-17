@@ -39,6 +39,30 @@
       },
       "revId": "b6c7d42a1b64ada30dda49d01ac47427434c0e34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b59673ac_94b25c42",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-06-17T00:19:56Z",
+      "side": 1,
+      "message": "Yes. The common_prefix provided by the caller should contain the proper resolutions. To be more precise, this could\u0027ve been wrapped with `package_relative_label` to be resolved against the package where the BUILD file lives. However, because we are just putting those strings into rules, there\u0027s no need to resolve them as this is the default context to resolve strings.\n\nLabel() is only needed when, in an extension (.bzl), we want to resolve a label string against **where the .bzl lives** (not where the BUILD file lives). Hence, there used to be a `Label()` because we are effectively calling `Label(\"//prebuilts/...:bin/clang\")` here, which resolves the string against clang_toolchain.bzl\u0027s repository. It doesn\u0027t matter whether clang_toolchain.bzl is in a sub-repository or main repository. The key is that `clang_toolchain.bzl` is in the same repository of `//prebuilts/clang/...:bin/clang`.",
+      "parentUuid": "2e19b90f_27a2f9c4",
+      "range": {
+        "startLine": 83,
+        "startChar": 12,
+        "endLine": 83,
+        "endChar": 13
+      },
+      "revId": "b6c7d42a1b64ada30dda49d01ac47427434c0e34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
