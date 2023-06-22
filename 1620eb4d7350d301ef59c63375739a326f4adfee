@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a273cd23_f7dbb636",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-06-22T17:37:12Z",
+      "side": 1,
+      "message": "Fixed with the right link now (because we have to convert to publicly visible googlesource.com links now, and I accidentally used this same CL number the first time).",
+      "revId": "1620eb4d7350d301ef59c63375739a326f4adfee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
