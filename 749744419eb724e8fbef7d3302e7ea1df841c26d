@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000047490014",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2635559?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "31073cd5_7f076a10",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/clang_toolchain.bzl",
+              "range": {
+                "startLine": 22,
+                "startChar": 0,
+                "endLine": 23,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "173cc265_3dbe5473",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-06-23T19:33:54Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/clang_toolchain.bzl` to format the file, or apply the suggested fix.",
+      "revId": "749744419eb724e8fbef7d3302e7ea1df841c26d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
