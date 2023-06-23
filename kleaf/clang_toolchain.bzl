@@ -27,6 +27,9 @@ def clang_toolchain(
         clang_version,
         target_cpu,
         target_os,
+        clang_binary_prefix,
+        clang_includes,
+        clang_all_binaries,
         linker_files = None,
         sysroot_label = None,
         sysroot_path = None,
@@ -39,6 +42,9 @@ def clang_toolchain(
         clang_version: value of `CLANG_VERSION`, e.g. `r475365b`.
         target_cpu: CPU that the toolchain cross-compiles to
         target_os: OS that the toolchain cross-compiles to
+        clang_binary_prefix: common prefix to all targets where binaries like `bin/clang` are found.
+        clang_includes: a target for `include/`
+        clang_all_binaries: a target for all executables for this toolchain
         linker_files: Additional dependencies to the linker
         sysroot_label: Label to a list of files from sysroot
         sysroot_path: Path to sysroot
@@ -59,14 +65,6 @@ def clang_toolchain(
     if extra_compatible_with == None:
         extra_compatible_with = []
 
-    clang_pkg = "//prebuilts/clang/host/linux-x86/clang-{}".format(clang_version)
-    clang_includes = Label("{}:includes".format(clang_pkg))
-
-    # Technically we can split the binaries into those for compiler, linker
-    # etc., but since these binaries are usually updated together, it is okay
-    # to use a superset here.
-    clang_all_binaries = Label("{}:binaries".format(clang_pkg))
-
     # Individual binaries
     # From _setup_env.sh
     #  HOSTCC=clang
@@ -83,12 +81,12 @@ def clang_toolchain(
     #
     # Note: ld.lld does not recognize --target etc. from android.bzl,
     # so just use clang directly
-    clang = Label("{}:bin/clang".format(clang_pkg))
-    clang_plus_plus = Label("{}:bin/clang++".format(clang_pkg))
+    clang = "{}bin/clang".format(clang_binary_prefix)
+    clang_plus_plus = "{}bin/clang++".format(clang_binary_prefix)
     ld = clang
-    strip = Label("{}:bin/llvm-strip".format(clang_pkg))
-    ar = Label("{}:bin/llvm-ar".format(clang_pkg))
-    objcopy = Label("{}:bin/llvm-objcopy".format(clang_pkg))
+    strip = "{}bin/llvm-strip".format(clang_binary_prefix)
+    ar = "{}bin/llvm-ar".format(clang_binary_prefix)
+    objcopy = "{}bin/llvm-objcopy".format(clang_binary_prefix)
     # cc_* rules doesn't seem to need nm, obj-dump, size, and readelf
 
     native.filegroup(
@@ -180,11 +178,23 @@ def prebuilt_clang_toolchain(
 
     extra_kwargs = ARCH_CONFIG[(target_os, target_cpu)]
 
+    clang_pkg = "//prebuilts/clang/host/linux-x86/clang-{}".format(clang_version)
+    clang_includes = Label("{}:includes".format(clang_pkg))
+
+    # Technically we can split the binaries into those for compiler, linker
+    # etc., but since these binaries are usually updated together, it is okay
+    # to use a superset here.
+    clang_all_binaries = Label("{}:binaries".format(clang_pkg))
+    clang_binary_prefix = str(clang_all_binaries).removesuffix("binaries")
+
     clang_toolchain(
         name = name,
         clang_version = clang_version,
         target_os = target_os,
         target_cpu = target_cpu,
+        clang_binary_prefix = clang_binary_prefix,
+        clang_includes = clang_includes,
+        clang_all_binaries = clang_all_binaries,
         extra_compatible_with = extra_compatible_with,
         **extra_kwargs
     )
