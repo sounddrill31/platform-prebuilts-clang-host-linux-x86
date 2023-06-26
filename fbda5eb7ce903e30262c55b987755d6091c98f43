@@ -46,6 +46,30 @@
       },
       "revId": "fbda5eb7ce903e30262c55b987755d6091c98f43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfcb16a1_75eab72e",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-06-26T20:41:04Z",
+      "side": 1,
+      "message": "I figured out how to symlink individual subdirectories, so now we just need one clang_pkg argument to the macro (because :binaries, :includes, :bin/clang are in the same package now.)",
+      "parentUuid": "005db36d_26f4cdd9",
+      "range": {
+        "startLine": 188,
+        "startChar": 4,
+        "endLine": 188,
+        "endChar": 23
+      },
+      "revId": "fbda5eb7ce903e30262c55b987755d6091c98f43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
