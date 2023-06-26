@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a558355_403e22e7",
+        "filename": "kleaf/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-06-26T15:37:35Z",
+      "side": 1,
+      "message": "`NOT_FOUND: Requested entity was not found`",
+      "range": {
+        "startLine": 70,
+        "startChar": 39,
+        "endLine": 70,
+        "endChar": 62
+      },
+      "revId": "f29ddd02044744d22238a3cc366ed889112558da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cdec1c9_aacc2dde",
+        "filename": "kleaf/README.md",
+        "patchSetId": 17
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-06-26T15:37:35Z",
+      "side": 1,
+      "message": "Here and below (L130, 138, 146): constraint",
+      "range": {
+        "startLine": 122,
+        "startChar": 28,
+        "endLine": 122,
+        "endChar": 37
+      },
+      "revId": "f29ddd02044744d22238a3cc366ed889112558da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
