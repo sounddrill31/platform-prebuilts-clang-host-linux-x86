@@ -1,0 +1,51 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000047605207",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2619895?revision\u003d34",
+      "fixSuggestions": [
+        {
+          "fixId": "d6d7a042_39ad05ce",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/user_clang_toolchain_repository.bzl",
+              "range": {
+                "startLine": 59,
+                "startChar": 0,
+                "endLine": 59,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "kleaf/user_clang_toolchain_repository.bzl",
+              "range": {
+                "startLine": 69,
+                "startChar": 0,
+                "endLine": 70,
+                "endChar": 0
+              },
+              "replacement": "                user_clang_toolchain_path_s,\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "fa72ab70_cc8fed56",
+        "filename": "kleaf/user_clang_toolchain_repository.bzl",
+        "patchSetId": 34
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-06-26T20:25:03Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/user_clang_toolchain_repository.bzl` to format the file, or apply the suggested fix.",
+      "revId": "16ac87d8fa04caee5b73350cd97c19dee48c3e97",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
