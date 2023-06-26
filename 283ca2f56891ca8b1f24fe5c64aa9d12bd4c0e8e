@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bc3b10c_44c9ad41",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 6
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-06-26T12:13:12Z",
+      "side": 1,
+      "message": "nit: Add a note to keep in sync with list in `kleaf/architecture_constants.bzl`",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 1
+      },
+      "revId": "283ca2f56891ca8b1f24fe5c64aa9d12bd4c0e8e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
