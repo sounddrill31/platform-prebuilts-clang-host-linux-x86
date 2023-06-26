@@ -22,6 +22,30 @@
       },
       "revId": "fbda5eb7ce903e30262c55b987755d6091c98f43",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "005db36d_26f4cdd9",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-06-26T19:07:46Z",
+      "side": 1,
+      "message": "Not necessary. If //prebuilts/clang/host/linux-x86/kleaf is in a subworkspace called `@kleaf`, then this evaluates to `@kleaf//prebuilts/clang/host/linux-x86/clang-{}:`.\n\nThe workspace name is important so we don\u0027t always refer to the main workspace. Note that `clang_toolchain` takes a string for clang_binary_prefix, not a Label (because it uses the string to construct a label string).\n\nThe more correct thing to do here is to provide each individual binary:\n\n```\nclang \u003d Label(\"{}:bin/clang\".format(clang_pkg))\nld \u003d Label(\"{}:bin/ld\".format(clang_pkg))\n...\n\nclang_toolchain(\n    clang \u003d clang,\n    ld \u003d ld,\n    ...\n)\n```\n\nbut it is an implementation detail within the same .bzl file, so I am taking the lazy route here.",
+      "parentUuid": "3f55d61a_47bc7141",
+      "range": {
+        "startLine": 188,
+        "startChar": 4,
+        "endLine": 188,
+        "endChar": 23
+      },
+      "revId": "fbda5eb7ce903e30262c55b987755d6091c98f43",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
