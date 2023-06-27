@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fb231e8_31cd01dd",
+        "filename": "kleaf/user_clang_toolchain_repository.bzl",
+        "patchSetId": 38
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-06-27T08:51:34Z",
+      "side": 1,
+      "message": "I understand this is ignored, but I\u0027m surprised Bazel does not complain if the target doesn\u0027t exist.",
+      "range": {
+        "startLine": 102,
+        "startChar": 18,
+        "endLine": 102,
+        "endChar": 36
+      },
+      "revId": "7f17fbadc9ee07a636afb6083bf84c481a7cc2ab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
