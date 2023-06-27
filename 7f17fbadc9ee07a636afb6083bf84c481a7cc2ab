@@ -22,6 +22,30 @@
       },
       "revId": "7f17fbadc9ee07a636afb6083bf84c481a7cc2ab",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "946be3cc_707b4756",
+        "filename": "kleaf/user_clang_toolchain_repository.bzl",
+        "patchSetId": 38
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-06-27T22:45:27Z",
+      "side": 1,
+      "message": "This is because in `clang_toolchain`, the macro does not send clang_pkg as-is to any rule(). It is just a string, so Bazel won\u0027t complain about this.\n\nI intentionally name it this way so a reader won\u0027t waste time figuring out where this target is.",
+      "parentUuid": "1fb231e8_31cd01dd",
+      "range": {
+        "startLine": 102,
+        "startChar": 18,
+        "endLine": 102,
+        "endChar": 36
+      },
+      "revId": "7f17fbadc9ee07a636afb6083bf84c481a7cc2ab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
