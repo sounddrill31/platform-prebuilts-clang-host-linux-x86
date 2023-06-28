@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6bd23ee3_65627a41",
+        "filename": "cc_toolchain_config.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-06-28T20:12:01Z",
+      "side": 1,
+      "message": "originally wrote comment to remove `ctx.files.compiler_clang_includes.to_list()[0]`, but rewrote the code, so this is fine now",
+      "revId": "32ae69a0859f618dfd8b18cba81678a0be1b5976",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
