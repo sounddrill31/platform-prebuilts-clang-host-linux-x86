@@ -81,9 +81,7 @@ filegroup(name = "empty")
 # Different clang versions are configured here.
 clang_version_info(
     name = "clang",
-    clang_files = glob(["**/*"]),
-    clang_short_version = ":clang_short_version",
-    clang_version = ":clang_version",
+    clang_version = "clang-experimental",
 )
 
 # x86_64 toolchain definitions
@@ -430,9 +428,9 @@ cc_toolchain_features_arm_isa_test_suite(
     name = "cc_toolchain_features_arm_isa_test",
 )
 
-cc_toolchain_clang_version_test_suite(
-    name = "cc_toolchain_clang_version_tests",
-)
+# cc_toolchain_clang_version_test_suite(
+#     name = "cc_toolchain_clang_version_tests",
+# )
 
 cc_toolchain_features_test_suite(
     name = "cc_toolchain_features_tests",

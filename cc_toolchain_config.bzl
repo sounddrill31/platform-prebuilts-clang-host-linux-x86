@@ -76,67 +76,92 @@ _libclang_rt_ubsan_minimal_prebuilt_map = {
     "linux_musl_x86_64": "x86_64-unknown-linux-musl/lib/linux/libclang_rt.ubsan_minimal-x86_64.a",
 }
 
-def _is_relative_path(path, root):
-    path_parts = paths.normalize(path).split("/")
-    root_parts = paths.normalize(root).split("/")
-    for i in range(len(root_parts)):
-        if path_parts[i] != root_parts[i]:
-            return False
-    return True
+def clang_version_info(*, name, clang_version):
+    clang_directory = clang_version
+    _clang_version_info(
+        name = name,
+        clang_version = clang_version,
+        compiler_clang_includes = native.glob([
+            paths.join(clang_directory, "lib/clang/*/include/**/*"),
+        ]),
+        linker_binaries = native.glob([
+            paths.join(clang_directory, "bin/*"),
+        ]),
+        compiler_binaries = native.glob([
+            paths.join(clang_directory, "bin/clang*"),
+        ]),
+        ar_files = [paths.join(clang_directory, "bin", "llvm-ar")],
+        clang_test_tools = [
+            paths.join(clang_directory, "bin", test_tool)
+            for test_tool in CLANG_TEST_TOOLS
+        ],
+        clang_tools = [
+            paths.join(clang_directory, "bin", test_tool)
+            for test_tool in CLANG_TOOLS
+        ],
+        libclang_rt_files = native.glob([
+            paths.join(clang_directory, "lib/clang/*/lib/linux", prebuilt_lib)
+            for prebuilt_lib in (
+                _libclang_rt_prebuilt_map.values() +
+                _libclang_rt_ubsan_minimal_prebuilt_map.values()
+            )
+        ]),
+    )
+
+def _get_clang_short_version_path(ctx, clang_version, file):
+    no_version_path_prefix = paths.join(ctx.label.package, clang_version, "lib", "clang")
+    version_relative_path = paths.relativize(file.short_path, no_version_path_prefix)
+    clang_short_version = version_relative_path.split("/")[0]
+    return paths.join(no_version_path_prefix, clang_short_version)
+
+def _get_libclang_rt_file_prefix(ctx, clang_version, file):
+    return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "lib", "linux")
+
+def _get_clang_includes_path_prefix(ctx, clang_version, file):
+    return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "include")
 
 def _clang_version_info_impl(ctx):
-    clang_version = ctx.attr.clang_version[BuildSettingInfo].value
-    clang_version_directory = paths.join(ctx.label.package, clang_version)
-    clang_short_version = ctx.attr.clang_short_version[BuildSettingInfo].value
-
-    all_files = {}  # a set to do fast prebuilt lookups later
     output_groups = {
-        "compiler_clang_includes": [],
-        "compiler_binaries": [],
-        "linker_binaries": [],
-        "ar_files": [],
-        "clang_test_tools": [],
+        "compiler_clang_includes": ctx.files.compiler_clang_includes,
+        "compiler_binaries": ctx.files.compiler_binaries,
+        "linker_binaries": ctx.files.linker_binaries,
+        "ar_files": ctx.files.ar_files,
+        "clang_test_tools": ctx.files.clang_test_tools,
     }
 
-    for file in ctx.files.clang_files:
-        if not _is_relative_path(file.short_path, clang_version_directory):
-            continue
-        file_path = paths.relativize(file.short_path, clang_version_directory)
-        all_files[file_path] = file
+    for tool_file in ctx.files.clang_tools:
+        output_groups[clang_tool_output_group(tool_file.basename)] = [tool_file]
 
-        file_path_parts = file_path.split("/")
-        if file_path_parts[:2] == ["lib", "clang"] and file_path_parts[4] == "include":
-            output_groups["compiler_clang_includes"].append(file)  # /lib/clang/*/include/**
-        if file_path_parts[0] == "bin" and len(file_path_parts) == 2:
-            output_groups["linker_binaries"].append(file)  # /bin/*
-            if file.basename.startswith("clang"):
-                output_groups["compiler_binaries"].append(file)  # /bin/clang*
-            if file.basename == "llvm-ar":
-                output_groups["ar_files"].append(file)  # /bin/llvm-ar
-            if file.basename in CLANG_TEST_TOOLS:
-                output_groups["clang_test_tools"].append(file)
-            if file.basename in CLANG_TOOLS:
-                output_groups[clang_tool_output_group(file.basename)] = [file]
-
-    libclang_rt_prefix = "lib/clang/%s/lib/linux" % clang_short_version
+    libclang_rt_files = {
+        # convert list to a set for faster lookups
+        file.short_path: file
+        for file in ctx.files.libclang_rt_files
+    }
+    libclang_rt_prefix = _get_libclang_rt_file_prefix(ctx, ctx.attr.clang_version, ctx.files.libclang_rt_files[0])
     for arch, path in _libclang_rt_prebuilt_map.items():
         file_path = paths.join(libclang_rt_prefix, path)
-        if file_path in all_files:
-            output_groups["libclang_rt_builtins_" + arch] = [all_files[file_path]]
+        if file_path in libclang_rt_files:
+            output_groups["libclang_rt_builtins_" + arch] = [libclang_rt_files[file_path]]
         else:
             fail("could not find libclang_rt_builtin for `%s` at path `%s`" % (arch, file_path))
     for arch, path in _libclang_rt_ubsan_minimal_prebuilt_map.items():
         file_path = paths.join(libclang_rt_prefix, path)
-        if file_path in all_files:
-            output_groups["libclang_rt_ubsan_minimal_" + arch] = [all_files[file_path]]
+        if file_path in libclang_rt_files:
+            output_groups["libclang_rt_ubsan_minimal_" + arch] = [libclang_rt_files[file_path]]
         else:
             fail("could not find libclang_rt_ubsan_minimal for `%s` at path `%s`" % (arch, file_path))
 
     return [
         _ClangVersionInfo(
-            clang_version = clang_version,
+            clang_version = ctx.attr.clang_version,
             includes = [
-                paths.join(clang_version_directory, "lib", "clang", clang_short_version, "include"),
+                _get_clang_includes_path_prefix(
+                    ctx,
+                    ctx.attr.clang_version,
+                    # we don't need the whole list
+                    # fix this
+                    ctx.files.compiler_clang_includes[0],
+                ),
             ],
         ),
         OutputGroupInfo(
@@ -144,12 +169,38 @@ def _clang_version_info_impl(ctx):
         ),
     ]
 
-clang_version_info = rule(
+_clang_version_info = rule(
     implementation = _clang_version_info_impl,
     attrs = {
-        "clang_version": attr.label(mandatory = True),
-        "clang_short_version": attr.label(mandatory = True),
-        "clang_files": attr.label_list(
+        "clang_version": attr.string(
+            mandatory = True,
+        ),
+        "compiler_clang_includes": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "linker_binaries": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "compiler_binaries": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "ar_files": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "clang_test_tools": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "clang_tools": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "libclang_rt_files": attr.label_list(
+            mandatory = True,
             allow_files = True,
         ),
     },
