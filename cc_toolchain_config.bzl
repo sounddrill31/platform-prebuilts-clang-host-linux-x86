@@ -52,7 +52,7 @@ CLANG_TEST_TOOLS = [
 def clang_tool_output_group(tool_name):
     return tool_name.replace("-", "_").replace(".", "_")
 
-_libclang_rt_prebuilt_map = {
+LIBCLANG_RT_PREBUILT_MAP = {
     "android_arm": "libclang_rt.builtins-arm-android.a",
     "android_arm64": "libclang_rt.builtins-aarch64-android.a",
     "android_x86": "libclang_rt.builtins-i686-android.a",
@@ -64,7 +64,7 @@ _libclang_rt_prebuilt_map = {
     "linux_musl_x86_64": "x86_64-unknown-linux-musl/lib/linux/libclang_rt.builtins-x86_64.a",
 }
 
-_libclang_rt_ubsan_minimal_prebuilt_map = {
+LIBCLANG_RT_UBSAN_MINIMAL_PREBUILT_MAP = {
     "android_arm": "libclang_rt.ubsan_minimal-arm-android.a",
     "android_arm64": "libclang_rt.ubsan_minimal-aarch64-android.a",
     "android_x86": "libclang_rt.ubsan_minimal-i686-android.a",
@@ -76,68 +76,41 @@ _libclang_rt_ubsan_minimal_prebuilt_map = {
     "linux_musl_x86_64": "x86_64-unknown-linux-musl/lib/linux/libclang_rt.ubsan_minimal-x86_64.a",
 }
 
-def _is_relative_path(path, root):
-    path_parts = paths.normalize(path).split("/")
-    root_parts = paths.normalize(root).split("/")
-    for i in range(len(root_parts)):
-        if path_parts[i] != root_parts[i]:
-            return False
-    return True
-
 def _clang_version_info_impl(ctx):
-    clang_version = ctx.attr.clang_version[BuildSettingInfo].value
-    clang_version_directory = paths.join(ctx.label.package, clang_version)
-    clang_short_version = ctx.attr.clang_short_version[BuildSettingInfo].value
-
-    all_files = {}  # a set to do fast prebuilt lookups later
     output_groups = {
-        "compiler_clang_includes": [],
-        "compiler_binaries": [],
-        "linker_binaries": [],
-        "ar_files": [],
-        "clang_test_tools": [],
+        "compiler_clang_includes": ctx.files.compiler_clang_includes,
+        "compiler_binaries": ctx.files.compiler_binaries,
+        "linker_binaries": ctx.files.linker_binaries,
+        "ar_files": ctx.files.ar_files,
+        "clang_test_tools": ctx.files.clang_test_tools,
     }
 
-    for file in ctx.files.clang_files:
-        if not _is_relative_path(file.short_path, clang_version_directory):
-            continue
-        file_path = paths.relativize(file.short_path, clang_version_directory)
-        all_files[file_path] = file
+    for tool_file in ctx.files.clang_tools:
+        output_groups[clang_tool_output_group(tool_file.basename)] = [tool_file]
 
-        file_path_parts = file_path.split("/")
-        if file_path_parts[:2] == ["lib", "clang"] and file_path_parts[4] == "include":
-            output_groups["compiler_clang_includes"].append(file)  # /lib/clang/*/include/**
-        if file_path_parts[0] == "bin" and len(file_path_parts) == 2:
-            output_groups["linker_binaries"].append(file)  # /bin/*
-            if file.basename.startswith("clang"):
-                output_groups["compiler_binaries"].append(file)  # /bin/clang*
-            if file.basename == "llvm-ar":
-                output_groups["ar_files"].append(file)  # /bin/llvm-ar
-            if file.basename in CLANG_TEST_TOOLS:
-                output_groups["clang_test_tools"].append(file)
-            if file.basename in CLANG_TOOLS:
-                output_groups[clang_tool_output_group(file.basename)] = [file]
-
-    libclang_rt_prefix = "lib/clang/%s/lib/linux" % clang_short_version
-    for arch, path in _libclang_rt_prebuilt_map.items():
+    libclang_rt_files = {
+        # convert list to a set for faster lookups
+        file.short_path: file
+        for file in ctx.files.libclang_rt_files
+    }
+    libclang_rt_prefix = paths.join(ctx.label.package, "lib", "clang", ctx.attr.clang_version, "lib", "linux")
+    for arch, path in LIBCLANG_RT_PREBUILT_MAP.items():
         file_path = paths.join(libclang_rt_prefix, path)
-        if file_path in all_files:
-            output_groups["libclang_rt_builtins_" + arch] = [all_files[file_path]]
+        if file_path in libclang_rt_files:
+            output_groups["libclang_rt_builtins_" + arch] = [libclang_rt_files[file_path]]
         else:
             fail("could not find libclang_rt_builtin for `%s` at path `%s`" % (arch, file_path))
-    for arch, path in _libclang_rt_ubsan_minimal_prebuilt_map.items():
+    for arch, path in LIBCLANG_RT_UBSAN_MINIMAL_PREBUILT_MAP.items():
         file_path = paths.join(libclang_rt_prefix, path)
-        if file_path in all_files:
-            output_groups["libclang_rt_ubsan_minimal_" + arch] = [all_files[file_path]]
+        if file_path in libclang_rt_files:
+            output_groups["libclang_rt_ubsan_minimal_" + arch] = [libclang_rt_files[file_path]]
         else:
             fail("could not find libclang_rt_ubsan_minimal for `%s` at path `%s`" % (arch, file_path))
 
     return [
         _ClangVersionInfo(
-            clang_version = clang_version,
-            includes = [
-                paths.join(clang_version_directory, "lib", "clang", clang_short_version, "include"),
-            ],
+            clang_version = paths.basename(ctx.label.package),
+            includes = [paths.join(ctx.label.package, "lib", "clang", ctx.attr.clang_version, "include")],
         ),
         OutputGroupInfo(
             **output_groups
@@ -147,9 +120,35 @@ def _clang_version_info_impl(ctx):
 clang_version_info = rule(
     implementation = _clang_version_info_impl,
     attrs = {
-        "clang_version": attr.label(mandatory = True),
-        "clang_short_version": attr.label(mandatory = True),
-        "clang_files": attr.label_list(
+        "clang_version": attr.string(
+            mandatory = True,
+        ),
+        "compiler_clang_includes": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "linker_binaries": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "compiler_binaries": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "ar_files": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "clang_test_tools": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "clang_tools": attr.label_list(
+            mandatory = True,
+            allow_files = True,
+        ),
+        "libclang_rt_files": attr.label_list(
+            mandatory = True,
             allow_files = True,
         ),
     },

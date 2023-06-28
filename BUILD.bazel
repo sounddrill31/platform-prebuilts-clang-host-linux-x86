@@ -78,12 +78,9 @@ load("//build/bazel/platforms/arch/variants:constants.bzl", _arch_constants = "c
 
 filegroup(name = "empty")
 
-# Different clang versions are configured here.
-clang_version_info(
+alias(
     name = "clang",
-    clang_files = glob(["**/*"]),
-    clang_short_version = ":clang_short_version",
-    clang_version = ":clang_version",
+    actual = "//prebuilts/clang/host/linux-x86:clang_version",
 )
 
 # x86_64 toolchain definitions
@@ -496,18 +493,12 @@ bool_flag(
     build_setting_default = is_env_true(env.get("ALLOW_UNKNOWN_WARNING_OPTION")),
 )
 
-string_flag(
+label_flag(
     name = "clang_version",
-    build_setting_default = env.get(
-        "LLVM_PREBUILTS_VERSION",
-        generated_config_constants.CLANG_DEFAULT_VERSION,
-    ),
-)
-
-string_flag(
-    name = "clang_short_version",
-    build_setting_default = env.get(
-        "LLVM_RELEASE_VERSION",
-        generated_config_constants.CLANG_DEFAULT_SHORT_VERSION,
+    build_setting_default = "//prebuilts/clang/host/linux-x86/%s:clang" % (
+        env.get(
+            "LLVM_PREBUILTS_VERSION",
+            generated_config_constants.CLANG_DEFAULT_VERSION,
+        )
     ),
 )

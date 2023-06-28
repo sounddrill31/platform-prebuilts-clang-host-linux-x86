@@ -1,4 +1,52 @@
+load("@bazel_skylib//lib:paths.bzl", "paths")
+load(
+    "//prebuilts/clang/host/linux-x86:cc_toolchain_config.bzl",
+    "CLANG_TEST_TOOLS",
+    "CLANG_TOOLS",
+    "clang_version_info",
+    "LIBCLANG_RT_PREBUILT_MAP",
+    "LIBCLANG_RT_UBSAN_MINIMAL_PREBUILT_MAP",
+)
+
 package(default_visibility = ["//visibility:public"])
+
+exports_files(
+    glob(["**/*"]),
+)
+
+clang_version = "17"
+
+clang_version_info(
+    name = "clang",
+    ar_files = [
+        paths.join("bin", "llvm-ar"),
+    ],
+    clang_test_tools = [
+        paths.join("bin", test_tool)
+        for test_tool in CLANG_TEST_TOOLS
+    ],
+    clang_tools = [
+        paths.join("bin", test_tool)
+        for test_tool in CLANG_TOOLS
+    ],
+    clang_version = clang_version,
+    compiler_binaries = glob([
+        paths.join("bin", "clang", "*"),
+    ]),
+    compiler_clang_includes = glob([
+        paths.join("lib", "clang", clang_version, "include", "**", "*"),
+    ]),
+    libclang_rt_files = glob([
+        paths.join("lib", "clang", clang_version, "lib", "linux", prebuilt_lib)
+        for prebuilt_lib in (
+            LIBCLANG_RT_PREBUILT_MAP.values() +
+            LIBCLANG_RT_UBSAN_MINIMAL_PREBUILT_MAP.values()
+        )
+    ]),
+    linker_binaries = glob([
+        paths.join("bin", "*"),
+    ]),
+)
 
 filegroup(
     name = "binaries",
