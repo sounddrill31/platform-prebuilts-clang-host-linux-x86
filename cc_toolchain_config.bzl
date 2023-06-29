@@ -77,36 +77,49 @@ _libclang_rt_ubsan_minimal_prebuilt_map = {
 }
 
 def clang_version_info(*, name, clang_version):
-    clang_directory = clang_version
     _clang_version_info(
         name = name,
         clang_version = clang_version,
         compiler_clang_includes = native.glob([
-            paths.join(clang_directory, "lib/clang/*/include/**/*"),
+            paths.join("lib", "clang", clang_version, "include", "**", "*"),
         ]),
         linker_binaries = native.glob([
-            paths.join(clang_directory, "bin/*"),
+            paths.join("bin", "*"),
         ]),
         compiler_binaries = native.glob([
-            paths.join(clang_directory, "bin/clang*"),
+            paths.join("bin", "clang", "*"),
         ]),
-        ar_files = [paths.join(clang_directory, "bin", "llvm-ar")],
+        ar_files = [
+            paths.join("bin", "llvm-ar"),
+        ],
         clang_test_tools = [
-            paths.join(clang_directory, "bin", test_tool)
+            paths.join("bin", test_tool)
             for test_tool in CLANG_TEST_TOOLS
         ],
         clang_tools = [
-            paths.join(clang_directory, "bin", test_tool)
+            paths.join("bin", test_tool)
             for test_tool in CLANG_TOOLS
         ],
         libclang_rt_files = native.glob([
-            paths.join(clang_directory, "lib/clang/*/lib/linux", prebuilt_lib)
+            paths.join("lib", "clang", clang_version, "lib", "linux", prebuilt_lib)
             for prebuilt_lib in (
                 _libclang_rt_prebuilt_map.values() +
                 _libclang_rt_ubsan_minimal_prebuilt_map.values()
             )
         ]),
     )
+
+def _clang_prebuilt_impl(ctx):
+    pass
+
+clang_prebuilt = rule(
+    implementation = _clang_prebuilt_impl,
+    attrs = {
+        "clang_version": attr.label(
+            mandatory = True,
+        ),
+    },
+)
 
 def _get_clang_short_version_path(ctx, clang_version, file):
     no_version_path_prefix = paths.join(ctx.label.package, clang_version, "lib", "clang")
@@ -115,10 +128,12 @@ def _get_clang_short_version_path(ctx, clang_version, file):
     return paths.join(no_version_path_prefix, clang_short_version)
 
 def _get_libclang_rt_file_prefix(ctx, clang_version, file):
-    return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "lib", "linux")
+    #return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "lib", "linux")
+    return paths.join(ctx.label.package, "lib", "clang", clang_version, "lib", "linux")
 
 def _get_clang_includes_path_prefix(ctx, clang_version, file):
-    return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "include")
+    #return paths.join(_get_clang_short_version_path(ctx, clang_version, file), "include")
+    return paths.join(ctx.label.package, "lib", "clang", clang_version, "include")
 
 def _clang_version_info_impl(ctx):
     output_groups = {
@@ -153,7 +168,7 @@ def _clang_version_info_impl(ctx):
 
     return [
         _ClangVersionInfo(
-            clang_version = ctx.attr.clang_version,
+            clang_version = paths.basename(ctx.label.package),
             includes = [
                 _get_clang_includes_path_prefix(
                     ctx,

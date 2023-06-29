@@ -1,4 +1,15 @@
+load("//prebuilts/clang/host/linux-x86:cc_toolchain_config.bzl", "clang_version_info")
+
 package(default_visibility = ["//visibility:public"])
+
+exports_files(
+    glob(["**/*"]),
+)
+
+clang_version_info(
+    name = "clang",
+    clang_version = "16",
+)
 
 filegroup(
     name = "binaries",
