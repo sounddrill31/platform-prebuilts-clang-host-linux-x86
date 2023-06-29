@@ -56,6 +56,63 @@
       "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
       "revId": "901e662921953140dc16fe4e0507dc64af59ed4a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000047879997",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2645222?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "f3847036_b10fcaeb",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 20,
+                "startChar": 0,
+                "endLine": 20,
+                "endChar": 0
+              },
+              "replacement": "    \"clang_prebuilt\",\n"
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 22,
+                "startChar": 0,
+                "endLine": 23,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "BUILD.bazel",
+              "range": {
+                "startLine": 502,
+                "startChar": 0,
+                "endLine": 503,
+                "endChar": 0
+              },
+              "replacement": "        env.get(\n            \"LLVM_RELEASE_VERSION\",\n            generated_config_constants.CLANG_DEFAULT_VERSION,\n        )\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "cee777a5_aa83ba90",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-06-29T19:20:04Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "901e662921953140dc16fe4e0507dc64af59ed4a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
