@@ -30,15 +30,15 @@ import (
 )
 
 const libclangCppSoFormat = "libclang-cpp.so.%s"
-const libcxxSoName = "libc++.so"
-const libcxxabiSoName = "libc++abi.so"
+const libcxxSoName = "libc++.so.1"
+const libcxxabiSoName = "libc++abi.so.1"
 
 var (
 	// Files included in the llvm-tools filegroup in ../Android.bp
 	llvmToolsFiles = []string{
 		"bin/llvm-symbolizer",
 		"bin/llvm-cxxfilt",
-		"lib/libc++.so",
+		"lib/libc++.so.1",
 	}
 )
 
