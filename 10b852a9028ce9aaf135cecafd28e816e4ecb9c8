@@ -1,0 +1,98 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000048332662",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2645222?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "f40b4c4d_b9909501",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "clang-r475365b/BUILD.bazel",
+              "range": {
+                "startLine": 6,
+                "startChar": 0,
+                "endLine": 7,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "clang-r475365b/BUILD.bazel",
+              "range": {
+                "startLine": 9,
+                "startChar": 0,
+                "endLine": 9,
+                "endChar": 0
+              },
+              "replacement": "    \"clang_version_info\",\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "79629745_2d20d772",
+        "filename": "clang-r475365b/BUILD.bazel",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-07-07T14:23:41Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier clang-r475365b/BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "10b852a9028ce9aaf135cecafd28e816e4ecb9c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000048332662",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2645222?revision\u003d3",
+      "fixSuggestions": [
+        {
+          "fixId": "70b4c124_643183e5",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "clang-r487747c/BUILD.bazel",
+              "range": {
+                "startLine": 6,
+                "startChar": 0,
+                "endLine": 7,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "clang-r487747c/BUILD.bazel",
+              "range": {
+                "startLine": 9,
+                "startChar": 0,
+                "endLine": 9,
+                "endChar": 0
+              },
+              "replacement": "    \"clang_version_info\",\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "5a38a8a6_ea32b1a6",
+        "filename": "clang-r487747c/BUILD.bazel",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-07-07T14:23:41Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier clang-r487747c/BUILD.bazel` to format the file, or apply the suggested fix.",
+      "revId": "10b852a9028ce9aaf135cecafd28e816e4ecb9c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
