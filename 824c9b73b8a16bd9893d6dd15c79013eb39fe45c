@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "97ed7663_1f4f5e16",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T21:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b26b65e6_912ee3ab",
+      "range": {
+        "startLine": 230,
+        "startChar": 14,
+        "endLine": 230,
+        "endChar": 20
+      },
+      "revId": "824c9b73b8a16bd9893d6dd15c79013eb39fe45c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4318817_339d0af1",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-10T21:27:28Z",
       "side": 1,
       "message": "looks like there\u0027s some stray spaces.",
+      "range": {
+        "startLine": 241,
+        "startChar": 0,
+        "endLine": 241,
+        "endChar": 4
+      },
+      "revId": "824c9b73b8a16bd9893d6dd15c79013eb39fe45c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "692f4e01_9d1812f2",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T21:47:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c4318817_339d0af1",
       "range": {
         "startLine": 241,
         "startChar": 0,
