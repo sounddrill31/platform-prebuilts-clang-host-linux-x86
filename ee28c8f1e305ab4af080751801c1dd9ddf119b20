@@ -49,6 +49,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fc949bc0_58294dd6",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T20:53:38Z",
+      "side": 1,
+      "message": "The default flag passed to the compiler should be \"-g\", but I don\u0027t care what value we put in the environment variable to represent that. I did want to make this resilient against not having the environment variable set. But I think it should also be valid to specify g alone since I expect it will not always be the default.",
+      "parentUuid": "cbedeb3a_aeb3708b",
+      "range": {
+        "startLine": 517,
+        "startChar": 63,
+        "endLine": 517,
+        "endChar": 65
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a96f1c87_9fb96f1a",
         "filename": "BUILD.bazel",
         "patchSetId": 4
@@ -60,6 +84,30 @@
       "writtenOn": "2023-07-10T19:51:41Z",
       "side": 1,
       "message": "given in Soong you have 0-3 and g, these should correspond to that. If you\u0027re representing `g` as explicitly passing `g` that would make sense, but an empty string as the default input seems reasonable -- I\u0027d just aim for consistency between Soong and Bazel when `CLANG_DEFAULT_DEBUG_LEVEL` is not set.",
+      "range": {
+        "startLine": 519,
+        "startChar": 3,
+        "endLine": 523,
+        "endChar": 23
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0db421f5_d4d13e7e",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T20:53:38Z",
+      "side": 1,
+      "message": "I had intended to also change the soong patch to use the \"default_debug_level_x\" string, thinking it\u0027d be more understandable. But I must have missed that change",
+      "parentUuid": "a96f1c87_9fb96f1a",
       "range": {
         "startLine": 519,
         "startChar": 3,
@@ -95,6 +143,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6de491c3_1bb8e241",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 536,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T20:53:38Z",
+      "side": 1,
+      "message": "Each of these flags is, in reality, a shortcut for combinations of other llvm flags. So while I want to preserve the simplicity of these \"ordered\" flags, I don\u0027t want to use prefixing in case we want to specify something else in the future.\n\nAre you also suggesting editing the existing `common_toolchain_config \u003d dict)` in\n `cc_toolchain_config.bzl`? Is it not enough These flags are compiler flags, so would it not be more correct to include them in the `_env_based_common_global_cflags` function?",
+      "parentUuid": "dd3c4ee6_c9b8f2de",
+      "range": {
+        "startLine": 527,
+        "startChar": 0,
+        "endLine": 536,
+        "endChar": 1
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "67a3d240_a0496839",
         "filename": "cc_toolchain_features.bzl",
         "patchSetId": 4
@@ -106,6 +178,30 @@
       "writtenOn": "2023-07-10T19:51:41Z",
       "side": 1,
       "message": "I\u0027d recommend prefixing with `-g` given that in Soong you\u0027re expecting 0-3.",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 228,
+        "endChar": 74
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9319e05_541c4c66",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T20:53:38Z",
+      "side": 1,
+      "message": "I\u0027m not sure what the value of `ctx._clang_default_debug_level[BuildSettingInfo]` is at this point. I thought it might be the \"-g\" / \"-g1\" strings. Is that not the case?",
+      "parentUuid": "67a3d240_a0496839",
       "range": {
         "startLine": 228,
         "startChar": 0,
