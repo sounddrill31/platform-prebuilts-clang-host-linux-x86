@@ -511,3 +511,59 @@ string_flag(
         generated_config_constants.CLANG_DEFAULT_SHORT_VERSION,
     ),
 )
+
+string_flag(
+    name = "clang_default_debug_level",
+    build_setting_default = env.get("CLANG_DEFAULT_DEBUG_LEVEL"),
+    values = [
+        "debug_level_g",
+        "debug_level_0",
+        "debug_level_1",
+        "debug_level_2",
+        "debug_level_3",
+    ],
+)
+
+config_setting(
+    name = "clang_default_debug_level_g",
+    flag_values = {
+        ":clang_default_debug_level": "debug_level_g",
+    },
+)
+
+config_setting(
+    name = "clang_default_debug_level_g0",
+    flag_values = {
+        ":clang_default_debug_level": "debug_level_g0",
+    },
+)
+
+config_setting(
+    name = "clang_default_debug_level_g1",
+    flag_values = {
+        ":clang_default_debug_level": "debug_level_g1",
+    },
+)
+
+config_setting(
+    name = "clang_default_debug_level_g2",
+    flag_values = {
+        ":clang_default_debug_level": "debug_level_g2",
+    },
+)
+
+config_setting(
+    name = "clang_default_debug_level_g3",
+    flag_values = {
+        ":clang_default_debug_level": "debug_level_g3",
+    },
+)
+
+clang_debug_level_flag = select({
+    "//prebuilts/clang/host/linux-x86:clang_default_debug_level_g": "-g",
+    "//prebuilts/clang/host/linux-x86:clang_default_debug_level_0": "-g0",
+    "//prebuilts/clang/host/linux-x86:clang_default_debug_level_1": "-g1",
+    "//prebuilts/clang/host/linux-x86:clang_default_debug_level_2": "-g2",
+    "//prebuilts/clang/host/linux-x86:clang_default_debug_level_3": "-g3",
+    "//conditions:default": "-g",
+})
