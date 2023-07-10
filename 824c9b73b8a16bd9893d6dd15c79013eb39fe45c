@@ -86,6 +86,93 @@
       "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
       "revId": "824c9b73b8a16bd9893d6dd15c79013eb39fe45c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000048473666",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2650766?revision\u003d7",
+      "fixSuggestions": [
+        {
+          "fixId": "67031cb8_4079a424",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 231,
+                "startChar": 0,
+                "endLine": 232,
+                "endChar": 0
+              },
+              "replacement": "    elif clang_debug_env_value \u003d\u003d \"debug_level_g\":\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 233,
+                "startChar": 0,
+                "endLine": 234,
+                "endChar": 0
+              },
+              "replacement": "    elif clang_debug_env_value \u003d\u003d \"debug_level_0\":\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 235,
+                "startChar": 0,
+                "endLine": 236,
+                "endChar": 0
+              },
+              "replacement": "    elif clang_debug_env_value \u003d\u003d \"debug_level_1\":\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 237,
+                "startChar": 0,
+                "endLine": 238,
+                "endChar": 0
+              },
+              "replacement": "    elif clang_debug_env_value \u003d\u003d \"debug_level_2\":\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 239,
+                "startChar": 0,
+                "endLine": 240,
+                "endChar": 0
+              },
+              "replacement": "    elif clang_debug_env_value \u003d\u003d \"debug_level_3\":\n"
+            },
+            {
+              "path": "cc_toolchain_features.bzl",
+              "range": {
+                "startLine": 241,
+                "startChar": 0,
+                "endLine": 242,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "82b7e4c4_ef7373fd",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-07-10T21:27:01Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features.bzl` to format the file, or apply the suggested fix.",
+      "revId": "824c9b73b8a16bd9893d6dd15c79013eb39fe45c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
