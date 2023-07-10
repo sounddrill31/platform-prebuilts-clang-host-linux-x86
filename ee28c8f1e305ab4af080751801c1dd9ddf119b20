@@ -120,6 +120,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ff14324_b674bc75",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1979435
+      },
+      "writtenOn": "2023-07-10T20:56:16Z",
+      "side": 1,
+      "message": "Will this allow for the environment var to not be set?",
+      "parentUuid": "0db421f5_d4d13e7e",
+      "range": {
+        "startLine": 519,
+        "startChar": 3,
+        "endLine": 523,
+        "endChar": 23
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dd3c4ee6_c9b8f2de",
         "filename": "BUILD.bazel",
         "patchSetId": 4
