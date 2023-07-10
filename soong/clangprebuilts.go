@@ -165,6 +165,7 @@ type archProps struct {
 	Linux_musl_x86_64   archInnerProps
 	Linux_musl_arm      archInnerProps
 	Linux_musl_arm64    archInnerProps
+	Windows_x86_64      archInnerProps
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -181,6 +182,9 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	if name == "libFuzzer.a" {
 		headerDir := path.Join(getClangPrebuiltDir(ctx), "prebuilt_include", "llvm", "lib", "Fuzzer")
 		p.Export_include_dirs = []string{headerDir}
+	} else if name == "libsimpleperf_readelf.a" {
+		headerDir := path.Join(getClangPrebuiltDir(ctx), "include")
+		p.Export_include_dirs = []string{headerDir}
 	}
 
 	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
@@ -194,6 +198,12 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-unknown-linux-musl/lib", name)}
 	p.Target.Linux_musl_arm.Srcs = []string{path.Join(libDir, "arm-unknown-linux-musleabihf/lib", name)}
 	p.Target.Linux_musl_arm64.Srcs = []string{path.Join(libDir, "aarch64-unknown-linux-musl/lib", name)}
+
+	if name == "libsimpleperf_readelf.a" {
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(getClangPrebuiltDir(ctx), "lib/x86_64-unknown-linux-gnu", name)}
+		p.Target.Windows_x86_64.Srcs = []string{path.Join(getClangPrebuiltDir(ctx), "lib/x86_64-w64-windows-gnu", name)}
+	}
+
 	ctx.AppendProperties(p)
 }
 
