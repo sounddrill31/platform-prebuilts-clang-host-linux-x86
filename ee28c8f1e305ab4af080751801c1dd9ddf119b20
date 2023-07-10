@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0bbb6b8_1105b579",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-10T19:51:41Z",
+      "side": 1,
+      "message": "nit: i\u0027d remove `_env` here",
+      "range": {
+        "startLine": 516,
+        "startChar": 37,
+        "endLine": 516,
+        "endChar": 41
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbedeb3a_aeb3708b",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-10T19:51:41Z",
+      "side": 1,
+      "message": "Is the default value an empty string or `g`?",
+      "range": {
+        "startLine": 517,
+        "startChar": 63,
+        "endLine": 517,
+        "endChar": 65
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a96f1c87_9fb96f1a",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-10T19:51:41Z",
+      "side": 1,
+      "message": "given in Soong you have 0-3 and g, these should correspond to that. If you\u0027re representing `g` as explicitly passing `g` that would make sense, but an empty string as the default input seems reasonable -- I\u0027d just aim for consistency between Soong and Bazel when `CLANG_DEFAULT_DEBUG_LEVEL` is not set.",
+      "range": {
+        "startLine": 519,
+        "startChar": 3,
+        "endLine": 523,
+        "endChar": 23
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd3c4ee6_c9b8f2de",
+        "filename": "BUILD.bazel",
+        "patchSetId": 4
+      },
+      "lineNbr": 536,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-10T19:51:41Z",
+      "side": 1,
+      "message": "Then, you\u0027d need to pass it to the toolchain as an input.\n\nYou can access the `BuildSettingInfo` as you\u0027re doing, but given that in Soong, you\u0027re expecting 0-3, I\u0027d recommend adding `-g` as a prefix. If you do this, you can drop the `config_setting`\n\nAlternatively, you can keep the `config_setting`, but you need config_setting per debug level:\n\ni.e.\n\n```\nconfig_setting(\n      name \u003d \"clang_default_debug_level_0\",\n      flag_values \u003d {\n          \":clang_default_debug_level\": \"0\"\n      },\n)\n\nconfig_setting(\n      name \u003d \"clang_default_debug_level_1\",\n      flag_values \u003d {\n          \":clang_default_debug_level\": \"1\"\n      },\n)\n...\n```\n\n```\n    debug_flag \u003d select({\n        \"//prebuilts/clang/host/linux-x86:clang_default_debug_level_0\": \"-g0\",\n        \"//prebuilts/clang/host/linux-x86:clang_default_debug_level_1\": \"-g1\",\n        \"//prebuilts/clang/host/linux-x86:clang_default_debug_level_2\": \"-g2\",\n        \"//prebuilts/clang/host/linux-x86:clang_default_debug_level_3\": \"-g3\",\n        \"//conditions:default\": \"-g\",\n    })\n    common_toolchain_config \u003d dict(\n        [\n            (\"target_os\", target_os),\n            (\"target_arch\", target_arch),\n            (\"clang_version\", clang_version),\n            (\"libclang_rt_builtin\", libclang_rt_path),\n            (\"libclang_rt_ubsan_minimal\", libclang_rt_ubsan_minimal_path),\n            (\"target_flags\", target_flags),\n            (\"compiler_flags\", compiler_flags),\n            (\"linker_flags\", linker_flags),\n            (\"rtti_toggle\", rtti_toggle),\n            (\"debug_flag\", debug_flag),\n        ],\n    )\n```\n\nand you\u0027d need to thread this through.",
+      "range": {
+        "startLine": 527,
+        "startChar": 0,
+        "endLine": 536,
+        "endChar": 1
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67a3d240_a0496839",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-10T19:51:41Z",
+      "side": 1,
+      "message": "I\u0027d recommend prefixing with `-g` given that in Soong you\u0027re expecting 0-3.",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 228,
+        "endChar": 74
+      },
+      "revId": "ee28c8f1e305ab4af080751801c1dd9ddf119b20",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
