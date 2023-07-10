@@ -225,6 +225,9 @@ def _env_based_common_global_cflags(ctx):
     if ctx.attr._allow_unknown_warning_option[BuildSettingInfo].value:
         flags.extend(["-Wno-error=unknown-warning-option"])
 
+    
+    flags.extend([ctx._clang_default_debug_level[BuildSettingInfo].value])
+
     return flags
 
 def _compiler_flag_features(ctx, target_arch, target_os, flags = []):
