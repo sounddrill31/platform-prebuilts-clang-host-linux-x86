@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a585fef_60bd2432",
+        "filename": "soong/clangprebuilts.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-07-11T00:12:06Z",
+      "side": 1,
+      "message": "Do we need to export this library for darwin as well - here as well as in prebuilts/clang/host/darwin-x86/Android.bp?",
+      "range": {
+        "startLine": 202,
+        "startChar": 1,
+        "endLine": 202,
+        "endChar": 39
+      },
+      "revId": "2f2fc452af92e8019606a760736d59eaeb997f89",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
