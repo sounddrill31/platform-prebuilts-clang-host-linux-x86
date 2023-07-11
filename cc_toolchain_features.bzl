@@ -1654,6 +1654,22 @@ def _get_cfi_features(target_arch, target_os):
         return []
     features = [
         feature(
+            name = "android_cfi_cross_dso",
+            enabled = True,
+            requires = [feature_set(features = ["android_cfi"])],
+            flag_sets = [
+                _make_flag_set(
+                    actions = _actions.c_and_cpp_compile + _actions.link,
+                    flags = [_generated_sanitizer_constants.CfiCrossDsoFlag],
+                    with_features = ["dynamic_executable"],
+                    with_not_features = ["static_executable"],
+                ),
+            ],
+        ),
+    ]
+
+    features.append(
+        feature(
             name = "android_cfi",
             enabled = False,
             flag_sets = [
@@ -1673,22 +1689,6 @@ def _get_cfi_features(target_arch, target_os):
             implies = ["android_full_lto"] + (
                 ["arm_isa_thumb"] if target_arch == _arches.Arm else []
             ),
-        ),
-    ]
-
-    features.append(
-        feature(
-            name = "android_cfi_cross_dso",
-            enabled = True,
-            requires = [feature_set(features = ["android_cfi"])],
-            flag_sets = [
-                _make_flag_set(
-                    actions = _actions.c_and_cpp_compile + _actions.link,
-                    flags = [_generated_sanitizer_constants.CfiCrossDsoFlag],
-                    with_features = ["dynamic_executable"],
-                    with_not_features = ["static_executable"],
-                ),
-            ],
         ),
     )
 
