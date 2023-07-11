@@ -1654,6 +1654,22 @@ def _get_cfi_features(target_arch, target_os):
         return []
     features = [
         feature(
+            name = "android_cfi_cross_dso",
+            enabled = True,
+            requires = [feature_set(features = ["android_cfi"])],
+            flag_sets = [
+                _make_flag_set(
+                    actions = _actions.c_and_cpp_compile + _actions.link,
+                    flags = [_generated_sanitizer_constants.CfiCrossDsoFlag],
+                    with_features = ["dynamic_executable"],
+                    with_not_features = ["static_executable"],
+                ),
+            ],
+        ),
+    ]
+
+    features.append(
+        feature(
             name = "android_cfi",
             enabled = False,
             flag_sets = [
@@ -1673,22 +1689,6 @@ def _get_cfi_features(target_arch, target_os):
             implies = ["android_full_lto"] + (
                 ["arm_isa_thumb"] if target_arch == _arches.Arm else []
             ),
-        ),
-    ]
-
-    features.append(
-        feature(
-            name = "android_cfi_cross_dso",
-            enabled = True,
-            requires = [feature_set(features = ["android_cfi"])],
-            flag_sets = [
-                _make_flag_set(
-                    actions = _actions.c_and_cpp_compile + _actions.link,
-                    flags = [_generated_sanitizer_constants.CfiCrossDsoFlag],
-                    with_features = ["dynamic_executable"],
-                    with_not_features = ["static_executable"],
-                ),
-            ],
         ),
     )
 
@@ -1868,18 +1868,15 @@ sanitizer_blocklist_dict = {
     "system/extras/toolchain-extras": "libprofile_clang_extras_blocklist.txt",
 }
 
-def _get_ubsan_blocklist_features():
+def _get_sanitizer_blocklist_features():
     features = []
     for blocklist in sanitizer_blocklist_dict.items():
         # Format the blocklist name to be used in a feature name
         blocklist_feature_name_suffix = blocklist[1].lower().replace(".", "_")
         features.append(
             feature(
-                name = "ubsan_blocklist_" + blocklist_feature_name_suffix,
+                name = "sanitizer_blocklist_" + blocklist_feature_name_suffix,
                 enabled = False,
-                requires = [
-                    feature_set(features = ["ubsan_enabled"]),
-                ],
                 flag_sets = [
                     flag_set(
                         actions = _actions.c_and_cpp_compile,
@@ -2133,8 +2130,6 @@ def _get_ubsan_features(target_os, libclang_rt_ubsan_minimal):
         ),
     )
 
-    ubsan_features.extend(_get_ubsan_blocklist_features())
-
     return ubsan_features
 
 def _manual_binder_interface_feature():
@@ -2203,6 +2198,7 @@ def get_features(
         # Sanitizers
         _get_cfi_features(target_arch, target_os),
         _get_ubsan_features(target_os, libclang_rt_ubsan_minimal),
+        _get_sanitizer_blocklist_features(),
         # Misc features
         _get_visibiility_hidden_feature(),
         # RTTI
