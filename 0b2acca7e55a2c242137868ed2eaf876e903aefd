@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ceb94a1f_7aead45f",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1882,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-12T21:22:33Z",
+      "side": 0,
+      "message": "do we need a `requires` section that _a_ sanitizer is enabled?",
+      "range": {
+        "startLine": 1880,
+        "startChar": 1,
+        "endLine": 1882,
+        "endChar": 18
+      },
+      "revId": "0b2acca7e55a2c242137868ed2eaf876e903aefd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
