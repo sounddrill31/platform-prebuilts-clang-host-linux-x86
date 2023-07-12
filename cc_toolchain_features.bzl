@@ -1871,11 +1871,19 @@ sanitizer_blocklist_dict = {
 def _get_ubsan_blocklist_features():
     features = []
     for blocklist in sanitizer_blocklist_dict.items():
-        # Format the blocklist name to be used in a feature name
+        # Format the blocklist name and path to be used in a feature name.
+        # We use both to ensure there is no conflict if there are duplicates
+        # of either one.
+        blocklist_feature_path_suffix = blocklist[0].lower().replace("/", "_")
         blocklist_feature_name_suffix = blocklist[1].lower().replace(".", "_")
         features.append(
             feature(
-                name = "ubsan_blocklist_" + blocklist_feature_name_suffix,
+                name = (
+                    "ubsan_blocklist_" +
+                    blocklist_feature_path_suffix +
+                    "_" +
+                    blocklist_feature_name_suffix
+                ),
                 enabled = False,
                 requires = [
                     feature_set(features = ["ubsan_enabled"]),
