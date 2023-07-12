@@ -27,7 +27,7 @@ def _test_sanitizer_blocklist_applied_when_ubsan_enabled():
         srcs = ["foo.cpp"],
         features = [
             "ubsan_undefined",
-            "sanitizer_blocklist_libavc_blocklist_txt",
+            "sanitizer_blocklist_external_libavc_libavc_blocklist_txt",
         ],
         tags = ["manual"],
     )
@@ -51,7 +51,7 @@ def _test_sanitizer_blocklist_applied_when_cfi_enabled():
         srcs = ["foo.cpp"],
         features = [
             "android_cfi",
-            "sanitizer_blocklist_libavc_blocklist_txt",
+            "sanitizer_blocklist_external_libavc_libavc_blocklist_txt",
         ],
         tags = ["manual"],
     )
@@ -74,7 +74,7 @@ def _test_sanitizer_blocklist_not_applied_when_sanitizers_disabled():
         name = name,
         srcs = ["foo.cpp"],
         features = [
-            "sanitizer_blocklist_libavc_blocklist_txt",
+            "sanitizer_blocklist_external_libavc_libavc_blocklist_txt",
         ],
         tags = ["manual"],
     )
