@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f920b1c_de7f3044",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1874,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-12T21:21:18Z",
+      "side": 1,
+      "message": "the information about unique name in the CL description would be useful context for this comment",
+      "range": {
+        "startLine": 1874,
+        "startChar": 8,
+        "endLine": 1874,
+        "endChar": 73
+      },
+      "revId": "6b201641c0d39d02e7b895e2b84a1224fb99ad3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73fe8978_2761f980",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1880,
+      "author": {
+        "id": 1687194
+      },
+      "writtenOn": "2023-07-12T21:21:18Z",
+      "side": 1,
+      "message": "should we remove the `ubsan` prefix given that ubsan is not required?",
+      "range": {
+        "startLine": 1880,
+        "startChar": 21,
+        "endLine": 1880,
+        "endChar": 27
+      },
+      "revId": "6b201641c0d39d02e7b895e2b84a1224fb99ad3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
