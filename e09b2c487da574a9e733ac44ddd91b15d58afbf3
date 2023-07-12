@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db52de00_f6665c4b",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 2128,
+      "author": {
+        "id": 1932329
+      },
+      "writtenOn": "2023-07-12T20:53:05Z",
+      "side": 1,
+      "message": "do we still want this condition now that this is not ubsan-specific?",
+      "range": {
+        "startLine": 2125,
+        "startChar": 0,
+        "endLine": 2128,
+        "endChar": 0
+      },
+      "revId": "e09b2c487da574a9e733ac44ddd91b15d58afbf3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
