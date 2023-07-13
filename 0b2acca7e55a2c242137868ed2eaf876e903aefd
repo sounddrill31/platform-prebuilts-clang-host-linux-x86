@@ -46,6 +46,30 @@
       },
       "revId": "0b2acca7e55a2c242137868ed2eaf876e903aefd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8992ee8_b667d94e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1882,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-07-13T20:39:32Z",
+      "side": 0,
+      "message": "Discussed offline. Going with `sanitizers_enabled` solution",
+      "parentUuid": "bc43b6d9_8986d2ad",
+      "range": {
+        "startLine": 1880,
+        "startChar": 1,
+        "endLine": 1882,
+        "endChar": 18
+      },
+      "revId": "0b2acca7e55a2c242137868ed2eaf876e903aefd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
