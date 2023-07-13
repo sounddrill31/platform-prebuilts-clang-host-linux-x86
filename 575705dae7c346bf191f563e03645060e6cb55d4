@@ -22,6 +22,30 @@
       },
       "revId": "575705dae7c346bf191f563e03645060e6cb55d4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "927f2524_ff568f8d",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 1907,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-07-13T16:10:18Z",
+      "side": 1,
+      "message": "Yep, though I agree it should be in another CL. I initially introduced these flags before I knew I could export them from Soong.",
+      "parentUuid": "7b3fe241_1ca4f79e",
+      "range": {
+        "startLine": 1903,
+        "startChar": 0,
+        "endLine": 1907,
+        "endChar": 1
+      },
+      "revId": "575705dae7c346bf191f563e03645060e6cb55d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
