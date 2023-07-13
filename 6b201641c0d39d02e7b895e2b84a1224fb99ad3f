@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cd06d4c_341f3094",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1874,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-07-13T15:37:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f920b1c_de7f3044",
+      "range": {
+        "startLine": 1874,
+        "startChar": 8,
+        "endLine": 1874,
+        "endChar": 73
+      },
+      "revId": "6b201641c0d39d02e7b895e2b84a1224fb99ad3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "73fe8978_2761f980",
