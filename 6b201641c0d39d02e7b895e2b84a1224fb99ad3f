@@ -45,6 +45,30 @@
       },
       "revId": "6b201641c0d39d02e7b895e2b84a1224fb99ad3f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9a44191a_7605f0d9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 1880,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-07-13T15:33:44Z",
+      "side": 1,
+      "message": "Handled in another CL. I\u0027ll merge them when necessary",
+      "parentUuid": "73fe8978_2761f980",
+      "range": {
+        "startLine": 1880,
+        "startChar": 21,
+        "endLine": 1880,
+        "endChar": 27
+      },
+      "revId": "6b201641c0d39d02e7b895e2b84a1224fb99ad3f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
