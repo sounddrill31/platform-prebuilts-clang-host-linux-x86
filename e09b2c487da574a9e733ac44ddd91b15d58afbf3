@@ -22,6 +22,30 @@
       },
       "revId": "e09b2c487da574a9e733ac44ddd91b15d58afbf3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ad1334f_f5eb8f8e",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 2128,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-07-13T16:25:16Z",
+      "side": 1,
+      "message": "This feature is completely unrelated to the blocklist. I think maybe You got confused by Gerrit\u0027s folding of the code.",
+      "parentUuid": "db52de00_f6665c4b",
+      "range": {
+        "startLine": 2125,
+        "startChar": 0,
+        "endLine": 2128,
+        "endChar": 0
+      },
+      "revId": "e09b2c487da574a9e733ac44ddd91b15d58afbf3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
