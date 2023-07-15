@@ -225,6 +225,10 @@ def _env_based_common_global_cflags(ctx):
     if ctx.attr._allow_unknown_warning_option[BuildSettingInfo].value:
         flags.extend(["-Wno-error=unknown-warning-option"])
 
+    device_page_size_agnostic = ctx.attr._product_variables[ProductVariablesInfo].Device_page_size_agnostic
+    if device_page_size_agnostic:
+        flags.extend(["-DTARGET_PAGE_SIZE_AGNOSTIC"])
+
     clang_debug_env_value = ctx.attr._clang_default_debug_level[BuildSettingInfo].value
     if clang_debug_env_value == "":
         flags.extend(["-g"])
