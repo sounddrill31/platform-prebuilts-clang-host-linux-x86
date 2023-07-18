@@ -51,6 +51,23 @@
       "message": "Failures unrelated to this change: b/289540339",
       "revId": "f619175f833b84fe41960f1214b4da992c4849d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68baa1d5_cc3b6530",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-07-18T02:19:47Z",
+      "side": 1,
+      "message": "The \"Qualcomm-Review\" vote is the only blocker to merge this now.  @quic_jiangenj@quicinc.com can you follow-up internally to get this vote?",
+      "revId": "f619175f833b84fe41960f1214b4da992c4849d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
