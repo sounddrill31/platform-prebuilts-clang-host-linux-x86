@@ -16,6 +16,24 @@
       "message": "This cl is no longer necessary, right?",
       "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "525c5c60_44eeac72",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1889140
+      },
+      "writtenOn": "2023-07-24T22:40:54Z",
+      "side": 1,
+      "message": "We need to use the flag TARGET_PAGE_SIZE_AGNOSTIC in zipalign:\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:build/make/tools/zipalign/Android.bp;l\u003d22?q\u003dlibzipalign\n\nWith these 2 cls aosp/2657042, aosp/2657937 is enough?",
+      "parentUuid": "2be340c7_ace7858c",
+      "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
