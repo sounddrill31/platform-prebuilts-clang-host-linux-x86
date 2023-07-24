@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2be340c7_ace7858c",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2023-07-24T22:28:52Z",
+      "side": 1,
+      "message": "This cl is no longer necessary, right?",
+      "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
