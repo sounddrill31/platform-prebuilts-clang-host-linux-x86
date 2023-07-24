@@ -70,6 +70,24 @@
       "parentUuid": "525c5c60_44eeac72",
       "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ab3ee2_432c33af",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1889140
+      },
+      "writtenOn": "2023-07-24T22:55:58Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "ef8ff442_2a3baf70",
+      "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
