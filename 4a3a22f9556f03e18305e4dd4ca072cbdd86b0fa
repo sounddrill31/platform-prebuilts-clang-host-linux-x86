@@ -34,6 +34,24 @@
       "parentUuid": "2be340c7_ace7858c",
       "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f42578b_b79557d9",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-07-24T22:46:37Z",
+      "side": 1,
+      "message": "Yes, here is an example of how you can add it to zipalign only:\nhttps://cs.android.com/android/platform/superproject/main/+/main:system/libhidl/Android.bp;l\u003d221;drc\u003dfc94fbce8ba2796d236bc5b050cb747ac304d82a",
+      "parentUuid": "525c5c60_44eeac72",
+      "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
