@@ -52,6 +52,24 @@
       "parentUuid": "525c5c60_44eeac72",
       "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef8ff442_2a3baf70",
+        "filename": "cc_toolchain_features.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2023-07-24T22:47:33Z",
+      "side": 1,
+      "message": "Yes, if you don\u0027t need to add it globally in soong then you don\u0027t need to add it globally in bazel either.\n\nBTW the soong changes are also not necessary if you use soong config variables instead of the product_variables switch.",
+      "parentUuid": "525c5c60_44eeac72",
+      "revId": "4a3a22f9556f03e18305e4dd4ca072cbdd86b0fa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
