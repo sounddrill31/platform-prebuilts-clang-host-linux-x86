@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab186ce6_f83ca0d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-07-26T12:52:13Z",
+      "side": 1,
+      "message": "Please make sure to update https://cs.android.com/android/kernel/superproject/+/common-android-mainline:prebuilts/clang/host/linux-x86/kleaf/versions.bzl accordingly.",
+      "revId": "646b9cfcd9ad9b3b1adaa2ba978fa1cb76b93122",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
