@@ -85,6 +85,23 @@
       "message": "@quic_pvphani can u check and approve from Qualcomm-Review side?",
       "revId": "f619175f833b84fe41960f1214b4da992c4849d3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd775ce8_20a5c000",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-07-26T18:54:32Z",
+      "side": 1,
+      "message": "presubmit failures are unrelated to this CL.",
+      "revId": "f619175f833b84fe41960f1214b4da992c4849d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
