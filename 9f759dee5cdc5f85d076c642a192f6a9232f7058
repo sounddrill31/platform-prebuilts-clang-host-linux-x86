@@ -16,6 +16,23 @@
       "message": "unrelated test errors only",
       "revId": "9f759dee5cdc5f85d076c642a192f6a9232f7058",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a06a8014_63f4f654",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-07-27T00:16:01Z",
+      "side": 1,
+      "message": "It looks like this branch is missing the updated OWNERS file for your team.",
+      "revId": "9f759dee5cdc5f85d076c642a192f6a9232f7058",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
