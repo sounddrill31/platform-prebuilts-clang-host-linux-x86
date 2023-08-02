@@ -46,6 +46,53 @@
       "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
       "revId": "1d06423009cc1d76f43d704090e3d888d981a18f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000050157173",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2690186?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "87c17821_b5af9714",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 25,
+                "startChar": 0,
+                "endLine": 25,
+                "endChar": 0
+              },
+              "replacement": "    \"libclang_ubsan_minimal_rt_prebuilt_map\",\n"
+            },
+            {
+              "path": "cc_toolchain_features_ubsan_test.bzl",
+              "range": {
+                "startLine": 26,
+                "startChar": 0,
+                "endLine": 27,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "73f84282_0d08c325",
+        "filename": "cc_toolchain_features_ubsan_test.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-08-02T15:59:07Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier cc_toolchain_features_ubsan_test.bzl` to format the file, or apply the suggested fix.",
+      "revId": "1d06423009cc1d76f43d704090e3d888d981a18f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
