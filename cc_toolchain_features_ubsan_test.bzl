@@ -22,13 +22,13 @@ load(
 )
 load(
     ":cc_toolchain_constants.bzl",
+    _generated_sanitizer_constants = "generated_sanitizer_constants",
     "libclang_ubsan_minimal_rt_prebuilt_map",
 )
 load(
     ":cc_toolchain_features.bzl",
     "int_overflow_ignorelist_filename",
     "int_overflow_ignorelist_path",
-    "minimal_runtime_flags",
 )
 
 compile_action_mnemonic = "CppCompile"
@@ -691,7 +691,7 @@ def _test_minimal_runtime_flags_added_to_compilation():
         name = test_name,
         target_under_test = name,
         mnemonics = [compile_action_mnemonic],
-        expected_flags = minimal_runtime_flags,
+        expected_flags = _generated_sanitizer_constants.MinimalRuntimeFlags,
     )
 
     return test_name
