@@ -28,16 +28,22 @@ import (
 	"android/soong/genrule"
 )
 
+<<<<<<< PATCH SET (3a3238 Revert "Replace libc++.so.1 with libc++.so")
+const libclangCppSoFormat = "libclang-cpp.so.%s"
+const libcxxSoName = "libc++.so.1"
+const libcxxabiSoName = "libc++abi.so.1"
+=======
 const libclangCppSoName = "libclang-cpp.so"
 const libcxxSoName = "libc++.so"
 const libcxxabiSoName = "libc++abi.so"
+>>>>>>> BASE      (4b22ef Merge "Export LibFuzzer to vendor" into main)
 
 var (
 	// Files included in the llvm-tools filegroup in ../Android.bp
 	llvmToolsFiles = []string{
 		"bin/llvm-symbolizer",
 		"bin/llvm-cxxfilt",
-		"lib/libc++.so",
+		"lib/libc++.so.1",
 	}
 )
 
