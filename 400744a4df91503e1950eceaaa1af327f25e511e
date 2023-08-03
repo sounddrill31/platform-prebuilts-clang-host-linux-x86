@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "78888c42_7a014342",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2023-08-03T16:42:57Z",
+      "side": 1,
+      "message": "needs to soak for a couple of weeks until downstream android14 branches all have switched to `main-kernel-build-2023`",
+      "revId": "400744a4df91503e1950eceaaa1af327f25e511e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
