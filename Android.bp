@@ -14,6 +14,31 @@
 // limitations under the License.
 //
 
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
+=======
+package {
+    default_applicable_licenses: ["prebuilts_clang_host_linux-x86_license"],
+}
+
+// See: http://go/android-license-faq
+// SPDX-license-identifier-GPL and SPDX-license-identifier-LGPL removed
+// those files are dual-licensed 'OR PSF'
+license {
+    name: "prebuilts_clang_host_linux-x86_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-NCSA",
+        "SPDX-license-identifier-PSF-2.0",
+        "SPDX-license-identifier-Zlib",
+        "legacy_unencumbered",
+    ],
+    // large-scale-change unable to identify any license_text files
+}
+
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 llvm_prebuilt_library_static {
     name: "libFuzzer",
     sdk_version: "minimum",
@@ -119,6 +144,30 @@ libclang_rt_prebuilt_library_shared {
     has_stubs: true,
 }
 
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
+=======
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan.static",
+    defaults: ["libclang_rt-prebuilt-default"],
+    host_supported: true,
+    recovery_available: true,
+    native_bridge_supported: true,
+    sdk_version: "24",
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.asan_cxx.static",
+    defaults: ["libclang_rt-prebuilt-default"],
+    host_supported: true,
+    recovery_available: true,
+    native_bridge_supported: true,
+    sdk_version: "24",
+}
+
+///////////////////////////////////////////////////////////////////////////////
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-aarch64-android",
     sdk_version: "minimum",
@@ -234,8 +283,54 @@ libclang_rt_prebuilt_library_shared {
     vndk: {
         enabled: true,
     },
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
     arch: {
         arm: {
+=======
+    sdk_version: "24",
+    check_elf_files: false,  // Bypass circular dependency between libc++
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_standalone.static",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "24",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    double_loadable: true,
+    host_supported: true,
+    stl: "c++_static",
+    check_elf_files: false,  // Bypass circular dependency between libc++
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.ubsan_minimal",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "24",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    double_loadable: true,
+    host_supported: true,
+    native_bridge_supported: true,
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.hwasan_static",
+    sdk_version: "minimum",
+    enabled: false,
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    host_supported: true,
+    target: {
+        bionic_arm64: {
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
             enabled: true,
         },
     },
@@ -248,12 +343,18 @@ libclang_rt_prebuilt_library_shared {
     enabled: false,
     vendor_available: true,
     recovery_available: true,
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
     double_loadable: true,
     vndk: {
         enabled: true,
     },
     arch: {
         arm64: {
+=======
+    host_supported: true,
+    target: {
+        bionic_arm64: {
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
             enabled: true,
         },
     },
@@ -301,8 +402,73 @@ libclang_rt_prebuilt_library_static {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
     arch: {
         arm: {
+=======
+    product_available: true,
+    ramdisk_available: false,
+    vendor_ramdisk_available: false,
+    sanitize: {
+        never: true,
+    },
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.fuzzer_interceptors",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "minimum",
+    host_supported: true,
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    ramdisk_available: false,
+    vendor_ramdisk_available: false,
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_object {
+    name: "clang_rt.crtbegin",
+    host_supported: true,
+    defaults: ["libclang_rt-prebuilt-default"],
+}
+
+libclang_rt_prebuilt_object {
+    name: "clang_rt.crtend",
+    host_supported: true,
+    defaults: ["libclang_rt-prebuilt-default"],
+}
+
+///////////////////////////////////////////////////////////////////////////////
+cc_defaults {
+    name: "libunwind-android-default",
+    defaults: [
+        "libclang_rt-prebuilt-default",
+        "linux_bionic_supported",
+    ],
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    native_bridge_supported: true,
+    sanitize: {
+        never: true,
+    },
+    stl: "none",
+    // The unwinder needs functions from libc (and libdl), but libc.so links
+    // against libunwind*.a. Clear the system_shared_libs property so that Soong
+    // doesn't complain about the cyclic dependency.
+    system_shared_libs: [],
+}
+
+llvm_prebuilt_library_static {
+    name: "libunwind",
+    defaults: ["libunwind-android-default"],
+    target: {
+        musl: {
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
             enabled: true,
         },
     },

@@ -8,41 +8,92 @@ LLVM Users
 ----------
 
 * [**Android Platform**](https://android.googlesource.com/platform/)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r365631b
+=======
+  * Currently clang-r487747c
+  * clang-r487747c for Android U release
+  * clang-r450784d for Android T release
+  * clang-r416183b1 for Android S release
+  * clang-r383902b1 for Android R-QPR2 release
+  * clang-r383902b for Android R release
+  * clang-r353983c1 for Android Q-QPR2 release
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * clang-r353983c for Android Q release
   * clang-4691093 for Android P release
   * Look for "ClangDefaultVersion" and/or "clang-" in [build/soong/cc/config/global.go](https://android.googlesource.com/platform/build/soong/+/master/cc/config/global.go/).
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
     * [Internal cs/ link](https://cs.corp.google.com/android/build/soong/cc/config/global.go?q=ClangDefaultVersion)
+=======
+    * [AOSP Code Search link](https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/config/global.go?q=ClangDefaultVersion)
+
+* [**Android Platform LLVM binutils**](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/llvm-binutils-stable/)
+  * Currently clang-r487747c
+  * These are *symlinks* to llvm tools and can be updated by running [update-binutils.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/update-binutils.py).
+
+* [**Android Platform clang-stable**](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-stable/)
+  * Currently clang-r487747c
+  * These are *copies* of some clang tools and can be updated by running [update-clang-stable.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/update-clang-stable.py).
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 
 * [**RenderScript**](https://developer.android.com/guide/topics/renderscript/index.html)
   * Currently clang-3289846
   * Look for "RSClangVersion" and/or "clang-" in [build/soong/cc/config/global.go](https://android.googlesource.com/platform/build/soong/+/master/cc/config/global.go/).
     * [Internal cs/ link](https://cs.corp.google.com/android/build/soong/cc/config/global.go?q=RSClangVersion)
 
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
 * [**Android Linux Kernel**](http://go/android-kernel)
   * Currently clang-r353983c
   * Look for "clang-" in [4.19 build configs](https://android.googlesource.com/kernel/common/+/android-4.19/build.config.cuttlefish.aarch64).
   * Look for "clang-" in [4.14 build configs](https://android.googlesource.com/kernel/common/+/android-4.14/build.config.cuttlefish.aarch64).
   * Look for "clang-" in [4.9 build configs](https://android.googlesource.com/kernel/common/+/android-4.9/build.config.cuttlefish.aarch64).
+=======
+* [**Android Linux Kernel**](http://go/android-systems)
+  * Currently clang-r487747c
+    * Look for "clang-" in [mainline build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android-mainline/build.config.constants).
+    * Look for "clang-" in [android14-6.1 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android14-6.1/build.config.constants)
+    * Look for "clang-" in [android14-5.15 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android14-5.15/build.config.constants)
+  * When adding or removing a clang prebuilt, the list in `kleaf/versions.bzl` needs to be updated.
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
 * [**NDK**](https://developer.android.com/ndk)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r349610b
+=======
+  * Currently clang-r487747c
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Look for "clang-" in [ndk/toolchains.py](https://android.googlesource.com/platform/ndk/+/refs/heads/master/ndk/toolchains.py)
 
 * [**Trusty**](https://source.android.com/security/trusty/)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r353983c
+=======
+  * LINUX_CLANG_BINDIR: clang-r475365b
+  * CLANG_BINDIR: clang-r475365b
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Look for "clang-" in [vendor/google/aosp/scripts/envsetup.sh](https://android.googlesource.com/trusty/vendor/google/aosp/+/master/scripts/envsetup.sh).
 
 * [**Android Emulator**](https://developer.android.com/studio/run/emulator.html)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r365631b
+=======
+  * Currently clang-r487747c
+  * Linux emulator is temporarily hardcoded to clang-r487747c, see b/268674933
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Look for "clang-" in [external/qemu/android/build/cmake/toolchain.cmake](https://android.googlesource.com/platform/external/qemu/+/emu-master-dev/android/build/cmake/toolchain.cmake#25).
     * Note that they work out of the emu-master-dev branch.
     * [Internal cs/ link](https://cs.corp.google.com/android/external/qemu/android/build/cmake/toolchain.cmake?q=clang-)
 
 * [**Context Hub Runtime Environment (CHRE)**](https://android.googlesource.com/platform/system/chre/)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r353983d
   * Look in [system/chre/build/arch/x86.mk](https://android.googlesource.com/platform/system/chre/+/master/build/arch/x86.mk#12).
+=======
+  * Currently clang-r487747c
+  * Look in [system/chre/build/clang.mk](https://googleplex-android.googlesource.com/platform/system/chre/+/refs/heads/master/build/clang.mk#13).
+    * [Internal Code Search link](https://source.corp.google.com/android/system/chre/build/clang.mk?q=clang-)
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 
 * [**Keymaster (system/keymaster) tests**](https://android.googlesource.com/platform/system/keymaster)
   * Currently clang-r339409d
@@ -56,14 +107,43 @@ LLVM Users
   * Look for "clang-" in [build-openjdk-darwin.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/master/build-openjdk-darwin.sh)
 
 * [**Clang Tools**](https://android.googlesource.com/platform/prebuilts/clang-tools/)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r365631b
+=======
+  * Currently clang-r487747c
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Look for "clang-r" in [envsetup.sh](https://android.googlesource.com/platform/development/+/refs/heads/master/vndk/tools/header-checker/android/envsetup.sh)
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
+=======
+  * Check out branch clang-tools and run test: OUT_DIR=out prebuilts/clang-tools/build-prebuilts.sh
+
+* **Android Rust**
+  * Toolchain
+    * Currently clang-r487747
+    * Look for "CLANG_REVISION" in [paths.py](https://android.googlesource.com/toolchain/android_rust/+/refs/heads/master/paths.py)
+  * Bindgen
+    * Currently clang-r487747c
+    * Look for "bindgenClangVersion" in [bindgen.go](https://android.googlesource.com/platform/build/soong/+/refs/heads/master/rust/bindgen.go)
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 
 * **Stage 1 compiler**
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
   * Currently clang-r365631b
   * Look for "clang-r" in [toolchain/llvm_android/build.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/build.py)
+=======
+  * Currently clang-r487747c
+  * Look for "clang-r" in [toolchain/llvm_android/constants.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/constants.py)
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
   * Note the chicken & egg paradox of a self hosting bootstrapping compiler; this can only be updated AFTER a new prebuilt is checked in.
 
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
+=======
+* **Android Studio / Android Game Development Extension**
+  * Currently clang-r487747
+  * Look in [lldb-utils/config/clang.version](https://googleplex-android.git.corp.google.com/platform/external/lldb-utils/+/refs/heads/lldb-master-dev/config/clang.version)
+
+
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 
 Prebuilt Versions
 -----------------
@@ -81,6 +161,47 @@ Prebuilt Versions
 * [clang-r353983d](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983d/) - June 2019
 * [clang-r365631b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r365631b/) - September 2019
 * [clang-r365631c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r365631c/) - September 2019
+<<<<<<< HEAD   (a1d1dc Merge empty history for sparse-8937393-L04200000958268913)
+=======
+* [clang-r365631c1](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r365631c/) - March 2020
+* [clang-r370808](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r370808/) - December 2019
+* [clang-r370808b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r370808b/) - January 2020
+* [clang-r377782b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r377782b) - February 2020
+* [clang-r377782c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r377782c) - March 2020
+* [clang-r377782d](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r377782d) - April 2020
+* [clang-r383902](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r383902) - May 2020
+* [clang-r383902b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r383902b) - June 2020
+* [clang-r383902b1](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r383902b1) - October 2020
+* [clang-r383902c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r383902c) - June 2020
+* [clang-r399163](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r399163) - August 2020
+* [clang-r399163b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r399163b) - October 2020
+* [clang-r407598](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r407598) - January 2021
+* [clang-r407598b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r407598b) - January 2021
+* [clang-r412851](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r412851) - February 2021
+* [clang-r416183](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r416183) - March 2021
+* [clang-r416183b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r416183b) - April 2021
+* [clang-r416183c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r416183b) - June 2021
+* [clang-r416183b1](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r416183b) - June 2021
+* [clang-r428724](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r428724) - August 2021
+* [clang-r433403](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r433403) - September 2021
+* [clang-r433403b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r433403b) - October 2021
+* [clang-r437112](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r437112) - November 2021
+* [clang-r437112b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r437112b) - January 2022
+* [clang-r445002](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r445002) - February 2022
+* [clang-r450784](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r450784) - March 2022
+* [clang-r450784b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r450784b) - April 2022
+* [clang-r450784c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r450784c) - April 2022
+* [clang-r450784d](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r450784d) - April 2022
+* [clang-r450784e](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r450784e) - April 2022
+* [clang-r458507](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r458507) - July 2022
+* [clang-r468909](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r468909) - October 2022
+* [clang-r468909b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+log/refs/heads/master/clang-r468909b) - October 2022
+* [clang-r475365b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r475365b) - December 2022
+* [clang-r487747](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747) - March 2023
+* [clang-r487747b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747b) - April 2023
+* [clang-r487747c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r487747c) - May 2023
+
+>>>>>>> BRANCH (2748c7 Merge cherrypicks of ['android-review.googlesource.com/26974)
 
 More Information
 ----------------
