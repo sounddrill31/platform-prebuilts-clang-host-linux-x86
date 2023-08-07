@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58528c85_70e58ba3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2023-08-07T21:46:30Z",
+      "side": 1,
+      "message": "I don\u0027t know if there was a reason to have the more targeted version of this before, so I created a very generic way to ignore python compiled files. Let me know if this is too generic for some reason.",
+      "revId": "44b7917ee006923db7b1c8cefa3404c9379467d8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
