@@ -19,4 +19,10 @@ VERSIONS = [
     "r450784e",
     "r475365b",
     "r487747c",
+<<<<<<< HEAD   (57080b Snap for 10321980 from fab96d98127b722c4be452dfc24a1ff629d36)
 ]
+=======
+    "r498229",
+    "r487747d",
+]
+>>>>>>> CHANGE (bb4f5d Update prebuilt Clang to r487747d (17.0.2).)
