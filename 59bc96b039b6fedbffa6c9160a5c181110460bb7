@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "747e697c_b38cffe6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065473
+      },
+      "writtenOn": "2023-08-07T15:57:08Z",
+      "side": 1,
+      "message": "I don\u0027t know why the `bp2build-incremental` build is failing",
+      "revId": "59bc96b039b6fedbffa6c9160a5c181110460bb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
