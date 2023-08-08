@@ -34,6 +34,24 @@
       "parentUuid": "afd5d4a9_8ee9d89d",
       "revId": "faea2319ba8c693b6bfd684694000aeac2034fbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0aa3aa7_93391680",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065473
+      },
+      "writtenOn": "2023-08-08T18:57:23Z",
+      "side": 1,
+      "message": "The error was `prebuilts/clang/host/linux-x86/Android.bp:420:1: module \"llvm-objdump\" variant \"darwin_arm64\": src: missing prebuilt source file`\n\nI assume the main issue is that I defined the module with all defaults in .bp, and the .go code only set `target.linux.src`, so the Mac build saw the module, but had no `src` set.\n\nPresumably this repo (prebuilts/clang/host/linux-x86) does not have any Mac prebuilts so excluding it seems appropriate?\n\nThere is also prebuilts/clang/host/darwin-x86 but that does not have own custom go code... \n\nI don\u0027t know how all those interact, and what would be the correct way to make it work for Mac.  In any case, it is not currently needed for Mac.",
+      "parentUuid": "3d440409_816e8e4c",
+      "revId": "faea2319ba8c693b6bfd684694000aeac2034fbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
