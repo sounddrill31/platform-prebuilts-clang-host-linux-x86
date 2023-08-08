@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afd5d4a9_8ee9d89d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065473
+      },
+      "writtenOn": "2023-08-08T13:11:27Z",
+      "side": 1,
+      "message": "(passes the mac builds now (it is disabled there))",
+      "revId": "faea2319ba8c693b6bfd684694000aeac2034fbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
