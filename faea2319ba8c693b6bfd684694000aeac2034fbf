@@ -16,6 +16,24 @@
       "message": "(passes the mac builds now (it is disabled there))",
       "revId": "faea2319ba8c693b6bfd684694000aeac2034fbf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3d440409_816e8e4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-08-08T18:47:13Z",
+      "side": 1,
+      "message": "Is there something we should do/fix for the Mac versions of these tools? What was the actual error? I understand that we probably don\u0027t need these for most other host projects, but it would still be good for us to understand what went wrong.",
+      "parentUuid": "afd5d4a9_8ee9d89d",
+      "revId": "faea2319ba8c693b6bfd684694000aeac2034fbf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
