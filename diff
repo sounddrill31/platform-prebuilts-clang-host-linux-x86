@@ -1,0 +1,170 @@
+yudiliu@yudiliu:~/android/aosp/main/prebuilts/clang/host/linux-x86$ for i in *.bzl;do ls $i && diff $i ~/android/aosp/main/build/bazel/toolchains/clang/host/linux-x86/$i; done
+cc_toolchain_clang_version_test.bzl
+47,48c47,48
+<         ctx.file.expected_clang_path,
+<         clang_path,
+---
+>         ctx.attr.expected_clang_path,
+>         clang_path.path,
+51c51
+<             clang_path,
+---
+>             clang_path.path,
+78,79c78,79
+<         ctx.file.expected_libclang_rt_path,
+<         libclang_rt_path,
+---
+>         ctx.attr.expected_libclang_rt_path,
+>         libclang_rt_path.path,
+82c82
+<             libclang_rt_path,
+---
+>             libclang_rt_path.path,
+92,93c92
+<             "expected_clang_path": attr.label(
+<                 allow_single_file = True,
+---
+>             "expected_clang_path": attr.string(
+96,97c95
+<             "expected_libclang_rt_path": attr.label(
+<                 allow_single_file = True,
+---
+>             "expected_libclang_rt_path": attr.string(
+146,147c144,145
+<             "expected_clang_path": "clang-r475365b/bin/clang",
+<             "expected_libclang_rt_builtins_path": "clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.builtins-aarch64-android.a",
+---
+>             "expected_clang_path": "prebuilts/clang/host/linux-x86/clang-r475365b/bin/clang",
+>             "expected_libclang_rt_builtins_path": "prebuilts/clang/host/linux-x86/clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.builtins-aarch64-android.a",
+161c159
+<         [f.short_path for f in ctx.files.expected_files],
+---
+>         ctx.attr.expected_files,
+171,172c169
+<             "expected_files": attr.label_list(
+<                 allow_files = True,
+---
+>             "expected_files": attr.string_list(
+205c202
+<         target_under_test = "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_%s_%s" % (os, arch),
+---
+>         target_under_test = "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_%s_%s" % (os, arch),
+210c207
+<         target_under_test = "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_%s_%s" % (os, arch),
+---
+>         target_under_test = "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_%s_%s" % (os, arch),
+226,227c223,224
+<             "expected_libclang_rt_builtins_path": "clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.builtins-aarch64-android.a",
+<             "expected_libclang_rt_ubsan_minimal_path": "clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.ubsan_minimal-aarch64-android.a",
+---
+>             "expected_libclang_rt_builtins_path": "prebuilts/clang/host/linux-x86/clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.builtins-aarch64-android.a",
+>             "expected_libclang_rt_ubsan_minimal_path": "prebuilts/clang/host/linux-x86/clang-r475365b/lib/clang/16.0.2/lib/linux/libclang_rt.ubsan_minimal-aarch64-android.a",
+253c250
+<         failure_message = "rule '//prebuilts/clang/host/linux-x86:NOT-A-VERSION' does not exist",
+---
+>         failure_message = "rule '//build/bazel/toolchains/clang/host/linux-x86:NOT-A-VERSION' does not exist",
+cc_toolchain_config.bzl
+399c399
+<             default = "//prebuilts/clang/host/linux-x86:auto_zero_initialize_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:auto_zero_initialize_env",
+402c402
+<             default = "//prebuilts/clang/host/linux-x86:auto_pattern_initialize_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:auto_pattern_initialize_env",
+405c405
+<             default = "//prebuilts/clang/host/linux-x86:auto_uninitialize_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:auto_uninitialize_env",
+408c408
+<             default = "//prebuilts/clang/host/linux-x86:use_ccache_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:use_ccache_env",
+411c411
+<             default = "//prebuilts/clang/host/linux-x86:llvm_next_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:llvm_next_env",
+414c414
+<             default = "//prebuilts/clang/host/linux-x86:allow_unknown_warning_option_env",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:allow_unknown_warning_option_env",
+420c420
+<             default = "//prebuilts/clang/host/linux-x86:clang_default_debug_level",
+---
+>             default = "//build/bazel/toolchains/clang/host/linux-x86:clang_default_debug_level",
+694c694
+<         "//prebuilts/clang/host/linux-x86:" + tc
+---
+>         "//build/bazel/toolchains/clang/host/linux-x86:" + tc
+cc_toolchain_constants.bzl
+244,252c244,252
+<     "//build/bazel/platforms/os_arch:android_arm": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_android_arm",
+<     "//build/bazel/platforms/os_arch:android_arm64": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_android_arm64",
+<     "//build/bazel/platforms/os_arch:android_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_android_x86",
+<     "//build/bazel/platforms/os_arch:android_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_android_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_linux_bionic_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_glibc_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_linux_glibc_x86",
+<     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_linux_glibc_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_musl_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_linux_musl_x86",
+<     "//build/bazel/platforms/os_arch:linux_musl_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_builtins_linux_musl_x86_64",
+---
+>     "//build/bazel/platforms/os_arch:android_arm": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_android_arm",
+>     "//build/bazel/platforms/os_arch:android_arm64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_android_arm64",
+>     "//build/bazel/platforms/os_arch:android_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_android_x86",
+>     "//build/bazel/platforms/os_arch:android_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_android_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_linux_bionic_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_glibc_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_linux_glibc_x86",
+>     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_linux_glibc_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_musl_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_linux_musl_x86",
+>     "//build/bazel/platforms/os_arch:linux_musl_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_builtins_linux_musl_x86_64",
+257,265c257,265
+<     "//build/bazel/platforms/os_arch:android_arm": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_arm",
+<     "//build/bazel/platforms/os_arch:android_arm64": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_arm64",
+<     "//build/bazel/platforms/os_arch:android_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_x86",
+<     "//build/bazel/platforms/os_arch:android_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_bionic_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_glibc_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_glibc_x86",
+<     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_glibc_x86_64",
+<     "//build/bazel/platforms/os_arch:linux_musl_x86": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_musl_x86",
+<     "//build/bazel/platforms/os_arch:linux_musl_x86_64": "//prebuilts/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_musl_x86_64",
+---
+>     "//build/bazel/platforms/os_arch:android_arm": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_arm",
+>     "//build/bazel/platforms/os_arch:android_arm64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_arm64",
+>     "//build/bazel/platforms/os_arch:android_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_x86",
+>     "//build/bazel/platforms/os_arch:android_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_android_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_bionic_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_bionic_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_glibc_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_glibc_x86",
+>     "//build/bazel/platforms/os_arch:linux_glibc_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_glibc_x86_64",
+>     "//build/bazel/platforms/os_arch:linux_musl_x86": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_musl_x86",
+>     "//build/bazel/platforms/os_arch:linux_musl_x86_64": "//build/bazel/toolchains/clang/host/linux-x86:libclang_rt_ubsan_minimal_linux_musl_x86_64",
+cc_toolchain_features_arm_isa_test.bzl
+cc_toolchain_features.bzl
+cc_toolchain_features_cfi_test.bzl
+cc_toolchain_features_env_based_flags_test.bzl
+48c48
+<         "@//prebuilts/clang/host/linux-x86:auto_pattern_initialize_env": True,
+---
+>         "@//build/bazel/toolchains/clang/host/linux-x86:auto_pattern_initialize_env": True,
+60c60
+<         "@//prebuilts/clang/host/linux-x86:auto_zero_initialize_env": True,
+---
+>         "@//build/bazel/toolchains/clang/host/linux-x86:auto_zero_initialize_env": True,
+72c72
+<         "@//prebuilts/clang/host/linux-x86:auto_uninitialize_env": True,
+---
+>         "@//build/bazel/toolchains/clang/host/linux-x86:auto_uninitialize_env": True,
+93,95c93,95
+<         "@//prebuilts/clang/host/linux-x86:use_ccache_env": True,
+<         "@//prebuilts/clang/host/linux-x86:llvm_next_env": True,
+<         "@//prebuilts/clang/host/linux-x86:allow_unknown_warning_option_env": True,
+---
+>         "@//build/bazel/toolchains/clang/host/linux-x86:use_ccache_env": True,
+>         "@//build/bazel/toolchains/clang/host/linux-x86:llvm_next_env": True,
+>         "@//build/bazel/toolchains/clang/host/linux-x86:allow_unknown_warning_option_env": True,
+cc_toolchain_features_flag_order_test.bzl
+cc_toolchain_features_linker_alignment_test.bzl
+cc_toolchain_features_misc_test.bzl
+cc_toolchain_features_pack_relocation_test.bzl
+cc_toolchain_features_sanitizer_blocklist_test.bzl
+cc_toolchain_features_thinlto_test.bzl
+cc_toolchain_features_ubsan_test.bzl
