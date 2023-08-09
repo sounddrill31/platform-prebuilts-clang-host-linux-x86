@@ -26,7 +26,6 @@ load(
     "get_features",
     "int_overflow_ignorelist_filename",
     "int_overflow_ignorelist_path",
-    "sanitizer_blocklist_dict",
 )
 load("//build/bazel/platforms/arch/variants:constants.bzl", _arch_constants = "constants")
 
@@ -520,9 +519,6 @@ def android_cc_toolchain(
             "%s_compiler_binaries" % name,
             "%s_compiler_clang_includes" % name,
             "@//%s:%s" % (int_overflow_ignorelist_path, int_overflow_ignorelist_filename),
-        ] + [
-            "@//%s:%s" % (blocklist[0], blocklist[1])
-            for blocklist in sanitizer_blocklist_dict.items()
         ],
     )
 
