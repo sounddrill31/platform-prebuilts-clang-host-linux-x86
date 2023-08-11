@@ -132,31 +132,12 @@ def test_linker_alignment_flag_arm():
         name = test_name,
         target_under_test = name,
         expected_action_mnemonics = ["CppLink"],
-        expected_flags = [
+        expected_flags = [],
+        no_expected_flags = [
             "-Wl,-z,max-page-size=4096",
-        ],
-        no_expected_flags = [],
-    )
-    return test_name
-
-def test_custom_linker_alignment_flag_arm():
-    name = "custom_linker_alignment_flag_arm"
-    test_name = name + "_test"
-
-    native.cc_binary(
-        name = name,
-        srcs = ["foo.cpp"],
-        tags = ["manual"],
-    )
-
-    custom_linker_alignment_flag_arm_test(
-        name = test_name,
-        target_under_test = name,
-        expected_action_mnemonics = ["CppLink"],
-        expected_flags = [
+            "-Wl,-z,max-page-size=16384",
             "-Wl,-z,max-page-size=65536",
         ],
-        no_expected_flags = [],
     )
     return test_name
 
@@ -254,7 +235,6 @@ def cc_toolchain_features_linker_alignment_test_suite(name):
         tests = [
             test_linker_alignment_flag_arm(),
             test_linker_alignment_flag_arm64(),
-            test_custom_linker_alignment_flag_arm(),
             test_custom_linker_alignment_flag_arm64(),
             test_linker_alignment_flag_x86(),
             test_linker_alignment_flag_x86_64(),
