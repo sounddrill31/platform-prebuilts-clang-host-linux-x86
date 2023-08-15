@@ -414,6 +414,10 @@ llvm_tools_filegroup {
 }
 
 llvm_prebuilt_build_tool {
+    name: "clang++",
+}
+
+llvm_prebuilt_build_tool {
     name: "llvm-dwarfdump",
 }
 
