@@ -17,4 +17,9 @@
 VERSIONS = [
     # keep sorted
     "r498229",
+<<<<<<< TARGET BRANCH (6dc9a8 Clang BOLT profile from build 10705839 am: d3a7e8f0c1)
 ]
+=======
+    "r498229b",
+]
+>>>>>>> SOURCE BRANCH (2afa11 Update prebuilt Clang to r498229b (17.0.4).)
