@@ -34,6 +34,24 @@
       "parentUuid": "6c2b1f90_b0f127bf",
       "revId": "3c958801a74245ed989ad8a63fe985de49516cb9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "afd81928_4a5f554c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-09-01T23:00:19Z",
+      "side": 1,
+      "message": "They do inherit from the parent OWNERS, so I think this CL might be unnecessary.",
+      "parentUuid": "7335914c_90013ed2",
+      "revId": "3c958801a74245ed989ad8a63fe985de49516cb9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
