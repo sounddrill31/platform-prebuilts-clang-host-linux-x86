@@ -1,1 +1,2 @@
 include platform/build/soong:/OWNERS
+include platform/prebuilts/clang/host/linux-x86:/OWNERS
