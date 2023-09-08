@@ -46,6 +46,30 @@
       },
       "revId": "84dc15913214e242be76d2bb6d70c1b8ac241001",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce8ebc87_3e5e8372",
+        "filename": "kleaf/versions.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-09-08T00:32:26Z",
+      "side": 1,
+      "message": "even if Bazel supports this, we still need to add this to bazelrc; and the bad think about bazelrc approach is that it is one more thing to clean up when we use Kleaf (build/kernel, prebuilts/* etc.) in a subworkspace.\n\nSo if Bazel supports pattern for deleted packages, AND we forget about b/293260835, then we can use this.",
+      "parentUuid": "57a896c2_4de7b2e8",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 43
+      },
+      "revId": "84dc15913214e242be76d2bb6d70c1b8ac241001",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
