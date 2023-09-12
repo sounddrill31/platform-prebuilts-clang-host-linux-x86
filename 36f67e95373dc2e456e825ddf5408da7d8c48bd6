@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98bf3127_a6dd2e76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2023-09-12T15:45:23Z",
+      "side": 1,
+      "message": "Looking at https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/main-kernel-build-2023,\n\nit appears that clang-r487747c/ was pinned as the final kernel toolchain release for android14.\n\nSo this is good to remove.  Thanks for triple checking with me!",
+      "revId": "36f67e95373dc2e456e825ddf5408da7d8c48bd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
