@@ -34,6 +34,23 @@
       "parentUuid": "3b31a564_7a3fa69a",
       "revId": "7a57f9e71fe05bafa1765818f0284cc7b974f639",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70cc9e86_01a010f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-09-13T20:26:58Z",
+      "side": 1,
+      "message": "FWIW, this was also removed in aosp-main branch (aosp/2747207).  It should automerge main-kernel when the conflict resolution at aosp/2751084 passes presubmit.",
+      "revId": "7a57f9e71fe05bafa1765818f0284cc7b974f639",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
