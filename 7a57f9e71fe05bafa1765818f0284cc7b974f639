@@ -16,6 +16,24 @@
       "message": "Not sending for presubmit again as it was already validated with",
       "revId": "7a57f9e71fe05bafa1765818f0284cc7b974f639",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e85aea1_3553a7a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2023-09-13T15:02:52Z",
+      "side": 1,
+      "message": "Actually, I am sending it for presubmit despite already being validated as aosp/2748205",
+      "parentUuid": "3b31a564_7a3fa69a",
+      "revId": "7a57f9e71fe05bafa1765818f0284cc7b974f639",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
