@@ -35,6 +35,12 @@ in the future.
 
 VERSIONS = [
     # keep sorted
+<<<<<<< TARGET BRANCH (bb52c7 Update README for r498229b am: 20fec249b6)
     "r498229",
+=======
+    "r450784e",
+    "r475365b",
+    "r487747c",
+>>>>>>> SOURCE BRANCH (36f67e Remove unused clang-r498229.)
     "r498229b",
 ]
