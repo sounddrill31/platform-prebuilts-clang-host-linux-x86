@@ -16,6 +16,41 @@
       "message": "Where did these binaries come from? Build id/number? There\u0027s a script that updates LLVM prebuilts (https://android.googlesource.com/toolchain/llvm_android#step-4_generate-prebuilts) and you should be using that, even if all you\u0027re doing is updating an existing set of binaries.",
       "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6af0a88d_3a48d713",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-09-22T23:32:00Z",
+      "side": 1,
+      "message": "This should update only the aarch64 libraries built for android: lib/clang/17/lib/linux/*aarch64-android.so.",
+      "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d17a53b2_a95cbe7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-09-22T23:32:00Z",
+      "side": 1,
+      "message": "The script doesn\u0027t handle updating existing prebuilts, I think.\n\nBut please do add the build id to the commit message.",
+      "parentUuid": "9d448bb0_b75fa5f1",
+      "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
