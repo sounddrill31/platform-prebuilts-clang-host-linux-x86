@@ -51,6 +51,42 @@
       "parentUuid": "9d448bb0_b75fa5f1",
       "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d85fd44a_41fe674c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2023-09-25T16:40:49Z",
+      "side": 1,
+      "message": "The libraries are built locally, as I can\u0027t find a way to tell the build server to respin a existing build with my new CL(aosp/2651112). The original build ID is added to commit message.",
+      "parentUuid": "d17a53b2_a95cbe7a",
+      "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6451f654_7551ae46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2023-09-25T16:40:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6af0a88d_3a48d713",
+      "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
