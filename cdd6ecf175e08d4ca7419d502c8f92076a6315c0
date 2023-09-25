@@ -123,6 +123,24 @@
       "parentUuid": "a1aff5d5_09b7fdf4",
       "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5ef3b41_a642b16a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-09-25T17:29:10Z",
+      "side": 1,
+      "message": "PS5 removes the aarch64-linux libraries that are not affected by the alignment change.",
+      "parentUuid": "d73c2b82_77eac695",
+      "revId": "cdd6ecf175e08d4ca7419d502c8f92076a6315c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
