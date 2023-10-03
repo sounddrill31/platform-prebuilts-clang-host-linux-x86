@@ -19,12 +19,21 @@ load(":user_clang_toolchain_repository.bzl", "user_clang_toolchain_repository")
 load(":versions.bzl", "VERSIONS")
 
 # buildifier: disable=unnamed-macro
-def register_clang_toolchains():
+def register_clang_toolchains(kleaf_repo_name = None):
     """Registers all clang toolchains defined in this package.
 
     The user clang toolchain is expected from the path defined in the
     `KLEAF_USER_CLANG_TOOLCHAIN_PATH` environment variable, if set.
+
+    Args:
+        kleaf_repo_name: Name of the Kleaf repository. Default is "@".
     """
+
+    if kleaf_repo_name == None:
+        kleaf_repo_name = "@"
+    if not kleaf_repo_name.startswith("@"):
+        fail("Invalid kleaf_repo_name. It must start with @")
+
 
     user_clang_toolchain_repository(
         name = "kleaf_user_clang_toolchain",
@@ -41,10 +50,10 @@ def register_clang_toolchains():
     for version in VERSIONS:
         for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
             native.register_toolchains(
-                "//prebuilts/clang/host/linux-x86/kleaf:{}_{}_{}_clang_toolchain".format(version, target_os, target_cpu),
+                "{}//prebuilts/clang/host/linux-x86/kleaf:{}_{}_{}_clang_toolchain".format(kleaf_repo_name, version, target_os, target_cpu),
             )
 
     for target_os, target_cpu in SUPPORTED_ARCHITECTURES:
         native.register_toolchains(
-            "//prebuilts/clang/host/linux-x86/kleaf:{}_{}_clang_toolchain".format(target_os, target_cpu),
+            "{}//prebuilts/clang/host/linux-x86/kleaf:{}_{}_clang_toolchain".format(kleaf_repo_name, target_os, target_cpu),
         )
