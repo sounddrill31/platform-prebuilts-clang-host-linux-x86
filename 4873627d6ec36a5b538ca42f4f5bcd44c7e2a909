@@ -36,6 +36,43 @@
       "message": "File is not formatted. Run `buildifier kleaf/register.bzl` to format the file, or apply the suggested fix.",
       "revId": "4873627d6ec36a5b538ca42f4f5bcd44c7e2a909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000055207003",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2768091?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "712a6258_44da57c7",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/register.bzl",
+              "range": {
+                "startLine": 37,
+                "startChar": 0,
+                "endLine": 38,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "5466d246_32ee5c2d",
+        "filename": "kleaf/register.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-10-03T17:42:23Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/register.bzl` to format the file, or apply the suggested fix.",
+      "revId": "4873627d6ec36a5b538ca42f4f5bcd44c7e2a909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
