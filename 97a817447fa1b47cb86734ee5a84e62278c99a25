@@ -22,6 +22,30 @@
       },
       "revId": "97a817447fa1b47cb86734ee5a84e62278c99a25",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d3061ac_e041127b",
+        "filename": "kleaf/register.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-10-04T17:10:17Z",
+      "side": 1,
+      "message": "https://android-review.git.corp.google.com/c/platform/prebuilts/clang/host/linux-x86/+/2772324",
+      "parentUuid": "59365c30_0e527094",
+      "range": {
+        "startLine": 44,
+        "startChar": 16,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "97a817447fa1b47cb86734ee5a84e62278c99a25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
