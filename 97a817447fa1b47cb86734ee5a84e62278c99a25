@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59365c30_0e527094",
+        "filename": "kleaf/register.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-10-04T09:26:48Z",
+      "side": 1,
+      "message": "Not a CL blocker, but consider adding a comment to avoid the temptation of cleaning this up, as it not obvious why the _castings_ are needed.",
+      "range": {
+        "startLine": 44,
+        "startChar": 16,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "97a817447fa1b47cb86734ee5a84e62278c99a25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
