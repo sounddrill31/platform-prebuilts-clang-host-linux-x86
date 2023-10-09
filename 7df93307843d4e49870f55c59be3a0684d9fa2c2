@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c91d395_63a52e40",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2023-10-09T08:50:26Z",
+      "side": 1,
+      "message": "could this be `sysroot_label`?",
+      "range": {
+        "startLine": 216,
+        "startChar": 12,
+        "endLine": 216,
+        "endChar": 43
+      },
+      "revId": "7df93307843d4e49870f55c59be3a0684d9fa2c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
