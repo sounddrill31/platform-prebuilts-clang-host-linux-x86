@@ -46,6 +46,30 @@
       },
       "revId": "7df93307843d4e49870f55c59be3a0684d9fa2c2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9b0d19f_f8b38a88",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-10-10T21:28:16Z",
+      "side": 1,
+      "message": "I need a separate global (private) variable for it if I do that. Note that we are in the middle of defining a dictionary.\n\nSo I\u0027d rather keep it DAMP and simple with two variables, rather than defining a `sysroot` rule. There\u0027s room for improvement for sure.",
+      "parentUuid": "fe318e5a_2b1edf69",
+      "range": {
+        "startLine": 216,
+        "startChar": 12,
+        "endLine": 216,
+        "endChar": 43
+      },
+      "revId": "7df93307843d4e49870f55c59be3a0684d9fa2c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
