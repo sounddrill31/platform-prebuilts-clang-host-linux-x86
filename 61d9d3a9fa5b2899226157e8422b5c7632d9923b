@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d359d19_2ced63ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-10-23T22:25:52Z",
+      "side": 1,
+      "message": "I should really upload my fix that uses prebuilts for RS objects so we can drop this toolchain entirely.",
+      "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
