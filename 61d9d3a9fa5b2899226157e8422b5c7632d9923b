@@ -16,6 +16,24 @@
       "message": "I should really upload my fix that uses prebuilts for RS objects so we can drop this toolchain entirely.",
       "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb92db64_e3d51d8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2023-10-23T22:27:07Z",
+      "side": 1,
+      "message": "We\u0027ll still need this fix (and your ncurses one from aosp/2760210) backported to every old branch that is still being built on gLinux.",
+      "parentUuid": "1d359d19_2ced63ef",
+      "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
