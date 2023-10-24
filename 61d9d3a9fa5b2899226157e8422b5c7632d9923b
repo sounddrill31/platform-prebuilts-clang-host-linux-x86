@@ -34,6 +34,24 @@
       "parentUuid": "1d359d19_2ced63ef",
       "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65609c5c_c0517035",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2023-10-24T00:53:10Z",
+      "side": 1,
+      "message": "I\u0027m not sure these symlinks help for this issue, since out/host/linux-x86/bin/bcc_strip_attr also depends on libncurses.so.5 and won\u0027t use this symlink.  I think `apt install libncurses5 libtinfo5` is probably the solution for now.",
+      "parentUuid": "cb92db64_e3d51d8d",
+      "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
