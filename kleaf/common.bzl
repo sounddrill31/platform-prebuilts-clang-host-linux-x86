@@ -119,7 +119,7 @@ def _common_cflags():
                         flags = [
                             # Work around https://github.com/bazelbuild/bazel/issues/4605
                             # "cxx_builtin_include_directory doesn't work with non-absolute path"
-                            "-no-canonical-prefixes",
+                            # "-no-canonical-prefixes",
                         ],
                     ),
                 ],
