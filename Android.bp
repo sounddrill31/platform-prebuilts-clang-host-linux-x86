@@ -212,6 +212,25 @@ libclang_rt_prebuilt_library_static {
     ],
 }
 
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.hwasan-preinit",
+    sdk_version: "minimum",
+    enabled: false,
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    host_supported: true,
+    target: {
+        bionic_arm64: {
+            enabled: true,
+        },
+    },
+    defaults: [
+        "libclang_rt-prebuilt-default",
+    ],
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.hwasan",
