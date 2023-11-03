@@ -111,20 +111,6 @@ def _common_cflags():
     return feature(
         name = "kleaf-no-canonical-prefixes",
         enabled = True,
-        flag_sets = [
-            flag_set(
-                actions = ALL_CC_COMPILE_ACTION_NAMES,
-                flag_groups = [
-                    flag_group(
-                        flags = [
-                            # Work around https://github.com/bazelbuild/bazel/issues/4605
-                            # "cxx_builtin_include_directory doesn't work with non-absolute path"
-                            "-no-canonical-prefixes",
-                        ],
-                    ),
-                ],
-            ),
-        ],
     )
 
 def _lld_compiler_rt():
