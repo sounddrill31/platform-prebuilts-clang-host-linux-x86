@@ -79,7 +79,7 @@ def _action_configs(ctx):
         ],
     )
     objcopy = action_config(
-        action_name = ACTION_NAMES.objcopy_embed_data,
+        action_name = "objcopy_embed_data",
         tools = [
             struct(
                 type_name = "tool",
