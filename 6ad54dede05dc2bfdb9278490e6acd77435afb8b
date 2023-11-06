@@ -25,6 +25,32 @@
       },
       "revId": "6ad54dede05dc2bfdb9278490e6acd77435afb8b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000058229417",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2818659?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "b95f0014_6324944e",
+        "filename": "kleaf/common.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2023-11-06T18:34:45Z",
+      "side": 1,
+      "message": "Loaded symbol \"variable_with_value\" is unused. Please remove it.\nTo disable the warning, add \u0027@unused\u0027 in a comment.\nIf you want to re-export a symbol, use the following pattern:\n\n    load(..., _variable_with_value \u003d \"variable_with_value\", ...)\n    variable_with_value \u003d _variable_with_value\n http://go/buildifier-warnings#load",
+      "range": {
+        "startLine": 23,
+        "startChar": 5,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "6ad54dede05dc2bfdb9278490e6acd77435afb8b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
