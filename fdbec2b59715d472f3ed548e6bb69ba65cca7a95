@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ee6d5da_f1bba8de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2023-11-07T18:05:29Z",
+      "side": 1,
+      "message": "@eakammer@google.com As you can see from the build error, we still need this hack for using cc_binary.",
+      "revId": "fdbec2b59715d472f3ed548e6bb69ba65cca7a95",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
