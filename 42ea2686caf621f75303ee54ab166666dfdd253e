@@ -34,6 +34,24 @@
       "parentUuid": "3930d0a0_a26fcd0a",
       "revId": "42ea2686caf621f75303ee54ab166666dfdd253e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52419540_f45020c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2023-11-13T22:06:38Z",
+      "side": 1,
+      "message": "1. double checked with readelf -l, they are 64K aligned\n2. Removed 32bit artifacts from diff\n3. removed these artifacts as well",
+      "parentUuid": "23b43e49_f7773019",
+      "revId": "42ea2686caf621f75303ee54ab166666dfdd253e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
