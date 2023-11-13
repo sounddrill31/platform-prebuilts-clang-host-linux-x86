@@ -52,6 +52,24 @@
       "parentUuid": "23b43e49_f7773019",
       "revId": "42ea2686caf621f75303ee54ab166666dfdd253e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7c49fdf_9998df28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2023-11-13T22:44:39Z",
+      "side": 1,
+      "message": "The original change aosp/2651112 does seem to affect x86(there\u0027s no arm check). Since we recently want to develop a 16K x86 emulator, it would be good if we can update the ubsan prebuilts for x86 as well.",
+      "parentUuid": "52419540_f45020c5",
+      "revId": "42ea2686caf621f75303ee54ab166666dfdd253e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
