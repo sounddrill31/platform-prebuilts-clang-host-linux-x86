@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3930d0a0_a26fcd0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-11-13T21:56:57Z",
+      "side": 1,
+      "message": "(1) Are you sure these are 16k-aligned?  The original change to toolchain build scripts only updated Arm64 runtimes.\n\n(2) do we need to do this for 32-bit x86?  IIUC, we did not do this for arm32 and plan for this only in 64-bit-only builds.\n\n(3) This change updates musl prebuilts for the host - which is unnecesssary.",
+      "revId": "42ea2686caf621f75303ee54ab166666dfdd253e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
