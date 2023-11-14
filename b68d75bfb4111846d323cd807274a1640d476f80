@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26d7b673_8593516e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2023-11-14T00:00:21Z",
+      "side": 1,
+      "message": "Can you check if the current libraries are already 64k aligned?  We refreshed the prebuilts in aosp/2816306.",
+      "revId": "b68d75bfb4111846d323cd807274a1640d476f80",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
