@@ -36,4 +36,9 @@ in the future.
 VERSIONS = [
     # keep sorted
     "r498229b",
+<<<<<<< TARGET BRANCH (2990a1 Merge "Remove bp2build properties from prebuilts/clang/host/)
 ]
+=======
+    "r510928",
+]
+>>>>>>> SOURCE BRANCH (8f1796 Update prebuilt Clang to r510928 (18.0.0).)
