@@ -24,24 +24,13 @@ bzl_library(
 bzl_library(
     name = "clang_toolchain_repository",
     srcs = ["clang_toolchain_repository.bzl"],
-    visibility = ["//visibility:private"],
+    visibility = ["//build/kernel/kleaf/docs:__pkg__"],
 )
 
 bzl_library(
     name = "versions",
     srcs = ["versions.bzl"],
     visibility = ["//visibility:public"],
-)
-
-bzl_library(
-    name = "register",
-    srcs = ["register.bzl"],
-    visibility = ["//visibility:public"],
-    deps = [
-        ":architecture_constants",
-        ":clang_toolchain_repository",
-        ":versions",
-    ],
 )
 
 constraint_setting(name = "clang_version")
