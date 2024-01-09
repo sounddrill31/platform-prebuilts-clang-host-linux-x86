@@ -69,6 +69,24 @@
       "parentUuid": "87edf05f_1ae5be9e",
       "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed628fbb_01f7cd33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-01-09T03:18:33Z",
+      "side": 1,
+      "message": "I do an ABTD run manually with both CLs explicitly added and it passes:\n\nhttps://android-build.corp.google.com/abtd/run/L58600030001191949/\n\nTo avoid issues, I\u0027ll hold this CL a bit to see how b/319167314 goes.",
+      "parentUuid": "cd12d8f3_ce2f5f8d",
+      "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
