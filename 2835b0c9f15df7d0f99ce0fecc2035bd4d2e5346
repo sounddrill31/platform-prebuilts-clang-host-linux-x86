@@ -51,6 +51,24 @@
       "parentUuid": "87edf05f_1ae5be9e",
       "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd12d8f3_ce2f5f8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2024-01-09T00:15:40Z",
+      "side": 1,
+      "message": "`test_user_clang_toolchain` test from  build/kernel/kleaf/tests/integration_test/integration_test.py",
+      "parentUuid": "87edf05f_1ae5be9e",
+      "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
