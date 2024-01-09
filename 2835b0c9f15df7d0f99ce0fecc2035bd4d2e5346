@@ -16,6 +16,23 @@
       "message": "TH is not picking up both changes for some reason. Let me try again.",
       "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87edf05f_1ae5be9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961395
+      },
+      "writtenOn": "2024-01-09T00:13:03Z",
+      "side": 1,
+      "message": "The integration test failure seems legit, PTAL.",
+      "revId": "2835b0c9f15df7d0f99ce0fecc2035bd4d2e5346",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
