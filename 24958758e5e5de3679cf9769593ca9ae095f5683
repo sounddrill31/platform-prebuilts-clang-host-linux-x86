@@ -22,6 +22,30 @@
       },
       "revId": "24958758e5e5de3679cf9769593ca9ae095f5683",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8f2503f_d9ec7be5",
+        "filename": "kleaf/clang_toolchain_repository.bzl",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-01-16T18:29:39Z",
+      "side": 1,
+      "message": "Yes. The number makes it lower priority than the `1_` toolchains in L119",
+      "parentUuid": "5592ebaa_2a4dcef3",
+      "range": {
+        "startLine": 147,
+        "startChar": 12,
+        "endLine": 147,
+        "endChar": 13
+      },
+      "revId": "24958758e5e5de3679cf9769593ca9ae095f5683",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
