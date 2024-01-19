@@ -52,6 +52,24 @@
       "parentUuid": "cb92db64_e3d51d8d",
       "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "842998f5_3dd3b80b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1999342
+      },
+      "writtenOn": "2024-01-19T16:21:37Z",
+      "side": 1,
+      "message": "Hi, these packages aren\u0027t available anymore in Ubuntu 23.10, and the symlinks looks to be enough to complete a full build",
+      "parentUuid": "65609c5c_c0517035",
+      "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
