@@ -19,4 +19,8 @@ VERSIONS = [
     "r450784e",
     "r475365b",
     "r487747c",
+<<<<<<< HEAD   (43fa9e Merge cherrypicks of ['android-review.googlesource.com/26974)
 ]
+=======
+]
+>>>>>>> CHANGE (76115e Update prebuilt Clang to r487747e (17.0.2).)
