@@ -33,6 +33,24 @@
       "message": "GA+1 for revert",
       "revId": "fe356e2301cfe858661c6104588cb63b3aa9f32c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69480a8b_96c3a8b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-01-31T07:00:35Z",
+      "side": 1,
+      "message": "It might be easier to revert and reland as the whole topic though... avoids an extra presubmit run and having to make sure the symlink is retained if we overwrite prebuilts.",
+      "parentUuid": "d8373b62_a05d4573",
+      "revId": "fe356e2301cfe858661c6104588cb63b3aa9f32c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
