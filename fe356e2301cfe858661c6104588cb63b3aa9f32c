@@ -51,6 +51,24 @@
       "parentUuid": "d8373b62_a05d4573",
       "revId": "fe356e2301cfe858661c6104588cb63b3aa9f32c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b776a45_055ceb02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-01-31T07:03:05Z",
+      "side": 1,
+      "message": "I debated making this same request to not revert this part, but I think it is fine. The rust-toolchain build also bumped to this new LLVM, but I put up a fix for our 17-\u003e18 issue here. I do agree with Pirama though, that it might be easiest to just keep the full revert together.",
+      "parentUuid": "69480a8b_96c3a8b6",
+      "revId": "fe356e2301cfe858661c6104588cb63b3aa9f32c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
