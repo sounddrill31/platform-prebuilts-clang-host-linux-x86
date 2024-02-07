@@ -34,6 +34,24 @@
       "parentUuid": "d86682e6_940487f0",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e1aba76e_7b3b2c9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T18:22:26Z",
+      "side": 1,
+      "message": "These flags were not added, but let me add them.\n\nShould I still use the sysroot from NDK or the sysroot from prebuilts/gcc?",
+      "parentUuid": "48e55b6e_675690e1",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
