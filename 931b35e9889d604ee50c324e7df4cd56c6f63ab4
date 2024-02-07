@@ -88,6 +88,24 @@
       "parentUuid": "95e42a69_d9b42ff6",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72e7b687_c1f61421",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T18:43:52Z",
+      "side": 1,
+      "message": "I changed the sysroot to the NDK one with the aforementioned flags `--target\u003dx86_64-unknown-linux-gnu --stdlib\u003dlibc++`, but it fails with \n\n```\nIn file included from build/kernel/kleaf/tests/cc_testing/cpp.cpp:2:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/vector:281:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__algorithm/copy.h:12:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__algorithm/copy_move_common.h:12:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__algorithm/iterator_operations.h:15:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/__iterator/advance.h:26:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/cstdlib:87:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/stdlib.h:94:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/stdlib.h:34:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/malloc.h:30:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1/stdio.h:108:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/stdio.h:42:\nIn file included from external/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/sys/types.h:36:\nexternal/prebuilt_ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/linux/types.h:21:10: fatal error: \u0027asm/types.h\u0027 file not found\n#include \u003casm/types.h\u003e\n         ^~~~~~~~~~~~~\n```\n\n(with CL:2954300). Any suggestions?",
+      "parentUuid": "95e42a69_d9b42ff6",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
