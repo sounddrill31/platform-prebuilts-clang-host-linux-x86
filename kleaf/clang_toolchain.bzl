@@ -210,6 +210,7 @@ ARCH_CONFIG = {
             # From _setup_env.sh, HOSTLDFLAGS
             Label("//prebuilts/kernel-build-tools:linux-x86-libs"),
         ],
+        ndk_triple = "x86_64-unknown-linux-gnu", # FIXME perhaps in build.config.constants
         # From _setup_env.sh
         # sysroot_flags+="--sysroot=${ROOT_DIR}/build/kernel/build-tools/sysroot "
         sysroot_label = Label("//build/kernel:sysroot"),
