@@ -124,6 +124,24 @@
       "parentUuid": "72e7b687_c1f61421",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7509c36c_673b0e23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T18:53:05Z",
+      "side": 1,
+      "message": "BTW, here are the asm/types.h in the original sysroot:\n\nhttps://cs.android.com/search?q\u003df:asm%2Ftypes.h%20f:prebuilts%2Fgcc\u0026sq\u003d\u0026ss\u003dandroid%2Fkernel%2Fsuperproject\n\nThere are `x86_64-linux-gnu` and `i386-linux-gnu`. But for the prebuilts/ndk_26 directory, the sysroot only contains ones for android:\n\nhttps://cs.android.com/search?q\u003df:asm%2Ftypes.h\u0026sq\u003d\u0026ss\u003dandroid%2Fkernel%2Fsuperproject:prebuilts%2Fndk-r26%2Ftoolchains%2Fllvm%2Fprebuilt%2Flinux-x86_64%2Fsysroot%2F",
+      "parentUuid": "72e7b687_c1f61421",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
