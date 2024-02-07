@@ -52,6 +52,24 @@
       "parentUuid": "48e55b6e_675690e1",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95e42a69_d9b42ff6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T18:25:29Z",
+      "side": 1,
+      "message": "To elaborate, here\u0027s the sysroot that the kernel build is using for building host binaries, prior to this change:\n\nhttps://cs.android.com/android/kernel/superproject/+/common-android-mainline:prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot/\n\nShould I change it to:\n\nhttps://cs.android.com/android/kernel/superproject/+/common-android-mainline:prebuilts/ndk-r26/toolchains/llvm/prebuilt/linux-x86_64/sysroot/\n\n?",
+      "parentUuid": "e1aba76e_7b3b2c9a",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
