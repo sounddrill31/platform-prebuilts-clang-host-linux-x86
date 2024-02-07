@@ -8,7 +8,8 @@ LLVM Users
 ----------
 
 * [**Android Platform**](https://android.googlesource.com/platform/)
-  * Currently clang-r498229b
+  * Currently clang-r510928
+  * clang-r498229b for Android U release
   * clang-r487747c for Android U release
   * clang-r450784d for Android T release
   * clang-r416183b1 for Android S release
