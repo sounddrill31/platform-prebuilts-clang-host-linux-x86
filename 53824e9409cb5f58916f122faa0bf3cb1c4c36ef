@@ -1,0 +1,88 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000067613152",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2954404?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "3f5c470e_6c3e613c",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/clang_toolchain.bzl",
+              "range": {
+                "startLine": 213,
+                "startChar": 0,
+                "endLine": 214,
+                "endChar": 0
+              },
+              "replacement": "        ndk_triple \u003d \"x86_64-unknown-linux-gnu\",  # FIXME perhaps in build.config.constants\n"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "301dd541_36a334af",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2024-02-07T18:52:15Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/clang_toolchain.bzl` to format the file, or apply the suggested fix.",
+      "revId": "53824e9409cb5f58916f122faa0bf3cb1c4c36ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000067613152",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/2954404?revision\u003d2",
+      "fixSuggestions": [
+        {
+          "fixId": "181dac8f_64ef0698",
+          "description": "Buildifier Suggestion",
+          "replacements": [
+            {
+              "path": "kleaf/linux.bzl",
+              "range": {
+                "startLine": 25,
+                "startChar": 0,
+                "endLine": 25,
+                "endChar": 0
+              },
+              "replacement": "    \"ALL_CC_COMPILE_ACTION_NAMES\",\n"
+            },
+            {
+              "path": "kleaf/linux.bzl",
+              "range": {
+                "startLine": 26,
+                "startChar": 0,
+                "endLine": 27,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "303bbbe9_53099edf",
+        "filename": "kleaf/linux.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2024-02-07T18:52:15Z",
+      "side": 1,
+      "message": "File is not formatted. Run `buildifier kleaf/linux.bzl` to format the file, or apply the suggested fix.",
+      "revId": "53824e9409cb5f58916f122faa0bf3cb1c4c36ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
