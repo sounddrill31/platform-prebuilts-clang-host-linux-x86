@@ -70,6 +70,24 @@
       "parentUuid": "e1aba76e_7b3b2c9a",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6dc622ae_fa10894f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-07T18:29:04Z",
+      "side": 1,
+      "message": "\u003e Should I still use the sysroot from NDK or the sysroot from prebuilts/gcc?\n\nUse `prebuilts/gcc`.  The sysroots from NDK are only applicable when building Android libraries.\n\nIf https://cs.android.com/android/kernel/superproject/+/common-android-mainline:prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot/ works by itself, that\u0027s well and good.  But you may also need `-B` and `-L` flags similar to https://source.corp.google.com/h/android/platform/superproject/+/llvm-toolchain:toolchain/llvm_android/configs.py;l\u003d97?q\u003dllvm_android%2Fconfigs.py\u0026ct\u003dos.  (See _GCCConfig further down in the file for actual values of `bin_dirs` and `lib_dir`.)",
+      "parentUuid": "95e42a69_d9b42ff6",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
