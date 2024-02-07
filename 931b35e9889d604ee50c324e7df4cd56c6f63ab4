@@ -196,6 +196,24 @@
       "parentUuid": "63a32479_1691087a",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e3ee89d_1b396155",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-07T19:32:08Z",
+      "side": 1,
+      "message": "Does the command run outside of bazel sandbox?  Clang adds two libc++ header paths (`-internal-isystem prebuilts/clang/host/linux-x86/clang-r498229b/bin/../include/x86_64-unknown-linux-gnu/c++/v1 -internal-isystem prebuilts/clang/host/linux-x86/clang-r498229b/bin/../include/c++/v1`) to the include path, among other things.",
+      "parentUuid": "65edf5d2_3f93e4fe",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
