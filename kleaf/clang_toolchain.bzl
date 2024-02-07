@@ -210,13 +210,14 @@ ARCH_CONFIG = {
             # From _setup_env.sh, HOSTLDFLAGS
             Label("//prebuilts/kernel-build-tools:linux-x86-libs"),
         ],
-        # From _setup_env.sh
-        # sysroot_flags+="--sysroot=${ROOT_DIR}/build/kernel/build-tools/sysroot "
-        sysroot_label = Label("//build/kernel:sysroot"),
+        ndk_triple = VARS.get("X86_64_NDK_TRIPLE"),
+        # From _setup_env.sh: when NDK triple is set,
+        # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
+        sysroot_label = "@prebuilt_ndk//:sysroot" if "X86_64_NDK_TRIPLE" in VARS else None,
         sysroot_path = paths.join(
-            Label("//build/kernel:sysroot").workspace_root,
-            "build/kernel/build-tools/sysroot",
-        ),
+            Label("@prebuilt_ndk//:sysroot").workspace_root,
+            "toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+        ) if "X86_64_NDK_TRIPLE" in VARS else None,
     ),
     ("android", "arm64"): dict(
         ndk_triple = VARS.get("AARCH64_NDK_TRIPLE"),
