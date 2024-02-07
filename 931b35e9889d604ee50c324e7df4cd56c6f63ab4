@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d86682e6_940487f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T18:08:12Z",
+      "side": 1,
+      "message": "Nick, what do you think about this change? Could / should I use NDK to build host binaries, and set `--target\u003dx86_64-linux-android31`?",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
