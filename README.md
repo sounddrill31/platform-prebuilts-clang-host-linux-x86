@@ -72,10 +72,10 @@ LLVM Users
 
 * **Android Rust**
   * Toolchain
-    * Currently clang-r498229b
+    * Currently clang-r510928
     * Look for "CLANG_REVISION" in [paths.py](https://android.googlesource.com/toolchain/android_rust/+/refs/heads/master/paths.py)
   * Bindgen
-    * Currently clang-r498229b
+    * Currently clang-r510928
     * Look for "bindgenClangVersion" in [bindgen.go](https://android.googlesource.com/platform/build/soong/+/refs/heads/master/rust/bindgen.go)
 
 * **Stage 1 compiler**
