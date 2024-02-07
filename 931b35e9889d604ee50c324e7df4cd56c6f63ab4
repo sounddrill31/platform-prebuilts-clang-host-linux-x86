@@ -106,6 +106,24 @@
       "parentUuid": "95e42a69_d9b42ff6",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be2e32f8_2e596492",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-07T18:45:32Z",
+      "side": 1,
+      "message": "Not sure if you saw my earlier comment.  You should use the sysroot from prebuilts/gcc instead.",
+      "parentUuid": "72e7b687_c1f61421",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
