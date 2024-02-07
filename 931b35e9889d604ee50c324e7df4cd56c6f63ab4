@@ -268,6 +268,24 @@
       "parentUuid": "4775c4a5_5d6bc33e",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05e1bfed_b4574fbe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T22:49:26Z",
+      "side": 1,
+      "message": "The full command was:\n\n```\nERROR: /mnt/sdc/android/kernel/build/kernel/kleaf/tests/cc_testing/BUILD.bazel:70:10: Linking build/kernel/kleaf/tests/cc_testing/cpp_linux_x86_64 failed: (Exit 1): clang failed: error executing CppLink command (from target //build/kernel/kleaf/tests/cc_testing:cpp_linux_x86_64) \n  (cd /mnt/sdc/android/kernel/out/bazel/output_user_root/1b6b21355d7d8de5177bf0bcb725bd7f/sandbox/linux-sandbox/201/execroot/__main__ \u0026\u0026 \\\n  exec env - \\\n    BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN\u003d1 \\\n    PATH\u003d/bin:/usr/bin:/usr/local/bin \\\n    PWD\u003d/proc/self/cwd \\\n  prebuilts/clang/host/linux-x86/clang-r498229b/bin/clang -o bazel-out/k8-fastbuild/bin/build/kernel/kleaf/tests/cc_testing/cpp_linux_x86_64 bazel-out/k8-fastbuild/bin/build/kernel/kleaf/tests/cc_testing/_objs/cpp_linux_x86_64/cpp.o -Wl,-S \u0027--target\u003dx86_64-unknown-linux-gnu\u0027 \u0027--stdlib\u003dlibc++\u0027 \u0027-fuse-ld\u003dlld\u0027 \u0027--rtlib\u003dcompiler-rt\u0027 \u0027--sysroot\u003dbuild/kernel/build-tools/sysroot\u0027)\n```",
+      "parentUuid": "e9492ea3_334168a8",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
