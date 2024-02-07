@@ -16,6 +16,24 @@
       "message": "Nick, what do you think about this change? Could / should I use NDK to build host binaries, and set `--target\u003dx86_64-linux-android31`?",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48e55b6e_675690e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-07T18:10:57Z",
+      "side": 1,
+      "message": "The c++ headers (from libc++) should get added by clang with `--target\u003dx86_64-unknown-linux-gnu --stdlib\u003dlibc++`.  Is that not the case?",
+      "parentUuid": "d86682e6_940487f0",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
