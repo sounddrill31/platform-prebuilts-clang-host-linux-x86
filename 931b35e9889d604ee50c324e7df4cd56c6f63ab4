@@ -214,6 +214,24 @@
       "parentUuid": "65edf5d2_3f93e4fe",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4775c4a5_5d6bc33e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-07T22:18:59Z",
+      "side": 1,
+      "message": "It runs inside of the bazel sandbox. Indeed, adding these directories prebuilts/clang/host/linux-x86/clang-r498229b/include to the sandbox fix the issue. I\u0027ll submit a patch.\n\nThank you so much, Pirama!",
+      "parentUuid": "9e3ee89d_1b396155",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
