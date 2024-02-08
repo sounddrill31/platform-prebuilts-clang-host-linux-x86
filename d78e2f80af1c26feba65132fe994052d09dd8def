@@ -46,6 +46,30 @@
       },
       "revId": "d78e2f80af1c26feba65132fe994052d09dd8def",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dc1604e_286a7c68",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T20:58:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83d6e62b_bf644747",
+      "range": {
+        "startLine": 213,
+        "startChar": 8,
+        "endLine": 213,
+        "endChar": 18
+      },
+      "revId": "d78e2f80af1c26feba65132fe994052d09dd8def",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

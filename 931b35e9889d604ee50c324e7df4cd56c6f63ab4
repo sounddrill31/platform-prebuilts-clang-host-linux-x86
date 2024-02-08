@@ -394,6 +394,24 @@
       "parentUuid": "f029b4ce_b2290ed4",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "102f42b9_2ed910b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T20:58:28Z",
+      "side": 1,
+      "message": "Thanks. I tried that too (CL:2954356: adds -B to compiler and -B, -L to linker, similar to https://source.corp.google.com/h/android/platform/superproject/+/llvm-toolchain:toolchain/llvm_android/configs.py;l\u003d97?q\u003dllvm_android%2Fconfigs.py\u0026ct\u003dos ). But it is giving me the same error that _Unwind_Resume is not found.\n\nhttps://paste.googleplex.com/6342853653954560",
+      "parentUuid": "e6b6ac9d_ae9df5ce",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
