@@ -322,6 +322,24 @@
       "parentUuid": "d274a2cf_d474c4cb",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b46712c2_552d56d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T18:12:57Z",
+      "side": 1,
+      "message": "When I do that, it gives:\n\n```\nld.lld: set maximum concurrency to 16, specify --threads\u003d to change\nld.lld: build/kernel/build-tools/sysroot/usr/lib/Scrt1.o\nld.lld: build/kernel/build-tools/sysroot/usr/lib/crti.o\nld.lld: /tmp/bazel-source-roots/0/prebuilts/clang/host/linux-x86/clang-r498229b/lib/clang/17/lib/x86_64-unknown-linux-gnu/clang_rt.crtbegin.o\nld.lld: bazel-out/k8-fastbuild/bin/build/kernel/kleaf/tests/cc_testing/_objs/cpp_linux_x86_64/cpp.o\nld.lld: /tmp/bazel-source-roots/0/prebuilts/clang/host/linux-x86/clang-r498229b/lib/clang/17/lib/x86_64-unknown-linux-gnu/libclang_rt.builtins.a\nld.lld: build/kernel/build-tools/sysroot/usr/lib/libc.so\nld.lld: build/kernel/build-tools/sysroot/usr/lib/libc.so.6\nld.lld: build/kernel/build-tools/sysroot/usr/lib/libc_nonshared.a\nld.lld: build/kernel/build-tools/sysroot/usr/lib/ld-linux-x86-64.so.2\nld.lld: /tmp/bazel-source-roots/0/prebuilts/clang/host/linux-x86/clang-r498229b/lib/clang/17/lib/x86_64-unknown-linux-gnu/libclang_rt.builtins.a\nld.lld: /tmp/bazel-source-roots/0/prebuilts/clang/host/linux-x86/clang-r498229b/lib/clang/17/lib/x86_64-unknown-linux-gnu/clang_rt.crtend.o\nld.lld: build/kernel/build-tools/sysroot/usr/lib/crtn.o\n```\n\nFor some reason, some other objects under `prebuilts/clang` like `clang_rt.crtbegin.o` are included, but `libc++.so` is not. (It looks under lib/clang/17/lib/x86_64-unknown-linux-gnu/, not lib/libc++.so, though).\n\nI tried without a sandbox:\n\n```\nbazel build //build/kernel/kleaf/tests/cc_testing:cpp_linux_x86_64  --sandbox_debug --noincompatible_sandbox_hermetic_tmp --strategy\u003dCppLink\u003dlocal\n```\n\nbut it produces the same error.",
+      "parentUuid": "75419027_cf08517f",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
