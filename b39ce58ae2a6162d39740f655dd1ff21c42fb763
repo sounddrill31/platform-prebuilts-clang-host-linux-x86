@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7bab467e_8956c4bd",
+        "filename": "clang-r498229b/BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-08T23:03:52Z",
+      "side": 1,
+      "message": "as below, we should be a little more selective. Those subdirectories contain not only the compiler, but also the clang tools and an sdk to build clang tools:\n\nhttps://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/b39ce58ae2a6162d39740f655dd1ff21c42fb763/clang-r498229b/lib/\n\nPerhaps whatever is _not_ compiler / linker / \"normal\" build tool should go into a separate filegroup. Or - since this one is called generically \"binaries\" - we should add another filegroup with just the build-essentials.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "b39ce58ae2a6162d39740f655dd1ff21c42fb763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f038d6d3_f3792ea7",
+        "filename": "clang-r498229b/BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-08T23:03:52Z",
+      "side": 1,
+      "message": "While at it, can we double check we really need _all_ those?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "b39ce58ae2a6162d39740f655dd1ff21c42fb763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1b20cee_934c2487",
+        "filename": "clang-r498229b/BUILD.bazel",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-08T23:03:52Z",
+      "side": 1,
+      "message": "That is way too much. `include/c++/**` should be sufficient or maybe that and a few arch subdirectories. Otherwise you are adding all the LLVM headers as well.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 21
+      },
+      "revId": "b39ce58ae2a6162d39740f655dd1ff21c42fb763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
