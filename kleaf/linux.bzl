@@ -24,6 +24,7 @@ load(
     "@rules_cc//cc:action_names.bzl",
     "ALL_CC_COMPILE_ACTION_NAMES",
     "ALL_CC_LINK_ACTION_NAMES",
+    "ALL_CPP_COMPILE_ACTION_NAMES",
 )
 
 # From _setup_env.sh, HOSTCFLAGS / HOSTLDFLAGS
@@ -43,6 +44,7 @@ def _linux_ldflags(ctx):
                     flag_group(
                         flags = [
                             "--target={}".format(ctx.attr.target),
+                            "-stdlib=libc++",
                         ],
                     ),
                 ],
@@ -65,6 +67,17 @@ def _linux_cflags(ctx):
                     flag_group(
                         flags = [
                             "--target={}".format(ctx.attr.target),
+                        ],
+                    ),
+                ],
+            ),
+            flag_set(
+                # Applies to C++ code only.
+                actions = ALL_CPP_COMPILE_ACTION_NAMES,
+                flag_groups = [
+                    flag_group(
+                        flags = [
+                            "-stdlib=libc++",
                         ],
                     ),
                 ],
