@@ -430,6 +430,24 @@
       "parentUuid": "102f42b9_2ed910b7",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc1f76e4_6c68f7cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T23:55:36Z",
+      "side": 1,
+      "message": "The file is indeed missing from the linker output log that I have. How do I add it? I have already run it outside of the sandbox by using `--strategy\u003dCppLink\u003dlocal`, but it doesn\u0027t fix the issue. Separately, I also run with `--sandbox_debug --noincompatible_sandbox_hermetic_tmp` and confirm that `prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/x86_64-linux/lib64/libgcc_s.so` is in the sandbox; I just need to let clang to recognize that it is there.\n\nI could manually add `\"-lgcc_s\"`; I just don\u0027t know if that\u0027s the right thing to do.",
+      "parentUuid": "f35b0e05_1c54c64d",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
