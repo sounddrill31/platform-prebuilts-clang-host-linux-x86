@@ -34,6 +34,12 @@ load(
 # See example in //build/kernel/kleaf/tests/cc_testing:openssl_client
 
 def _linux_ldflags(ctx):
+    extra = []
+    for bin_dir in ctx.files.bin_dirs:
+        extra.append("-B" + bin_dir.path)
+    for lib_dir in ctx.files.lib_dirs:
+        extra.append("-L" + lib_dir.path)
+
     return feature(
         name = "kleaf-host-ldflags",
         enabled = True,
@@ -48,7 +54,7 @@ def _linux_ldflags(ctx):
                             # Can't use static_link_cpp_runtimes because
                             # https://github.com/bazelbuild/bazel/issues/14342
                             "-static-libstdc++",
-                        ],
+                        ] + extra,
                     ),
                 ],
             ),
@@ -59,6 +65,10 @@ def _linux_ldflags(ctx):
     )
 
 def _linux_cflags(ctx):
+    extra_cpp_flags = []
+    for bin_dir in ctx.files.bin_dirs:
+        extra_cpp_flags.append("-B" + bin_dir.path)
+
     return feature(
         name = "kleaf-host-cflags",
         enabled = True,
@@ -81,7 +91,7 @@ def _linux_cflags(ctx):
                     flag_group(
                         flags = [
                             "-stdlib=libc++",
-                        ],
+                        ] + extra_cpp_flags,
                     ),
                 ],
             ),
