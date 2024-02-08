@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d951ac48_71ed3303",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-08T05:51:20Z",
+      "side": 1,
+      "message": "This is not really an ndk_triple.  Consider `linux_triple`.  The NDK is used to build for an Android device (so it\u0027ll look like `x86_64-linux-android` or similar for other architectures.).",
+      "range": {
+        "startLine": 213,
+        "startChar": 8,
+        "endLine": 213,
+        "endChar": 18
+      },
+      "revId": "d78e2f80af1c26feba65132fe994052d09dd8def",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

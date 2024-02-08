@@ -304,6 +304,24 @@
       "parentUuid": "05e1bfed_b4574fbe",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75419027_cf08517f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-08T05:51:20Z",
+      "side": 1,
+      "message": "Try `-Wl,--verbose` linker flag.  Running it on glinux (without sandbox), lld prints\n\u003e ld.lld: .../prebuilts/clang/host/linux-x86/clang-r510928/bin/../lib/x86_64-unknown-linux-gnu/libc++.so\n\namong other lines.",
+      "parentUuid": "d274a2cf_d474c4cb",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
