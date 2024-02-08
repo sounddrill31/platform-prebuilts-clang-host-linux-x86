@@ -340,6 +340,24 @@
       "parentUuid": "75419027_cf08517f",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee6cc780_96d8e363",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T18:21:43Z",
+      "side": 1,
+      "message": "I also tried (though I know this might be the wrong thing) to add `-lc++` to the command, and it gives:\n\n```\n$ prebuilts/clang/host/linux-x86/clang-r498229b/bin/clang -o /tmp/cpp_linux_x86_64 bazel-out/k8-fastbuild/bin/build/kernel/kleaf/tests/cc_testing/_objs/cpp_linux_x86_64/cpp.o -Wl,-S \u0027--target\u003dx86_64-unknown-linux-gnu\u0027 -lc++ -Wl,--verbose \u0027--rtlib\u003dcompiler-rt\u0027 \u0027--sysroot\u003dbuild/kernel/build-tools/sysroot\u0027 -fuse-ld\u003dlld -Wl,--threads\u003d1\n[...]\nld.lld: /mnt/sdc/android/kernel/prebuilts/clang/host/linux-x86/clang-r498229b/bin/../lib/x86_64-unknown-linux-gnu/libc++.so\n[...]\nld.lld: error: undefined symbol: _Unwind_Resume\n```\n\nMany of the undefined symbols errors are gone, except for `_Unwind_Resume`. So I guess `--stdlib\u003dlibc++` is not telling clang to link to libc++?",
+      "parentUuid": "b46712c2_552d56d7",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
