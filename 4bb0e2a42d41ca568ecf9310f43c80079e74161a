@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4411a0ed_781437a2",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-08T00:04:56Z",
+      "side": 1,
+      "message": "```suggestion\n  * Currently clang-r510928\n```",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 28
+      },
+      "revId": "4bb0e2a42d41ca568ecf9310f43c80079e74161a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "65576ea7_3a49fd2f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-08T00:04:56Z",
+      "side": 1,
+      "message": "Also add the new version.\n```suggestion\n* [clang-r498229b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r498229b) - August 2023\n* [clang-510928](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-510928) - Jan 2024\n```",
+      "range": {
+        "startLine": 146,
+        "startChar": 0,
+        "endLine": 146,
+        "endChar": 141
+      },
+      "revId": "4bb0e2a42d41ca568ecf9310f43c80079e74161a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
