@@ -448,6 +448,24 @@
       "parentUuid": "f35b0e05_1c54c64d",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2dade0f_aceb300d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T23:59:26Z",
+      "side": 1,
+      "message": "Looking at your paste, I see these flags in your build command:\n\n```\n-lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc\n```\n\nDo you know where do these flags come from? Should I add these to mine as well?",
+      "parentUuid": "dc1f76e4_6c68f7cf",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
