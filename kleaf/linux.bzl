@@ -34,6 +34,12 @@ load(
 # See example in //build/kernel/kleaf/tests/cc_testing:openssl_client
 
 def _linux_ldflags(ctx):
+    extra = []
+    for bin_dir in ctx.files.bin_dirs:
+        extra += ["-B", bin_dir.path]
+    for lib_dir in ctx.files.lib_dirs:
+        extra += ["-L", lib_dir.path]
+
     return feature(
         name = "kleaf-host-ldflags",
         enabled = True,
@@ -45,7 +51,8 @@ def _linux_ldflags(ctx):
                         flags = [
                             "--target={}".format(ctx.attr.target),
                             "-stdlib=libc++",
-                        ],
+                            "-Wl,--verbose"
+                        ] + extra,
                     ),
                 ],
             ),
@@ -56,6 +63,10 @@ def _linux_ldflags(ctx):
     )
 
 def _linux_cflags(ctx):
+    extra_cpp_flags = []
+    for bin_dir in ctx.files.bin_dirs:
+        extra_cpp_flags += ["-B", bin_dir.path]
+
     return feature(
         name = "kleaf-host-cflags",
         enabled = True,
@@ -78,7 +89,7 @@ def _linux_cflags(ctx):
                     flag_group(
                         flags = [
                             "-stdlib=libc++",
-                        ],
+                        ] + extra_cpp_flags,
                     ),
                 ],
             ),
