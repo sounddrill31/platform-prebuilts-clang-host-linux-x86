@@ -22,6 +22,30 @@
       },
       "revId": "d78e2f80af1c26feba65132fe994052d09dd8def",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83d6e62b_bf644747",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 5
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T18:04:26Z",
+      "side": 1,
+      "message": "Sure, I\u0027ll rename it. It is just referring to the `--target` option.",
+      "parentUuid": "d951ac48_71ed3303",
+      "range": {
+        "startLine": 213,
+        "startChar": 8,
+        "endLine": 213,
+        "endChar": 18
+      },
+      "revId": "d78e2f80af1c26feba65132fe994052d09dd8def",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
