@@ -358,6 +358,24 @@
       "parentUuid": "b46712c2_552d56d7",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f029b4ce_b2290ed4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-08T18:37:13Z",
+      "side": 1,
+      "message": "I also tried using `clang++` instead of `clang` for linking, and it appears to link to libc++ properly. But I still have the issue of `_Unwind_Resume`; I tried adding `-lunwind` and `-pthreads` but it still complains about `__sF` which I don\u0027t know where to find.\n\nRemaining question:\n- Can I use clang++ to replace clang for linking for C code? What are the side effects?\n- How do I resolve the issue of `_Unwind_Resume`?",
+      "parentUuid": "ee6cc780_96d8e363",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
