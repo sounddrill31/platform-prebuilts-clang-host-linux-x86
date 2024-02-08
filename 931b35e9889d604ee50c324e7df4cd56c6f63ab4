@@ -412,6 +412,24 @@
       "parentUuid": "e6b6ac9d_ae9df5ce",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f35b0e05_1c54c64d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-08T22:27:26Z",
+      "side": 1,
+      "message": "https://paste.googleplex.com/6124679851409408 - another useful linker flag is `-Wl,--trace-symbol\u003d_Unwind_Resume`.  It shows that this symbol is coming from libgcc_s.so:\n\u003e prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/x86_64-linux/lib64/libgcc_s.so: shared definition of _Unwind_Resume\n\nBut this file is missing from the linker output under bazel sandbox.",
+      "parentUuid": "102f42b9_2ed910b7",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
