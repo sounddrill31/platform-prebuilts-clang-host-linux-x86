@@ -538,6 +538,24 @@
       "parentUuid": "803364ca_54858fa5",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ae80164_027b492f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-09T18:47:37Z",
+      "side": 1,
+      "message": "Thanks Pirama. I\u0027ll start a new thread because installing libc++ along with the built binaries requires knowledge about toolchain configuration. See my other thread.\n\n---\n\n@ndesaulniers@google.com:\n\n\u003e Sorry for just getting to this thread now. The NDK triples only exist for the UAPI header tests and not for the kernel builds themselves.\n\nI understand. However, here I am setting `--target` for host binaries for a different reason -- to build C++ binaries. Does that justifies setting `--target`?",
+      "parentUuid": "952a81e5_c53f8a4f",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
