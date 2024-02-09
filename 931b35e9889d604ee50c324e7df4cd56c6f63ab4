@@ -484,6 +484,24 @@
       "parentUuid": "a2dade0f_aceb300d",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da870a93_f4ef1f3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-09T00:54:11Z",
+      "side": 1,
+      "message": "Thanks! This lets me build properly. (CL:2956678)\n\nThe remaining issue is that, with `-stdlib\u003dlibc++` it is able to compile, but it can\u0027t be found at runtime:\n\n```\n/mnt/sdc/android/kernel/out/bazel/output_user_root/1b6b21355d7d8de5177bf0bcb725bd7f/execroot/__main__/bazel-out/k8-fastbuild/bin/build/kernel/kleaf/tests/cc_testing/cpp_linux_x86_64: error while loading shared libraries: libc++.so: cannot open shared object file: No such file or directory\n```\n\nAdding `LD_DEBUG\u003dlibs` gives me https://paste.googleplex.com/6395444890959872. I could add `-Wl,-rpath,prebuilts/clang/host/linux-x86/clang-r498229b/lib/x86_64-unknown-linux-gnu/` but it seems wrong.\n\nI also tried adding `features \u003d [\"fully_static_link\"],` to my `cc_binary` rule, which adds `-static`, but that yields: https://paste.googleplex.com/6304528721248256\n\nAny suggestions?",
+      "parentUuid": "7fbb3626_b7eb6ab0",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
