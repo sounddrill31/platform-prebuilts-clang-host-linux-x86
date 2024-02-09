@@ -58,7 +58,7 @@ def _linux_ldflags(ctx):
             ),
         ],
         implies = [
-            "kleaf-lld-compiler-rt",
+            "kleaf-lld",
         ],
     )
 
