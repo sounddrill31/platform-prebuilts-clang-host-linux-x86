@@ -520,6 +520,24 @@
       "parentUuid": "da870a93_f4ef1f3e",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "952a81e5_c53f8a4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1114194
+      },
+      "writtenOn": "2024-02-09T16:27:48Z",
+      "side": 1,
+      "message": "Sorry for just getting to this thread now. The NDK triples only exist for the UAPI header tests and not for the kernel builds themselves.",
+      "parentUuid": "803364ca_54858fa5",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
