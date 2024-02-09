@@ -109,8 +109,6 @@ libclang_rt_prebuilt_library_static {
     // compatibility.
     visibility: [
         "//bionic:__subpackages__",
-        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
-        "//frameworks/libs/native_bridge_support/android_api/libc:__subpackages__",
     ],
 }
 
@@ -324,7 +322,6 @@ llvm_prebuilt_library_static {
     // which needs to export the unwinder API.
     visibility: [
         "//bionic:__subpackages__",
-        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
         "//frameworks/libs/native_bridge_support/android_api/libc:__subpackages__",
     ],
 }
