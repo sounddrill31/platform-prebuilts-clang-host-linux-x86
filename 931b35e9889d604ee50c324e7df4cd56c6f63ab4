@@ -466,6 +466,24 @@
       "parentUuid": "dc1f76e4_6c68f7cf",
       "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fbb3626_b7eb6ab0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-09T00:05:32Z",
+      "side": 1,
+      "message": "My command didn\u0027t include `--rtlib\u003dcompiler-rt`.  Removing that should resolve the error.  (We don\u0027t use --rtlib\u003dcompiler-rt for linux targets in other builds either).",
+      "parentUuid": "a2dade0f_aceb300d",
+      "revId": "931b35e9889d604ee50c324e7df4cd56c6f63ab4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
