@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d00d7a8a_11d1b3eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-09T10:21:11Z",
+      "side": 1,
+      "message": "Also, this version is no longer in use and is going away in aosp/2953232",
+      "revId": "b39ce58ae2a6162d39740f655dd1ff21c42fb763",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7bab467e_8956c4bd",
         "filename": "clang-r498229b/BUILD.bazel",
         "patchSetId": 2
