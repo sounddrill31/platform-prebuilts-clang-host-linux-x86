@@ -16,6 +16,24 @@
       "message": "See comments in CL:2954856",
       "revId": "4aad4c3cf01e32b4be621a6dffe2216e3247805f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ed03c0a_c05d26cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-09T22:55:38Z",
+      "side": 1,
+      "message": "unresolving",
+      "parentUuid": "524fb736_265b7a07",
+      "revId": "4aad4c3cf01e32b4be621a6dffe2216e3247805f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
