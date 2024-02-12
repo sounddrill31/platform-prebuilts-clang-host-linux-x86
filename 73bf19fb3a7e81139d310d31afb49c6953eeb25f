@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3c52eb3_7e8927dc",
+        "filename": "clang-r510928/BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-12T09:52:39Z",
+      "side": 1,
+      "message": "what about `include/x86_64-unknown-linux-gnu/c++/**`?",
+      "revId": "73bf19fb3a7e81139d310d31afb49c6953eeb25f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
