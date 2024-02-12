@@ -34,6 +34,24 @@
       "parentUuid": "d3c52eb3_7e8927dc",
       "revId": "73bf19fb3a7e81139d310d31afb49c6953eeb25f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b48d7e05_2a839fe2",
+        "filename": "clang-r510928/BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-12T19:57:27Z",
+      "side": 1,
+      "message": "I think you should include this location as well.  It\u0027s included from `include/c++/v1/__config`.  There is a workaround that currently symlinks `include/c++/v1/__config_site` to `include/x86_64-unknown-linux-gnu/c++/__config_site` which we plan to clean up eventually.",
+      "parentUuid": "c9d0765e_98e76089",
+      "revId": "73bf19fb3a7e81139d310d31afb49c6953eeb25f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
