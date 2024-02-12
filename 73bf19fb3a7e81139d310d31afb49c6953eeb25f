@@ -16,6 +16,24 @@
       "message": "what about `include/x86_64-unknown-linux-gnu/c++/**`?",
       "revId": "73bf19fb3a7e81139d310d31afb49c6953eeb25f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9d0765e_98e76089",
+        "filename": "clang-r510928/BUILD.bazel",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-12T19:27:24Z",
+      "side": 1,
+      "message": "This is not necessary for now. The directory only includes one `__config_site` file:\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:prebuilts/clang/host/linux-x86/clang-r510928/include/x86_64-unknown-linux-gnu/c++/v1/;l\u003d1",
+      "parentUuid": "d3c52eb3_7e8927dc",
+      "revId": "73bf19fb3a7e81139d310d31afb49c6953eeb25f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
