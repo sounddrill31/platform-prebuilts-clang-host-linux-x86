@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36aa1a89_a7a7fb4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1402878
+      },
+      "writtenOn": "2024-02-12T09:53:14Z",
+      "side": 1,
+      "message": "I am not sure we need to patch old versions ...",
+      "revId": "5decbb85a2d6005084946fb28c92c9db7dac8043",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
