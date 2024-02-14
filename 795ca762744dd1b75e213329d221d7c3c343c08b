@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c95bfc62_99fd5578",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2024-02-14T11:20:39Z",
+      "side": 1,
+      "message": "ok, apparently there are some branches where this repo is merging but native_bridge_support is not. I am going to keep this as is for now.",
+      "revId": "795ca762744dd1b75e213329d221d7c3c343c08b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
