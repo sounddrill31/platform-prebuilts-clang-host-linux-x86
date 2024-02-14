@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0892d4c9_167cf9ea",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1347428
+      },
+      "writtenOn": "2024-02-14T18:55:59Z",
+      "side": 1,
+      "message": "Just fyi:\n\n```suggestion\n* [clang-r510928](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r510928) - Jan 2024\n```",
+      "revId": "d734f65817e1ce03159a635801ee937856589a6b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
