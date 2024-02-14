@@ -34,6 +34,24 @@
       "parentUuid": "0892d4c9_167cf9ea",
       "revId": "d734f65817e1ce03159a635801ee937856589a6b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82957e69_e01397cf",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1978766
+      },
+      "writtenOn": "2024-02-14T23:23:21Z",
+      "side": 1,
+      "message": "Thanks for spotting the typo",
+      "parentUuid": "e0981212_9d3e8dfa",
+      "revId": "d734f65817e1ce03159a635801ee937856589a6b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
