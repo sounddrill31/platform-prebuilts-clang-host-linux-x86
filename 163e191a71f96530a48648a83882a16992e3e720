@@ -16,6 +16,24 @@
       "message": "I think you should file a bug assigned to ccross@ or aosp-llvm-dev@ about getting AOSP LLVM utilities to link against musl on the host.  AFAIK, most of android host utilities have been ported.  This patch seems to be required because the compiler/assembler/linker/object utils have not yet been ported to use musl on the host.\n\nIt\u0027s important that that gets done, otherwise Android will continue to keep dragging this ancient glibc version forward.",
       "revId": "163e191a71f96530a48648a83882a16992e3e720",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4f2664d_53ac6ded",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 13
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-15T17:43:37Z",
+      "side": 1,
+      "message": "Yes, most of this is ported but I think we want an all-or-nothing switchover to musl (but it\u0027s not currently on anyone\u0027s radar).\n\n(cc: @ccross@android.com)",
+      "parentUuid": "721c80f0_fdbb5de9",
+      "revId": "163e191a71f96530a48648a83882a16992e3e720",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
