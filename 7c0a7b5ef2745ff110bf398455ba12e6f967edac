@@ -16,6 +16,24 @@
       "message": "Hello @eakammer@google.com,\n\n@pirama@google.com mentioned the following in the other long comment:\n\n\u003e The convention is to set rpath to `$ORIGIN:$ORIGIN/../lib` and install libc++ to `\u003cinstall-bin-dir\u003e/../lib`.\n\u003e\n\u003e -static will produce a static binary - which is not what you want. Use -static-libstdc++ flag instead - it\u0027ll statically link in libc++ as well, despite the name.\n\nFrom the Bazel\u0027s perspective, how do I configure the toolchain so that ALL `cc_binary`\u0027s built with this toolchain automatically has `libc++.so` included in runfiles?\n\nOr alternatively, should I always statically link in libc++ so that I don\u0027t need to add it to runfiles and to packaging?",
       "revId": "7c0a7b5ef2745ff110bf398455ba12e6f967edac",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9658a6a2_e9a6b451",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-02-15T00:34:33Z",
+      "side": 1,
+      "message": "I decided to use `-static-libstdc++` because it is simple. I\u0027ll revisit this if this cause issues later.",
+      "parentUuid": "46f17d54_f21e7cf5",
+      "revId": "7c0a7b5ef2745ff110bf398455ba12e6f967edac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
