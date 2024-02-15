@@ -34,6 +34,24 @@
       "parentUuid": "721c80f0_fdbb5de9",
       "revId": "163e191a71f96530a48648a83882a16992e3e720",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9877038f_8d6bbfbb",
+        "filename": "kleaf/clang_toolchain.bzl",
+        "patchSetId": 13
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2024-02-15T20:35:57Z",
+      "side": 1,
+      "message": "This looks like it is related to what you\u0027re compiling against, not what the compiler itself is using.  You could switch to compiling everything against musl if you wanted to, using the sysroots in `prebuilts/build-tools/sysroots`, but that\u0027s orthogonal to whether clang itself is linked against glibc or musl.  We do have a clang linked against musl being built, but it\u0027s currently not on any roadmap to switch to it.",
+      "parentUuid": "e4f2664d_53ac6ded",
+      "revId": "163e191a71f96530a48648a83882a16992e3e720",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
