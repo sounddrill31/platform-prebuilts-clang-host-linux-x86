@@ -16,6 +16,24 @@
       "message": "@Pirama, are the host utilties in android not linked against compiler-rt?",
       "revId": "b23d3c808d310246777ed9623631a360af6fe203",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "932d52fb_26d29f8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-15T17:40:29Z",
+      "side": 1,
+      "message": "AFAICT, Android host tools don\u0027t use compiler-rt and still depend on libgcc.",
+      "parentUuid": "83895e3a_1e6c63a3",
+      "revId": "b23d3c808d310246777ed9623631a360af6fe203",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
