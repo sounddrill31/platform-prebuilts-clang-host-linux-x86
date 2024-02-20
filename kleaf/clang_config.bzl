@@ -61,8 +61,11 @@ clang_config = rule(
             "linux",
         ]),
         "sysroot": attr.string(mandatory = True),
+<<<<<<< HEAD   (c3da51 Merge changes from topic "kleaf_clang_plus_plus" into main-k)
         "bin_dirs": attr.label_list(),
         "lib_dirs": attr.label_list(),
+=======
+>>>>>>> BRANCH (aa4011 kleaf: ndk_triple -> target.)
         "target": attr.string(),
         "toolchain_identifier": attr.string(),
         "clang_version": attr.string(),

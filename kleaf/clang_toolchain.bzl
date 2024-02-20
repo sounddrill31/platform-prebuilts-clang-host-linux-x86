@@ -32,10 +32,13 @@ def _clang_toolchain_internal(
         linker_files = None,
         sysroot_label = None,
         sysroot_path = None,
+<<<<<<< HEAD   (c3da51 Merge changes from topic "kleaf_clang_plus_plus" into main-k)
         bin_files = None,
         bin_dirs = None,
         lib_files = None,
         lib_dirs = None,
+=======
+>>>>>>> BRANCH (aa4011 kleaf: ndk_triple -> target.)
         target = None,
         extra_compatible_with = None):
     """Defines a cc toolchain for kernel build, based on clang.
@@ -52,10 +55,13 @@ def _clang_toolchain_internal(
         linker_files: Additional dependencies to the linker
         sysroot_label: Label to a list of files from sysroot
         sysroot_path: Path to sysroot
+<<<<<<< HEAD   (c3da51 Merge changes from topic "kleaf_clang_plus_plus" into main-k)
         bin_files: Files for `-B`
         bin_dirs: Directory to be set in `-B`
         lib_files: Files for `-L`
         lib_dirs: Directory to be set in `-L`
+=======
+>>>>>>> BRANCH (aa4011 kleaf: ndk_triple -> target.)
         target: The `--target` option provided to clang. This is usually `NDK_TRIPLE`.
         extra_compatible_with: Extra `exec_compatible_with` / `target_compatible_with`.
     """
