@@ -41,6 +41,7 @@ def _linux_ldflags(_ctx):
         ],
     )
 
+<<<<<<< HEAD   (19d84f [automerger skipped] kleaf: Use clang++ to link. am: dcbde2b)
 def _linux_cc_rules_flags(ctx):
     """Flags applying to cc_* rules but not Kbuild"""
 
@@ -83,6 +84,39 @@ def _linux_cc_rules_flags(ctx):
                             "--target={}".format(ctx.attr.target),
                             "-stdlib=libc++",
                         ] + extra_compile_flags,
+=======
+def _linux_cc_rules_flags(_ctx):
+    """Flags applying to cc_* rules but not Kbuild"""
+    return feature(
+        name = "kleaf-host-cc-rules-flags",
+        enabled = True,
+        flag_sets = [
+            flag_set(
+                actions = ALL_CC_LINK_ACTION_NAMES,
+                flag_groups = [
+                    flag_group(
+                        flags = [
+                            "-stdlib=libc++",
+                            # Using -static-libstdc++ removes the complication of adding
+                            # libc++ to runfiles for cc_binary, adjusting rpath, and
+                            # packaging libc++ along with the cc_binary when it is
+                            # mentioned in a pkg_* or copy_to_dist_dir rule.
+                            # Can't use static_link_cpp_runtimes because
+                            # https://github.com/bazelbuild/bazel/issues/14342
+                            "-static-libstdc++",
+                        ],
+                    ),
+                ],
+            ),
+            flag_set(
+                # Applies to C++ code only.
+                actions = ALL_CPP_COMPILE_ACTION_NAMES,
+                flag_groups = [
+                    flag_group(
+                        flags = [
+                            "-stdlib=libc++",
+                        ],
+>>>>>>> BRANCH (bf1b35 kleaf: Add -stdlib=libc++ -static-libstdc++ to host cc_* rul)
                     ),
                 ],
             ),
