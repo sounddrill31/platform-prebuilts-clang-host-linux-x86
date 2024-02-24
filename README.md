@@ -33,9 +33,10 @@ LLVM Users
     * [AOSP Code Search link](https://cs.android.com/android/platform/superproject/+/master:build/soong/cc/config/global.go?q=RSClangVersion)
 
 * [**Android Linux Kernel**](http://go/android-systems)
-  * Currently clang-r498229b
-    * Look for "clang-" in [mainline build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android-mainline/build.config.constants).
-    * Look for "clang-" in [android15-6.1 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android15-6.1/build.config.constants)
+  * Currently clang-r510928. Look for "CLANG_VERSION" in:
+    * [mainline build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android-mainline/build.config.constants).
+    * [android15-6.1 build configs](https://android.googlesource.com/kernel/common/+/refs/heads/android15-6.1/build.config.constants)
+    * [bootable/libbootloader/gbl/build.config.constants](https://android.googlesource.com/platform/bootable/libbootloader/+/refs/heads/main/gbl/build.config.constants)
   * When adding or removing a clang prebuilt, the list in `kleaf/versions.bzl` needs to be updated.
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
@@ -44,26 +45,24 @@ LLVM Users
   * Look for "clang-" in [ndk/toolchains.py](https://android.googlesource.com/platform/ndk/+/refs/heads/master/ndk/toolchains.py)
 
 * [**Trusty**](https://source.android.com/security/trusty/)
-  * LINUX_CLANG_BINDIR: clang-r475365b
-  * CLANG_BINDIR: clang-r475365b
+  * LINUX_CLANG_BINDIR: clang-r510928
+  * CLANG_BINDIR: clang-r510928
   * Look for "clang-" in [vendor/google/aosp/scripts/envsetup.sh](https://android.googlesource.com/trusty/vendor/google/aosp/+/master/scripts/envsetup.sh).
 
 * [**Android Emulator**](https://developer.android.com/studio/run/emulator.html)
-  * Currently clang-r487747c
-  * Linux emulator is temporarily hardcoded to clang-r487747c, see b/268674933
+  * Currently clang-r510928
   * Look for "clang-" in [external/qemu/android/build/toolchains.json](https://android.googlesource.com/platform/external/qemu/+/emu-master-dev/android/build/toolchains.json#2).
     * Note that they work out of the emu-master-dev branch.
     * [Android Code Search link](https://cs.android.com/android/platform/superproject/+/emu-master-dev:external/qemu/android/build/toolchains.json?q=clang)
 
 * [**Context Hub Runtime Environment (CHRE)**](https://android.googlesource.com/platform/system/chre/)
-  * Currently clang-r498229b
+  * Currently clang-r510928
   * Look in [system/chre/build/clang.mk](https://googleplex-android.googlesource.com/platform/system/chre/+/refs/heads/master/build/clang.mk#13).
     * [Internal Code Search link](https://source.corp.google.com/android/system/chre/build/clang.mk?q=clang-)
 
 * [**OpenJDK (jdk/build)**](https://android.googlesource.com/toolchain/jdk/build/)
-  * Currently clang-r416183b
-  * Look for "clang-" in [build-jetbrainsruntime-linux.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/master/build-jetbrainsruntime-linux.sh)
-  * Look for "clang-" in [build-openjdk-darwin.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/master/build-openjdk-darwin.sh)
+  * Currently clang-r450784e
+  * Look for "clang-" in [build-jetbrainsruntime-common.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/main/build-jetbrainsruntime-common.sh)
 
 * [**Clang Tools**](https://android.googlesource.com/platform/prebuilts/clang-tools/)
   * Currently
@@ -86,7 +85,7 @@ LLVM Users
   * Note the chicken & egg paradox of a self hosting bootstrapping compiler; this can only be updated AFTER a new prebuilt is checked in.
 
 * **Android Studio / Android Game Development Extension**
-  * Currently clang-r498229b
+  * Currently clang-r510928
   * Look in [lldb-utils/config/clang.version](https://googleplex-android.git.corp.google.com/platform/external/lldb-utils/+/refs/heads/lldb-master-dev/config/clang.version)
 
 
