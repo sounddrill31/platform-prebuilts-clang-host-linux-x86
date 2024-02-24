@@ -87,7 +87,10 @@ LLVM Users
   * Currently clang-r498229b
   * Look in [lldb-utils/config/clang.version](https://googleplex-android.git.corp.google.com/platform/external/lldb-utils/+/refs/heads/lldb-master-dev/config/clang.version)
 
-
+* **vndk/tools**
+  Update in [development/vndk/tools/header-checker/envsetup.sh](https://android.googlesource.com/platform/development/+/refs/heads/main/vndk/tools/header-checker/android/envsetup.sh)
+  * LLVM_PREBUILTS_VERSION=clang-r510928
+  * LLVM_RELEASE_VERSION=18
 
 Prebuilt Versions
 -----------------
