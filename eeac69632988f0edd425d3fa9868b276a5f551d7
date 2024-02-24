@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84f3cda0_2f94fc45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-02-24T00:04:28Z",
+      "side": 1,
+      "message": "It\u0027s under \"Clang tools\".  Maybe expand out the path for envsetup.sh so the full path is clearer.",
+      "revId": "eeac69632988f0edd425d3fa9868b276a5f551d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
