@@ -91,7 +91,14 @@ def _clang_toolchain_internal(
     # so just use clang directly
     clang = clang_pkg.relative(":bin/clang")
     clang_plus_plus = clang_pkg.relative(":bin/clang++")
+<<<<<<< HEAD   (60e31a Snap for 11435509 from 18bfb7fbd697a1ad710fd0581a4ac9f3db385)
     ld = clang
+=======
+
+    # TODO: Support building C++ device binaries.
+    #   This requires adding "-static-libstdc++" to avoid dynamic linkage.
+    ld = clang_plus_plus if target_os == "linux" else clang
+>>>>>>> BRANCH (b4c2fd kleaf: device binaries link using clang.)
     strip = clang_pkg.relative(":bin/llvm-strip")
     ar = clang_pkg.relative(":bin/llvm-ar")
     objcopy = clang_pkg.relative(":bin/llvm-objcopy")
