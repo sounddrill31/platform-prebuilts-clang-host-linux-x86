@@ -35,5 +35,12 @@ in the future.
 
 VERSIONS = [
     # keep sorted
+<<<<<<< HEAD   (23c716 Merge "Remove unused clang-r487747b." am: deadb15c53 am: fef)
     "r510928",
+=======
+    "r450784e",
+    "r475365b",
+    "r487747",
+    "r487747c",
+>>>>>>> BRANCH (d3b378 [automerger skipped] Merge "Update prebuilt Clang to r487747)
 ]
