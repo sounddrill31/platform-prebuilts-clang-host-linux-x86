@@ -36,4 +36,9 @@ in the future.
 VERSIONS = [
     # keep sorted
     "r510928",
+<<<<<<< HEAD   (7e6a61 kleaf: device binaries link using clang. am: b4c2fd1220 am: )
 ]
+=======
+    "r522817",
+]
+>>>>>>> BRANCH (1038ee Merge changes from topic "update-clang-11542355" into main)
