@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db0427f5_ce3dea39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1096713
+      },
+      "writtenOn": "2024-03-12T17:09:53Z",
+      "side": 1,
+      "message": "The failing test ran again on a re-run with this same binary: https://android-build.corp.google.com/test_investigate/?invocationId\u003dI02500010254766651\u0026testResultId\u003dTR14429210112702646\u0026redirect\u003dhttp://fusion2/414598ef-99a4-4e4c-8c70-c3672c67d51f\n\nThis is a known long-standing bug in the Launcher which hasn\u0027t been looked at, b/325144467",
+      "revId": "910fcacd71d220a8d9bc6714071e4afec503f290",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
