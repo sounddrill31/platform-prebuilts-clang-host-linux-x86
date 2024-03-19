@@ -911,6 +911,16 @@
     New->setPackExpansion(isPackExpansion);
     break;
   }
+  case attr::CallsiteWrapper: {
+    bool isInherited = Record.readInt();
+    bool isImplicit = Record.readInt();
+    bool isPackExpansion = Record.readInt();
+    New = new (Context) CallsiteWrapperAttr(Context, Info);
+    cast<InheritableAttr>(New)->setInherited(isInherited);
+    New->setImplicit(isImplicit);
+    New->setPackExpansion(isPackExpansion);
+    break;
+  }
   case attr::Capability: {
     bool isInherited = Record.readInt();
     bool isImplicit = Record.readInt();

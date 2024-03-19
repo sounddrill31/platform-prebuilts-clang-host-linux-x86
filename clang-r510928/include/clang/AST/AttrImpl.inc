@@ -8186,6 +8186,73 @@ const char *CalledOnceAttr::getSpelling() const {
 }
 
 
+// CallsiteWrapperAttr implementation
+
+CallsiteWrapperAttr *CallsiteWrapperAttr::CreateImplicit(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo) {
+  auto *A = new (Ctx) CallsiteWrapperAttr(Ctx, CommonInfo);
+  A->setImplicit(true);
+  if (!A->isAttributeSpellingListCalculated() && !A->getAttrName())
+    A->setAttributeSpellingListIndex(0);
+  return A;
+}
+
+CallsiteWrapperAttr *CallsiteWrapperAttr::Create(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo) {
+  auto *A = new (Ctx) CallsiteWrapperAttr(Ctx, CommonInfo);
+  if (!A->isAttributeSpellingListCalculated() && !A->getAttrName())
+    A->setAttributeSpellingListIndex(0);
+  return A;
+}
+
+CallsiteWrapperAttr *CallsiteWrapperAttr::CreateImplicit(ASTContext &Ctx, SourceRange Range) {
+  AttributeCommonInfo I(Range, NoSemaHandlerAttribute, {AttributeCommonInfo::AS_GNU, 0, false /*IsAlignas*/, false /*IsRegularKeywordAttribute*/});
+  return CreateImplicit(Ctx, I);
+}
+
+CallsiteWrapperAttr *CallsiteWrapperAttr::Create(ASTContext &Ctx, SourceRange Range) {
+  AttributeCommonInfo I(Range, NoSemaHandlerAttribute, {AttributeCommonInfo::AS_GNU, 0, false /*IsAlignas*/, false /*IsRegularKeywordAttribute*/});
+  return Create(Ctx, I);
+}
+
+CallsiteWrapperAttr::CallsiteWrapperAttr(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo
+             )
+  : InheritableAttr(Ctx, CommonInfo, attr::CallsiteWrapper, false, false)
+  {
+}
+
+CallsiteWrapperAttr *CallsiteWrapperAttr::clone(ASTContext &C) const {
+  auto *A = new (C) CallsiteWrapperAttr(C, *this);
+  A->Inherited = Inherited;
+  A->IsPackExpansion = IsPackExpansion;
+  A->setImplicit(Implicit);
+  return A;
+}
+
+void CallsiteWrapperAttr::printPretty(raw_ostream &OS, const PrintingPolicy &Policy) const {
+  bool IsFirstArgument = true; (void)IsFirstArgument;
+  unsigned TrailingOmittedArgs = 0; (void)TrailingOmittedArgs;
+  switch (getAttributeSpellingListIndex()) {
+  default:
+    llvm_unreachable("Unknown attribute spelling!");
+    break;
+  case 0 : {
+    OS << " __attribute__((callsite_wrapper";
+    OS << "))";
+    break;
+  }
+}
+}
+
+const char *CallsiteWrapperAttr::getSpelling() const {
+  switch (getAttributeSpellingListIndex()) {
+  default:
+    llvm_unreachable("Unknown attribute spelling!");
+    return "(No spelling)";
+  case 0:
+    return "callsite_wrapper";
+  }
+}
+
+
 // CapabilityAttr implementation
 
 CapabilityAttr *CapabilityAttr::CreateImplicit(ASTContext &Ctx, llvm::StringRef Name, const AttributeCommonInfo &CommonInfo) {
@@ -36811,6 +36878,8 @@ const char *Attr::getSpelling() const {
     return cast<CallbackAttr>(this)->getSpelling();
   case attr::CalledOnce:
     return cast<CalledOnceAttr>(this)->getSpelling();
+  case attr::CallsiteWrapper:
+    return cast<CallsiteWrapperAttr>(this)->getSpelling();
   case attr::Capability:
     return cast<CapabilityAttr>(this)->getSpelling();
   case attr::CapturedRecord:
@@ -37571,6 +37640,8 @@ Attr *Attr::clone(ASTContext &C) const {
     return cast<CallbackAttr>(this)->clone(C);
   case attr::CalledOnce:
     return cast<CalledOnceAttr>(this)->clone(C);
+  case attr::CallsiteWrapper:
+    return cast<CallsiteWrapperAttr>(this)->clone(C);
   case attr::Capability:
     return cast<CapabilityAttr>(this)->clone(C);
   case attr::CapturedRecord:
@@ -38331,6 +38402,8 @@ void Attr::printPretty(raw_ostream &OS, const PrintingPolicy &Policy) const {
     return cast<CallbackAttr>(this)->printPretty(OS, Policy);
   case attr::CalledOnce:
     return cast<CalledOnceAttr>(this)->printPretty(OS, Policy);
+  case attr::CallsiteWrapper:
+    return cast<CallsiteWrapperAttr>(this)->printPretty(OS, Policy);
   case attr::Capability:
     return cast<CapabilityAttr>(this)->printPretty(OS, Policy);
   case attr::CapturedRecord:

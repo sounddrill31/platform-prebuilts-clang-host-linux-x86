@@ -641,6 +641,13 @@ Record.push_back(SA->getGuard());
     Record.push_back(A->isPackExpansion());
     break;
   }
+  case attr::CallsiteWrapper: {
+    const auto *SA = cast<CallsiteWrapperAttr>(A);
+    Record.push_back(SA->isInherited());
+    Record.push_back(A->isImplicit());
+    Record.push_back(A->isPackExpansion());
+    break;
+  }
   case attr::Capability: {
     const auto *SA = cast<CapabilityAttr>(A);
     Record.push_back(SA->isInherited());

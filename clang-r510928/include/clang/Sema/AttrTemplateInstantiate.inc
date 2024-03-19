@@ -410,6 +410,10 @@ Attr *instantiateTemplateAttribute(const Attr *At, ASTContext &C, Sema &S,
       const auto *A = cast<CalledOnceAttr>(At);
       return A->clone(C);
     }
+    case attr::CallsiteWrapper: {
+      const auto *A = cast<CallsiteWrapperAttr>(At);
+      return A->clone(C);
+    }
     case attr::Capability: {
       const auto *A = cast<CapabilityAttr>(At);
       return A->clone(C);
@@ -1992,6 +1996,9 @@ Attr *instantiateTemplateAttributeForDecl(const Attr *At,
       return nullptr;
     }
     case attr::CalledOnce: {
+      return nullptr;
+    }
+    case attr::CallsiteWrapper: {
       return nullptr;
     }
     case attr::Capability: {

@@ -13,7 +13,7 @@
 
   <project path="toolchain/binutils" name="toolchain/binutils" revision="c19795e958ed532462948fd14b1bdfd4f6e96e03" />
 
-  <project path="toolchain/llvm-project" name="toolchain/llvm-project" revision="477610d4d0d988e69dbc3fae4fe86bff3f07f2b5" />
+  <project path="toolchain/llvm-project" name="toolchain/llvm-project" revision="56fdd7153ef3d05b69d08d4134cd4d4b18b2d57d" />
 
   <project path="toolchain/llvm_android" name="toolchain/llvm_android" revision="32255e163e2fad02be80c2308344c9f9b5acc7ed" />
 

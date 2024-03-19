@@ -328,6 +328,10 @@
   bool VisitCalledOnceAttr(CalledOnceAttr *A) {
     return true; 
   }
+  bool TraverseCallsiteWrapperAttr(CallsiteWrapperAttr *A);
+  bool VisitCallsiteWrapperAttr(CallsiteWrapperAttr *A) {
+    return true; 
+  }
   bool TraverseCapabilityAttr(CapabilityAttr *A);
   bool VisitCapabilityAttr(CapabilityAttr *A) {
     return true; 
@@ -2340,6 +2344,15 @@ bool VISITORCLASS<Derived>::TraverseCalledOnceAttr(CalledOnceAttr *A) {
   if (!getDerived().VisitAttr(A))
     return false;
   if (!getDerived().VisitCalledOnceAttr(A))
+    return false;
+  return true;
+}
+
+template <typename Derived>
+bool VISITORCLASS<Derived>::TraverseCallsiteWrapperAttr(CallsiteWrapperAttr *A) {
+  if (!getDerived().VisitAttr(A))
+    return false;
+  if (!getDerived().VisitCallsiteWrapperAttr(A))
     return false;
   return true;
 }
@@ -5335,6 +5348,8 @@ bool VISITORCLASS<Derived>::TraverseAttr(Attr *A) {
       return getDerived().TraverseCallbackAttr(cast<CallbackAttr>(A));
     case attr::CalledOnce:
       return getDerived().TraverseCalledOnceAttr(cast<CalledOnceAttr>(A));
+    case attr::CallsiteWrapper:
+      return getDerived().TraverseCallsiteWrapperAttr(cast<CallsiteWrapperAttr>(A));
     case attr::Capability:
       return getDerived().TraverseCapabilityAttr(cast<CapabilityAttr>(A));
     case attr::CapturedRecord:

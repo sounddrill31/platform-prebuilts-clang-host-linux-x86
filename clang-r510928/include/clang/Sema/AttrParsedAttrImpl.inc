@@ -3767,6 +3767,50 @@ bool isParamExpr(size_t N) const override {
 static const ParsedAttrInfoCalledOnce Instance;
 };
 const ParsedAttrInfoCalledOnce ParsedAttrInfoCalledOnce::Instance;
+static constexpr ParsedAttrInfo::Spelling CallsiteWrapperSpellings[] = {
+  {AttributeCommonInfo::AS_GNU, "callsite_wrapper"},
+};
+struct ParsedAttrInfoCallsiteWrapper final : public ParsedAttrInfo {
+  constexpr ParsedAttrInfoCallsiteWrapper() : ParsedAttrInfo(
+    /*AttrKind=*/ParsedAttr::AT_CallsiteWrapper,
+    /*NumArgs=*/0,
+    /*OptArgs=*/0,
+    /*NumArgMembers=*/0,
+    /*HasCustomParsing=*/0,
+    /*AcceptsExprPack=*/0,
+    /*IsTargetSpecific=*/0,
+    /*IsType=*/0,
+    /*IsStmt=*/0,
+    /*IsKnownToGCC=*/0,
+    /*IsSupportedByPragmaAttribute=*/1,
+    /*Spellings=*/CallsiteWrapperSpellings,
+    /*ArgNames=*/{}) {}
+bool diagAppertainsToDecl(Sema &S, const ParsedAttr &Attr, const Decl *D) const override {
+  if (!isa<FunctionDecl>(D)) {
+    S.Diag(Attr.getLoc(), diag::warn_attribute_wrong_decl_type_str)
+      << Attr << Attr.isRegularKeywordAttribute() << "functions";
+    return false;
+  }
+  return true;
+}
+
+bool diagAppertainsToStmt(Sema &S, const ParsedAttr &AL, const Stmt *St) const override {
+  S.Diag(AL.getLoc(), diag::err_decl_attribute_invalid_on_stmt)
+    << AL << AL.isRegularKeywordAttribute() << St->getBeginLoc();
+  return false;
+}
+
+void getPragmaAttributeMatchRules(llvm::SmallVectorImpl<std::pair<attr::SubjectMatchRule, bool>> &MatchRules, const LangOptions &LangOpts) const override {
+  MatchRules.push_back(std::make_pair(attr::SubjectMatchRule_function, /*IsSupported=*/true));
+}
+
+bool isParamExpr(size_t N) const override {
+  return false;
+}
+
+static const ParsedAttrInfoCallsiteWrapper Instance;
+};
+const ParsedAttrInfoCallsiteWrapper ParsedAttrInfoCallsiteWrapper::Instance;
 static constexpr ParsedAttrInfo::Spelling CapabilitySpellings[] = {
   {AttributeCommonInfo::AS_GNU, "capability"},
   {AttributeCommonInfo::AS_CXX11, "clang::capability"},
@@ -17247,6 +17291,7 @@ static const ParsedAttrInfo *AttrInfoMap[] = {
 &ParsedAttrInfoCallableWhen::Instance,
 &ParsedAttrInfoCallback::Instance,
 &ParsedAttrInfoCalledOnce::Instance,
+&ParsedAttrInfoCallsiteWrapper::Instance,
 &ParsedAttrInfoCapability::Instance,
 &ParsedAttrInfoCarriesDependency::Instance,
 &ParsedAttrInfoCleanup::Instance,

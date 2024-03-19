@@ -101,6 +101,7 @@ case AttributeCommonInfo::Syntax::AS_GNU:
     .Case("callable_when", 1)
     .Case("callback", 1)
     .Case("called_once", 1)
+    .Case("callsite_wrapper", 1)
     .Case("capability", 1)
     .Case("shared_capability", 1)
     .Case("capability", 1)

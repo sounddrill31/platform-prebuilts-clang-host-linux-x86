@@ -1285,9 +1285,13 @@ static AttributeCommonInfo::Kind getAttrKind(StringRef Name, AttributeCommonInfo
       break;
     }
     break;
-  case 16:	 // 11 strings to match.
+  case 16:	 // 12 strings to match.
     switch (Name[0]) {
     default: break;
+    case 'c':	 // 1 string to match.
+      if (memcmp(Name.data()+1, "allsite_wrapper", 15) != 0)
+        break;
+      return AttributeCommonInfo::AT_CallsiteWrapper;	 // "callsite_wrapper"
     case 'e':	 // 1 string to match.
       if (memcmp(Name.data()+1, "nforce_tcb_leaf", 15) != 0)
         break;

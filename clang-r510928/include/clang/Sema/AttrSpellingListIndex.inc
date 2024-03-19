@@ -623,6 +623,11 @@
         return 2;
     break;
   }
+  case AT_CallsiteWrapper: {
+    if (Name == "callsite_wrapper" && getSyntax() == AttributeCommonInfo::AS_GNU && Scope == "")
+        return 0;
+    break;
+  }
   case AT_Capability: {
     if (Name == "capability" && getSyntax() == AttributeCommonInfo::AS_GNU && Scope == "")
         return 0;

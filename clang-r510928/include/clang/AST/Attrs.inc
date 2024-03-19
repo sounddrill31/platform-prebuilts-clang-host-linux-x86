@@ -3004,6 +3004,27 @@ public:
   static bool classof(const Attr *A) { return A->getKind() == attr::CalledOnce; }
 };
 
+class CallsiteWrapperAttr : public InheritableAttr {
+public:
+  // Factory methods
+  static CallsiteWrapperAttr *CreateImplicit(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo);
+  static CallsiteWrapperAttr *Create(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo);
+  static CallsiteWrapperAttr *CreateImplicit(ASTContext &Ctx, SourceRange Range = {});
+  static CallsiteWrapperAttr *Create(ASTContext &Ctx, SourceRange Range = {});
+
+  // Constructors
+  CallsiteWrapperAttr(ASTContext &Ctx, const AttributeCommonInfo &CommonInfo
+             );
+
+  CallsiteWrapperAttr *clone(ASTContext &C) const;
+  void printPretty(raw_ostream &OS,
+                   const PrintingPolicy &Policy) const;
+  const char *getSpelling() const;
+
+
+  static bool classof(const Attr *A) { return A->getKind() == attr::CallsiteWrapper; }
+};
+
 class CapabilityAttr : public InheritableAttr {
 unsigned nameLength;
 char *name;
