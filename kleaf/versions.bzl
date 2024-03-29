@@ -35,6 +35,12 @@ in the future.
 
 VERSIONS = [
     # keep sorted
+<<<<<<< TARGET BRANCH (d1b8d1 [README] Update trusty clang version to clang-r498229b am: 8)
+=======
+    "r475365b",
+    "r487747c",
+    "r498229b",
+>>>>>>> SOURCE BRANCH (20e3d2 Merge "Remove unused clang-r450784e." into main)
     "r510928",
     "r522817",
 ]
