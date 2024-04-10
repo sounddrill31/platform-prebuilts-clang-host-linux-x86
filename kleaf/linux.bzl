@@ -37,7 +37,7 @@ def _linux_ldflags(_ctx):
         name = "kleaf-host-ldflags",
         enabled = True,
         implies = [
-            "kleaf-lld",
+            "kleaf-lld-compiler-rt",
         ],
     )
 
@@ -70,6 +70,7 @@ def _linux_cc_rules_flags(ctx):
                             # Can't use static_link_cpp_runtimes because
                             # https://github.com/bazelbuild/bazel/issues/14342
                             "-static-libstdc++",
+                            # "-Wl,-rpath,prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl/libc_musl.so",
                         ] + extra_link_flags,
                     ),
                 ],
@@ -82,6 +83,7 @@ def _linux_cc_rules_flags(ctx):
                         flags = [
                             "--target={}".format(ctx.attr.target),
                             "-stdlib=libc++",
+                            "-D_LIBCPP_HAS_MUSL_LIBC=ON",
                         ] + extra_compile_flags,
                     ),
                 ],
