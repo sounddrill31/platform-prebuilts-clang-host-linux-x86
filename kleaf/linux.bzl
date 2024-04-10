@@ -37,7 +37,7 @@ def _linux_ldflags(_ctx):
         name = "kleaf-host-ldflags",
         enabled = True,
         implies = [
-            "kleaf-lld",
+            # "kleaf-lld",
         ],
     )
 
@@ -82,6 +82,7 @@ def _linux_cc_rules_flags(ctx):
                         flags = [
                             "--target={}".format(ctx.attr.target),
                             "-stdlib=libc++",
+                            "-D_LIBCPP_HAS_MUSL_LIBC",
                         ] + extra_compile_flags,
                     ),
                 ],
