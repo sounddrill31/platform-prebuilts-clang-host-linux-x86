@@ -82,6 +82,7 @@ def _linux_cc_rules_flags(ctx):
                         flags = [
                             "--target={}".format(ctx.attr.target),
                             "-stdlib=libc++",
+                            "-D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE",
                         ] + extra_compile_flags,
                     ),
                 ],
