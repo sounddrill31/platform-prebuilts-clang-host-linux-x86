@@ -32,6 +32,7 @@ def _clang_toolchain_internal(
         linker_files = None,
         sysroot_label = None,
         sysroot_path = None,
+        sysroot_dir_label = None,
         bin_files = None,
         bin_dirs = None,
         lib_files = None,
@@ -51,7 +52,10 @@ def _clang_toolchain_internal(
             Name of the label is ignored.
         linker_files: Additional dependencies to the linker
         sysroot_label: Label to a list of files from sysroot
-        sysroot_path: Path to sysroot
+        sysroot_path: Path to sysroot.
+
+            Deprecated; use `sysroot_dir_label` instead.
+        sysroot_dir_label: Label that points to the path to sysroot.
         bin_files: Files for `-B`
         bin_dirs: Directory to be set in `-B`
         lib_files: Files for `-L`
@@ -59,9 +63,6 @@ def _clang_toolchain_internal(
         target: The `--target` option provided to clang. This is usually `NDK_TRIPLE`.
         extra_compatible_with: Extra `exec_compatible_with` / `target_compatible_with`.
     """
-
-    if sysroot_path == None:
-        sysroot_path = "/dev/null"
 
     sysroot_labels = []
     if sysroot_label != None:
@@ -124,7 +125,10 @@ def _clang_toolchain_internal(
 
     native.filegroup(
         name = name + "_linker_files",
-        srcs = [clang_all_binaries] + sysroot_labels + linker_files + bin_files + lib_files,
+        srcs = [clang_all_binaries] + sysroot_labels + linker_files + bin_files + lib_files + [
+            Label("//prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl:libc_musl.so"),
+            Label("//prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl:libc.a"),
+        ],
     )
 
     native.filegroup(
@@ -139,7 +143,8 @@ def _clang_toolchain_internal(
     clang_config(
         name = name + "_clang_config",
         clang_version = clang_version,
-        sysroot = sysroot_path,
+        sysroot_path = sysroot_path,
+        sysroot_dir = sysroot_dir_label,
         bin_dirs = bin_dirs,
         lib_dirs = lib_dirs,
         target_cpu = target_cpu,
@@ -164,6 +169,8 @@ def _clang_toolchain_internal(
         objcopy_files = clang_all_binaries,
         strip_files = clang_all_binaries,
         supports_param_files = False,
+        dynamic_runtime_lib = Label("//prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl:libc_musl.so"),
+        static_runtime_lib = Label("//prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl:libc.a"),
         toolchain_config = name + "_clang_config",
         toolchain_identifier = name + "_clang_id",
     )
@@ -221,7 +228,7 @@ def clang_toolchain(
         **extra_kwargs
     )
 
-_GCC_PKG = Label("//prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8")
+_LINUX_MUSL_PKG = Label("//prebuilts/build-tools/sysroots/x86_64-unknown-linux-musl")
 
 # Keys: (target_os, target_cpu)
 # Values: arguments to clang_toolchain()
@@ -230,18 +237,9 @@ ARCH_CONFIG = {
         linker_files = [
             Label("//prebuilts/kernel-build-tools:linux-x86-libs"),
         ],
-        target = "x86_64-unknown-linux-gnu",
-        # From _setup_env.sh
-        # sysroot_flags+="--sysroot=${ROOT_DIR}/build/kernel/build-tools/sysroot "
-        sysroot_label = Label("//build/kernel:sysroot"),
-        sysroot_path = paths.join(
-            Label("//build/kernel:sysroot").workspace_root,
-            "build/kernel/build-tools/sysroot",
-        ),
-        bin_files = [_GCC_PKG.relative(":bin_files")],
-        bin_dirs = [_GCC_PKG.relative(":bin_dirs")],
-        lib_files = [_GCC_PKG.relative(":lib_files")],
-        lib_dirs = [_GCC_PKG.relative(":lib_dirs")],
+        target = "x86_64-unknown-linux-musl",
+        sysroot_label = _LINUX_MUSL_PKG.relative(":files"),
+        sysroot_dir_label = _LINUX_MUSL_PKG.relative(":dir"),
     ),
     ("android", "arm64"): dict(
         target = VARS.get("AARCH64_NDK_TRIPLE"),
