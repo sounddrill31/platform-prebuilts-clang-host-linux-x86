@@ -26,7 +26,7 @@ load(
     "ALL_CPP_COMPILE_ACTION_NAMES",
 )
 
-# From _setup_env.sh, HOSTCFLAGS / HOSTLDFLAGS
+# HOSTCFLAGS / HOSTLDFLAGS
 # Note: openssl (via boringssl) and elfutils should be added explicitly
 # via //prebuilts/kernel-build-tools:linux_x86_imported_libs
 # Hence not listed here.

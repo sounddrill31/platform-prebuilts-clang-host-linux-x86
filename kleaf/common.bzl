@@ -128,7 +128,6 @@ def _common_cflags():
     )
 
 def _lld_compiler_rt():
-    # From _setup_env.sh
     return feature(
         name = "kleaf-lld-compiler-rt",
         enabled = False,  # Not enabled unless implied by individual os

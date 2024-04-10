@@ -27,7 +27,6 @@ load(
 )
 
 def _ldflags(target):
-    # From _setup_env.sh
     # USERLDFLAGS
     return feature(
         name = "kleaf-android-ldflags",
@@ -54,7 +53,6 @@ def _ldflags(target):
     )
 
 def _clfags(target):
-    # From _setup_env.sh
     # USERCFLAGS
     return feature(
         name = "kleaf-android-cflags",

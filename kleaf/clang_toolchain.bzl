@@ -88,20 +88,6 @@ def _clang_toolchain_internal(
     # to use a superset here.
     clang_all_binaries = clang_pkg.relative(":binaries")
 
-    # Individual binaries
-    # From _setup_env.sh
-    #  HOSTCC=clang
-    #  HOSTCXX=clang++
-    #  CC=clang
-    #  LD=ld.lld
-    #  AR=llvm-ar
-    #  NM=llvm-nm
-    #  OBJCOPY=llvm-objcopy
-    #  OBJDUMP=llvm-objdump
-    #  OBJSIZE=llvm-size
-    #  READELF=llvm-readelf
-    #  STRIP=llvm-strip
-    #
     # Note: ld.lld does not recognize --target etc. from android.bzl,
     # so just use clang directly
     clang = clang_pkg.relative(":bin/clang")
@@ -238,8 +224,6 @@ ARCH_CONFIG = {
     ),
     ("android", "arm64"): dict(
         target = VARS.get("AARCH64_NDK_TRIPLE"),
-        # From _setup_env.sh: when NDK triple is set,
-        # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
         sysroot_label = "@prebuilt_ndk//:sysroot" if "AARCH64_NDK_TRIPLE" in VARS else None,
         sysroot_path = paths.join(
             Label("@prebuilt_ndk//:sysroot").workspace_root,
@@ -248,8 +232,6 @@ ARCH_CONFIG = {
     ),
     ("android", "arm"): dict(
         target = VARS.get("ARM_NDK_TRIPLE"),
-        # From _setup_env.sh: when NDK triple is set,
-        # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
         sysroot_label = "@prebuilt_ndk//:sysroot" if "ARM_NDK_TRIPLE" in VARS else None,
         sysroot_path = paths.join(
             Label("@prebuilt_ndk//:sysroot").workspace_root,
@@ -258,8 +240,6 @@ ARCH_CONFIG = {
     ),
     ("android", "x86_64"): dict(
         target = VARS.get("X86_64_NDK_TRIPLE"),
-        # From _setup_env.sh: when NDK triple is set,
-        # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
         sysroot_label = "@prebuilt_ndk//:sysroot" if "X86_64_NDK_TRIPLE" in VARS else None,
         sysroot_path = paths.join(
             Label("@prebuilt_ndk//:sysroot").workspace_root,
@@ -269,8 +249,6 @@ ARCH_CONFIG = {
     ("android", "i386"): dict(
         # i386 uses the same NDK_TRIPLE as x86_64
         target = VARS.get("X86_64_NDK_TRIPLE"),
-        # From _setup_env.sh: when NDK triple is set,
-        # --sysroot=${NDK_DIR}/toolchains/llvm/prebuilt/linux-x86_64/sysroot
         sysroot_label = "@prebuilt_ndk//:sysroot" if "X86_64_NDK_TRIPLE" in VARS else None,
         sysroot_path = paths.join(
             Label("@prebuilt_ndk//:sysroot").workspace_root,
