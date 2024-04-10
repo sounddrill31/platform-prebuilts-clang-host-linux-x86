@@ -17,7 +17,6 @@
 package clangprebuilts
 
 import (
-	"fmt"
 	"path"
 	"strings"
 
@@ -29,12 +28,30 @@ import (
 	"android/soong/genrule"
 )
 
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 const libLLVMSoFormat = "libLLVM-%ssvn.so"
 const libclangSoFormat = "libclang.so.%ssvn"
 const libclangCxxSoFormat = "libclang_cxx.so.%ssvn"
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
+=======
+const libclangCppSoName = "libclang-cpp.so"
+const libcxxSoName = "libc++.so"
+const libcxxabiSoName = "libc++abi.so"
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+var (
+	// Files included in the llvm-tools filegroup in ../Android.bp
+	llvmToolsFiles = []string{
+		"bin/llvm-symbolizer",
+		"bin/llvm-cxxfilt",
+		"lib/libc++.so",
+	}
+)
+
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 // This module is used to generate libfuzzer, libomp static libraries and
 // libclang_rt.* shared libraries. When LLVM_PREBUILTS_VERSION and
 // LLVM_RELEASE_VERSION are set, the library will generated from the given
@@ -46,6 +63,8 @@ func init() {
 		llvmHostPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("llvm_prebuilt_library_static",
 		llvmPrebuiltLibraryStaticFactory)
+	android.RegisterModuleType("llvm_prebuilt_build_tool",
+		llvmPrebuiltBuildToolFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
 		libClangRtPrebuiltLibrarySharedFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_static",
@@ -84,10 +103,14 @@ func trimVersionNumbers(ver string, retain int) string {
 }
 
 func getHostLibrary(ctx android.LoadHookContext) string {
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
 		config.ClangDefaultShortVersion)
 
+=======
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 	switch ctx.ModuleName() {
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 	case "prebuilt_libLLVM_host":
 		versionStr := trimVersionNumbers(releaseVersion, 1)
 		return fmt.Sprintf(libLLVMSoFormat, versionStr)
@@ -97,6 +120,10 @@ func getHostLibrary(ctx android.LoadHookContext) string {
 	case "prebuilt_libclang_cxx_host":
 		versionStr := trimVersionNumbers(releaseVersion, 1)
 		return fmt.Sprintf(libclangCxxSoFormat, versionStr)
+=======
+	case "prebuilt_libclang-cpp_host":
+		return libclangCppSoName
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 	case "prebuilt_libc++_host":
 		return libcxxSoName
 	case "prebuilt_libc++abi_host":
@@ -150,6 +177,7 @@ func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
 }
 
 type archProps struct {
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 	Android_arm struct {
 		Srcs []string
 	}
@@ -162,6 +190,23 @@ type archProps struct {
 	Android_x86_64 struct {
 		Srcs []string
 	}
+=======
+	Android_arm         archInnerProps
+	Android_arm64       archInnerProps
+	Android_riscv64     archInnerProps
+	Android_x86         archInnerProps
+	Android_x86_64      archInnerProps
+	Linux_bionic_arm64  archInnerProps
+	Linux_bionic_x86_64 archInnerProps
+	Glibc_x86           archInnerProps
+	Glibc_x86_64        archInnerProps
+	Linux_musl_x86      archInnerProps
+	Linux_musl_x86_64   archInnerProps
+	Linux_musl_arm      archInnerProps
+	Linux_musl_arm64    archInnerProps
+	Darwin              archInnerProps
+	Windows_x86_64      archInnerProps
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -178,12 +223,61 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	if name == "libFuzzer.a" {
 		headerDir := path.Join(getClangPrebuiltDir(ctx), "prebuilt_include", "llvm", "lib", "Fuzzer")
 		p.Export_include_dirs = []string{headerDir}
+	} else if name == "libsimpleperf_readelf.a" {
+		headerDir := path.Join(getClangPrebuiltDir(ctx), "include")
+		p.Export_include_dirs = []string{headerDir}
 	}
 
 	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm", name)}
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
+	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+
+	if name == "libsimpleperf_readelf.a" {
+		p.Target.Glibc_x86_64.Srcs = []string{path.Join(getClangPrebuiltDir(ctx), "lib/x86_64-unknown-linux-gnu", name)}
+		p.Target.Windows_x86_64.Srcs = []string{path.Join(getClangPrebuiltDir(ctx), "lib/x86_64-w64-windows-gnu", name)}
+		p.Target.Darwin.Srcs = []string{":libsimpleperf_readelf_darwin"}
+		p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-unknown-linux-musl/lib", name)}
+		p.Target.Linux_musl_arm64.Srcs = []string{path.Join(libDir, "aarch64-unknown-linux-musl/lib", name)}
+	} else {
+		p.Target.Linux_musl_x86.Srcs = []string{path.Join(libDir, "i686-unknown-linux-musl/lib", name)}
+		p.Target.Linux_musl_x86_64.Srcs = []string{path.Join(libDir, "x86_64-unknown-linux-musl/lib", name)}
+		p.Target.Linux_musl_arm.Srcs = []string{path.Join(libDir, "arm-unknown-linux-musleabihf/lib", name)}
+		p.Target.Linux_musl_arm64.Srcs = []string{path.Join(libDir, "aarch64-unknown-linux-musl/lib", name)}
+	}
+
+	ctx.AppendProperties(p)
+}
+
+func llvmPrebuiltBuildTool(ctx android.LoadHookContext) {
+	clangDir := getClangPrebuiltDir(ctx)
+	name := strings.TrimPrefix(ctx.ModuleName(), "prebuilt_")
+	src := path.Join(clangDir, "bin", name)
+	deps := []string{
+		path.Join(clangDir, "lib", "libc++.so"),
+		path.Join(clangDir, "lib", "x86_64-unknown-linux-gnu", "libc++.so"),
+	}
+
+	type props struct {
+		Enabled *bool
+		Target  struct {
+			Linux struct {
+				Enabled *bool
+				Src     *string
+				Deps    []string
+			}
+		}
+	}
+	p := &props{}
+	p.Enabled = proptools.BoolPtr(false)
+	p.Target.Linux.Enabled = proptools.BoolPtr(true)
+	p.Target.Linux.Src = &src
+	p.Target.Linux.Deps = deps
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 	ctx.AppendProperties(p)
 }
 
@@ -274,10 +368,16 @@ func libClangRtLLndkLibrary(ctx android.LoadHookContext) {
 func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 	clangDir := getClangPrebuiltDir(ctx)
 	libName := strings.TrimSuffix(ctx.ModuleName(), "_darwin")
-	if libName == "libc++" || libName == "libc++abi" {
-		libName += ".1"
+	if libName == "libsimpleperf_readelf" {
+		libName += ".a"
+	} else {
+		libName += ".dylib"
 	}
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 	lib := path.Join(clangDir, "lib64", libName+".dylib")
+=======
+	lib := path.Join(clangDir, "lib", libName)
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 
 	type props struct {
 		Srcs []string
@@ -295,6 +395,12 @@ func llvmPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.DeviceSupported)
 	android.AddLoadHook(module, llvmPrebuiltLibraryStatic)
 	return module.Init()
+}
+
+func llvmPrebuiltBuildToolFactory() android.Module {
+	module := android.NewPrebuiltBuildTool()
+	android.AddLoadHook(module, llvmPrebuiltBuildTool)
+	return module
 }
 
 func llvmHostPrebuiltLibrarySharedFactory() android.Module {

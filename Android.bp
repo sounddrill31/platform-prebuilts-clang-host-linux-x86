@@ -16,6 +16,7 @@
 
 llvm_prebuilt_library_static {
     name: "libFuzzer",
+    vendor_available: true,
     sdk_version: "minimum",
     sanitize: {
         never: true,
@@ -31,6 +32,35 @@ llvm_prebuilt_library_static {
     },
 }
 
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+cc_defaults {
+    name: "libclang_rt-prebuilt-default",
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+///////////////////////////////////////////////////////////////////////////////
+libclang_rt_prebuilt_library_static {
+    name: "libclang_rt.builtins",
+    defaults: ["libclang_rt-prebuilt-default"],
+    sdk_version: "minimum",
+    recovery_available: true,
+    vendor_available: true,
+    product_available: true,
+    native_bridge_supported: true,
+    host_supported: true,
+    sanitize: {
+        never: true,
+    },
+    stl: "none",
+}
+
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-arm-android",
     sdk_version: "minimum",
@@ -47,6 +77,17 @@ libclang_rt_prebuilt_library_static {
         },
     },
     stl: "none",
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+    // This exported variant of the builtins library is only intended for use in
+    // libc.so and libm.so, which exports some builtins symbols for backwards
+    // compatibility.
+    visibility: [
+        "//bionic:__subpackages__",
+        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
+        "//frameworks/libs/native_bridge_support/android_api/libc:__subpackages__",
+    ],
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 }
 
 libclang_rt_prebuilt_library_static {
@@ -371,6 +412,7 @@ libclang_rt_prebuilt_library_shared {
     has_stubs: true,
 }
 
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-arm-android",
     sdk_version: "minimum",
@@ -774,6 +816,33 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+=======
+    // The libunwind-exported.a library is only intended for use with libc.so,
+    // which needs to export the unwinder API.
+    visibility: [
+        "//bionic:__subpackages__",
+        "//frameworks/libs/native_bridge_support/libc:__subpackages__",
+        "//frameworks/libs/native_bridge_support/android_api/libc:__subpackages__",
+    ],
+}
+
+llvm_prebuilt_library_static {
+    name: "libsimpleperf_readelf",
+    host_supported: true,
+    sdk_version: "minimum",
+    sanitize: {
+        never: true,
+    },
+    target: {
+        windows: {
+            enabled: true,
+        },
+    },
+    visibility: [
+        "//cts/tests/tests/simpleperf",
+        "//system/extras/simpleperf",
+    ],
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 }
 
 // -----------------------------------------------------------------------------
@@ -835,6 +904,26 @@ clang_builtin_headers {
     out: ["clang_builtin_headers_resources.inc"],
 }
 
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+// Export llvm tools as a filegroup which is packaged and available for CI
+// tests.
+llvm_tools_filegroup {
+    name: "llvm-tools",
+    visibility: ["//development/scripts:__subpackages__"],
+    // The tools and libs in the filegroup are in
+    // ./soong/clangprebuilts.go:llvmToolsFiles
+}
+
+llvm_prebuilt_build_tool {
+    name: "llvm-dwarfdump",
+}
+
+llvm_prebuilt_build_tool {
+    name: "llvm-objdump",
+}
+
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
 subdirs = [
     "soong",
 ]

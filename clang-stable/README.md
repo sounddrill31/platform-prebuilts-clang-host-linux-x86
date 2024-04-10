@@ -1,0 +1,4 @@
+<<<<<<< HEAD   (5e06ab Merge empty history for sparse-10404224-L36400000962437536)
+=======
+All contents in clang-stable are copies of clang-r510928.
+>>>>>>> BRANCH (174fa0 Merge cherrypicks of ['android-review.googlesource.com/30369)
