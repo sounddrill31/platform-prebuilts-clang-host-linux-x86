@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f9dccd8_ebc78226",
+        "filename": "Android.bp",
+        "patchSetId": 26
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-04-11T23:07:27Z",
+      "side": 1,
+      "message": "Replace `vndk: {...}` with `double_loadable: true` -- see Ib034c17e5f5faf811d6464f670db8e9b56633a5a and b/328994089.",
+      "range": {
+        "startLine": 419,
+        "startChar": 4,
+        "endLine": 419,
+        "endChar": 25
+      },
+      "revId": "2d674b68b6d7c1d15de37aec691f2d5afa0dd14f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
