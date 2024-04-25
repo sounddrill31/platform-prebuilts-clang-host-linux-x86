@@ -401,8 +401,10 @@ cc_defaults {
 // so it needs to avoid using the per-thread EH globals pointer.
 cc_defaults {
     name: "libc++-noexcept-default",
-    defaults: ["libc++-device-base-default"],
-    host_supported: false,
+    defaults: [
+        "libc++-device-base-default",
+        "linux_bionic_supported",
+    ],
     apex_available: [
         "com.android.runtime",
     ],
