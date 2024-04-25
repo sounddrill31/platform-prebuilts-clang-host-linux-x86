@@ -16,6 +16,24 @@
       "message": "This CL should fix errors like these:\n\n```\nFAILED: out/soong/.intermediates/bionic/linker/linker/linux_bionic_x86_64/linker64\necho \"module linker missing dependencies: libc++_static_noexcept{os:linux_bionic,arch:x86_64,link:static}\" \u0026\u0026 false\nmodule linker missing dependencies: libc++_static_noexcept{os:linux_bionic,arch:x86_64,link:static}\n```\n\ne.g.: ab/11766248, target mainline_modules_sdks-trunk_staging-userdebug.\n\nI\u0027m currently waiting for the `packages/modules/common/build/mainline_modules_sdks.sh` script to finish.",
       "revId": "53306275df9fea8a953555e77a736c57acdde055",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "decfe97d_480659ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-04-25T23:58:31Z",
+      "side": 1,
+      "message": "The script succeeded when I ran it locally with aosp-main-with-phones.",
+      "parentUuid": "88c26ee1_d9352020",
+      "revId": "53306275df9fea8a953555e77a736c57acdde055",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
