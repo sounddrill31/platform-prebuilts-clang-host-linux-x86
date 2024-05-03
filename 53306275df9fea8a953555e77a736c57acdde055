@@ -34,6 +34,23 @@
       "parentUuid": "88c26ee1_d9352020",
       "revId": "53306275df9fea8a953555e77a736c57acdde055",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05ea4ab1_41a38062",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-05-03T05:40:59Z",
+      "side": 1,
+      "message": "This change is now included in PS3 of the libc++-reapplication patch, aosp/3073091.",
+      "revId": "53306275df9fea8a953555e77a736c57acdde055",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
