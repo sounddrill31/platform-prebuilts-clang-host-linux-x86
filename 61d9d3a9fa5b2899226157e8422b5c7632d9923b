@@ -88,6 +88,24 @@
       "parentUuid": "842998f5_3dd3b80b",
       "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "748aca19_ad48df4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3068219
+      },
+      "writtenOn": "2024-05-14T16:00:36Z",
+      "side": 1,
+      "message": "@seba@sebaubuntu.dev just for info, I worked around the problem in Debian testing/unstable by installing old libncurses5 packages from the archive with `dpkg`, even though they were not available via `apt`:\n* http://ftp.debian.org/debian/pool/main/n/ncurses/libncurses5_6.4-4_amd64.deb\n* http://ftp.debian.org/debian/pool/main/n/ncurses/libtinfo5_6.4-4_amd64.deb\n\nAfer that I was able to build a full Android 14 image on a recent Debian system.",
+      "parentUuid": "d7ba5d65_adc6d72b",
+      "revId": "61d9d3a9fa5b2899226157e8422b5c7632d9923b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
