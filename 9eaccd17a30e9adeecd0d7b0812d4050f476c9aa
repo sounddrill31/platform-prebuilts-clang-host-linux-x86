@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a103650_256e833f",
+        "filename": "clang-stable/lib/python3/site-packages/clang/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-05-17T17:11:21Z",
+      "side": 1,
+      "message": "Can you add this to the top level Android.bp?  The entire clang-stable subdir is deleted during every update (update-clang-stable.py).",
+      "revId": "9eaccd17a30e9adeecd0d7b0812d4050f476c9aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
