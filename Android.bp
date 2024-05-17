@@ -418,3 +418,25 @@ llvm_prebuilt_build_tool {
 subdirs = [
     "soong",
 ]
+
+genrule {
+    name: "py-clang-srcs",
+    srcs: [
+        "clang-stable/lib/python3/site-packages/clang/*.py",
+    ],
+    out: [
+        "__init__.py",
+        "cindex.py",
+        "enumerations.py",
+    ],
+    cmd: "cp $(in) $(genDir)",
+}
+
+python_library {
+    name: "py-clang",
+    pkg_path: "clang",
+    host_supported: true,
+    srcs: [
+        ":py-clang-srcs",
+    ],
+}
