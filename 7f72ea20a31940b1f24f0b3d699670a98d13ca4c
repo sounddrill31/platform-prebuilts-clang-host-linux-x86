@@ -16,6 +16,24 @@
       "message": "LGTM, but let\u0027s also get a quick review from @ccross@android.com about the genrule changes.",
       "revId": "7f72ea20a31940b1f24f0b3d699670a98d13ca4c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd196168_bd2c4337",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2024-05-20T16:23:22Z",
+      "side": 1,
+      "message": "Does a filegroup work?\n```\nfilegroup: {\n    name: \"py-clang-srcs\",\n    srcs: [\"clang-stable/lib/python3/site-packages/clang/*.py\"],\n    path: \"clang-stable/lib/python3/site-packages/clang\",\n}\n```",
+      "parentUuid": "dccd09e2_a316bfee",
+      "revId": "7f72ea20a31940b1f24f0b3d699670a98d13ca4c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
