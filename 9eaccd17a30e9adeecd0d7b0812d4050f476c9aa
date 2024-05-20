@@ -16,6 +16,24 @@
       "message": "Can you add this to the top level Android.bp?  The entire clang-stable subdir is deleted during every update (update-clang-stable.py).",
       "revId": "9eaccd17a30e9adeecd0d7b0812d4050f476c9aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b42b3780_7c9a5082",
+        "filename": "clang-stable/lib/python3/site-packages/clang/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1812161
+      },
+      "writtenOn": "2024-05-20T12:28:12Z",
+      "side": 1,
+      "message": "Done. A genrule was required to move the files from the deeply nested directory at build time, since Python import paths are based on the file tree (and also importing from these directories would require placing `__init__.py` files in every directory or a complex dynamic import wrapper script).",
+      "parentUuid": "8a103650_256e833f",
+      "revId": "9eaccd17a30e9adeecd0d7b0812d4050f476c9aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
