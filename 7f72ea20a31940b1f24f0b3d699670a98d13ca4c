@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dccd09e2_a316bfee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-05-20T16:18:58Z",
+      "side": 1,
+      "message": "LGTM, but let\u0027s also get a quick review from @ccross@android.com about the genrule changes.",
+      "revId": "7f72ea20a31940b1f24f0b3d699670a98d13ca4c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
