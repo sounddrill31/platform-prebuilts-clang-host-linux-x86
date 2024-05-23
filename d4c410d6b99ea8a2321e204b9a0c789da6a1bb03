@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b36ef761_07c5278a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2024-05-23T01:37:05Z",
+      "side": 1,
+      "message": "Can you point to the build failures on Droid Monitor please?",
+      "revId": "d4c410d6b99ea8a2321e204b9a0c789da6a1bb03",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
