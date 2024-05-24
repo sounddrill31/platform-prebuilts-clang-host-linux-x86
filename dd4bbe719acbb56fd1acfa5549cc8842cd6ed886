@@ -16,6 +16,24 @@
       "message": "Can you point us to the failing build/test for this revert? This set of CLs is very hard to land, and we\u0027d prefer to fix forward (as has happened already for a few spots). Nearly every failure so far has been an existing issue with the code, that this new libc++ has exposed, as opposed to the libc++ update (what\u0027s being reverted here) being at fault.",
       "revId": "dd4bbe719acbb56fd1acfa5549cc8842cd6ed886",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fdd1d39_5d8fcfef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1971940
+      },
+      "writtenOn": "2024-05-24T18:58:21Z",
+      "side": 1,
+      "message": "Here\u0027s the bug b/342542917.",
+      "parentUuid": "3ca63772_6d054ff8",
+      "revId": "dd4bbe719acbb56fd1acfa5549cc8842cd6ed886",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
