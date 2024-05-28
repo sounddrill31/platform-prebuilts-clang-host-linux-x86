@@ -1,0 +1,11 @@
+<<<<<<< HEAD   (c1b031 Merge empty history for sparse-11692345-L02700030003121399)
+=======
+#!/tmpfs/src/git/out/python3/install/bin/python3.11
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
+>>>>>>> BRANCH (26abbf Merge cherrypicks of ['android-review.googlesource.com/30510)
