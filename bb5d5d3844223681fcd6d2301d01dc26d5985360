@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d43690b2_f1d1be64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-06-14T06:07:05Z",
+      "side": 1,
+      "message": "Emulator build is not on clang-r522817 so failure is unrelated.",
+      "revId": "bb5d5d3844223681fcd6d2301d01dc26d5985360",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
