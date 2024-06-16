@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3b9d03e_8c40acd0",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-06-16T05:23:53Z",
+      "side": 1,
+      "message": "This is still pending on aosp/3125771.  LGTM for the rest of the changes.  Thanks for keeping this uptodate Yi!",
+      "range": {
+        "startLine": 71,
+        "startChar": 35,
+        "endLine": 71,
+        "endChar": 42
+      },
+      "revId": "1986e97f6ded392f0bc55818bafc234968485c48",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
