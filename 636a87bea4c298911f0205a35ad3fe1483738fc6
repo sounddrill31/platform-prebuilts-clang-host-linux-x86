@@ -33,6 +33,24 @@
       "message": "aye, but is there any important difference that we actually _want_? or should we be moving to a world where both \u003catomic\u003e and \u003cstdatomic.h\u003e come from the toolchain rather than libc?",
       "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be104511_40662961",
+        "filename": "clang-r522817/lib/clang/18/include/stdatomic.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1229339
+      },
+      "writtenOn": "2024-06-17T20:15:16Z",
+      "side": 1,
+      "message": "AFAIK, we could remove [bits/]stdatomic.h from Bionic and just use Clang\u0027s stdatomic.h. That would be even simpler -- the C11 stdatomic.h would come from Clang\u0027s resource directory, and the C++ stdatomic.h would come from libc++.\n\nI can run that through TreeHugger next.",
+      "parentUuid": "70ff3c5d_523535e8",
+      "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
