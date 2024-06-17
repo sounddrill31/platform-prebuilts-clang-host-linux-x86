@@ -51,6 +51,24 @@
       "parentUuid": "70ff3c5d_523535e8",
       "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1cecf01_703164e9",
+        "filename": "clang-r522817/lib/clang/18/include/stdatomic.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2024-06-17T20:27:18Z",
+      "side": 1,
+      "message": "oh, even better ... i\u0027m guessing this is the real answer to the iOS question i just asked on the other thread!\n\nyeah, +100 on that. \u003catomic\u003e/\u003cstdatomic.h\u003e does seem like something that should come from the toolchain rather than libc.",
+      "parentUuid": "be104511_40662961",
+      "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
