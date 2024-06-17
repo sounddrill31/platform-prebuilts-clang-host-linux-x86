@@ -16,6 +16,23 @@
       "message": "I uploaded this change to LLVM at https://github.com/llvm/llvm-project/pull/95498. I\u0027m uploading it to Gerrit so I can run TreeHugger on it to look for any issues.",
       "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70ff3c5d_523535e8",
+        "filename": "clang-r522817/lib/clang/18/include/stdatomic.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2024-06-17T14:43:20Z",
+      "side": 1,
+      "message": "aye, but is there any important difference that we actually _want_? or should we be moving to a world where both \u003catomic\u003e and \u003cstdatomic.h\u003e come from the toolchain rather than libc?",
+      "revId": "636a87bea4c298911f0205a35ad3fe1483738fc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
