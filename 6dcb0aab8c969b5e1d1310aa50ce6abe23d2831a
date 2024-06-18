@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d3547f5_90cec324",
+        "filename": "docs/mlgo.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-06-18T05:39:06Z",
+      "side": 1,
+      "message": "You could also use build/soong/scripts/get_clang_version.py to extract this version.",
+      "range": {
+        "startLine": 72,
+        "startChar": 18,
+        "endLine": 72,
+        "endChar": 136
+      },
+      "revId": "6dcb0aab8c969b5e1d1310aa50ce6abe23d2831a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
