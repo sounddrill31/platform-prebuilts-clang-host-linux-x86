@@ -25,7 +25,7 @@ export WORKING_DIR=`pwd`
 
 ```sh
 cd $WORKING_DIR
-git clone https://github.com/google/ml-compiler-opt
+git clone https://github.com/google/ml-compiler-opt --depth=1
 ```
 
 #### aosp-master-plus-llvm
@@ -69,7 +69,7 @@ You do not need the full toolchain for ML training.
 
 ```sh
 mkdir $WORKING_DIR/llvm-build; cd $WORKING_DIR/llvm-build
-export CLANG_VER=`grep ClangDefaultVersion.*clang-r $WORKING_DIR/aosp-master-plus-llvm/build/soong/cc/config/global.go | tr -s ' ' | cut -d' ' -f3 | tr -d '"'`
+export CLANG_VER=`grep -oP "ClangDefaultVersion.*\"\Kclang-r\S+[^\"]" $WORKING_DIR/aosp-master-plus-llvm/build/soong/cc/config/global.go`
 CC=$WORKING_DIR/aosp-master-plus-llvm/prebuilts/clang/host/linux-x86/$CLANG_VER/bin/clang \
 CXX=$WORKING_DIR/aosp-master-plus-llvm/prebuilts/clang/host/linux-x86/$CLANG_VER/bin/clang++ \
 $WORKING_DIR/aosp-master-plus-llvm/prebuilts/cmake/linux-x86/bin/cmake -G Ninja \
