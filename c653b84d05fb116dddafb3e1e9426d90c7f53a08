@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4f8acdd_cf79cb9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-06-20T21:56:54Z",
+      "side": 1,
+      "message": "Why does this change reverted https://android-review.git.corp.google.com/c/platform/prebuilts/clang/host/linux-x86/+/2956423 ?",
+      "revId": "c653b84d05fb116dddafb3e1e9426d90c7f53a08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
