@@ -22,6 +22,30 @@
       },
       "revId": "b4299ff5e1af1d31e683ae2a5081be4667fbe863",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41c6aa5e_6464a254",
+        "filename": "kleaf/clang_config.bzl",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2024-06-25T18:48:41Z",
+      "side": 1,
+      "message": "Yeah. `\"\"` specifically. None just falls back to the default value.\n\nThat being said -- this needs clean up. Using /dev/null as the default sysroot path is silly.",
+      "parentUuid": "ad648626_4d4eb67a",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 27
+      },
+      "revId": "b4299ff5e1af1d31e683ae2a5081be4667fbe863",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
