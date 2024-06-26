@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82168b35_452c289e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1087625
+      },
+      "writtenOn": "2024-06-26T06:44:24Z",
+      "side": 1,
+      "message": "This is the first 19 release, should reset minor version to `0`.",
+      "range": {
+        "startLine": 7,
+        "startChar": 34,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "bd12ac3739abdff2a555691d28a5fd04b04d684c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
